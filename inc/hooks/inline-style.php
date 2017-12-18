@@ -137,7 +137,9 @@ if( ! function_exists( 'trade_hub_inline_style' ) ) :
             body.blog .content-start article:hover h2 a,
             .popular:hover i,
             .comment:hover i,
-            .recent:hover i{
+            .recent:hover i,
+            a.read-more,
+            .text-div.right h3{
               color: <?php echo esc_attr( $trade_hub_primary_color_option );?> !important;
             }
         <?php

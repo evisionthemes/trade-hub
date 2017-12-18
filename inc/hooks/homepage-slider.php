@@ -152,10 +152,197 @@ if ( ! function_exists( 'trade_hub_featured_home_slider' ) ) :
           }
           ?>
 
-        </div><!-- wrapper -->
+    </div><!-- wrapper -->
     </section><!-- section -->
-    <?php
-        }
-    }
+    <!-- home page sections -->
+    <section class="feature-section section-wrapper" id="trade-hub-feature">
+       <div class="container">
+          <div class="row">
+             <h1>our amazing feature</h1>
+             <div class="col-md-6">
+                <div class="feature-content">
+                   <i class="fa fa-desktop"></i>
+                   <div class="content-right">
+                      <h3>responsive layout</h3>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+                   </div>
+                </div>
+             </div><!-- col-md-6 -->
+             <div class="col-md-6">
+                <div class="feature-content">
+                   <i class="fa fa-desktop"></i>
+                   <div class="content-right">
+                      <h3>responsive layout</h3>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+                   </div>
+                </div>
+             </div><!-- col-md-6 -->
+             <div class="col-md-6">
+                <div class="feature-content">
+                   <i class="fa fa-desktop"></i>
+                   <div class="content-right">
+                      <h3>responsive layout</h3>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+                   </div>
+                </div>
+             </div><!-- col-md-6 -->
+             <div class="col-md-6">
+                <div class="feature-content">
+                   <i class="fa fa-desktop"></i>
+                   <div class="content-right">
+                      <h3>responsive layout</h3>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+                   </div>
+                </div>
+             </div><!-- col-md-6 -->
+          </div><!-- row -->
+       </div><!-- container -->
+    </section><!-- feature section end -->    
+    <section class="portfolio-first section-wrapper" id="portfolio">
+       <div class="background-image-div portfolio-left">
+          <div class="bg-overlay">
+             <div class="border-only clearfix">
+               <h2>page title 1</h2>
+                <p>Paetos dignissim at cursus elefeind norma arcu.velim pellentesque 
+                uter justo magna gravida.</p>
+             </div>
+          </div>
+       </div><!-- background image div -->
+       <div class="text-div right">
+          <h2>GREAT PRODUCT OF COMPANY</h2>
+          <p class="portfolio-description">Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally</p>
+          <div class="listing">
+             <h3>PSD TO HTML5/CSS3</h3>
+             <p>Paetos dignissim at cursus elefeind norma arcu.velim pellentesque 
+                uter justo magna gravida.
+             </p>
+             <h3>HOSTING & DOMAIN SERVICES</h3>
+             <p>Paetos dignissim at cursus elefeind norma arcu.velim pellentesque 
+                uter justo magna gravida.
+             </p>
+             <h3>GET PLAN YOUR BUSINESS</h3>
+             <p>Paetos dignissim at cursus elefeind norma arcu.velim pellentesque 
+                uter justo magna gravida.
+             </p>
+          </div>
+       </div><!-- right section -->
+    </section><!--portfolio section -->       
+    <section class="portfolio-second section-wrapper" id="portfolio">
+       <div class="text-div right">
+          <h2>GREAT PRODUCT OF COMPANY</h2>
+          <p class="portfolio-description">Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally</p>
+          <div class="listing">
+             <h3>PSD TO HTML5/CSS3</h3>
+             <p>Paetos dignissim at cursus elefeind norma arcu.velim pellentesque 
+                uter justo magna gravida.
+             </p>
+             <h3>HOSTING & DOMAIN SERVICES</h3>
+             <p>Paetos dignissim at cursus elefeind norma arcu.velim pellentesque 
+                uter justo magna gravida.
+             </p>
+             <h3>GET PLAN YOUR BUSINESS</h3>
+             <p>Paetos dignissim at cursus elefeind norma arcu.velim pellentesque 
+                uter justo magna gravida.
+             </p>
+          </div>
+       </div><!-- left section -->
+       <div class="background-image-div img-two portfolio-left">
+          <div class="bg-overlay">
+             <div class="border-only clearfix">
+               <h2>page title 1</h2>
+               <p>Paetos dignissim at cursus elefeind norma arcu.velim pellentesque 
+                uter justo magna gravida.</p>
+             </div>
+          </div>
+       </div><!-- right section -->
+    </section><!--portfolio section -->     
+    <section class="testimonials-section section-wrapper">
+       <div class="container">
+          <div class="row">
+             <h1>testimonials</h1>
+             <div class="testimonials">
+                <div class="testimonials-wrapper">
+                   <div class="testimonials-content">
+                      <div class="client-image"></div>
+                      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a…</p>
+                      <h4><a href="#">John doe</a></h4>
+                   </div>
+                </div><!-- wrapper -->
+                <div class="testimonials-wrapper">
+                   <div class="testimonials-content">
+                      <div class="client-image"></div>
+                      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a…</p>
+                      <h4><a href="#">John doe</a></h4>
+                   </div>
+                </div><!-- wrapper -->
+                <div class="testimonials-wrapper">
+                   <div class="testimonials-content">
+                      <div class="client-image"></div>
+                      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a…</p>
+                      <h4><a href="#">John doe</a></h4>
+                   </div>
+                </div><!-- wrapper -->
+                <div class="testimonials-wrapper">
+                   <div class="testimonials-content">
+                      <div class="client-image"></div>
+                      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a…</p>
+                      <h4><a href="#">John doe</a></h4>
+                   </div>
+                </div><!-- wrapper -->
+             </div><!-- testimonials -->
+          </div><!-- row -->
+       </div><!-- container -->
+    </section><!-- testimonials section end -->    
+    <section class="callback-section section-wrapper" id="trade-hub-callback">
+       <div class="overlay-callback">
+          <h1>call to action title</h1>
+          <p>Paetos dignissim at cursus elefeind norma arcu.velim pellentesque uter justo magna gravida.</p>
+          <a href="#"" class="border-btn" >View More</a>
+       </div><!-- overlay -->
+    </section><!-- call back section end -->
+    <section class="section-wrapper blog-section">
+     <div class="container">
+       <div class="row">
+           <h1>from our blog</h1>
+         <div class="blog-image"></div>
+       </div><!-- row -->
+     </div><!-- container -->
+    </section><!-- blog section -->
+    <section class="contact-section section-wrapper">
+     <div class="left contact">
+       <div class="contact-list">
+         <h2>Contact us</h2>
+         <ul>
+           <li>new baneshwor, kathmandu, nepal</li>
+           <li>test@gmail.com</li>
+           <li>+977-123456789</li>
+         </ul>
+       </div>
+     </div><!-- left content -->
+     <div class="right social-nav-section">
+       <div class="right-content">
+         <div class="about">
+           <h2>About Us</h2>
+           <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy </p>
+           <a href="#" class="more">know more</a>
+         </div><!-- about us section -->
+         <div class="social-icon-only social-nav">
+          <h2>follow us </h2>
+            <div class="menu-social-links-container">
+                <?php
+                  wp_nav_menu( array(
+                      'theme_location' => 'social',
+                      'menu_id'        => 'social-menu',
+                      'menu_class'     => 'trade-hub-social-menu',
+                  ) );
+                ?>        
+            </div>
+          </div><!-- social menu -->
+       </div>
+     </div>
+    </section><!-- contact section -->
+  <?php
+  }
+}
 endif;
 add_action( 'homepage-main-slider', 'trade_hub_featured_home_slider', 10 );

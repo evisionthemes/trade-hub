@@ -258,19 +258,16 @@ add_action( 'trade_hub_action_before_header', 'trade_hub_skip_to_content', 10 );
                            <!-- site-header-menu -->
                         </div>
                      </div>
-                     <?php if ((1 == $trade_hub_customizer_all_values['trade-hub-header-enable-home-link']) || (1 == $trade_hub_customizer_all_values['trade-hub-header-enable-search'])) { ?>
-                     <div class="nav-buttons col-md-1">
-                        <?php if (1 == $trade_hub_customizer_all_values['trade-hub-header-enable-search']) { ?>
+                    
+                     <div class="nav-buttons col-md-1">                       
                         <div class="button-list">
                            <div class="search-holder">
-                              <a class="button-search button-outline" href="#">
+                              <a class="button-search button-outline">
                               <i class="fa fa-search"></i>
                               </a>                                
                            </div>
-                        </div>
-                        <?php } ?>
-                     </div>
-                     <?php } ?>                              
+                        </div>                        
+                     </div>                                             
                   </div>
                   <div class="search-form-nav" id="top-search">
                      <?php get_search_form();?>

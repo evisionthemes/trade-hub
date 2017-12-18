@@ -228,3 +228,15 @@ border: 3px solid #000;
     list-style: none;
     text-align: center;
 }
+
+.banner-wrapper button.slick-prev,
+.banner-wrapper button.slick-next {
+    display: none!important;
+    -moz-transition: opacity 1s;
+    -webkit-transition: opacity 1s !important;
+    transition: opacity 1s !important;
+}
+.banner-wrapper:hover button.slick-prev,
+.banner-wrapper:hover button.slick-next{
+    display: block !important;
+}

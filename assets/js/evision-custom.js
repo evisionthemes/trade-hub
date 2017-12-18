@@ -92,35 +92,40 @@ jQuery(document).ready(function ($) {
         }
       ]
     }); 
+
+    $('.testimonials').slick({
+      dots: true,
+      arrows: false,
+      autoplay: true,
+      autoplaySpeed: 6000,
+      slidesToShow: 3,
+      responsive: [{
+          breakpoint: 768,
+          settings: {
+            arrows: false,
+            slidesToShow: 3
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            arrows: false,
+            slidesToShow: 1
+          }
+        }
+      ]
+    }); 
   // header fix
+  $(window).scroll(function () { 
 
-  var fixedBackgroundColor = '#2d2d2d',
-    fixedBackgroundTransparent = 'transparent',
-    scrollTopPosition = $('body').scrollTop(),
-    selectedHeader = $('.wrap-nav'),
-    containerselectedHeader = $('.wrap-nav .container'),
-    fixedBackgroundNoSlider = selectedHeader.hasClass('fixed-nav');
+    console.log($(window).scrollTop());
 
-  var waypoint = new Waypoint({
-    element: selectedHeader,
-    offset: '0',
-    handler: function (direction) {
-      if ("down" == direction) {
-        containerselectedHeader.css({
-          'maxWidth': '1170px',
-          'paddingLeft': '16px',
-          'paddingRight': '16px'
-        });
-        selectedHeader.addClass('fixed-nav');
-      } else {
-        containerselectedHeader.css({
-          'maxWidth': '1170px',
-          'paddingLeft': '16px',
-          'paddingRight': '16px'
-        });
-        selectedHeader.removeClass('fixed-nav');
-      }
+    if ($(window).scrollTop() > 0) {
+      $('#masthead').addClass('navbar-fixed-top');
+    }
 
+    if ($(window).scrollTop() < 1) {
+      $('#masthead').removeClass('navbar-fixed-top');
     }
   });
 
