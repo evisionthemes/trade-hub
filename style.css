@@ -7722,7 +7722,7 @@ button#mobile-menu-toggle-close {
     position: relative;
   }
   .main-navigation.sec-main-navigation ul>li.current_page_item:before {
-    content: ">";
+    content: "";
     display: inline-block;
     height: 3px;
     left: 0;
@@ -10008,7 +10008,6 @@ i.fa.fa-bars.top-nav-mobile {
   color: #fff;
   background-repeat: no-repeat;
   background-position: center, center;
-  border-bottom: 5px solid #1abc9c;
 }
 
 .sec-title {
@@ -10027,21 +10026,25 @@ i.fa.fa-bars.top-nav-mobile {
 }
 
 .overlay {
-  background: #00000070;
-  height: 100%;
-  padding: 10% 0;
+  height: calc(100vh - 130px);
+  position: relative;
+  background: rgba(0, 0, 0, 0.5)
 }
 
+.banner-content-inner {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  z-index: 999;
+}
 a.border-btn {
   color: #fff;
   font-size: 18px;
-  border: 2px solid #1abc9c;
   padding: 12px 55px;
   border-radius: 4px;
   -webkit-transition: width 0.5s;
   transition: width 0.5s;
   text-transform: uppercase;
-  background: #1abc9c;
 }
 
 a.border-btn:hover,
@@ -10055,12 +10058,16 @@ a.border-btn:active {
   outline: none;
 }
 
-
+@media screen and (max-width:767px) {
+  .text-content {
+    padding: 0 40px 40px;
+  }
+}
 /* portfolio section */
 
 section.section-wrapper,
 .portfolio-first {
-  padding-top: 40px;
+  padding-top: 20px;
 }
 
 section.section-wrapper h1 {
@@ -10167,19 +10174,37 @@ p.portfolio-description {
   display: block;
 }
 
+@media screen and (max-width:767px) {
+  section#portfolio {
+    display: block;
+  }
+  .text-div.right {
+    width: 100%;
+    float: none;
+    background: #393939;
+    padding: 10px 20px;
+  }
+  .background-image-div.portfolio-left{
+    width: 100%;
+    float: none;
+  }
+}
+
 /* feature section */
 .feature-content i {
-  font-size: 48px;
-  color: #1abc9c;
+  font-size: 18px;
   border: 1px solid #cdcdcd;
   padding: 25px;
   border-radius: 50%;
   transition: all .5s;
+  position: absolute;
+  top: 50%;
+  transform: translate(0,-50%);
 }
 
 .content-right {
   float: right;
-  width: calc(100% - 110px);
+  width: calc(100% - 66px);
   padding-left: 20px;
 }
 
@@ -10187,18 +10212,16 @@ p.portfolio-description {
   border: 1px solid #efefef;
   padding: 10px;
   display: inline-block;
-  margin-top: 32px;
+  margin-bottom: 32px;
   transition: all .5s;
-  background: #f6f6f6;
+  position: relative;
 }
 
-.feature-content:hover i {
-  background: #1abc9c;
-  color: #fff;
+/*.feature-content:hover i {
   border: 0;
-}
+}*/
 
-.content-right h3 {
+.feature-section h3 {
   font-weight: 600;
   font-size: 16px;
   text-transform: uppercase;
@@ -10206,11 +10229,88 @@ p.portfolio-description {
 }
 
 .feature-content:hover {
-  box-shadow: 0 3px 2px #dcdcdc;
-  background: #fff;
+  background: #f6f6f6;
 }
 
+.content-left {
+  border: 1px solid #efefef;
+  padding: 10px;
+  position: relative;
+}
 
+.service-image {
+  max-height: 294px;
+  height: 100%;
+  overflow: hidden;
+}
+
+.left-text-content {
+    padding-top: 25px;
+}
+
+#f1_container {
+  position: relative;
+  height: 281px;
+  z-index: 1;
+  overflow: hidden;
+}
+#f1_container {
+  perspective: 1000;
+}
+#f1_card {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: all 1.0s linear;
+}
+.content-left:hover #f1_card,
+#f1_container:hover #f1_card {
+  transform: rotateY(180deg);
+  box-shadow: -5px 5px 5px #aaa;
+}
+.face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+.face.back {
+  display: block;
+  transform: rotateY(180deg);
+  box-sizing: border-box;
+  padding: 10px;
+  color: white;
+  text-align: center;
+  background: url(./assets/images/3.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
+.face.back:after {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.58);
+  content: "";
+  top: 0;
+  left: 0;
+}
+.face.back a{
+  position: absolute;
+  z-index: 9999;
+  left: 0;
+  right: 0;
+  margin: auto;
+  max-width: 150px;
+  top: 50%;
+  transform: translate(0,-50%);
+  color: #fff;
+  font-size: 18px;
+  text-transform: uppercase;
+  border-bottom: 1px solid #1abc9c;
+}
+  
 /* callback section */
 
 section.callback-section {
@@ -10261,15 +10361,16 @@ section.testimonials-section .slick-dots li {
 }
 
 .testimonials-content:hover {
-  background: #1abc9c;
   border-radius: 6px;
 }
 
-.testimonials-content:hover p,
-.testimonials-content:hover h4 a {
-  color: #fff;
+.testimonials-content p {
+    position: relative;
+    z-index: 999;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
 }
-
 .client-image {
   background: url(./assets/images/1.jpg);
   background-repeat: no-repeat;
@@ -10289,7 +10390,7 @@ section.testimonials-section .slick-dots li {
 }
 
 .testimonials-content h4 {
-  text-align: right;
+  text-align: center;
 }
 
 .testimonials-content p:before {
@@ -10308,22 +10409,21 @@ section.testimonials-section .slick-dots li {
   padding-left: 10px;
 }
 
-.testimonials-content:hover p:after,
-.testimonials-content:hover p:before {
-  color: #fff;
-}
 
+section.testimonials-section #f1_container{
+  height: 200px;
+}
 
 /* trade hub contact section */
 
 section.contact-section.section-wrapper {
   display: flex;
+  padding-top: 0;
 }
 
 .left.contact {
   width: 30%;
   float: left;
-  background: #1abc9c;
   color: #fff;
   padding: 20px 40px;
 }
@@ -10381,7 +10481,19 @@ a.more:after {
   padding-left: 10px;
 }
 
-
+@media screen and (max-width:767px) {
+  section.contact-section.section-wrapper{
+    display: block;
+  }
+  .left.contact,
+  .about,
+  .right.social-nav-section,
+  .social-icon-only {
+    width: 100%;
+    height: auto;
+    
+  }
+}
 /* from our blog */
 
 .blog-image {
@@ -10391,10 +10503,40 @@ a.more:after {
   padding: 224px;
 }
 
-.home div#content {
+/*.home div#content {
   display: none;
+}*/
+
+/* Preloader */
+
+body {
+  overflow: hidden;
 }
 
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  z-index: 9999999;
+}
+
+#status {
+  max-width: 150px;
+  max-height: 101px;
+  position: absolute;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 50%;
+  transform: translate(0, -50%);
+  background-size: 250px;
+}
 
 /* ==================================*/
 
@@ -10405,4 +10547,6 @@ a.more:after {
 /*=========================*/
 
 
-/*# sourceMappingURL=style.css.map */
+div#content {
+    display: none;
+}
