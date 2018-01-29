@@ -198,6 +198,9 @@ add_action( 'trade_hub_action_before_header', 'trade_hub_skip_to_content', 10 );
    function trade_hub_navigation_page_start() {
        global $trade_hub_customizer_all_values; 
        ?>
+        <div id="preloader">
+          <div id="status">&nbsp;</div>
+        </div>
         <header id="masthead" class="wrapper wrap-head site-header">
           <div class="container top-header-wrap">
             <div class="col-md-4 wrapper wrapper-site-identity">

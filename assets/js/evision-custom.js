@@ -1,9 +1,10 @@
 // On Document Load
-jQuery(window).load(function () {
-  //site loader
-  jQuery('#wraploader').hide();
-});
-
+/* pre loader */
+jQuery(window).on('load', function() { 
+  jQuery('#status').fadeOut();  
+  jQuery('#preloader').delay(350).fadeOut('slow'); 
+  jQuery('body').delay(350).css({'overflow':'visible'});
+})
 // On Document Ready
 jQuery(document).ready(function ($) {
 
@@ -93,33 +94,9 @@ jQuery(document).ready(function ($) {
       ]
     }); 
 
-    $('.testimonials').slick({
-      dots: true,
-      arrows: false,
-      autoplay: true,
-      autoplaySpeed: 6000,
-      slidesToShow: 3,
-      responsive: [{
-          breakpoint: 768,
-          settings: {
-            arrows: false,
-            slidesToShow: 3
-          }
-        },
-        {
-          breakpoint: 480,
-          settings: {
-            arrows: false,
-            slidesToShow: 1
-          }
-        }
-      ]
-    }); 
+    
   // header fix
   $(window).scroll(function () { 
-
-    console.log($(window).scrollTop());
-
     if ($(window).scrollTop() > 0) {
       $('#masthead').addClass('navbar-fixed-top');
     }

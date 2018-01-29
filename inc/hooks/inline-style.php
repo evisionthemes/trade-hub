@@ -93,7 +93,9 @@ if( ! function_exists( 'trade_hub_inline_style' ) ) :
             .read-more-text a,
             .nav-links .nav-previous a, 
             .nav-links .nav-next a,
-            .tagcloud a:hover{
+            .tagcloud a:hover,
+            .left.contact,
+            a.border-btn{
               background-color: <?php echo esc_attr( $trade_hub_primary_color_option );?>;
             }
 
@@ -103,7 +105,8 @@ if( ! function_exists( 'trade_hub_inline_style' ) ) :
             .flip-container .front,
             .flip-container .back,
             .nav-links .nav-previous a:hover,
-            .nav-links .nav-next a:hover {
+            .nav-links .nav-next a:hover,
+            a.border-btn {
               border-color: <?php echo esc_attr( $trade_hub_primary_color_option );?>; 
             }
 
@@ -138,8 +141,8 @@ if( ! function_exists( 'trade_hub_inline_style' ) ) :
             .popular:hover i,
             .comment:hover i,
             .recent:hover i,
-            a.read-more,
-            .text-div.right h3{
+            .text-div.right h3,
+            .feature-content i{
               color: <?php echo esc_attr( $trade_hub_primary_color_option );?> !important;
             }
         <?php
