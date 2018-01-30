@@ -153,14 +153,12 @@
 .slick-prev:before, .slick-next:before {
     color: #fff;
     font-size: 32px;
-    background: #000000b0;
+    background: rgba(0, 0, 0, 0.69);
     -moz-transition: all .5s;
     -webkit-transition: all .5s;
     transition: all .5s;
 }
-.slick-prev:hover:before, .slick-next:hover:before{
-    background: #2a80b9;
-}
+
 .slick-next {
     position: absolute;
     right: 0;

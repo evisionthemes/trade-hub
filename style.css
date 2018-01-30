@@ -796,7 +796,6 @@ dt {
   width: 100%;
 }
 
-
 .nav-links:before,
 .nav-links:after {
   display: table;
@@ -1085,7 +1084,6 @@ body.single .nav-links .nav-next a:hover {
 .main-panel-section .widget_recent_entries .post-date {
   padding-left: 0;
 }
-
 
 .wrapper {
   background-repeat: no-repeat;
@@ -7141,21 +7139,18 @@ body.evision-no-sidebar #secondary {
   content: "\:";
 }
 
-@media screen and (max-width: 767px) {  
+@media screen and (max-width: 767px) {
   header.wrapper.top-header .controls {
     font-size: 20px;
     width: auto;
   }
 }
 
-
-
 span.notice-title:before {
   content: "\f0a1";
   font-family: fontAwesome;
   padding-right: 6px;
 }
-
 
 @media screen and (min-width: 768px) {
   .top-header .top-header-right div {
@@ -7705,7 +7700,6 @@ button#mobile-menu-toggle-close {
   .main-navigation a,
   .main-navigation a:visited {
     color: #fff;
-    background: #000;
     margin: 2px 0;
     padding: 10px 10px;
   }
@@ -8735,8 +8729,6 @@ a#slide-next {
 
 
 /* ==================================*/
-
-
 
 #blog-post article.hentry,
 .search article.hentry,
@@ -9913,7 +9905,6 @@ i.fa.fa-bars.top-nav-mobile {
   }
 }
 
-
 .navbar-fixed-top {
   position: fixed;
   z-index: 99999;
@@ -9961,6 +9952,7 @@ i.fa.fa-bars.top-nav-mobile {
   transform: translate(0, -50%);
   z-index: 999;
 }
+
 a.border-btn {
   color: #fff;
   font-size: 18px;
@@ -9987,11 +9979,13 @@ a.border-btn:active {
     padding: 0 40px 40px;
   }
 }
+
+
 /* portfolio section */
 
 section.section-wrapper,
 .portfolio-first {
-  padding-top: 20px;
+  padding-top: 40px;
 }
 
 section.section-wrapper h1 {
@@ -9999,6 +9993,7 @@ section.section-wrapper h1 {
   padding-bottom: 30px;
   text-transform: capitalize;
   position: relative;
+  margin-top: 0;
 }
 
 section.section-wrapper h1:after {
@@ -10083,17 +10078,20 @@ p.portfolio-description {
 .background-image-div.portfolio-left p {
   color: #fff;
 }
+
 .border-only.clearfix {
   border: 2px solid #fff;
   text-align: center;
   padding: 30px;
   transition: all .7s;
 }
+
 .border-only.clearfix p {
-    display: none;
-    transition: all .7s;
+  display: none;
+  transition: all .7s;
 }
-.border-only.clearfix:hover p{
+
+.border-only.clearfix:hover p {
   display: block;
 }
 
@@ -10107,13 +10105,15 @@ p.portfolio-description {
     background: #393939;
     padding: 10px 20px;
   }
-  .background-image-div.portfolio-left{
+  .background-image-div.portfolio-left {
     width: 100%;
     float: none;
   }
 }
 
+
 /* feature section */
+
 .feature-content i {
   font-size: 18px;
   border: 1px solid rgba(205, 205, 205, 0.23);
@@ -10122,7 +10122,7 @@ p.portfolio-description {
   transition: all .5s;
   position: absolute;
   top: 50%;
-  transform: translate(0,-50%);
+  transform: translate(0, -50%);
 }
 
 .content-right {
@@ -10135,14 +10135,10 @@ p.portfolio-description {
   border: 1px solid #efefef;
   padding: 10px;
   display: inline-block;
-  margin-bottom: 32px;
+  margin-top: 15px;
   transition: all .5s;
   position: relative;
 }
-
-/*.feature-content:hover i {
-  border: 0;
-}*/
 
 .feature-section h3 {
   font-weight: 600;
@@ -10151,14 +10147,15 @@ p.portfolio-description {
   margin-top: 0;
 }
 
-.feature-content:hover {
-  background: #f6f6f6;
-}
-
 .content-left {
   border: 1px solid #efefef;
   padding: 10px;
   position: relative;
+  margin-top: 15px;
+}
+
+.feature-content:hover i {
+  background: #f6f6f6;
 }
 
 .service-image {
@@ -10168,35 +10165,41 @@ p.portfolio-description {
 }
 
 .left-text-content {
-    padding-top: 25px;
+  padding-top: 25px;
 }
 
 #f1_container {
   position: relative;
-  height: 281px;
+  height: 228px;
   z-index: 1;
   overflow: hidden;
 }
+
 #f1_container {
   perspective: 1000;
 }
+
 #f1_card {
   width: 100%;
   height: 100%;
   transform-style: preserve-3d;
   transition: all 1.0s linear;
 }
+
 .content-left:hover #f1_card,
-#f1_container:hover #f1_card {
+#f1_container:hover #f1_card,
+.testimonials-content:hover #f1_card {
   transform: rotateY(180deg);
   box-shadow: -5px 5px 5px #aaa;
 }
+
 .face {
   position: absolute;
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
 }
+
 .face.back {
   display: block;
   transform: rotateY(180deg);
@@ -10210,6 +10213,7 @@ p.portfolio-description {
   background-position: center;
   position: relative;
 }
+
 .face.back:after {
   position: absolute;
   height: 100%;
@@ -10219,7 +10223,8 @@ p.portfolio-description {
   top: 0;
   left: 0;
 }
-.face.back a{
+
+.face.back a {
   position: absolute;
   z-index: 9999;
   left: 0;
@@ -10227,18 +10232,19 @@ p.portfolio-description {
   margin: auto;
   max-width: 150px;
   top: 50%;
-  transform: translate(0,-50%);
+  transform: translate(0, -50%);
   color: #fff;
   font-size: 18px;
   text-transform: uppercase;
 }
 
 @media screen and (max-width:767px) {
-  #f1_container{
+  #f1_container {
     height: 200px;
   }
 }
-  
+
+
 /* callback section */
 
 section.callback-section {
@@ -10262,7 +10268,8 @@ section .overlay-callback h1 {
   text-align: left;
   margin: 0;
 }
-section .overlay-callback h1:after{
+
+section .overlay-callback h1:after {
   width: 0;
 }
 
@@ -10297,12 +10304,13 @@ section.testimonials-section .slick-dots li {
 }
 
 .testimonials-content p {
-    position: relative;
-    z-index: 999;
-    color: #fff;
-    padding: 10px;
-    text-align: center;
+  position: relative;
+  z-index: 999;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
 }
+
 .client-image {
   background: url(./assets/images/1.jpg);
   background-repeat: no-repeat;
@@ -10317,10 +10325,6 @@ section.testimonials-section .slick-dots li {
   margin-bottom: 15px;
 }
 
-.testimonials-wrapper {
-  padding: 10px 20px;
-}
-
 .testimonials-content h4 {
   text-align: center;
 }
@@ -10328,22 +10332,21 @@ section.testimonials-section .slick-dots li {
 .testimonials-content p:before {
   content: "\f10d";
   font-family: fontAwesome;
-  opacity: .3;
   padding-right: 10px;
 }
 
 .testimonials-content p:after {
   content: "\f10e";
   font-family: fontAwesome;
-  opacity: .3;
-  color: #1abc9c;
   padding-left: 10px;
 }
 
-
-section.testimonials-section #f1_container{
+section.testimonials-section #f1_container,
+section.testimonials-section .face.back {
   height: 200px;
+  overflow: hidden;
 }
+
 
 /* trade hub contact section */
 
@@ -10413,7 +10416,7 @@ a.more:after {
 }
 
 @media screen and (max-width:767px) {
-  section.contact-section.section-wrapper{
+  section.contact-section.section-wrapper {
     display: block;
   }
   .left.contact,
@@ -10422,10 +10425,12 @@ a.more:after {
   .social-icon-only {
     width: 100%;
     height: auto;
-    
   }
 }
+
+
 /* from our blog */
+
 section#th-news {
   padding-bottom: 40px;
 }
@@ -10437,31 +10442,37 @@ section#th-news {
   margin-bottom: 20px;
 }
 
-.news-more-link{
+.news-more-link {
   text-align: center;
-  padding: 30px 0 15px;
+  padding: 30px 0 9px;
 }
 
 .th-news-wrapper {
   position: relative;
   margin-bottom: 20px;
 }
-a.blog-meta{
+
+a.blog-meta {
   margin-bottom: 20px;
 }
+
 a.blog-meta:before {
   content: "\f073";
   font-family: fontAwesome;
   padding-right: 10px;
 }
+
 .ribbon {
   position: absolute;
-  left: -5px; top: -5px;
+  left: -5px;
+  top: -5px;
   z-index: 1;
   overflow: hidden;
-  width: 75px; height: 75px;
+  width: 75px;
+  height: 75px;
   text-align: right;
 }
+
 .ribbon span {
   font-size: 10px;
   font-weight: bold;
@@ -10475,26 +10486,34 @@ a.blog-meta:before {
   display: block;
   box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
   position: absolute;
-  top: 19px; left: -21px;
+  top: 19px;
+  left: -21px;
 }
+
 .ribbon span::before {
   content: "";
-  position: absolute; left: 0px; top: 100%;
+  position: absolute;
+  left: 0px;
+  top: 100%;
   z-index: -1;
   border-left: 3px solid #000;
   border-right: 3px solid transparent;
   border-bottom: 3px solid transparent;
   border-top: 3px solid #000;
 }
+
 .ribbon span::after {
   content: "";
-  position: absolute; right: 0px; top: 100%;
+  position: absolute;
+  right: 0px;
+  top: 100%;
   z-index: -1;
   border-left: 3px solid transparent;
   border-right: 3px solid #000;
   border-bottom: 3px solid transparent;
   border-top: 3px solid #000;
 }
+
 
 /* Preloader */
 
@@ -10527,6 +10546,7 @@ body {
   background-size: 250px;
 }
 
+
 /* ==================================*/
 
 
@@ -10535,8 +10555,6 @@ body {
 
 /*=========================*/
 
-
 .home div#content {
-    display: none;
+  display: none;
 }
-

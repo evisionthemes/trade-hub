@@ -165,27 +165,27 @@ if ( ! function_exists( 'trade_hub_featured_home_slider' ) ) :
                      <i class="fa fa-desktop"></i>
                      <div class="content-right">
                         <h3><a href="#">responsive layout</a></h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
-                     </div>
-                  </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                     </div><!--content -->
+                  </div><!-- feature content -->
                </div><!-- col-md-12 -->
                <div class="col-md-12">
                   <div class="feature-content">
                      <i class="fa fa-desktop"></i>
                      <div class="content-right">
                         <h3><a href="#">responsive layout</a></h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
-                     </div>
-                  </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                     </div><!-- content -->
+                  </div><!-- feature content -->
                </div><!-- col-md-12 -->
                <div class="col-md-12">
                   <div class="feature-content">
                      <i class="fa fa-desktop"></i>
                      <div class="content-right">
                         <h3><a href="#">responsive layout</a></h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
-                     </div>
-                  </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                     </div><!-- content -->
+                  </div><!-- feature content -->
                </div><!-- col-md-12 -->               
              </div><!-- md-6 -->
               <div class="feature-text-content-wrapper col-md-6">
@@ -195,15 +195,15 @@ if ( ! function_exists( 'trade_hub_featured_home_slider' ) ) :
                     <div id="f1_card" class="shadow">
                       <div class="front face">
                         <img src="<?php bloginfo('template_url'); ?>/assets/images/3.jpg" />
-                      </div>
+                      </div><!-- image -->
                       <div class="back face center"><!-- put background image inline style here -->
                        <a href="#">About us</a>
-                      </div>
-                    </div>
-                    </div>
+                      </div><!-- back face -->
+                    </div><!-- f1 card -->
+                    </div><!-- f1 container -->
                    <div class="left-text-content">
                     <h3><a href="#">something about us</a></h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam Ut enim ad minim veniam</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
                    </div>
                  </div>
                </div>
@@ -212,9 +212,8 @@ if ( ! function_exists( 'trade_hub_featured_home_slider' ) ) :
        </div><!-- container -->
     </section><!-- feature section end -->    
     <section class="portfolio-first section-wrapper" id="portfolio">
-       <div class="background-image-div portfolio-left">
+       <div class="background-image-div portfolio-left"><!-- put background image link here -->
           <div class="bg-overlay">
-            
           </div>
        </div><!-- background image div -->
        <div class="text-div right">
@@ -235,10 +234,8 @@ if ( ! function_exists( 'trade_hub_featured_home_slider' ) ) :
              </p>
           </div>
        </div><!-- right section -->
-    </section><!--portfolio section -->      
-   
-    </section><!--portfolio section -->     
-    <section class="testimonials-section section-wrapper">
+    </section><!--portfolio section -->        
+    <section class="testimonials-section section-wrapper"><!-- testimonials section start here -->
        <div class="container">
           <div class="row">
              <h1>testimonials</h1>
@@ -361,7 +358,7 @@ if ( ! function_exists( 'trade_hub_featured_home_slider' ) ) :
            <li>new baneshwor, kathmandu, nepal</li>
            <li>test@gmail.com</li>
            <li>+977-123456789</li>
-         </ul>
+         </ul><!-- contact list -->
        </div>
      </div><!-- left content -->
      <div class="right social-nav-section">

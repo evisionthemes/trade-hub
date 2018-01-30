@@ -99,7 +99,9 @@ if( ! function_exists( 'trade_hub_inline_style' ) ) :
             section.section-wrapper h1:after,
             .text-div.right,
             section.callback-section,
-            .ribbon span{
+            .ribbon span,
+            .slick-prev:hover:before, 
+            .slick-next:hover:before{
               background-color: <?php echo esc_attr( $trade_hub_primary_color_option );?>;
             }
 
@@ -147,7 +149,10 @@ if( ! function_exists( 'trade_hub_inline_style' ) ) :
             .comment:hover i,
             .recent:hover i,
             .feature-content i,
-            .testimonials-content p:before{
+            .testimonials-content p:before,
+            a.blog-meta:hover,
+            a.blog-meta:focus,
+            .testimonials-content p:after{
               color: <?php echo esc_attr( $trade_hub_primary_color_option );?> !important;
             }
         <?php
