@@ -16,7 +16,7 @@ $trade_hub_sections['trade-hub-fs-slider-options'] =
     array(
         'priority'       => 80,
         'title'          => __( 'Slider Property', 'trade-hub' ),
-        'panel'          => 'trade-hub-featured-slider',
+        'panel'          => 'trade-hub-main-homepage-panel',
     );
 
 $trade_hub_settings_controls['trade-hub-fs-single-words'] =

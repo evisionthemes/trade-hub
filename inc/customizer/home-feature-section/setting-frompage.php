@@ -18,9 +18,9 @@ $trade_hub_customizer_defaults['trade_hub_our-feature_icon'] = esc_html__('fa fa
 // section for our-feature-option
 $trade_hub_sections['trade_hub_our-feature-section'] = 
 		array(
-				'title'			=> esc_html__('Our-Feature-Section','trade-hub'),
+				'title'			=> esc_html__('Our-Feature','trade-hub'),
 				'panel'				=> 'trade-hub-main-homepage-panel',
-				'priority'			=> 10
+				'priority'			=> 20
 		);
 
 // create a setting control for our-feature section

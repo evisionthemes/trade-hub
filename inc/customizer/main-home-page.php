@@ -19,3 +19,22 @@ require get_template_directory() .'/inc/customizer/home-feature-section/setting-
 
 // conetion of our -service-section
 require get_template_directory() .'/inc/customizer/home-our-service/our-service-page.php';
+
+// conetion of  testimonial section
+require get_template_directory() .'/inc/customizer/home-testimonial/setting.php';
+
+// conetion of  call to action section
+require get_template_directory() .'/inc/customizer/home-call-to-action/from-page-setting.php';
+
+// conetion of  contact  section
+require get_template_directory() .'/inc/customizer/home-contact-section/contact.php';
+
+// conetion of  about-us  section
+require get_template_directory() .'/inc/customizer/home-contact-section/about-us.php';
+
+// conetion of  social link  section
+require get_template_directory() .'/inc/customizer/home-contact-section/social-link.php';
+
+// conetion of  feature slider
+require get_template_directory() .'/inc/customizer/featured-slider/feature-slider-setting.php';
+

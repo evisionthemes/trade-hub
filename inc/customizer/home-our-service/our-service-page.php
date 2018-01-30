@@ -18,9 +18,9 @@ $trade_hub_customizer_defaults['trade_hub_our_service_third_sub_title'] = esc_ht
 
 // create a section for our service section
 $trade_hub_sections['trade-hub-our-service section']	=	array(
-	'title'			=>	esc_html__('Our-Service-Section',''),
+	'title'			=>	esc_html__('Our-Service','trade_hub'),
 	'panel'			=>'trade-hub-main-homepage-panel',
-	'priority'		=> 10
+	'priority'		=> 220
 );
 
 // create a setting control for our service enable option
