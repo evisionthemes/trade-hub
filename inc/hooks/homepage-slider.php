@@ -295,10 +295,16 @@ if ( ! function_exists( 'trade_hub_featured_home_slider' ) ) :
     </section><!-- testimonials section end -->    
     <section class="callback-section section-wrapper" id="trade-hub-callback">
        <div class="overlay-callback">
-          <h1>call to action title</h1>
-          <p>Paetos dignissim at cursus elefeind norma arcu.velim pellentesque uter justo magna gravida.</p>
-          <a href="#"" class="border-btn" >View More</a>
+         <div class="container">
+            <div class="col-md-9 call-toaction-text">
+              <h1>use this button for call to action</h1>
+            </div><!-- title -->
+            <div class="col-md-3 call-to-action-btn">
+              <a href="#"" class="border-btn" >Buy now</a>
+            </div><!-- btn -->
+            </div><!-- container -->
        </div><!-- overlay -->
+<<<<<<< HEAD
     </section><!-- call back section end -->
     <section class="section-wrapper blog-section">
      <div class="container">
@@ -307,6 +313,57 @@ if ( ! function_exists( 'trade_hub_featured_home_slider' ) ) :
          <div class="blog-image"></div>
        </div><!-- row -->
      </div><!-- container -->
+=======
+    </section><!-- call back section end -->   
+    <section class="section-wrapper" id="th-news">
+      <div class="container">
+        <div class="row">
+          <h1>latest news</h1>
+          <div class="col-md-4 col-sm-4 col-xs-12">
+            <div class="th-news-wrapper">
+            <div class="ribbon"><span>POPULAR</span></div>
+              <div class="news-image">
+                 <img class="img-responsive" src="<?php bloginfo('template_url'); ?>/assets/images/3.jpg" />
+              </div><!-- img -->
+              <div class="news-heading-content feature-section">
+                <h3><a href="#">dont miss our next event</a></h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed venenatis dignissim ultrices. Suspendisse ut sollicitudin nisi. Fusce efficitur nec nunc nec bibendum. Praesent laoreet tortor quis velit facilisis faucibus. Maecenas sollicitudin lectus diam, non vehicula arcu ullamcorper ac. In pharetra, est vitae interdum tincidunt, urna ligula rutrum tellus, sit amet pharetra purus magna eu enim.</p>
+                <a href="#" class="blog-meta">2017/9/10</a>
+              </div><!-- content -->
+            </div><!-- wrapper -->
+          </div><!-- col-md-4 -->
+          <div class="col-md-4 col-sm-4 col-xs-12">
+            <div class="th-news-wrapper">
+            <div class="ribbon"><span>POPULAR</span></div>
+              <div class="news-image">
+                 <img class="img-responsive" src="<?php bloginfo('template_url'); ?>/assets/images/3.jpg" />
+              </div><!-- img -->
+              <div class="news-heading-content feature-section">
+                <h3><a href="#">dont miss our next event</a></h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed venenatis dignissim ultrices. Suspendisse ut sollicitudin nisi. Fusce efficitur nec nunc nec bibendum. Praesent laoreet tortor quis velit facilisis faucibus. Maecenas sollicitudin lectus diam, non vehicula arcu ullamcorper ac. In pharetra, est vitae interdum tincidunt, urna ligula rutrum tellus, sit amet pharetra purus magna eu enim.</p>
+                <a href="#" class="blog-meta">2017/9/10</a>
+              </div><!-- content -->
+            </div><!-- wrapper -->
+          </div><!-- col-md-4 -->
+          <div class="col-md-4 col-sm-4 col-xs-12">
+            <div class="th-news-wrapper">
+            <div class="ribbon"><span>POPULAR</span></div>
+              <div class="news-image">
+                 <img class="img-responsive" src="<?php bloginfo('template_url'); ?>/assets/images/3.jpg" />
+              </div><!-- img -->
+              <div class="news-heading-content feature-section">
+                <h3><a href="#">dont miss our next event</a></h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed venenatis dignissim ultrices. Suspendisse ut sollicitudin nisi. Fusce efficitur nec nunc nec bibendum. Praesent laoreet tortor quis velit facilisis faucibus. Maecenas sollicitudin lectus diam, non vehicula arcu ullamcorper ac. In pharetra, est vitae interdum tincidunt, urna ligula rutrum tellus, sit amet pharetra purus magna eu enim.</p>
+                <a href="#" class="blog-meta">2017/9/10</a>
+              </div><!-- content -->
+            </div><!-- wrapper -->
+          </div><!-- col-md-4 -->
+          <div class="news-more-link col-md-12 clearfix">
+            <a href="#" class="border-btn">browse more</a>
+          </div>
+        </div><!-- row -->
+      </div><!-- container -->
+>>>>>>> 32a80192f3be79ce5ebd3c398be35e76aa722707
     </section><!-- blog section -->
     <section class="contact-section section-wrapper">
      <div class="left contact">

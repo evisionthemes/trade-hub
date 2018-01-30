@@ -95,7 +95,11 @@ if( ! function_exists( 'trade_hub_inline_style' ) ) :
             .nav-links .nav-next a,
             .tagcloud a:hover,
             .left.contact,
-            a.border-btn{
+            a.border-btn,
+            section.section-wrapper h1:after,
+            .text-div.right,
+            section.callback-section,
+            .ribbon span{
               background-color: <?php echo esc_attr( $trade_hub_primary_color_option );?>;
             }
 
@@ -106,7 +110,8 @@ if( ! function_exists( 'trade_hub_inline_style' ) ) :
             .flip-container .back,
             .nav-links .nav-previous a:hover,
             .nav-links .nav-next a:hover,
-            a.border-btn {
+            a.border-btn,
+            .ribbon span::before {
               border-color: <?php echo esc_attr( $trade_hub_primary_color_option );?>; 
             }
 
@@ -141,8 +146,8 @@ if( ! function_exists( 'trade_hub_inline_style' ) ) :
             .popular:hover i,
             .comment:hover i,
             .recent:hover i,
-            .text-div.right h3,
-            .feature-content i{
+            .feature-content i,
+            .testimonials-content p:before{
               color: <?php echo esc_attr( $trade_hub_primary_color_option );?> !important;
             }
         <?php

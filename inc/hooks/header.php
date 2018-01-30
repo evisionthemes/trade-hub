@@ -236,12 +236,12 @@ add_action( 'trade_hub_action_before_header', 'trade_hub_skip_to_content', 10 );
                         </nav>
                         <!-- #site-navigation -->
                         <div class="nav-holder">
-                           <button id="sec-menu-toggle" class="menu-toggle" aria-controls="secondary-menu" aria-expanded="false"><span class="fa fa-bars"></span></button>
+                           <button id="sec-menu-toggle" class="menu-toggle" aria-controls="secondary-menu" aria-expanded="false"><i class="fa fa-bars"></i></button>
                            <div id="sec-site-header-menu" class="site-header-menu">
                               <div class="container">
                                  <div class="row">
                                     <div class="col-xs-12 col-sm-12 col-md-12">
-                                       <button id="mobile-menu-toggle-close" class="menu-toggle" aria-controls="secondary-menu"><span class="fa fa-close"></span></button>
+                                       <button id="mobile-menu-toggle-close" class="menu-toggle" aria-controls="secondary-menu"><i class="fa fa-close"></i></button>
                                     </div>
                                     <div class="col-xs-12 col-sm-12 col-md-12 trade-hub-main-nav">
                                        <nav id="sec-site-navigation-mobile" class="main-navigation sec-main-navigation" role="navigation" aria-label="secondary-menu">
