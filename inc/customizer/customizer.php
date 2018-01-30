@@ -64,6 +64,12 @@ Modify Theme Option Section Options
 require get_template_directory().'/inc/customizer/theme-option/option-panel.php';
 
 
+/******************************************
+main-home-page options
+ *******************************************/
+require get_template_directory().'/inc/customizer/main-home-page.php';
+
+
 
 /*Resetting all Values*/
 /**

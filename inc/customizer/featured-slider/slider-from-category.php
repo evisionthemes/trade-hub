@@ -6,7 +6,7 @@ global $trade_hub_repeated_settings_controls;
 global $trade_hub_customizer_defaults;
 
 /*defaults values*/
-$trade_hub_customizer_defaults['trade-hub-featured-slider-category'] = 0;
+$trade_hub_customizer_defaults['trade-hub-main-homepage-panel-category'] = 0;
 
 /*category selection*/
 $trade_hub_sections['trade-hub-home-featured-slider-category'] =
@@ -14,16 +14,14 @@ $trade_hub_sections['trade-hub-home-featured-slider-category'] =
         'priority'       => 50,
         'title'          => __( 'Select From Category', 'trade-hub' ),
         'description'    => __( 'This option only work when you have selected "Category" in "settings Option".', 'trade-hub' ),
-        'panel'          => 'trade-hub-featured-slider',
+        'panel'          => 'trade-hub-main-homepage-panel',
     );
 
-
-
 /*creating setting control for trade-hub-fs-Category start*/
-$trade_hub_settings_controls['trade-hub-featured-slider-category'] =
+$trade_hub_settings_controls['trade-hub-main-homepage-panel-category'] =
     array(
         'setting' =>     array(
-            'default'              => $trade_hub_customizer_defaults['trade-hub-featured-slider-category']
+            'default'              => $trade_hub_customizer_defaults['trade-hub-main-homepage-panel-category']
         ),
         'control' => array(
             'label'                 =>  __( 'Select Category For Slider', 'trade-hub' ),
