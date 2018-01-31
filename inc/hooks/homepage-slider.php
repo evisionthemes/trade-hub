@@ -104,7 +104,7 @@ if ( ! function_exists( 'trade_hub_featured_home_slider' ) ) :
         $trade_hub_feature_slider_number = absint( $trade_hub_customizer_all_values['trade-hub-featured-slider-number'] );
         $trade_hub_feature_enable_title = $trade_hub_customizer_all_values['trade-hub-fs-enable-title'];
         $trade_hub_feature_enable_caption = $trade_hub_customizer_all_values['trade-hub-fs-enable-caption'];
-        $trade_hub_feature_enable_search = $trade_hub_customizer_all_values['trade-hub-search-enable'];
+        // $trade_hub_feature_enable_search = $trade_hub_customizer_all_values['trade-hub-search-enable'];
         $trade_hub_feature_button_text = $trade_hub_customizer_all_values['trade-hub-fs-button-text'];
 
     ?>

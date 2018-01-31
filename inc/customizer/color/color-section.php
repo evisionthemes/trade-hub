@@ -44,8 +44,8 @@ $trade_hub_settings_controls['trade-hub-site-identity-color'] =
             'default'              => $trade_hub_customizer_defaults['trade-hub-site-identity-color'],
         ),
         'control' => array(
-            'label'                 =>  __( 'Site Identity Color', 'trade-hub' ),
-            'description'           =>  __( 'Site title and tagline color', 'trade-hub' ),
+            'label'                 =>  esc_html__( 'Site Identity Color', 'trade-hub' ),
+            'description'           =>  esc_html__( 'Site title and tagline color', 'trade-hub' ),
             'section'               => 'colors',
             'type'                  => 'color',
             'priority'              => 20,
@@ -59,7 +59,7 @@ $trade_hub_settings_controls['trade-hub-primary-color'] =
             'default'              => $trade_hub_customizer_defaults['trade-hub-primary-color'],
         ),
         'control' => array(
-            'label'                 =>  __( 'Primary Color', 'trade-hub' ),
+            'label'                 =>  esc_html__( 'Primary Color', 'trade-hub' ),
             'section'               => 'colors',
             'type'                  => 'color',
             'priority'              => 30,
@@ -74,8 +74,8 @@ $trade_hub_settings_controls['trade-hub-color-reset'] =
             'transport'            => 'postmessage',
         ),
         'control' => array(
-            'label'                 =>  __( 'Reset', 'trade-hub' ),
-            'description'           =>  __( 'Caution: Reset all color settings above to default. Refresh the page after saving to view the effects', 'trade-hub' ),
+            'label'                 =>  esc_html__( 'Reset', 'trade-hub' ),
+            'description'           =>  esc_html__( 'Caution: Reset all color settings above to default. Refresh the page after saving to view the effects', 'trade-hub' ),
             'section'               => 'colors',
             'type'                  => 'checkbox',
             'priority'              => 220,

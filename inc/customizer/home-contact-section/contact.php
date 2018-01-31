@@ -16,9 +16,9 @@ $trade_hub_customizer_defaults['trade-contact-phone']  = esc_html__('+977-123456
 // create a section for call to action
 $trade_hub_sections['trade-hub-contact-section'] = 
 array(
-	'title'					=> esc_html__('Contact-Us','trade-hub'),
+	'title'					=> esc_html__('Contact','trade-hub'),
 	'panel'					=> 'trade-hub-main-homepage-panel',
-	'priority'				=> 250
+	'priority'				=> 260
 );
 
 // create a setting control for enable option

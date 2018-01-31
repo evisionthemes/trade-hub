@@ -10,7 +10,7 @@ $trade_hub_customizer_defaults['trade-hub-enable-back-to-top'] = 1;
 $trade_hub_sections['trade-hub-back-to-top-options'] =
     array(
         'priority'       => 80,
-        'title'          => __( 'Back To Top Options', 'trade-hub' ),
+        'title'          => esc_html__( 'Back To Top Options', 'trade-hub' ),
         'panel'          => 'trade-hub-theme-options'
     );
 
@@ -20,7 +20,7 @@ $trade_hub_settings_controls['trade-hub-enable-back-to-top'] =
             'default'              => $trade_hub_customizer_defaults['trade-hub-enable-back-to-top'],
         ),
         'control' => array(
-            'label'                 =>  __( 'Enable Back To Top', 'trade-hub' ),
+            'label'                 =>  esc_html__( 'Enable Back To Top', 'trade-hub' ),
             'section'               => 'trade-hub-back-to-top-options',
             'type'                  => 'checkbox',
             'priority'              => 50,

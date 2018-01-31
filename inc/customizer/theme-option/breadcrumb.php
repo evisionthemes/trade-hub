@@ -10,7 +10,7 @@ $trade_hub_customizer_defaults['trade-hub-enable-breadcrumb'] = 1;
 $trade_hub_sections['trade-hub-breadcrumb-options'] =
     array(
         'priority'       => 50,
-        'title'          => __( 'Breadcrumb Options', 'trade-hub' ),
+        'title'          => esc_html__( 'Breadcrumb Options', 'trade-hub' ),
         'panel'          => 'trade-hub-theme-options',
     );
 
@@ -20,7 +20,7 @@ $trade_hub_settings_controls['trade-hub-enable-breadcrumb'] =
             'default'              => $trade_hub_customizer_defaults['trade-hub-enable-breadcrumb'],
         ),
         'control' => array(
-            'label'                 =>  __( 'Enable Breadcrumb', 'trade-hub' ),
+            'label'                 =>  esc_html__( 'Enable Breadcrumb', 'trade-hub' ),
             'section'               => 'trade-hub-breadcrumb-options',
             'type'                  => 'checkbox',
             'priority'              => 10,
