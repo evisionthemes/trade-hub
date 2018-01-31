@@ -96,12 +96,11 @@ if( ! function_exists( 'trade_hub_inline_style' ) ) :
             .tagcloud a:hover,
             .left.contact,
             a.border-btn,
-            section.section-wrapper h1:after,
-            .text-div.right,
-            section.callback-section,
+            section.section-wrapper h1:after,            
             .ribbon span,
             .slick-prev:hover:before, 
-            .slick-next:hover:before{
+            .slick-next:hover:before,
+            .nav-holder #sec-menu-toggle{
               background-color: <?php echo esc_attr( $trade_hub_primary_color_option );?>;
             }
 
@@ -148,11 +147,12 @@ if( ! function_exists( 'trade_hub_inline_style' ) ) :
             .popular:hover i,
             .comment:hover i,
             .recent:hover i,
-            .feature-content i,
             .testimonials-content p:before,
             a.blog-meta:hover,
             a.blog-meta:focus,
-            .testimonials-content p:after{
+            .testimonials-content p:after,
+            a.know-more:hover,
+            a.know-more:focus{
               color: <?php echo esc_attr( $trade_hub_primary_color_option );?> !important;
             }
         <?php
