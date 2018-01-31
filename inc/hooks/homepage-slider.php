@@ -159,8 +159,8 @@ if ( ! function_exists( 'trade_hub_featured_home_slider' ) ) :
        <div class="container">
           <div class="row">
              <h1>our amazing feature</h1>            
-             <div class="feature-icon-content-wrapper col-md-6">
-               <div class="col-md-12">
+             <div class="feature-icon-content-wrapper col-md-12">
+               <div class="col-md-4 col-sm-4 col-xs-12">
                   <div class="feature-content">
                      <i class="fa fa-desktop"></i>
                      <div class="content-right">
@@ -169,7 +169,7 @@ if ( ! function_exists( 'trade_hub_featured_home_slider' ) ) :
                      </div><!--content -->
                   </div><!-- feature content -->
                </div><!-- col-md-12 -->
-               <div class="col-md-12">
+               <div class="col-md-4 col-sm-4 col-xs-12">
                   <div class="feature-content">
                      <i class="fa fa-desktop"></i>
                      <div class="content-right">
@@ -178,7 +178,7 @@ if ( ! function_exists( 'trade_hub_featured_home_slider' ) ) :
                      </div><!-- content -->
                   </div><!-- feature content -->
                </div><!-- col-md-12 -->
-               <div class="col-md-12">
+               <div class="col-md-4 col-sm-4 col-xs-12">
                   <div class="feature-content">
                      <i class="fa fa-desktop"></i>
                      <div class="content-right">
@@ -187,30 +187,29 @@ if ( ! function_exists( 'trade_hub_featured_home_slider' ) ) :
                      </div><!-- content -->
                   </div><!-- feature content -->
                </div><!-- col-md-12 -->               
-             </div><!-- md-6 -->
-              <div class="feature-text-content-wrapper col-md-6">
-               <div class="col-md-12">
-                 <div class="content-left">                 
-                   <div id="f1_container">
-                    <div id="f1_card" class="shadow">
-                      <div class="front face">
-                        <img src="<?php bloginfo('template_url'); ?>/assets/images/3.jpg" />
-                      </div><!-- image -->
-                      <div class="back face center"><!-- put background image inline style here -->
-                       <a href="#">About us</a>
-                      </div><!-- back face -->
-                    </div><!-- f1 card -->
-                    </div><!-- f1 container -->
-                   <div class="left-text-content">
-                    <h3><a href="#">something about us</a></h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                   </div>
-                 </div>
-               </div>
-             </div>
+             </div><!-- md-6 -->              
           </div><!-- row -->
        </div><!-- container -->
     </section><!-- feature section end -->    
+    <section class="about-section section-wrapper">
+      <div class="container">
+        <div class="row">
+          <div class="feature-text-content-wrapper col-md-12">
+              <div class="content-left clearfix">   
+                <div class="col-md-6 col-xs-12 col-sm-6">
+                  <div class="left-text-content feature-section">
+                    <h3><a href="#">Why choose us</a></h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.Lorem ipsum dolor sit amet, 
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.Lorem ipsum dolor sit amet, consectetur adipiscing elitconsectetur adipiscing elit</p>
+                    <a href="#" class="know-more">know more</a>
+                  </div>
+                </div><!-- col-md-6 -->                  
+              </div>
+           </div>
+        </div>
+      </div>
+    </section><!-- about section -->
     <section class="portfolio-first section-wrapper" id="portfolio">
        <div class="background-image-div portfolio-left"><!-- put background image link here -->
           <div class="bg-overlay">
@@ -307,7 +306,7 @@ if ( ! function_exists( 'trade_hub_featured_home_slider' ) ) :
           <h1>latest news</h1>
           <div class="col-md-4 col-sm-4 col-xs-12">
             <div class="th-news-wrapper">
-            <div class="ribbon"><span>POPULAR</span></div>
+            <div class="ribbon"><a href="#"><span>POPULAR</span></a></div>
               <div class="news-image">
                  <img class="img-responsive" src="<?php bloginfo('template_url'); ?>/assets/images/3.jpg" />
               </div><!-- img -->
@@ -320,7 +319,7 @@ if ( ! function_exists( 'trade_hub_featured_home_slider' ) ) :
           </div><!-- col-md-4 -->
           <div class="col-md-4 col-sm-4 col-xs-12">
             <div class="th-news-wrapper">
-            <div class="ribbon"><span>POPULAR</span></div>
+            <div class="ribbon"><a href="#"><span>SPORTS</span></a></div>
               <div class="news-image">
                  <img class="img-responsive" src="<?php bloginfo('template_url'); ?>/assets/images/3.jpg" />
               </div><!-- img -->
@@ -333,7 +332,7 @@ if ( ! function_exists( 'trade_hub_featured_home_slider' ) ) :
           </div><!-- col-md-4 -->
           <div class="col-md-4 col-sm-4 col-xs-12">
             <div class="th-news-wrapper">
-            <div class="ribbon"><span>POPULAR</span></div>
+            <div class="ribbon"><a href="#"><span>SHOP</span></a></div>
               <div class="news-image">
                  <img class="img-responsive" src="<?php bloginfo('template_url'); ?>/assets/images/3.jpg" />
               </div><!-- img -->
