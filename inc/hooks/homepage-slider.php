@@ -191,7 +191,7 @@ if ( ! function_exists( 'trade_hub_featured_home_slider' ) ) :
           </div><!-- row -->
        </div><!-- container -->
     </section><!-- feature section end -->    
-    <section class="about-section section-wrapper">
+    <section class="about-section section-wrapper"><!-- background image style here -->
       <div class="container">
         <div class="row">
           <div class="feature-text-content-wrapper col-md-12">

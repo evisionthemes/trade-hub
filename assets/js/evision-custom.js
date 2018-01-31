@@ -7,6 +7,7 @@ jQuery(window).on('load', function () {
     'overflow': 'visible'
   });
 })
+
 // On Document Ready
 jQuery(document).ready(function ($) {
   goToTop();

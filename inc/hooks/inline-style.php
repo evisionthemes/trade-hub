@@ -100,7 +100,8 @@ if( ! function_exists( 'trade_hub_inline_style' ) ) :
             .ribbon span,
             .slick-prev:hover:before, 
             .slick-next:hover:before,
-            .nav-holder #sec-menu-toggle{
+            .nav-holder #sec-menu-toggle,
+            section.callback-section{
               background-color: <?php echo esc_attr( $trade_hub_primary_color_option );?>;
             }
 
