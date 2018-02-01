@@ -369,6 +369,7 @@ p {
   margin-bottom: 15px;
   font-size: 14px;
   line-height: 1.7;
+  color: #444;
 }
 
 q,
@@ -1380,6 +1381,7 @@ span.fa.fa-bars {
 .fa-times:before {
   content: "x";
   font-family: sans-serif;
+  font-size: 16px;
 }
 
 .fa-search-plus:before {
@@ -8066,7 +8068,7 @@ button#mobile-menu-toggle-close {
 @media screen and (max-width: 767px) {
   .social-nav ul {
     padding-left: 0;
-    text-align: center;
+    text-align: left;
   }
 }
 
@@ -9914,14 +9916,17 @@ i.fa.fa-bars.top-nav-mobile {
 .navbar-fixed-top {
   position: fixed;
   z-index: 99999;
-  box-shadow: 0 0 8px #bfbfbf;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
   transition: all 0.5s;
+  top: 0;
 }
 
 
 /* home page slider */
+section#banner-section {
+  border-bottom: 5px solid;
+}
 
 .banner-slider {
   text-align: center;
@@ -9947,35 +9952,42 @@ i.fa.fa-bars.top-nav-mobile {
 }
 
 .overlay {
-  height: calc(100vh - 150px);
+  height: calc(100vh - 160px);
   position: relative;
-  background: rgba(0, 0, 0, 0.5)
-}
+/*  background: rgba(0, 0, 0, 0.5)
+*/}
 
 .banner-content-inner {
   position: absolute;
   top: 50%;
   transform: translate(0, -50%);
   z-index: 999;
+  background: rgba(0, 0, 0, 0.23921568627450981);
+  max-width: 900px;
+  width: 100%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  padding: 0 16px 30px;
 }
 
 a.border-btn {
-  color: #fff;
+  color: #000;
   font-size: 18px;
   padding: 12px 55px;
-  border-radius: 4px;
+  border-radius: 0;
   -webkit-transition: width 0.5s;
   transition: width 0.5s;
   text-transform: uppercase;
+  border: 1px solid #cacaca;
+  background: #fff;
 }
 
 a.border-btn:hover,
 a.border-btn:focus,
 a.border-btn:active {
   background: #fff;
-  color: #000;
   text-decoration: none;
-  border: 2px solid #0000007d;
   box-shadow: none;
   outline: none;
 }
@@ -10006,11 +10018,11 @@ section.section-wrapper h1 {
   text-transform: capitalize;
   position: relative;
   margin-top: 0;
-  color: rgba(0, 0, 0, 0.54);
+  margin-bottom: 40px;
+  color: #444;
 }
 
-
-/*section.section-wrapper h1:after {
+section.section-wrapper h1:after {
   content: "";
   left: 0;
   right: 0;
@@ -10021,7 +10033,7 @@ section.section-wrapper h1 {
   right: 0;
   margin: auto;
   margin-top: 10px;
-}*/
+}
 
 .portfolio-second.section-wrapper {
   padding-top: 0;
@@ -10073,13 +10085,12 @@ section#portfolio .bg-overlay {
 
 section#portfolio h1,
 section#portfolio h2 {
-  color: rgba(0, 0, 0, 0.54);
+  color: #444;
 }
 
 p.portfolio-description {
   margin: 0;
   padding: 3px 0 28px;
-  color: #000;
 }
 
 .listing h3 {
@@ -10098,9 +10109,7 @@ p.portfolio-description {
 }
 
 .listing p {
-  font-size: 14px;
   font-style: italic;
-  color: #000;
   padding-left: 24px;
 }
 
@@ -10120,6 +10129,7 @@ p.portfolio-description {
     float: none;
     background: #fbfbfb;
     padding: 10px 20px;
+    margin-top: 30px;
   }
   .background-image-div.portfolio-left {
     width: 100%;
@@ -10143,22 +10153,23 @@ section#trade-hub-feature h1 {
   font-size: 24px;
   padding: 15px;
   transition: all .5s;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   color: rgba(0, 0, 0, 0.54);
   transform: scale(1.2);
+  background: #fff;
+  border-radius: 50%;
 }
 
 .feature-content {
   padding: 10px;
   display: inline-block;
-  margin-top: 15px;
   transition: all .5s;
   position: relative;
   text-align: center;
 }
 
 .feature-content:hover {
-  box-shadow: 0 0 3px #bdbdbd;
+  box-shadow: 0 0 1px #bdbdbd;
   background: #fff;
 }
 
@@ -10286,8 +10297,15 @@ a.know-more:after {
 }
 
 @media screen and (max-width:767px) {
-  section.about-section:after {
-    display: none;
+  section.about-section {
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 40px;
+    padding: 20px 0;
+  }
+  .left-text-content.feature-section {
+    background: rgba(230, 230, 230, 0.83);
+    padding: 20px;
   }
 }
 
@@ -10306,6 +10324,11 @@ section.callback-section {
   color: #000;
   text-align: center;
   padding: 50px 0 30px;
+  transition: .5s;
+}
+
+.overlay-callback:hover {
+  background: transparent;
 }
 
 section .overlay-callback h1 {
@@ -10314,6 +10337,10 @@ section .overlay-callback h1 {
   text-transform: uppercase;
   text-align: left;
   margin: 0;
+}
+
+section .overlay-callback h1:after {
+  width: 0;
 }
 
 .overlay-callback p {
