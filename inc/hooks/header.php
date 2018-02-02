@@ -280,7 +280,7 @@ add_action( 'trade_hub_action_before_header', 'trade_hub_skip_to_content', 10 );
           </div>
         </header>
         <?php if ( is_front_page() ) {
-          do_action('homepage-main-slider');
+          // do_action('trade_hub_homepage');
         } ?>
 <div id="content" class="container site-content">
 <?php

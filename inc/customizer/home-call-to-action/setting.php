@@ -9,7 +9,7 @@ global $trade_hub_customizer_defaults;
 // defaults value's
 $trade_hub_customizer_defaults['trade-hub-call-action-enable-option']  = 1;
 $trade_hub_customizer_defaults['trade-hub-call-action-button-text']  = esc_html__('BUY NOW','trade-hub');
-$trade_hub_customizer_defaults['trade-hub-call-action-single-word']	= 30;
+// $trade_hub_customizer_defaults['trade-hub-call-action-single-word']	= 30;
 $trade_hub_customizer_defaults['trade-hub-call-action-main-text']	= esc_html__('USE THIS BUTTON FOR CALL TO ACTION','trade-hub');
 $trade_hub_customizer_defaults['trade-hub-call-action-link']	= '#';
 
@@ -39,19 +39,19 @@ array(
 );
 
 // create a setting control for single word
-$trade_hub_settings_controls['trade-hub-call-action-single-word']  =
-array(
-	'setting'				=> array(
-		'default'			=> $trade_hub_customizer_defaults['trade-hub-call-action-single-word']
-	),
-	'control'				=> array(
-		'label'				=> esc_html__('Select Number Of Word','trade-hub'),
-		'section'			=> 'trade-hub-call-action-section',
-		'type'				=> 'text',
-		'priority'			=> 20,
-		'active_callback'	=> ''
-	)
-);
+// $trade_hub_settings_controls['trade-hub-call-action-single-word']  =
+// array(
+// 	'setting'				=> array(
+// 		'default'			=> $trade_hub_customizer_defaults['trade-hub-call-action-single-word']
+// 	),
+// 	'control'				=> array(
+// 		'label'				=> esc_html__('Select Number Of Word','trade-hub'),
+// 		'section'			=> 'trade-hub-call-action-section',
+// 		'type'				=> 'text',
+// 		'priority'			=> 20,
+// 		'active_callback'	=> ''
+// 	)
+// );
 
 // create a setting control for page
 $trade_hub_settings_controls['trade-hub-call-action-main-text']  =
