@@ -155,8 +155,153 @@ if ( ! function_exists( 'trade_hub_featured_home_slider' ) ) :
 
     </div><!-- wrapper -->
     </section><!-- section -->
-    <!-- home page sections -->  
-      
+    <!-- home page sections -->
+    <section class="feature-section section-wrapper" id="trade-hub-feature">
+       <div class="container">
+          <div class="row">
+             <h1>our amazing feature</h1>            
+             <div class="feature-icon-content-wrapper col-md-12">
+               <div class="col-md-4 col-sm-4 col-xs-12">
+                  <div class="feature-content">
+                     <i class="fa fa-desktop"></i>
+                     <div class="content-right">
+                        <h3><a href="#">responsive layout</a></h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                     </div><!--content -->
+                  </div><!-- feature content -->
+               </div><!-- col-md-12 -->
+               <div class="col-md-4 col-sm-4 col-xs-12">
+                  <div class="feature-content">
+                     <i class="fa fa-desktop"></i>
+                     <div class="content-right">
+                        <h3><a href="#">responsive layout</a></h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                     </div><!-- content -->
+                  </div><!-- feature content -->
+               </div><!-- col-md-12 -->
+               <div class="col-md-4 col-sm-4 col-xs-12">
+                  <div class="feature-content">
+                     <i class="fa fa-desktop"></i>
+                     <div class="content-right">
+                        <h3><a href="#">responsive layout</a></h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                     </div><!-- content -->
+                  </div><!-- feature content -->
+               </div><!-- col-md-12 -->               
+             </div><!-- md-6 -->              
+          </div><!-- row -->
+       </div><!-- container -->
+    </section><!-- feature section end -->    
+    <section class="about-section section-wrapper"><!-- background image style here -->
+      <div class="container">
+        <div class="row">
+          <div class="feature-text-content-wrapper col-md-12">
+              <div class="content-left clearfix">   
+                <div class="col-md-6 col-xs-12 col-sm-6">
+                  <div class="left-text-content feature-section">
+                    <h3><a href="#">Why choose us</a></h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.Lorem ipsum dolor sit amet, 
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.Lorem ipsum dolor sit amet, consectetur adipiscing elitconsectetur adipiscing elit</p>
+                    <a href="#" class="know-more">know more</a>
+                  </div>
+                </div><!-- col-md-6 -->                  
+              </div>
+           </div>
+        </div>
+      </div>
+    </section><!-- about section -->
+    <section class="portfolio-first section-wrapper" id="portfolio">
+       <div class="background-image-div portfolio-left"><!-- put background image link here -->
+          <div class="bg-overlay">
+          </div>
+       </div><!-- background image div -->
+       <div class="text-div right">
+          <h2>GREAT PRODUCT OF COMPANY</h2>
+          <p class="portfolio-description">Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally</p>
+          <div class="listing">
+             <h3>PSD TO HTML5/CSS3</h3>
+             <p>Paetos dignissim at cursus elefeind norma arcu.velim pellentesque 
+                uter justo magna gravida.
+             </p>
+             <h3>HOSTING & DOMAIN SERVICES</h3>
+             <p>Paetos dignissim at cursus elefeind norma arcu.velim pellentesque 
+                uter justo magna gravida.
+             </p>
+             <h3>GET PLAN YOUR BUSINESS</h3>
+             <p>Paetos dignissim at cursus elefeind norma arcu.velim pellentesque 
+                uter justo magna gravida.
+             </p>
+          </div>
+       </div><!-- right section -->
+    </section><!--portfolio section -->        
+    <section class="testimonials-section section-wrapper"><!-- testimonials section start here -->
+       <div class="container">
+          <div class="row">
+             <h1>testimonials</h1>
+             <div class="testimonials">
+                <div class="col-md-4 col-sm-4 col-xs-12 testimonials-wrapper">
+                  <div class="testimonials-content">
+                      <div id="f1_container">
+                        <div id="f1_card" class="shadow">
+                          <div class="front face">
+                            <img src="<?php bloginfo('template_url'); ?>/assets/images/3.jpg" />
+                          </div><!-- testimonials image -->
+                          <div class="back face center"><!-- put background image inline style here -->
+                           <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, whilen an unknown printer took a…</p>
+                          </div>
+                        </div>
+                      </div><!-- flip 1 container -->
+                      <h4><a href="#">John doe</a></h4><!-- custom link for testimonials -->
+                   </div><!-- testimonials content -->
+                </div><!-- wrapper -->
+                <div class="col-md-4 col-sm-4 col-xs-12 testimonials-wrapper">
+                   <div class="testimonials-content">
+                      <div id="f1_container">
+                        <div id="f1_card" class="shadow">
+                          <div class="front face">
+                            <img src="<?php bloginfo('template_url'); ?>/assets/images/3.jpg" />
+                          </div><!-- testimonials image -->
+                          <div class="back face center"><!-- put background image inline style here -->
+                           <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, whilen an unknown printer took a…</p>
+                          </div>
+                        </div>
+                      </div><!-- flip 1 container -->
+                      <h4><a href="#">John doe</a></h4><!-- custom link for testimonials -->
+                   </div><!-- testimonials content -->
+                </div><!-- wrapper -->
+                <div class="col-md-4 col-sm-4 col-xs-12 testimonials-wrapper">
+                  <div class="testimonials-content">
+                      <div id="f1_container">
+                        <div id="f1_card" class="shadow">
+                          <div class="front face">
+                            <img src="<?php bloginfo('template_url'); ?>/assets/images/3.jpg" />
+                          </div><!-- testimonials image -->
+                          <div class="back face center"><!-- put background image inline style here -->
+                           <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, whilen an unknown printer took a…</p>
+                          </div>
+                        </div>
+                      </div><!-- flip 1 container -->
+                      <h4><a href="#">John doe</a></h4><!-- custom link for testimonials -->
+                   </div><!-- testimonials content -->
+                </div><!-- wrapper -->               
+             </div><!-- testimonials -->
+          </div><!-- row -->
+       </div><!-- container -->
+    </section><!-- testimonials section end -->    
+    <section class="callback-section section-wrapper" id="trade-hub-callback">
+       <div class="overlay-callback">
+         <div class="container">
+            <div class="col-md-9 call-toaction-text">
+              <h1>use this button for call to action</h1>
+            </div><!-- title -->
+            <div class="col-md-3 call-to-action-btn">
+              <a href="#"" class="border-btn" >Buy now</a>
+            </div><!-- btn -->
+            </div><!-- container -->
+       </div><!-- overlay -->
+    </section><!-- call back section end -->   
+
     <section class="section-wrapper" id="th-news">
       <div class="container">
         <div class="row">

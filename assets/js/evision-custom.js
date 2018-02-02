@@ -7,6 +7,7 @@ jQuery(window).on('load', function () {
     'overflow': 'visible'
   });
 })
+
 // On Document Ready
 jQuery(document).ready(function ($) {
   goToTop();
@@ -83,7 +84,10 @@ function navBar() {
     jQuery(".trade-hub-top-menu ul").slideToggle("1500");
   });
 
-
+  jQuery("#sec-menu-toggle").click(function () {
+    jQuery('button > i').toggleClass('fa-bars');
+    jQuery("button > i").toggleClass("fa-close");
+  });
   //hide and show search 
   jQuery(".nav-buttons").click(function () {
     jQuery("#top-search").slideToggle("fast");

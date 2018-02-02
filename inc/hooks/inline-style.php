@@ -95,12 +95,12 @@ if( ! function_exists( 'trade_hub_inline_style' ) ) :
             .nav-links .nav-next a,
             .tagcloud a:hover,
             .left.contact,
-            a.border-btn,
             section.section-wrapper h1:after,            
             .ribbon span,
             .slick-prev:hover:before, 
             .slick-next:hover:before,
-            .nav-holder #sec-menu-toggle{
+            .nav-holder #sec-menu-toggle,
+            section.callback-section{
               background-color: <?php echo esc_attr( $trade_hub_primary_color_option );?>;
             }
 
@@ -114,6 +114,10 @@ if( ! function_exists( 'trade_hub_inline_style' ) ) :
             a.border-btn,
             .ribbon span::before {
               border-color: <?php echo esc_attr( $trade_hub_primary_color_option );?>; 
+            }
+
+            section#banner-section {
+              border-bottom-color: <?php echo esc_attr( $trade_hub_primary_color_option );?> !important; 
             }
 
             @media screen and (min-width: 768px){
@@ -152,7 +156,11 @@ if( ! function_exists( 'trade_hub_inline_style' ) ) :
             a.blog-meta:focus,
             .testimonials-content p:after,
             a.know-more:hover,
-            a.know-more:focus{
+            a.know-more:focus,
+            a.border-btn:hover,
+            a.border-btn:focus,
+            a.border-btn:active,
+            .feature-content:hover i{
               color: <?php echo esc_attr( $trade_hub_primary_color_option );?> !important;
             }
         <?php
