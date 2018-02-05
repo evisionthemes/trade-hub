@@ -6954,9 +6954,15 @@ aside#secondary .right-post-content .thumb-post .post-icons a:hover {
   }
 }
 
-div#content {
+div#content,
+body.home.page #primary {
   padding-top: 40px;
 }
+
+body.home.page div#content{
+  padding-top: 0;
+}
+
 
 .site-content #primary,
 .site-content #secondary {
