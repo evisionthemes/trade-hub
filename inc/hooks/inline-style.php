@@ -89,10 +89,7 @@ if( ! function_exists( 'trade_hub_inline_style' ) ) :
             .main-navigation.sec-main-navigation ul li.current_page_item:before,
             .comments-area input[type="submit"],
             .slider-controls a i,
-            .tabs-menu li.current,
-            .read-more-text a,
-            .nav-links .nav-previous a, 
-            .nav-links .nav-next a,
+            .tabs-menu li.current,           
             .tagcloud a:hover,
             .left.contact,
             section.section-wrapper h1:after,            
@@ -108,9 +105,7 @@ if( ! function_exists( 'trade_hub_inline_style' ) ) :
             .widgettitle,
             .wrapper-slider,
             .flip-container .front,
-            .flip-container .back,
-            .nav-links .nav-previous a:hover,
-            .nav-links .nav-next a:hover,
+            .flip-container .back,            
             a.border-btn,
             .ribbon span::before {
               border-color: <?php echo esc_attr( $trade_hub_primary_color_option );?>; 

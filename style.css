@@ -809,7 +809,7 @@ dt {
 
 .nav-links .nav-previous a,
 .nav-links .nav-next a {
-  color: #ffffff;
+  color: #000;
   display: inline-block;
   font-size: 18px;
   padding: 5px 17px;
@@ -821,23 +821,25 @@ dt {
   -moz-transition: all 0.5s ease 0.1s;
   transition: all 0.5s ease 0.1s;
   border-radius: 4px;
+  background-color: #efefef;
+  border: 1px solid #efefef;
 }
 
 .nav-links .nav-previous a:hover,
 .nav-links .nav-next a:hover {
-  background: #000;
+  background: #fff;
 }
 
-.nav-next a:before {
-  content: "\f100";
-  font-family: fontAwesome;
-  padding-right: 10px;
-}
-
-.nav-previous a:after {
+.nav-next a:after {
   content: "\f101";
   font-family: fontAwesome;
   padding-left: 10px;
+}
+
+.nav-previous a:before {
+  content: "\f100";
+  font-family: fontAwesome;
+  padding-right: 10px;
 }
 
 @media screen and (min-width: 1199px) {
@@ -870,15 +872,15 @@ body.single span.post-navi {
 
 body.single .nav-links .nav-previous a,
 body.single .nav-links .nav-next a {
-  background: none;
+  background: #efefef;
   border: 1px solid rgba(0, 0, 0, 0.15);
-  color: rgba(0, 0, 0, 0.55);
+  color: #000;
   margin-bottom: 10px;
 }
 
 body.single .nav-links .nav-previous a:hover,
 body.single .nav-links .nav-next a:hover {
-  background: #e0e0e0;
+  background: #fff;
 }
 
 @media screen and (max-width: 767px) {
@@ -5317,14 +5319,6 @@ dd {
   transition: bottom 0.5s linear, opacity 0.5s linear, border-radius 0.5s linear;
 }
 
-.evision-back-to-top:hover,
-.evision-back-to-top:active {
-  -webkit-border-radius: 100%;
-  -moz-border-radius: 100%;
-  -ms-border-radius: 100%;
-  border-radius: 100%;
-}
-
 .evision-back-to-top i,
 .evision-back-to-top:focus i,
 .evision-back-to-top:visited i {
@@ -7216,6 +7210,7 @@ span.notice-title:before {
 .site-header .wrapper-site-identity .site-description {
   margin-bottom: 0;
   margin-top: 0;
+  padding-top: 7px;
   font-size: 14px;
 }
 
@@ -7402,7 +7397,7 @@ span.notice-title:before {
 .wrap-nav .wrap-inner .nav-buttons {
   float: right;
   text-align: right;
-  width: 90px;
+  width: 30px;
   padding: 3px 0;
   position: absolute;
   top: 0;
@@ -8722,6 +8717,10 @@ a#slide-next {
   transition: background-position 0.5s linear;
 }
 
+.call-to-action-btn {
+  float: right;
+}
+
 .wrapper-callback h2 {
   font-size: 32px;
   font-size: 2rem;
@@ -9822,12 +9821,12 @@ body article.sticky:hover {
 /* read more text button */
 
 .read-more-text a {
-  color: #fff;
+  color: #000;
   padding: 10px;
   margin: 10px 0;
   font-size: 17px;
-  box-shadow: 0 2px 2px #dedede;
   border-radius: 4px;
+  border: 1px solid #efefef;
 }
 
 article.sticky .read-more-text a {
@@ -9845,9 +9844,7 @@ article.sticky .read-more-text a {
 }
 
 .read-more-text a:hover {
-  background: rgba(0, 0, 0, 0.95);
   letter-spacing: 1px;
-  color: #fff !important;
 }
 
 body .content-start article .entry-content {
@@ -10081,8 +10078,20 @@ section#portfolio .bg-overlay {
   padding: 30px 54px;
   background: #fff;
   z-index: 9;
+  position: relative;
 }
-
+@media screen and (min-width:767px) {
+  .text-div.right:after {
+    content: "\f0d9";
+    left: -21px;
+    position: absolute;
+    top: 50%;
+    font-family: fontAwesome;
+    color: #fff;
+    font-size: 68px;
+    transform: translate(0,-50%);
+  }
+}
 section#portfolio h1,
 section#portfolio h2 {
   color: #444;
@@ -10309,6 +10318,18 @@ a.know-more:after {
   }
 }
 
+@media screen and (min-width:767px) {
+  .left-text-content.feature-section:after{
+    content: "\f0da";
+    right: -21px;
+    position: absolute;
+    top: 50%;
+    font-family: fontAwesome;
+    color: #fff;
+    font-size: 68px;
+    transform: translate(0,-50%);
+  }
+}
 
 /* callback section */
 
@@ -10626,6 +10647,9 @@ body {
   background-size: 250px;
 }
 
+
+
+  
 
 /* ==================================*/
 
