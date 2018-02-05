@@ -8,6 +8,7 @@ global $trade_hub_customizer_defaults;
 
 // default's value
 $trade_hub_customizer_defaults['trade-contact-enable-option']  = 1;
+$trade_hub_customizer_defaults['trade-contact-main-title']  = esc_html__('Contact Us','trade-hub');
 $trade_hub_customizer_defaults['trade-contact-localtion']  = esc_html__('NEW BANESHOWER,KATHMANDU NEPAL','trade-hub');
 $trade_hub_customizer_defaults['trade-contact-email']  = esc_html__('Evisionitnepal@gmail.com','trade-hub');
 $trade_hub_customizer_defaults['trade-contact-phone']  = esc_html__('+977-1234567890','trade-hub');
@@ -35,6 +36,23 @@ array(
 		'active_callback'	=> ''
 	)
 );
+
+
+// create a setting control fortitle text
+$trade_hub_settings_controls['trade-contact-main-title']  =
+array(
+	'setting'				=> array(
+		'default'			=> $trade_hub_customizer_defaults['trade-contact-main-title']
+	),
+	'control'				=> array(
+		'label'				=> esc_html__('Enable Contact Section','trade-hub'),
+		'section'			=> 'trade-hub-contact-section',
+		'type'				=> 'text',
+		'priority'			=> 15,
+		'active_callback'	=> ''
+	)
+);
+
 
 // setting control for contact us  location
 $trade_hub_settings_controls['trade-contact-localtion']  = 

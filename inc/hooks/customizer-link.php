@@ -18,7 +18,7 @@ if ( ! function_exists('customizer_link') ) :
 		global $trade_hub_customizer_all_values;
 		
 
-		 if ( 1 != $trade_hub_customizer_all_values['trade-hub-feature-slider-enable']  ) {
+		 if ( 1 != $trade_hub_customizer_all_values['trade-hub-feature-slider-enable'] && 1 != $trade_hub_customizer_all_values['trade-hub-our-service-enable-option']  &&  1 != $trade_hub_customizer_all_values['trade-hub-our-feature-section-enable']  ){
 		 	
         if ( current_user_can( 'edit_theme_options' ) ) { ?>
             <section class="wrapper display-info">

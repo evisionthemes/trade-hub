@@ -13,7 +13,7 @@ $trade_hub_customizer_defaults['trade-hub-fs-single-words'] = 30;
 $trade_hub_customizer_defaults['trade-hub-fs-enable-title'] = 1;
 $trade_hub_customizer_defaults['trade-hub-fs-enable-caption'] = 1;
 $trade_hub_customizer_defaults['trade-hub-fs-button-text'] = esc_html__('View More','trade-hub');
-$trade_hub_customizer_defaults['trade-hub-featured-slider-number'] = 5;
+$trade_hub_customizer_defaults['trade-hub-featured-slider-number'] = 2;
 $trade_hub_customizer_defaults['trade-hub-featured-slider-selection'] = 'from-page';
 
 /*feature slider enable setting*/
@@ -52,11 +52,7 @@ $trade_hub_settings_controls['trade-hub-featured-slider-number'] =
             'type'                  => 'select',
             'choices'               => array(
                 1 => esc_html__( '1', 'trade-hub' ),
-                2 => esc_html__( '2', 'trade-hub' ),
-                3 => esc_html__( '3', 'trade-hub' ),
-                4 => esc_html__( '4', 'trade-hub' ),
-                5 => esc_html__( '5', 'trade-hub' ),
-                6 => esc_html__( '6', 'trade-hub' )
+                2 => esc_html__( '2', 'trade-hub' )
             ),
             'priority'              => 20,
             'active_callback'       => ''
@@ -120,7 +116,7 @@ $trade_hub_settings_controls['trade-hub-featured-slider-category'] =
 /*creating setting control for trade-hub-fs-page start*/
 $trade_hub_repeated_settings_controls['trade-hub-featured-slider-pages'] =
     array(
-        'repeated' => 6,
+        'repeated' => 2,
         'trade-hub-fs-pages-ids' => array(
             'setting' =>     array(
                 'default'              => $trade_hub_customizer_defaults['trade-hub-featured-slider-pages'],

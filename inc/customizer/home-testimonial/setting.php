@@ -10,7 +10,7 @@ global $trade_hub_customizer_defaults;
 $trade_hub_customizer_defaults['trade-hub-testimonial-enable-option'] = 1;
 $trade_hub_customizer_defaults['trade-hub-testimonial-title-text'] = esc_html__('Testimonials','trade-hub');
 $trade_hub_customizer_defaults['trade-hub-testimonial-single-word'] = 30;
-$trade_hub_customizer_defaults['trade-hub-testimonial-from-page'] = 'from-page';
+$trade_hub_customizer_defaults['trade-hub-testimonial-from-page'] = 0;
 $trade_hub_customizer_defaults['trade-hub-testimonial-number-page'] = 3;
 
 

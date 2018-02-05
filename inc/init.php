@@ -41,7 +41,7 @@ require get_template_directory() . '/inc/hooks/header.php';
 
 require get_template_directory() . '/inc/hooks/footer.php';
 
-// require get_template_directory() . '/inc/hooks/homepage-feature.php';
+require get_template_directory() . '/inc/hooks/homepage-feature.php';
 
 require get_template_directory() . '/inc/hooks/homepage-our-service.php';
 
@@ -49,6 +49,15 @@ require get_template_directory() . '/inc/hooks/homepage-call-to-action.php';
 
 require get_template_directory() . '/inc/hooks/homepage-testimonial.php';
 
-require get_template_directory().'/inc/hooks/customizer-link.php';
+require get_template_directory() . '/inc/hooks/homepage-about-us.php';
+
+require get_template_directory() . '/inc/hooks/homepage-latestnews.php';
+
+require get_template_directory() . '/inc/hooks/homepage-contact-us.php';
+
+
+
+
+// require get_template_directory().'/inc/hooks/customizer-link.php';
 
 

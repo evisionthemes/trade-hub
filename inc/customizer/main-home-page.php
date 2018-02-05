@@ -26,19 +26,25 @@ require get_template_directory() .'/inc/customizer/home-our-service/our-service-
 // conetion of  testimonial section
 require get_template_directory() .'/inc/customizer/home-testimonial/setting.php';
 
+// conetion of  about us  section
+require get_template_directory() .'/inc/customizer/home-about-us/setting-from-page.php';
+
 // conetion of  call to action section
 require get_template_directory() .'/inc/customizer/home-call-to-action/setting.php';
 
 // conetion of  contact  section
 require get_template_directory() .'/inc/customizer/home-contact-section/contact.php';
 
-// conetion of  about-us  section
+// conetion of  contact-about-us  section
 require get_template_directory() .'/inc/customizer/home-contact-section/about-us.php';
 
 // conetion of  social link  section
-// require get_template_directory() .'/inc/customizer/home-contact-section/social-link.php';
+require get_template_directory() .'/inc/customizer/home-contact-section/social-link.php';
 
 // conetion of  latest news
 require get_template_directory() .'/inc/customizer/home-latest-news/from-page-setting.php';
+
+
+
 
 

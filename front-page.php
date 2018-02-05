@@ -24,7 +24,7 @@ if ( 'posts' == get_option( 'show_on_front' ) ) {
         $trade_hub_static_page = absint($trade_hub_customizer_all_values['trade-hub-enable-static-page']);
         // $trade_hub_static_page = 1;
         if ($trade_hub_static_page  == 1) { ?>
-            <div id="content" class="site-content container">
+            <div id="content" class=" container site-content ">
                 <div id="primary" class="content-area col-sm-8">
                     <main id="main" class="site-main" role="main">
                         <?php

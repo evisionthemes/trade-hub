@@ -12,8 +12,6 @@ $trade_hub_customizer_defaults['trade-about-us-select-page']  = '';
 $trade_hub_customizer_defaults['trade-about-us-single-word']  = 30;
 $trade_hub_customizer_defaults['trade-about-us-button-text']  = esc_html__('KNOW MORE','trade-hub');
 
-
-
 // create a setting control for single word
 $trade_hub_settings_controls['trade-about-us-single-word']  =
 array(
