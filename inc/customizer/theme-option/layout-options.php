@@ -17,7 +17,7 @@ $trade_hub_customizer_defaults['trade-hub-archive-image-align'] = 'full';
 $trade_hub_sections['trade-hub-layout-options'] =
     array(
         'priority'       => 20,
-        'title'          => __( 'Layout Options', 'trade-hub' ),
+        'title'          => esc_html__( 'Layout Options', 'trade-hub' ),
         'panel'          => 'trade-hub-theme-options',
     );
 
@@ -28,8 +28,8 @@ $trade_hub_settings_controls['trade-hub-enable-static-page'] =
             'default'              => $trade_hub_customizer_defaults['trade-hub-enable-static-page'],
         ),
         'control' => array(
-            'label'                 =>  __( 'Enable Static Front Page', 'trade-hub' ),
-            'description'           =>  __( 'If you disable this the static page will be disappera form the home page and other section from customizer will reamin as it is', 'trade-hub' ),
+            'label'                 =>  esc_html__( 'Enable Static Front Page', 'trade-hub' ),
+            'description'           =>  esc_html__( 'If you disable this the static page will be disappera form the home page and other section from customizer will reamin as it is', 'trade-hub' ),
             'section'               => 'trade-hub-layout-options',
             'type'                  => 'checkbox',
             'priority'              => 10,
@@ -43,7 +43,7 @@ $trade_hub_settings_controls['trade-hub-alternate-layout'] =
             'default'              => $trade_hub_customizer_defaults['trade-hub-alternate-layout'],
         ),
         'control' => array(
-            'label'                 =>  __( 'Alternate Archive Image Alignment', 'trade-hub' ),
+            'label'                 =>  esc_html__( 'Alternate Archive Image Alignment', 'trade-hub' ),
             'section'               => 'trade-hub-layout-options',
             'type'                  => 'checkbox',
             'priority'              => 10,
@@ -57,14 +57,14 @@ $trade_hub_settings_controls['trade-hub-default-layout'] =
             'default'              => $trade_hub_customizer_defaults['trade-hub-default-layout'],
         ),
         'control' => array(
-            'label'                 =>  __( 'Default Layout', 'trade-hub' ),
-            'description'           =>  __( 'Please note that this section can be overridden for individual page/posts', 'trade-hub' ),
+            'label'                 =>  esc_html__( 'Default Layout', 'trade-hub' ),
+            'description'           =>  esc_html__( 'Please note that this section can be overridden for individual page/posts', 'trade-hub' ),
             'section'               => 'trade-hub-layout-options',
             'type'                  => 'select',
             'choices'               => array(
-                'right-sidebar' => __( 'Content - Primary Sidebar', 'trade-hub' ),
-                'left-sidebar' => __( 'Primary Sidebar - Content', 'trade-hub' ),
-                'no-sidebar' => __( 'No Sidebar', 'trade-hub' )
+                'right-sidebar' => esc_html__( 'Content - Primary Sidebar', 'trade-hub' ),
+                'left-sidebar' => esc_html__( 'Primary Sidebar - Content', 'trade-hub' ),
+                'no-sidebar' => esc_html__( 'No Sidebar', 'trade-hub' )
             ),
             'priority'              => 10,
             'active_callback'       => ''
@@ -78,17 +78,17 @@ $trade_hub_settings_controls['trade-hub-single-post-image-align'] =
             'default'              => $trade_hub_customizer_defaults['trade-hub-single-post-image-align'],
         ),
         'control' => array(
-            'label'                 =>  __( 'Alignment Of Image In Single Post/Page', 'trade-hub' ),
+            'label'                 =>  esc_html__( 'Alignment Of Image In Single Post/Page', 'trade-hub' ),
             'section'               => 'trade-hub-layout-options',
             'type'                  => 'select',
             'choices'               => array(
-                'full' => __( 'Full', 'trade-hub' ),
-                'right' => __( 'Right', 'trade-hub' ),
-                'left' => __( 'Left', 'trade-hub' ),
-                'no-image' => __( 'No image', 'trade-hub' )
+                'full' => esc_html__( 'Full', 'trade-hub' ),
+                'right' => esc_html__( 'Right', 'trade-hub' ),
+                'left' => esc_html__( 'Left', 'trade-hub' ),
+                'no-image' => esc_html__( 'No image', 'trade-hub' )
             ),
             'priority'              => 40,
-            'description'           =>  __( 'Please note that this setting can be override from individual post/page', 'trade-hub' ),
+            'description'           =>  esc_html__( 'Please note that this setting can be override from individual post/page', 'trade-hub' ),
         )
     );
 
@@ -98,7 +98,7 @@ $trade_hub_settings_controls['trade-hub-single-post-image-align'] =
                 'default'              => $trade_hub_customizer_defaults['trade-hub-excerpt-length'],
             ),
             'control' => array(
-                'label'                 =>  __( 'Excerpt Length (in words)', 'trade-hub' ),
+                'label'                 =>  esc_html__( 'Excerpt Length (in words)', 'trade-hub' ),
                 'section'               => 'trade-hub-layout-options',
                 'type'                  => 'number',
                 'priority'              => 40,
@@ -111,14 +111,14 @@ $trade_hub_settings_controls['trade-hub-single-post-image-align'] =
                     'default'              => $trade_hub_customizer_defaults['trade-hub-archive-layout'],
                 ),
                 'control' => array(
-                    'label'                 =>  __( 'Archive Layout', 'trade-hub' ),
+                    'label'                 =>  esc_html__( 'Archive Layout', 'trade-hub' ),
                     'section'               => 'trade-hub-layout-options',
                     'type'                  => 'select',
                     'choices'               => array(
-                        'excerpt-only' => __( 'Excerpt Only', 'trade-hub' ),
-                        'thumbnail-and-excerpt' => __( 'Thumbnail and Excerpt', 'trade-hub' ),
-                        'full-post' => __( 'Full Post', 'trade-hub' ),
-                        'thumbnail-and-full-post' => __( 'Thumbnail and Full Post', 'trade-hub' ),
+                        'excerpt-only' => esc_html__( 'Excerpt Only', 'trade-hub' ),
+                        'thumbnail-and-excerpt' => esc_html__( 'Thumbnail and Excerpt', 'trade-hub' ),
+                        'full-post' => esc_html__( 'Full Post', 'trade-hub' ),
+                        'thumbnail-and-full-post' => esc_html__( 'Thumbnail and Full Post', 'trade-hub' ),
                     ),
                     'priority'              => 55,
                 )

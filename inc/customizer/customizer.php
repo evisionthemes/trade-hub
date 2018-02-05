@@ -56,7 +56,7 @@ require get_template_directory().'/inc/customizer/font/font-section.php';
 /******************************************
 Featured Slider options
  *******************************************/
-require get_template_directory().'/inc/customizer/featured-slider/slider-panel.php';
+// require get_template_directory().'/inc/customizer/featured-slider/slider-panel.php';
 
 /******************************************
 Modify Theme Option Section Options

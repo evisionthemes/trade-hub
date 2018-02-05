@@ -40,3 +40,15 @@ require get_template_directory() . '/inc/function/header-logo.php';
 require get_template_directory() . '/inc/hooks/header.php';
 
 require get_template_directory() . '/inc/hooks/footer.php';
+
+// require get_template_directory() . '/inc/hooks/homepage-feature.php';
+
+require get_template_directory() . '/inc/hooks/homepage-our-service.php';
+
+require get_template_directory() . '/inc/hooks/homepage-call-to-action.php';
+
+require get_template_directory() . '/inc/hooks/homepage-testimonial.php';
+
+require get_template_directory().'/inc/hooks/customizer-link.php';
+
+

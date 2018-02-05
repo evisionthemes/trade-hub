@@ -1,4 +1,5 @@
 <?php
+
 if ( ! function_exists( 'trade_hub_featured_slider_array' ) ) :
     /**
      * Featured Slider array creation
@@ -104,7 +105,7 @@ if ( ! function_exists( 'trade_hub_featured_home_slider' ) ) :
         $trade_hub_feature_slider_number = absint( $trade_hub_customizer_all_values['trade-hub-featured-slider-number'] );
         $trade_hub_feature_enable_title = $trade_hub_customizer_all_values['trade-hub-fs-enable-title'];
         $trade_hub_feature_enable_caption = $trade_hub_customizer_all_values['trade-hub-fs-enable-caption'];
-        $trade_hub_feature_enable_search = $trade_hub_customizer_all_values['trade-hub-search-enable'];
+        // $trade_hub_feature_enable_search = $trade_hub_customizer_all_values['trade-hub-search-enable'];
         $trade_hub_feature_button_text = $trade_hub_customizer_all_values['trade-hub-fs-button-text'];
 
     ?>
@@ -300,6 +301,7 @@ if ( ! function_exists( 'trade_hub_featured_home_slider' ) ) :
             </div><!-- container -->
        </div><!-- overlay -->
     </section><!-- call back section end -->   
+
     <section class="section-wrapper" id="th-news">
       <div class="container">
         <div class="row">
@@ -386,4 +388,4 @@ if ( ! function_exists( 'trade_hub_featured_home_slider' ) ) :
   }
 }
 endif;
-add_action( 'homepage-main-slider', 'trade_hub_featured_home_slider', 10 );
+add_action( 'trade_hub_homepage', 'trade_hub_featured_home_slider', 10 );

@@ -12,7 +12,7 @@ $trade_hub_customizer_defaults['trade-hub-enable-theme-name'] = 1;
 $trade_hub_sections['trade-hub-footer-options'] =
     array(
         'priority'       => 150,
-        'title'          => __( 'Footer Options', 'trade-hub' ),
+        'title'          => esc_html__( 'Footer Options', 'trade-hub' ),
         'panel'          => 'trade-hub-theme-options'
     );
 
@@ -22,15 +22,15 @@ $trade_hub_settings_controls['trade-hub-footer-sidebar-number'] =
             'default'              => $trade_hub_customizer_defaults['trade-hub-footer-sidebar-number'],
         ),
         'control' => array(
-            'label'                 =>  __( 'Number of Sidebars In Footer Area', 'trade-hub' ),
+            'label'                 =>  esc_html__( 'Number of Sidebars In Footer Area', 'trade-hub' ),
             'section'               => 'trade-hub-footer-options',
             'type'                  => 'select',
             'choices'               => array(
-                0 => __( 'Disable footer sidebar area', 'trade-hub' ),
-                1 => __( '1', 'trade-hub' ),
-                2 => __( '2', 'trade-hub' ),
-                3 => __( '3', 'trade-hub' ),
-                4 => __( '4', 'trade-hub' )
+                0 => esc_html__( 'Disable footer sidebar area', 'trade-hub' ),
+                1 => esc_html__( '1', 'trade-hub' ),
+                2 => esc_html__( '2', 'trade-hub' ),
+                3 => esc_html__( '3', 'trade-hub' ),
+                4 => esc_html__( '4', 'trade-hub' )
             ),
             'priority'              => 15,
             'description'           => '',
@@ -44,7 +44,7 @@ $trade_hub_settings_controls['trade-hub-copyright-text'] =
             'default'              => $trade_hub_customizer_defaults['trade-hub-copyright-text'],
         ),
         'control' => array(
-            'label'                 =>  __( 'Copyright Text', 'trade-hub' ),
+            'label'                 =>  esc_html__( 'Copyright Text', 'trade-hub' ),
             'section'               => 'trade-hub-footer-options',
             'type'                  => 'text_html',
             'priority'              => 20,

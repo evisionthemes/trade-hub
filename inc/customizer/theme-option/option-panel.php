@@ -3,7 +3,7 @@ global $trade_hub_panels;
 /*creating panel for theme settings*/
 $trade_hub_panels['trade-hub-theme-options'] =
     array(
-        'title'          => __( 'Theme Options', 'trade-hub' ),
+        'title'          => esc_html__( 'Theme Options', 'trade-hub' ),
         'priority'       => 235
     );
 

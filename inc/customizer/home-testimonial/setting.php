@@ -10,7 +10,8 @@ global $trade_hub_customizer_defaults;
 $trade_hub_customizer_defaults['trade-hub-testimonial-enable-option'] = 1;
 $trade_hub_customizer_defaults['trade-hub-testimonial-title-text'] = esc_html__('Testimonials','trade-hub');
 $trade_hub_customizer_defaults['trade-hub-testimonial-single-word'] = 30;
-$trade_hub_customizer_defaults['trade-hub-testimonial-from-page'] = '';
+$trade_hub_customizer_defaults['trade-hub-testimonial-from-page'] = 'from-page';
+$trade_hub_customizer_defaults['trade-hub-testimonial-number-page'] = 3;
 
 
 // create  a section for testtimonials;
@@ -66,22 +67,30 @@ array(
 	)
 );
 
-// settig control for testimonial select page
-$trade_hub_repeated_settings_controls['trade-hub-testimonial-from-page'] =
-array(
-	'repeated'		 => 3,
-	'trade-hub-testimonial-page-id' 	=> array(
-		'setting'						=> array(
-			'default'					=> $trade_hub_customizer_defaults['trade-hub-testimonial-from-page']
-		),
-		'control'						=> array(
-			'label'						=> esc_html__('Select Page For Testimonial %s','trade-hub'),
-			'section'					=> 'trade-hub-testimonial-sections',
-			'type'						=> 'dropdown-pages',
-			'priority'					=> 50,
-			'active_callback'			=> ''
-		)
-	),
 
-);
+/*creating setting control for chrimbo-news-activities-page start*/
+$trade_hub_repeated_settings_controls['trade-hub-testimonial-from-page'] =
+    array(
+        'repeated' => 3,
+        'trade-hub-testimonial-pages-ids' => array(
+            'setting' =>     array(
+                'default'              => $trade_hub_customizer_defaults['trade-hub-testimonial-from-page'],
+            ),
+            'control' => array(
+                'label'                 =>  __( 'Select Page For testimonial Section %s', 'trade-hub' ),
+                'section'               => 'trade-hub-testimonial-sections',
+                'type'                  => 'dropdown-pages',
+                'priority'              => 50,
+                'description'           => ''
+            )
+        ),
+        'chrimbo-activities-pages-divider' => array(
+            'control' => array(
+                'section'               => 'trade-hub-testimonial-sections',
+                'type'                  => 'message',
+                'priority'              => 50,
+                'description'           => '<br /><hr />'
+            )
+        )
+    );
 
