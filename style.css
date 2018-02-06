@@ -9925,7 +9925,7 @@ section#banner-section {
   top: 50%;
   transform: translate(0, -50%);
   z-index: 999;
-  background: rgba(0, 0, 0, 0.23921568627450981);
+  background: rgba(0, 0, 0, 0.24);
   max-width: 900px;
   width: 100%;
   left: 0;
@@ -10003,7 +10003,6 @@ section.section-wrapper h1:after {
 }
 
 .background-image-div {
-  background: url(./assets/images/1.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -10207,7 +10206,6 @@ section#trade-hub-feature {
   padding: 10px;
   color: white;
   text-align: center;
-  background: url(./assets/images/3.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -10364,7 +10362,6 @@ section.testimonials-section .slick-dots li {
 }
 
 .client-image {
-  background: url(./assets/images/1.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   height: 100px;
