@@ -120,18 +120,18 @@ if ( ! function_exists( 'trade_hub_home_testimonial' ) ) :
                             ?>
                             <div class="col-md-4 col-sm-4 col-xs-12 testimonials-wrapper">
                                 <div class="testimonials-content">
-                                    <div id="f1_container">
-                                        <div id="f1_card" class="shadow">
-                                            <div class="front face">
+                                    <div id="th-f1_container">
+                                        <div id="th-f1_card" class="shadow">
+                                            <div class="th-front th-face">
                                                 <img src="<?php echo esc_url($trade_hub_testimonial_array['trade-hub-testimonial-image']);?>" />
                                             </div><!-- testimonials image -->
-                                            <div class="back face center"><!-- put background image inline style here -->
+                                            <h4><a href="<?php echo esc_url($trade_hub_testimonial_array['trade-hub-testimonial-link']);?>"><?php echo esc_html($trade_hub_testimonial_array['trade-hub-testimonial-title']);?></a></h4><!-- custom link for testimonials -->
+                                            <div class="th-back th-face center"><!-- put background image inline style here -->
                                                 <p><?php echo wp_kses_post($trade_hub_testimonial_array['trade-hub-testimonial-content'])?></p>
                                             </div>
                                         </div>
                                     </div><!-- flip 1 container -->
-
-                                    <h4><a href="<?php echo esc_url($trade_hub_testimonial_array['trade-hub-testimonial-link']);?>"><?php echo esc_html($trade_hub_testimonial_array['trade-hub-testimonial-title']);?></a></h4><!-- custom link for testimonials -->
+                                    
                                 </div><!-- testimonials content -->
                             </div><!-- wrapper -->
                             <?php

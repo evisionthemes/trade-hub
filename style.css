@@ -367,7 +367,7 @@ input[type="submit"] {
 
 p {
   margin-bottom: 15px;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.7;
   color: #444;
 }
@@ -1016,7 +1016,7 @@ body.single .nav-links .nav-next a:hover {
   display: block;
   padding-bottom: 7px;
   padding-top: 6px;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .widget a {
@@ -5849,13 +5849,6 @@ span.comment {
   float: right;
 }
 
-.footer-widget ul a:before {
-  content: "\f105";
-  font-family: fontAwesome;
-  padding-right: 7px;
-  font-weight: 100;
-}
-
 .thumb-post .overlay-post-content {
   -webkit-box-shadow: inset 0px -126px 89px -91px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: inset 0px -126px 89px -91px rgba(0, 0, 0, 0.75);
@@ -6665,7 +6658,7 @@ aside#secondary .right-post-content .thumb-post .post-icons a:hover {
 .search-holder {
   text-align: center;
   display: block;
-  padding-top: 4px;
+  padding-top: 7px;
 }
 
 .nav-buttons.col-md-1 .search-holder .button-search {
@@ -7561,11 +7554,10 @@ button#mobile-menu-toggle-close {
 .main-navigation a,
 .main-navigation a:visited {
   display: block;
-  font-size: 12px;
+  font-size: 14px;
   outline-offset: -1px;
-  padding: 21px 50px 28px 0;
+  padding: 21px 30px 28px 0;
   text-transform: uppercase;
-  font-weight: 600;
   color: #4e4c4c;
 }
 
@@ -8848,6 +8840,10 @@ aside#secondary h2 {
   padding: 0;
 }
 
+section.no-results.not-found {
+  max-width: 456px;
+}
+
 section.error-404.not-found {
   padding: 10px 57px;
   background: #efefef;
@@ -9443,42 +9439,6 @@ div {
 
 
 /* sidebar changes */
-
-aside#secondary .widget ul li:before {
-  content: "\f101";
-  font-family: fontAwesome;
-  padding-right: 10px;
-  color: #585858;
-}
-
-aside#secondary section.widget_categories ul li:before {
-  content: "\f114";
-}
-
-aside#secondary section.widget_recent_entries ul li:before {
-  content: "\f0a1";
-}
-
-aside#secondary section.widget_archive ul li:before {
-  content: "\f187";
-}
-
-aside#secondary section.widget_archive select {
-  width: 100%;
-}
-
-aside#secondary section.widget_pages ul li:before {
-  content: "\f016";
-}
-
-aside#secondary section.widget_meta ul li:before {
-  content: "\f02e";
-}
-
-aside#secondary section.widget_recent_comments ul li:before {
-  content: "\f0e5";
-}
-
 i.fa.fa-search.fa-close {
   margin-top: -10px;
 }
@@ -9977,7 +9937,7 @@ section#banner-section {
 a.border-btn {
   color: #000;
   font-size: 18px;
-  padding: 12px 55px;
+  padding: 12px 30px;
   border-radius: 0;
   -webkit-transition: width 0.5s;
   transition: width 0.5s;
@@ -10017,11 +9977,11 @@ section.section-wrapper,
 
 section.section-wrapper h1 {
   text-align: center;
-  padding-bottom: 30px;
+  padding-bottom: 15px;
   text-transform: capitalize;
   position: relative;
   margin-top: 0;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   color: #444;
 }
 
@@ -10160,10 +10120,6 @@ section#trade-hub-feature {
   background: #fbfbfb;
 }
 
-section#trade-hub-feature h1 {
-  padding-bottom: 0;
-}
-
 .feature-content i {
   font-size: 24px;
   padding: 15px;
@@ -10297,9 +10253,8 @@ section#trade-hub-feature h1 {
 section.about-section {
   position: relative;
   padding-top: 40px;
-  min-height: 400px;
+  min-height: 350px;
   background: #fbfbfb;
-  background: url(./assets/images/3.jpg);
   background-size: 50%;
   background-repeat: no-repeat;
   background-position: 100%;
@@ -10391,10 +10346,11 @@ section.testimonials-section .slick-dots li {
 }
 
 .testimonials-content {
-  border: 1px solid #dedede;
+  border: 1px solid rgba(222, 222, 222, 0.38);
   padding: 10px;
   text-align: center;
   transition: all .5s;
+  background: #fff;
 }
 
 .testimonials-content:hover {
@@ -10404,8 +10360,6 @@ section.testimonials-section .slick-dots li {
 .testimonials-content p {
   position: relative;
   z-index: 999;
-  color: #fff;
-  padding: 10px;
   text-align: center;
 }
 
@@ -10431,12 +10385,25 @@ section.testimonials-section .slick-dots li {
   content: "\f10d";
   font-family: fontAwesome;
   padding-right: 10px;
+  opacity: .4;
 }
 
 .testimonials-content p:after {
   content: "\f10e";
   font-family: fontAwesome;
   padding-left: 10px;
+  opacity: .4;
+}
+
+.th-front.th-face {
+  height: 130px;
+  overflow: hidden;
+  width: 130px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  border-radius: 50%;
+  margin: 15px auto;
 }
 
 section.testimonials-section #f1_container,
@@ -10492,7 +10459,7 @@ section.contact-section h2 {
 
 .left.contact ul li {
   list-style: none;
-  font-size: 14px;
+  font-size: 16px;
   border-bottom: 1px solid #c5c5c5;
 }
 
@@ -10504,7 +10471,6 @@ section.contact-section h2 {
 .about p,
 .about a {
   color: #c1c1c1;
-  font-size: 14px;
 }
 
 a.more:after {
