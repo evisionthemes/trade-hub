@@ -3,12 +3,16 @@ Theme Name: Trade Hub
 Theme URI: https://evisionthemes.com/product/trade-hub
 Author: eVision Themes
 Author URI: http://evisionthemes.com
-Description: Trade Hub, A clean and responsive WordPress magazine theme that has a beautiful design to help you start a professional looking magazine / news website. It can be used for any magazine niche such as tech, politics, sports, games, fashion, etc. With the multiple and flexible features, you can optimize your website through customizer and wouldn't have to write any single code. The theme has responsive design, drag and drop options, enable / disable settings, so, the contents of your website will look elegant on any smart devices. Preview : demo: http://demo.evisionthemes.com/trade-hub Support : https://evisionthemes.com/supports Follow: https://www.facebook.com/evisionthemes Documentation : http://doc.evisionthemes.com/trade-hub
-Version: 0.1.0
+Description: Trade Hub is a fresh, clean & feature rich WordPress theme developed specifically for all type of corporate business, finance business and startup company, blogging, etc. This theme is fully responsive that is perfectly adjust on any small to large devices. No coding required to create a website. In order to build inner pages layout, it supports popular plugins like Jetpack, Elementor Page Builder and other popular ones.. 
+Preview : demo: http://demo.evisionthemes.com/trade-hub 
+Support : https://evisionthemes.com/supports 
+Follow: https://www.facebook.com/evisionthemes 
+Documentation : http://doc.evisionthemes.com/trade-hub
+Version: 1.0.0
 License: GNU General Public License v3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Text Domain: trade-hub
-Tags: blog, news, one-column, two-columns, left-sidebar, right-sidebar,custom-background, custom-logo, custom-menu, custom-colors, threaded-comments, translation-ready, featured-images, theme-options, full-width-template, e-commerce, footer-widgets
+Tags: custom-logo, custom-menu, custom-colors, threaded-comments, blog, news, one-column, two-columns, left-sidebar, right-sidebar,custom-background,  translation-ready, featured-images, theme-options, full-width-template, e-commerce, footer-widgets
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
@@ -10252,7 +10256,7 @@ section.about-section {
   position: relative;
   padding-top: 40px;
   min-height: 350px;
-  background: #fbfbfb;
+  background: #fff;
   background-size: 50%;
   background-repeat: no-repeat;
   background-position: 100%;
@@ -10398,7 +10402,6 @@ section.testimonials-section .slick-dots li {
   width: 130px;
   left: 0;
   right: 0;
-  margin: auto;
   border-radius: 50%;
   margin: 15px auto;
 }
@@ -10441,8 +10444,8 @@ section.contact-section.section-wrapper {
 }
 
 .social-icon-only {
-  width: 50%;
-  float: left;
+/*  width: 50%;
+*/  float: left;
   text-align: left;
   padding: 20px 40px;
 }
@@ -10500,7 +10503,6 @@ section#th-news {
   max-height: 200px;
   overflow: hidden;
   height: 100%;
-  margin-bottom: 20px;
 }
 
 .news-image img {
@@ -10520,6 +10522,18 @@ section#th-news {
 .th-news-wrapper {
   position: relative;
   margin-bottom: 20px;
+}
+
+.news-heading-content.feature-section {
+  margin-top: -36px;
+  z-index: 99;
+  position: relative;
+  background: #fff;
+  width: 90%;
+  left: 0;
+  right: 0;
+  margin: -30px auto;
+  padding: 16px;
 }
 
 a.blog-meta {
