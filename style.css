@@ -10435,17 +10435,17 @@ section.contact-section.section-wrapper {
 }
 
 .about {
-  width: 50%;
   padding: 20px 30px;
   color: #fff;
   float: left;
   height: 100%;
   background: #312e2e;
+  max-width: 50%;
 }
 
 .social-icon-only {
-/*  width: 50%;
-*/  float: left;
+  max-width: 50%;
+  float: left;
   text-align: left;
   padding: 20px 40px;
 }
