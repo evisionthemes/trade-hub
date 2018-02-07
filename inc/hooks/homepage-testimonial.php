@@ -18,7 +18,7 @@ if ( ! function_exists( 'trade_hub_testimonial_array' ) ) :
         $trade_hub_testimonial_contents_array[1]['trade-hub-testimonial-title'] = esc_html__('JOHN DOE', 'trade-hub');
         $trade_hub_testimonial_contents_array[1]['trade-hub-testimonial-content'] = esc_html__("Proin eget tortor risus. Pellentesque in ipsum id orci porta dapibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.", 'trade-hub');
         $trade_hub_testimonial_contents_array[1]['trade-hub-testimonial-link'] = '#';
-        $trade_hub_testimonial_contents_array[1]['trade-hub-testimonial-image'] = get_template_directory_uri().'/assets/images/bg1.jpg';
+        $trade_hub_testimonial_contents_array[1]['trade-hub-testimonial-image'] = get_template_directory_uri().'/assets/images/right-content-post.jpg';
         $trade_hub_testimonial_page = array('trade-hub-testimonial-pages-ids');
         $trade_hub_testimonial_posts = evision_customizer_get_repeated_all_value(3 , $trade_hub_testimonial_page);
         $trade_hub_testimonial_posts_ids = array();
@@ -93,7 +93,7 @@ if ( ! function_exists( 'trade_hub_home_testimonial' ) ) :
     function trade_hub_home_testimonial()
     {
         global $trade_hub_customizer_all_values;
-        if( 1 != $trade_hub_customizer_all_values['trade-hub-testimonial-enable-option'] )
+        if( ! $trade_hub_customizer_all_values['trade-hub-testimonial-enable-option'] )
         {
             return null;
         }

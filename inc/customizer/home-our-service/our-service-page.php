@@ -6,22 +6,22 @@ global $trade_hub_repeated_setting_controls;
 global $trade_hub_customizer_defaults;
 
 // deafults value
-$trade_hub_customizer_defaults['trade-hub-our-service-enable-option'] = 1;
+$trade_hub_customizer_defaults['trade-hub-our-service-enable-option'] = 0;
 $trade_hub_customizer_defaults['trade-hub-our-service-single-word'] = 25;
-$trade_hub_customizer_defaults['trade-hub-our-service-title'] = esc_html__('GREAT PRODUCT OF COMPANY','trade_hub');
-$trade_hub_customizer_defaults['trade-hub-our-service-sub-title'] = esc_html__('Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally','trade_hub');
-$trade_hub_customizer_defaults['trade-hub-our-service-first-title'] = esc_html__('PSD TO HTML5/CSS3','trade_hub');
-$trade_hub_customizer_defaults['trade-hub-our-service-first-sub-title'] = esc_html__('Paetos dignissim at cursus elefeind norma arcu.velim pellentesque uter justo magna gravida.','trade_hub');
-$trade_hub_customizer_defaults['trade-hub-our-service-second-title'] = esc_html__('HOSTING & DOMAIN SERVICES','trade_hub');
-$trade_hub_customizer_defaults['trade-hub-our-service-second-sub-title'] = esc_html__('Paetos dignissim at cursus elefeind norma arcu.velim pellentesque uter justo magna gravida.','trade_hub');
-$trade_hub_customizer_defaults['trade-hub-our-service-third-title'] = esc_html__('GET PLAN YOUR BUSINESS','trade_hub');
-$trade_hub_customizer_defaults['trade-hub-our-service-third-sub-title'] = esc_html__('Paetos dignissim at cursus elefeind norma arcu.velim pellentesque uter justo magna gravida.','trade_hub');
+$trade_hub_customizer_defaults['trade-hub-our-service-title'] = esc_html__('GREAT PRODUCT OF COMPANY','trade-hub');
+$trade_hub_customizer_defaults['trade-hub-our-service-sub-title'] = esc_html__('Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally','trade-hub');
+$trade_hub_customizer_defaults['trade-hub-our-service-first-title'] = esc_html__('PSD TO HTML5/CSS3','trade-hub');
+$trade_hub_customizer_defaults['trade-hub-our-service-first-sub-title'] = esc_html__('Paetos dignissim at cursus elefeind norma arcu.velim pellentesque uter justo magna gravida.','trade-hub');
+$trade_hub_customizer_defaults['trade-hub-our-service-second-title'] = esc_html__('HOSTING & DOMAIN SERVICES','trade-hub');
+$trade_hub_customizer_defaults['trade-hub-our-service-second-sub-title'] = esc_html__('Paetos dignissim at cursus elefeind norma arcu.velim pellentesque uter justo magna gravida.','trade-hub');
+$trade_hub_customizer_defaults['trade-hub-our-service-third-title'] = esc_html__('GET PLAN YOUR BUSINESS','trade-hub');
+$trade_hub_customizer_defaults['trade-hub-our-service-third-sub-title'] = esc_html__('Paetos dignissim at cursus elefeind norma arcu.velim pellentesque uter justo magna gravida.','trade-hub');
 
 $trade_hub_customizer_defaults['trade-hub-our-service-image'] = get_template_directory_uri() .'/inc/assets/images/3.jpg';
 
 // create a section for our service section
 $trade_hub_sections['trade-hub-our-service-section']	=	array(
-	'title'			=>	esc_html__('Our-Service','trade_hub'),
+	'title'			=>	esc_html__('Our-Service','trade-hub'),
 	'panel'			=>'trade-hub-main-homepage-panel',
 	'priority'		=> 220
 );
@@ -32,7 +32,7 @@ $trade_hub_settings_controls['trade-hub-our-service-enable-option'] = array(
 		'default'			=> $trade_hub_customizer_defaults['trade-hub-our-service-enable-option']
 	),
 	'control'				=> array(
-		'label'				=> esc_html__('Enable Our Service','trade_hub'),
+		'label'				=> esc_html__('Enable Our Service','trade-hub'),
 		'section'			=> 'trade-hub-our-service-section',
 		'type'				=> 'checkbox',
 		'priority'			=> 10,
@@ -46,7 +46,7 @@ $trade_hub_settings_controls['trade-hub-our-service-single-word'] = array(
 		'default'			=> $trade_hub_customizer_defaults['trade-hub-our-service-single-word']
 	),
 	'control'				=> array(
-		'label'				=> esc_html__('Select Number Of Word- Our Service','trade_hub'),
+		'label'				=> esc_html__('Select Number Of Word- Our Service','trade-hub'),
 		'section'			=> 'trade-hub-our-service-section',
 		'type'				=> 'number',
 		'priority'			=> 10,
@@ -61,7 +61,7 @@ $trade_hub_settings_controls['trade-hub-our-service-title'] = array(
 		'default'			=> $trade_hub_customizer_defaults['trade-hub-our-service-title']
 	),
 	'control'				=> array(
-		'label'				=> esc_html__(' Title Text','trade_hub'),
+		'label'				=> esc_html__(' Title Text','trade-hub'),
 		'section'			=> 'trade-hub-our-service-section',
 		'type'				=> 'text',
 		'priority'			=> 30,
@@ -75,7 +75,7 @@ $trade_hub_settings_controls['trade-hub-our-service-sub-title'] = array(
 		'default'			=> $trade_hub_customizer_defaults['trade-hub-our-service-sub-title']
 	),
 	'control'				=> array(
-		'label'				=> esc_html__('Sub-Title Text','trade_hub'),
+		'label'				=> esc_html__('Sub-Title Text','trade-hub'),
 		'section'			=> 'trade-hub-our-service-section',
 		'type'				=> 'textarea',
 		'priority'			=> 40,
@@ -89,7 +89,7 @@ $trade_hub_settings_controls['trade-hub-our-service-first-title'] = array(
 		'default'			=> $trade_hub_customizer_defaults['trade-hub-our-service-first-title']
 	),
 	'control'				=> array(
-		'label'				=> esc_html__('First Title Text','trade_hub'),
+		'label'				=> esc_html__('First Title Text','trade-hub'),
 		'section'			=> 'trade-hub-our-service-section',
 		'type'				=> 'text',
 		'priority'			=> 50,
@@ -103,7 +103,7 @@ $trade_hub_settings_controls['trade-hub-our-service-first-sub-title'] = array(
 		'default'			=> $trade_hub_customizer_defaults['trade-hub-our-service-first-sub-title']
 	),
 	'control'				=> array(
-		'label'				=> esc_html__('First-Sub-Title Text','trade_hub'),
+		'label'				=> esc_html__('First-Sub-Title Text','trade-hub'),
 		'section'			=> 'trade-hub-our-service-section',
 		'type'				=> 'textarea',
 		'priority'			=> 60,
@@ -117,7 +117,7 @@ $trade_hub_settings_controls['trade-hub-our-service-second-title'] = array(
 		'default'			=> $trade_hub_customizer_defaults['trade-hub-our-service-second-title']
 	),
 	'control'				=> array(
-		'label'				=> esc_html__('Second Title Text','trade_hub'),
+		'label'				=> esc_html__('Second Title Text','trade-hub'),
 		'section'			=> 'trade-hub-our-service-section',
 		'type'				=> 'text',
 		'priority'			=> 70,
@@ -131,7 +131,7 @@ $trade_hub_settings_controls['trade-hub-our-service-second-sub-title'] = array(
 		'default'			=> $trade_hub_customizer_defaults['trade-hub-our-service-second-sub-title']
 	),
 	'control'				=> array(
-		'label'				=> esc_html__('Second-Sub-Title Text','trade_hub'),
+		'label'				=> esc_html__('Second-Sub-Title Text','trade-hub'),
 		'section'			=> 'trade-hub-our-service-section',
 		'type'				=> 'textarea',
 		'priority'			=> 80,
@@ -145,7 +145,7 @@ $trade_hub_settings_controls['trade-hub-our-service-third-title'] = array(
 		'default'			=> $trade_hub_customizer_defaults['trade-hub-our-service-third-title']
 	),
 	'control'				=> array(
-		'label'				=> esc_html__('Third Title Text','trade_hub'),
+		'label'				=> esc_html__('Third Title Text','trade-hub'),
 		'section'			=> 'trade-hub-our-service-section',
 		'type'				=> 'text',
 		'priority'			=> 90,
@@ -159,7 +159,7 @@ $trade_hub_settings_controls['trade-hub-our-service-third-sub-title'] = array(
 		'default'			=> $trade_hub_customizer_defaults['trade-hub-our-service-third-sub-title']
 	),
 	'control'				=> array(
-		'label'				=> esc_html__('Third-Sub-Title Text','trade_hub'),
+		'label'				=> esc_html__('Third-Sub-Title Text','trade-hub'),
 		'section'			=> 'trade-hub-our-service-section',
 		'type'				=> 'textarea',
 		'priority'			=> 100,
@@ -173,7 +173,7 @@ $trade_hub_settings_controls['trade-hub-our-service-image'] = array(
 		'default'			=> $trade_hub_customizer_defaults['trade-hub-our-service-image']
 	),
 	'control'				=> array(
-		'label'				=> esc_html__('Upload Image Service Section','trade_hub'),
+		'label'				=> esc_html__('Upload Image Service Section','trade-hub'),
 		'section'			=> 'trade-hub-our-service-section',
 		'type'				=> 'upload',
 		'priority'			=> 110,

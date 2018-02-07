@@ -3,11 +3,11 @@ Theme Name: Trade Hub
 Theme URI: https://evisionthemes.com/product/trade-hub
 Author: eVision Themes
 Author URI: http://evisionthemes.com
-Description: Trade Hub is a fresh, clean & feature rich WordPress theme developed specifically for all type of corporate business, finance business and startup company, blogging, etc. This theme is fully responsive that is perfectly adjust on any small to large devices. No coding required to create a website. In order to build inner pages layout, it supports popular plugins like Jetpack, Elementor Page Builder and other popular ones.. 
-Preview : demo: http://demo.evisionthemes.com/trade-hub 
-Support : https://evisionthemes.com/supports 
+Trade Hub is a user friendly creative theme for all kind of business, accounting, financial, coaching, law office, business planning, corporate websites and blogging. It's simple to configure the homepage setting using Theme Customizer. The theme comes with flexible features, clean coding, documentation and dedicated support team to solve your confusion while building professional website. 
+Documentation: https://evisionthemes.com/documentation/
+Support : https://evisionthemes.com/supports
+Live Preview : https://demo.evisionthemes.com/trade-hub/
 Follow: https://www.facebook.com/evisionthemes 
-Documentation : http://doc.evisionthemes.com/trade-hub
 Version: 1.0.0
 License: GNU General Public License v3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -5723,7 +5723,6 @@ aside#secondary .widget .widget-title:after,
   padding: 0;
   font-size: 14px;
   font-size: 0.875rem;
-  border-radius: 4px;
 }
 
 .search-form .search-submit:hover,
@@ -6956,10 +6955,9 @@ body.home.page #primary {
   padding-top: 40px;
 }
 
-body.home.page div#content{
+body.home.page div#content {
   padding-top: 0;
 }
-
 
 .site-content #primary,
 .site-content #secondary {
@@ -9443,6 +9441,7 @@ div {
 
 
 /* sidebar changes */
+
 i.fa.fa-search.fa-close {
   margin-top: -10px;
 }
@@ -9625,7 +9624,6 @@ span.edit-link:before {
 
 div#page {
   background: #fff;
-  box-shadow: 0 0 3px #585858;
   padding: 0;
 }
 
@@ -9891,6 +9889,7 @@ i.fa.fa-bars.top-nav-mobile {
 
 
 /* home page slider */
+
 section#banner-section {
   border-bottom: 5px solid;
 }
@@ -9921,8 +9920,9 @@ section#banner-section {
 .overlay {
   height: calc(100vh - 160px);
   position: relative;
-/*  background: rgba(0, 0, 0, 0.5)
-*/}
+  /*  background: rgba(0, 0, 0, 0.5)
+*/
+}
 
 .banner-content-inner {
   position: absolute;
@@ -10010,12 +10010,7 @@ section.section-wrapper h1:after {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  transform: scale(1.2);
   transition: all .5s;
-}
-
-section#portfolio:hover .background-image-div {
-  transform: scale(1);
 }
 
 .bg-overlay {
@@ -10044,23 +10039,12 @@ section#portfolio .bg-overlay {
 .text-div.right {
   width: 50%;
   float: right;
-  padding: 30px 54px;
+  padding: 30px 0 0 54px;
   background: #fff;
   z-index: 9;
   position: relative;
 }
-@media screen and (min-width:767px) {
-  .text-div.right:after {
-    content: "\f0d9";
-    left: -21px;
-    position: absolute;
-    top: 50%;
-    font-family: fontAwesome;
-    color: #fff;
-    font-size: 68px;
-    transform: translate(0,-50%);
-  }
-}
+
 section#portfolio h1,
 section#portfolio h2 {
   color: #444;
@@ -10107,7 +10091,7 @@ p.portfolio-description {
     float: none;
     background: #fbfbfb;
     padding: 10px 20px;
-    margin-top: 30px;
+    margin: 30px 0;
   }
   .background-image-div.portfolio-left {
     width: 100%;
@@ -10281,18 +10265,6 @@ a.know-more:after {
   }
 }
 
-@media screen and (min-width:767px) {
-  .left-text-content.feature-section:after{
-    content: "\f0da";
-    right: -21px;
-    position: absolute;
-    top: 50%;
-    font-family: fontAwesome;
-    color: #fff;
-    font-size: 68px;
-    transform: translate(0,-50%);
-  }
-}
 
 /* callback section */
 
@@ -10489,6 +10461,7 @@ a.more:after {
   .social-icon-only {
     width: 100%;
     height: auto;
+    max-width: 100%;
   }
 }
 
@@ -10532,7 +10505,7 @@ section#th-news {
   width: 90%;
   left: 0;
   right: 0;
-  margin: -30px auto;
+  margin: -36px auto 10px;
   padding: 16px;
 }
 
@@ -10598,6 +10571,16 @@ a.blog-meta:before {
   border-top: 3px solid #000;
 }
 
+@media screen and (max-width:767px) {
+  .news-heading-content.feature-section {
+    width: 100%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding: auto;
+  }
+}
+
 
 /* Preloader */
 
@@ -10631,8 +10614,25 @@ body {
 }
 
 
+/* if all sections are disable */
 
-  
+.trade-hub-no-opton {
+  max-width: 600px;
+  width: 100%;
+  left: 0;
+  right: 0;
+  margin: 20px auto;
+  padding: 100px 0;
+  text-align: center;
+  background: #fbfbfb;
+}
+
+.trade-hub-no-opton a {
+  background: #239ddb;
+  padding: 10px;
+  color: #fff;
+}
+
 
 /* ==================================*/
 

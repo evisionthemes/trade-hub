@@ -14,8 +14,7 @@ if ( !function_exists('trade_hub_call_to_action') ) :
 		$trade_hub_call_action_button_text = esc_html($trade_hub_customizer_all_values['trade-hub-call-action-button-text']);
 		$trade_hub_call_action_button_url = $trade_hub_customizer_all_values['trade-hub-call-action-link'];
 
-		if ( 1 != $trade_hub_customizer_all_values['trade-hub-call-action-enable-option'] )
-		{
+		if ( !$trade_hub_customizer_all_values['trade-hub-call-action-enable-option'] ) {
 			return null;
 		}?>
 		<section class="callback-section section-wrapper" id="trade-hub-callback">

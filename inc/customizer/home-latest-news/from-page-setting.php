@@ -7,7 +7,7 @@ global $trade_hub_repeated_settings_controls;
 global $trade_hub_customizer_defaults;
 
 // defaults value
-$trade_hub_customizer_defaults['trade-hub-latest-news-enable-option'] = 1;
+$trade_hub_customizer_defaults['trade-hub-latest-news-enable-option'] = 0;
 $trade_hub_customizer_defaults['trade-hub-latest-news-title-text']  = esc_html__('Latest News','trade-hub');
 $trade_hub_customizer_defaults['trade-hub-latest-news-category']  = 0;
 $trade_hub_customizer_defaults['trade-hub-latest-news-single-word']  = 30;

@@ -5,7 +5,7 @@ global $trade_hub_customizer_defaults;
 
 /*defaults values*/
 $trade_hub_customizer_defaults['trade-hub-site-identity-color'] = '#313131';
-$trade_hub_customizer_defaults['trade-hub-primary-color'] = '#11616d';
+$trade_hub_customizer_defaults['trade-hub-primary-color'] = '#239ddb';
 $trade_hub_customizer_defaults['trade-hub-color-reset'] = '';
 
 /**

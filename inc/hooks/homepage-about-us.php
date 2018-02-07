@@ -18,8 +18,7 @@ function  tarde_hub_about_us()
 	$trade_hub_home_about_posts = absint($trade_hub_customizer_all_values['trdae-hub-about-us-page']);
 
 
-  	if( 0 ==$trade_hub_customizer_all_values['trade-hub-about-us-enable'] )
-  	{
+  	if( !$trade_hub_customizer_all_values['trade-hub-about-us-enable'] ) {
         return null;
     }
     ?>
@@ -45,8 +44,7 @@ function  tarde_hub_about_us()
             }
             ?>
 
-            <section class="about-section section-wrapper" style="background-image: url('<?php echo esc_url($thumb[0]); ?>');"><!-- background image style here -->
-			    <div class="container">
+            <section class="about-section section-wrapper container" style="background-image: url('<?php echo esc_url($thumb[0]); ?>');"><!-- background image style here -->
 			        <div class="row">
 			        	
 			            <div class="feature-text-content-wrapper col-md-12">
@@ -64,7 +62,6 @@ function  tarde_hub_about_us()
 			            </div>
 			           
 			        </div>
-		       </div>
 		    </section><!-- about section -->
 
               

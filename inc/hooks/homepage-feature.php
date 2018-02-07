@@ -108,8 +108,7 @@ if ( ! function_exists( 'trade_hub_home_feature' ) ) :
     function trade_hub_home_feature()
     {
         global $trade_hub_customizer_all_values;
-        if( 1 != $trade_hub_customizer_all_values['trade-hub-our-feature-enable'] )
-        {
+        if( ! $trade_hub_customizer_all_values['trade-hub-our-feature-enable'] ) {
             return null;
         }
         $trade_hub_feature_arrays = trade_hub_home_feature_array(  );

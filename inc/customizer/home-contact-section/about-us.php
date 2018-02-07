@@ -7,7 +7,7 @@ global $trade_hub_repeated_settings_controls;
 global $trade_hub_customizer_defaults;
 
 // defaults value
-$trade_hub_customizer_defaults['trade-about-us-enable-option']  = 1;
+$trade_hub_customizer_defaults['trade-about-us-enable-option']  = 0;
 $trade_hub_customizer_defaults['trade-about-us-select-page']  = '';
 $trade_hub_customizer_defaults['trade-about-us-single-word']  = 30;
 $trade_hub_customizer_defaults['trade-about-us-button-text']  = esc_html__('KNOW MORE','trade-hub');

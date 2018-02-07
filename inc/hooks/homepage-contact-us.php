@@ -17,8 +17,7 @@ if ( !function_exists('trade_hub_contact') ) :
  		$trade_hub_latest_news_contact_us_phone = $trade_hub_customizer_all_values['trade-contact-phone'];
  		
 
- 		if ( 1 != $trade_hub_customizer_all_values['trade-contact-enable-option'] )
- 		{
+ 		if ( ! $trade_hub_customizer_all_values['trade-contact-enable-option'] ) {
  			return null;
  		}
  		?>

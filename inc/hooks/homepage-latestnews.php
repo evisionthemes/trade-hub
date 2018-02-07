@@ -75,8 +75,7 @@ if ( ! function_exists( 'trade_hub_latest_news' ) ) :
     {
         global $trade_hub_customizer_all_values;
 
-        if( 1 != $trade_hub_customizer_all_values['trade-hub-latest-news-enable-option'] ) {
-            return null;
+        if( ! $trade_hub_customizer_all_values['trade-hub-latest-news-enable-option'] ) {return null;
         }
 
         $trade_hub_latest_news_single_words = absint( $trade_hub_customizer_all_values['trade-hub-latest-news-single-word'] );
