@@ -5697,9 +5697,11 @@ aside#secondary .widget .widget-title:after,
 
 .footer-widget .widget li {
   border-top-style: dotted;
-  border-top: 1px solid #424242;
+  border-top: 1px solid #d2d2d2;
 }
-
+.footer-widget .widget li:first-child{
+  border-top: 0;
+}
 .search-form label {
   width: 68%;
   /*fallback*/
@@ -6308,7 +6310,8 @@ img.desaturate {
 
 .section-title h3 {
   border-bottom: 1px solid #d9d9d9;
-  font-family: "Roboto", Helvetica, sans-serif font-size: 20px;
+  font-family: "Roboto", Helvetica, sans-serif;
+  font-size: 20px;
   font-size: 1.25rem;
   padding-bottom: 10px;
   position: relative;
@@ -6670,7 +6673,7 @@ aside#secondary .right-post-content .thumb-post .post-icons a:hover {
   transition-duration: 1s;
   transition-delay: 1.5s;
   position: relative;
-  padding: 8px 10px;
+  padding: 12px 10px;
   padding-right: 0;
   cursor: pointer;
 }
@@ -7005,7 +7008,7 @@ body.home.page div#content {
   /*right*/
   width: 70%;
   padding-left: 0;
-  padding-right: 2%;
+  padding-right: 4%;
   padding-bottom: 20px;
   /*left*/
   /*none*/
@@ -7331,10 +7334,6 @@ span.notice-title:before {
   transition: top 0.5s linear;
 }
 
-#fixedhead .button {
-  @inlcude font-size(0.813);
-}
-
 @media screen and (max-width: 767px) {
   #fixedhead .site-branding {
     display: none;
@@ -7461,10 +7460,6 @@ span.notice-title:before {
   padding: 13px;
 }
 
-.nav-holder .go-right {
-  max-width-left: 5px;
-}
-
 .nav-holder .go-left {
   padding-right: 5px;
 }
@@ -7558,7 +7553,7 @@ button#mobile-menu-toggle-close {
   display: block;
   font-size: 14px;
   outline-offset: -1px;
-  padding: 21px 30px 28px 0;
+  padding: 26px 30px 28px 0;
   text-transform: uppercase;
   color: #4e4c4c;
 }
@@ -7594,7 +7589,7 @@ button#mobile-menu-toggle-close {
 }
 
 .main-navigation.sec-main-navigation ul ul {
-  background-color: #2b2b2b;
+  background-color: #fbfbfb;
   display: none;
   box-shadow: 0 1px 2px #8f8f8f;
 }
@@ -7607,7 +7602,7 @@ button#mobile-menu-toggle-close {
     width: 200px;
   }
   body.single .main-navigation.sec-main-navigation ul ul {
-    top: 2.3em;
+    /*top: 2.3em;*/
   }
   body.single .main-navigation.sec-main-navigation ul ul ul {
     top: 0;
@@ -7623,11 +7618,11 @@ button#mobile-menu-toggle-close {
 .main-navigation.sec-main-navigation ul ul li:hover>a,
 .main-navigation.sec-main-navigation ul ul li:focus>a,
 .main-navigation.sec-main-navigation ul ul li:active>a {
-  color: #fff;
+  color: #000;
 }
 
 .main-navigation.sec-main-navigation ul ul a {
-  color: #fff;
+  color: #000;
   font-size: 16px;
   padding: 12px 18px;
   width: 100%;
@@ -7691,6 +7686,7 @@ button#mobile-menu-toggle-close {
   }
   .main-navigation.sec-main-navigation ul ul a {
     border-top: none;
+    color: #fff;
   }
   .main-navigation.sec-main-navigation {
     overflow-y: hidden;
@@ -7743,7 +7739,7 @@ button#mobile-menu-toggle-close {
   .sec-main-navigation.main-navigation ul {
     text-align: left;
     width: 100%;
-    /*display: inline-block !important;*/
+    display: inline-block !important;
   }
 }
 
@@ -9886,7 +9882,11 @@ i.fa.fa-bars.top-nav-mobile {
   transition: all 0.5s;
   top: 0;
 }
-
+@media screen and (max-width:767px){
+  .navbar-fixed-top{
+    position: unset;
+  }
+}
 
 /* home page slider */
 
@@ -9991,8 +9991,6 @@ section.section-wrapper h1 {
 
 section.section-wrapper h1:after {
   content: "";
-  left: 0;
-  right: 0;
   position: absolute;
   width: 79px;
   height: 2px;
@@ -10241,7 +10239,7 @@ section.about-section {
   padding-top: 40px;
   min-height: 350px;
   background: #fff;
-  background-size: 50%;
+  background-size: 50% 100%;
   background-repeat: no-repeat;
   background-position: 100%;
 }
@@ -10517,6 +10515,12 @@ a.blog-meta:before {
   content: "\f073";
   font-family: fontAwesome;
   padding-right: 10px;
+}
+
+a.date-meta:before {
+  content: "\f073";
+  padding-right: 10px;
+  font-family: fontAwesome;
 }
 
 .ribbon {

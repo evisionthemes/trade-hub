@@ -125,7 +125,7 @@ if ( ! function_exists( 'trade_hub_latest_news' ) ) :
                                     <p><?php else: ?>
                                         <?php echo  wp_kses_post( trade_hub_words_count( $trade_hub_latest_news_single_words ,get_the_content() ) ); ?></p>
                                     <?php endif;?>   
-                                    <a href="<?php echo esc_url( get_day_link( get_the_time('Y'), get_the_time('m'), get_the_time('d') ) ); ?>"><?php echo esc_html( get_the_date('M j , Y') );?></a>
+                                    <a class="date-meta" href="<?php echo esc_url( get_day_link( get_the_time('Y'), get_the_time('m'), get_the_time('d') ) ); ?>"><?php echo esc_html( get_the_date('M j , Y') );?></a>
                                 </div><!-- content -->
 
                                </div><!-- th-news-wrapper -->  
