@@ -156,10 +156,6 @@ if ( ! function_exists( 'trade_hub_featured_home_slider' ) ) :
     </div><!-- wrapper -->
     </section><!-- section -->
     <!-- home page sections -->
-    
-    
-            
-   
   
   <?php
   }
