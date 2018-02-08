@@ -51,23 +51,8 @@ array(
 	)
 );
 
-// create a setting control for single word
-$trade_hub_settings_controls['trade-hub-call-action-link']  =
-array(
-	'setting'				=> array(
-		'default'			=> $trade_hub_customizer_defaults['trade-hub-call-action-link']
-	),
-	'control'				=> array(
-		'label'				=> esc_html__('Button Url','trade-hub'),
-		'section'			=> 'trade-hub-call-action-section',
-		'type'				=> 'url',
-		'priority'			=> 40,
-		'active_callback'	=> ''
-	)
-);
 
-
-// create a setting control for single word
+// create a setting control for button text
 $trade_hub_settings_controls['trade-hub-call-action-button-text']  =
 array(
 	'setting'				=> array(
@@ -77,9 +62,23 @@ array(
 		'label'				=> esc_html__('Button Text','trade-hub'),
 		'section'			=> 'trade-hub-call-action-section',
 		'type'				=> 'text',
-		'priority'			=> 50,
+		'priority'			=> 40,
 		'active_callback'	=> ''
 	)
 );
 
+// create a setting control for button url
+$trade_hub_settings_controls['trade-hub-call-action-link']  =
+array(
+	'setting'				=> array(
+		'default'			=> $trade_hub_customizer_defaults['trade-hub-call-action-link']
+	),
+	'control'				=> array(
+		'label'				=> esc_html__('Button Url','trade-hub'),
+		'section'			=> 'trade-hub-call-action-section',
+		'type'				=> 'url',
+		'priority'			=> 50,
+		'active_callback'	=> ''
+	)
+);
 

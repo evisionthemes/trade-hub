@@ -138,7 +138,7 @@ if ( ! function_exists( 'trade_hub_home_feature' ) ) :
 				                  			<div class="feature-content">
 				                     			<i class="fa <?php echo esc_attr($trade_hub_feature_array['trade-hub-home-feature-page-icon']);?>"></i>
 				                     			<div class="content-right">
-				                        			<h3><a href="#"><?php echo esc_html($trade_hub_feature_array['trade-hub-home-feature-title']);
+				                        			<h3><a href="<?php echo esc_url($trade_hub_feature_array['trade-hub-home-feature-link']);?>"><?php echo esc_html($trade_hub_feature_array['trade-hub-home-feature-title']);
 				                        			 ?></a></h3>
 				                        			<p><?php echo wp_kses_post($trade_hub_feature_array['trade-hub-home-feature-content']);?></p>
 				                     			</div><!--content -->

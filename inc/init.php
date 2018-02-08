@@ -53,11 +53,6 @@ require get_template_directory() . '/inc/hooks/homepage-about-us.php';
 
 require get_template_directory() . '/inc/hooks/homepage-latestnews.php';
 
-require get_template_directory() . '/inc/hooks/homepage-contact-us.php';
-
-
-
-
-// require get_template_directory().'/inc/hooks/customizer-link.php';
+require get_template_directory().'/inc/hooks/customizer-link.php';
 
 

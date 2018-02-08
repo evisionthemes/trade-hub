@@ -231,6 +231,7 @@ add_action( 'trade_hub_action_before_header', 'trade_hub_skip_to_content', 10 );
                                   'theme_location' => 'primary',
                                   'menu_id'        => 'primary-menu',
                                   'menu_class'     => 'primary-menu',
+                                  'fallback_cb'    => 'trade_hub_primary_menu_callback'
                               ) );
                               ?>
                         </nav>
@@ -250,6 +251,7 @@ add_action( 'trade_hub_action_before_header', 'trade_hub_skip_to_content', 10 );
                                                  'theme_location' => 'primary',
                                                  'menu_id'        => 'primary-menu-mobile',
                                                  'menu_class'     => 'primary-menu',
+                                                 'fallback_cb'    => 'trade_hub_primary-menu-mobile_callback'
                                              ) );
                                              ?>
                                        </nav>
@@ -264,17 +266,22 @@ add_action( 'trade_hub_action_before_header', 'trade_hub_skip_to_content', 10 );
                     
                      <div class="nav-buttons col-md-1">                       
                         <div class="button-list">
+                          <?php if ( 0 != $trade_hub_customizer_all_values['trade-hub-search-button-enable-option']) 
+                          {?>
                            <div class="search-holder">
                               <a class="button-search button-outline">
                               <i class="fa fa-search"></i>
                               </a>                                
                            </div>
+                          <?php } ?>
                         </div>                        
                      </div>                                             
                   </div>
+
                   <div class="search-form-nav" id="top-search">
                      <?php get_search_form();?>
                   </div>
+                 
                </div>
             </nav>
           </div>

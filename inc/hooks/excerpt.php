@@ -1,24 +1,23 @@
 <?php
-if( ! function_exists( 'trade_hub_excerpt_length' ) ) :
-
-    /**
+if ( !function_exists('trade_hub_excerpt_length') ) :
+     /**
      * Excerpt length
      *
-     * @since  trade-hub 1.0.0
+     * @since trade_hub 0.0.1
      *
      * @param null
      * @return int
      */
-    function trade_hub_excerpt_length( $length ){
-        global $trade_hub_customizer_all_values;
-        $excerpt_length = $trade_hub_customizer_all_values['trade-hub-excerpt-length'];
-        if ( empty( $excerpt_length) ) {
+     function trade_hub_excerpt_length( $length )
+     {
+        global $business_craft_customizer_all_values;
+        $excerpt_length = $business_craft_customizer_all_values['trade-number-of-words'];
+        if ( empty($excerpt_length) )
+        {
             $excerpt_length = $length;
         }
-        return absint( $excerpt_length );
-
-    }
-
+        return $excerpt_length;
+     }
 endif;
 add_filter( 'excerpt_length', 'trade_hub_excerpt_length', 999 );
 

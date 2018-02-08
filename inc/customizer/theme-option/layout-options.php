@@ -6,11 +6,11 @@ global $trade_hub_customizer_defaults;
 
 /*defaults values*/
 $trade_hub_customizer_defaults['trade-hub-enable-static-page'] = 1;
-
+$trade_hub_customizer_defaults['trade-hub-search-button-enable-option'] = 1;
 $trade_hub_customizer_defaults['trade-hub-alternate-layout'] = 1;
 $trade_hub_customizer_defaults['trade-hub-default-layout'] = 'right-sidebar';
 $trade_hub_customizer_defaults['trade-hub-single-post-image-align'] = 'full';
-$trade_hub_customizer_defaults['trade-hub-excerpt-length'] = '50';
+$trade_hub_customizer_defaults['trade-number-of-words'] = 35;
 $trade_hub_customizer_defaults['trade-hub-archive-layout'] = 'thumbnail-and-excerpt';
 $trade_hub_customizer_defaults['trade-hub-archive-image-align'] = 'full';
 
@@ -37,6 +37,20 @@ $trade_hub_settings_controls['trade-hub-enable-static-page'] =
     );
 
     /*home page static page display*/
+$trade_hub_settings_controls['trade-hub-search-button-enable-option'] =
+    array(
+        'setting' =>     array(
+            'default'              => $trade_hub_customizer_defaults['trade-hub-search-button-enable-option'],
+        ),
+        'control' => array(
+            'label'                 =>  esc_html__( 'Enable Search Button', 'trade-hub' ),
+            'section'               => 'trade-hub-layout-options',
+            'type'                  => 'checkbox',
+            'priority'              => 10,
+        )
+    );
+
+/*search button enable option*/
 $trade_hub_settings_controls['trade-hub-alternate-layout'] =
     array(
         'setting' =>     array(
@@ -49,6 +63,7 @@ $trade_hub_settings_controls['trade-hub-alternate-layout'] =
             'priority'              => 10,
         )
     );
+
 /*layout-options option responsive lodader start*/
 
 $trade_hub_settings_controls['trade-hub-default-layout'] =
@@ -92,18 +107,35 @@ $trade_hub_settings_controls['trade-hub-single-post-image-align'] =
         )
     );
 
-    $trade_hub_settings_controls['trade-hub-excerpt-length'] =
-        array(
-            'setting' =>     array(
-                'default'              => $trade_hub_customizer_defaults['trade-hub-excerpt-length'],
-            ),
-            'control' => array(
-                'label'                 =>  esc_html__( 'Excerpt Length (in words)', 'trade-hub' ),
-                'section'               => 'trade-hub-layout-options',
-                'type'                  => 'number',
-                'priority'              => 40,
-            )
-        );
+    // $trade_hub_settings_controls['trade-hub-excerpt-length'] =
+    //     array(
+    //         'setting' =>     array(
+    //             'default'              => $trade-hub-excerpt-length['trade-hub-excerpt-length'],
+    //         ),
+    //         'control' => array(
+    //             'label'                 =>  esc_html__( 'Excerpt Length (in words)', 'trade-hub' ),
+    //             'section'               => 'trade-hub-layout-options',
+    //             'type'                  => 'number',
+    //             'priority'              => 40,
+    //         )
+    //     );
+
+    $trade_hub_settings_controls['trade-number-of-words'] =
+    array(
+        'setting' =>       array(
+            'default'              =>   $trade_hub_customizer_defaults['trade-number-of-words']
+        ),
+        'control' =>   array(
+            'label'                 =>    esc_html__( 'Number Of Words For Excerpt', 'trade-hub' ),
+            'description'           =>    esc_html__( 'This will controll the excerpt length on listing page', 'trade-hub' ),
+            'section'               =>   'trade-hub-layout-options',
+            'type'                  =>   'number',
+            'input_attrs' =>   array( 'min' =>   1, 'max' =>   200),
+            'priority'              =>   40,
+            'active_callback'       =>   ''
+        )
+    );
+
 
         $trade_hub_settings_controls['trade-hub-archive-layout'] =
             array(

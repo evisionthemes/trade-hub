@@ -6,10 +6,10 @@ if ( ! function_exists( 'trade_hub_featured_slider_array' ) ) :
      *
      * @since Trade Hub 1.0.0
      *
-     * @param string $from_slider
+     * @param string null
      * @return array
      */
-    function trade_hub_featured_slider_array( $from_slider ){
+    function trade_hub_featured_slider_array( ){
         global $trade_hub_customizer_all_values;
         $trade_hub_feature_slider_number = absint( $trade_hub_customizer_all_values['trade-hub-featured-slider-number'] );
         $trade_hub_feature_slider_single_words = absint( $trade_hub_customizer_all_values['trade-hub-fs-single-words'] );
@@ -19,38 +19,27 @@ if ( ! function_exists( 'trade_hub_featured_slider_array' ) ) :
         $trade_hub_feature_slider_contents_array[0]['trade-hub-feature-slider-image'] = get_template_directory_uri()."/assets/img/slider.jpg";
         $repeated_page = array('trade-hub-fs-pages-ids');
         $trade_hub_feature_slider_args = array();
+      
+        $trade_hub_feature_slider_posts = evision_customizer_get_repeated_all_value(2 , $repeated_page);
+        $trade_hub_feature_slider_posts_ids = array();
+        if( null != $trade_hub_feature_slider_posts ) {
+            foreach( $trade_hub_feature_slider_posts as $trade_hub_feature_slider_post ) {
+                if( 0 != $trade_hub_feature_slider_post['trade-hub-fs-pages-ids'] ){
+                    $trade_hub_feature_section_posts_ids[] = $trade_hub_feature_slider_post['trade-hub-fs-pages-ids'];
+                }
+            }
 
-        if ( 'from-category' ==  $from_slider ){
-            $trade_hub_feature_slider_category = $trade_hub_customizer_all_values['trade-hub-featured-slider-category'];
-            if( 0 != $trade_hub_feature_slider_category ){
+            if( !empty( $trade_hub_feature_section_posts_ids )){
                 $trade_hub_feature_slider_args =    array(
-                    'post_type' => 'post',
-                    'cat' => $trade_hub_feature_slider_category,
-                    'ignore_sticky_posts' => true
+                    'post_type' => 'page',
+                    'post__in' => $trade_hub_feature_section_posts_ids,
+                    'posts_per_page' => $trade_hub_feature_slider_number,
+                    'orderby' => 'post__in'
                 );
             }
-        }
-        else{
-            $trade_hub_feature_slider_posts = evision_customizer_get_repeated_all_value(2 , $repeated_page);
-            $trade_hub_feature_slider_posts_ids = array();
-            if( null != $trade_hub_feature_slider_posts ) {
-                foreach( $trade_hub_feature_slider_posts as $trade_hub_feature_slider_post ) {
-                    if( 0 != $trade_hub_feature_slider_post['trade-hub-fs-pages-ids'] ){
-                        $trade_hub_feature_section_posts_ids[] = $trade_hub_feature_slider_post['trade-hub-fs-pages-ids'];
-                    }
-                }
 
-                if( !empty( $trade_hub_feature_section_posts_ids )){
-                    $trade_hub_feature_slider_args =    array(
-                        'post_type' => 'page',
-                        'post__in' => $trade_hub_feature_section_posts_ids,
-                        'posts_per_page' => $trade_hub_feature_slider_number,
-                        'orderby' => 'post__in'
-                    );
-                }
-
-            }
         }
+        
         if( !empty( $trade_hub_feature_slider_args )){
             // the query
             $trade_hub_fature_section_post_query = new WP_Query( $trade_hub_feature_slider_args );

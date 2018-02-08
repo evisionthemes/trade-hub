@@ -170,19 +170,6 @@ $trade_hub_settings_controls['trade-hub-fs-enable-caption'] =
     );
 
 
-$trade_hub_settings_controls['trade-hub-fs-button-text'] =
-array(
-    'setting' =>     array(
-        'default'              => $trade_hub_customizer_defaults['trade-hub-fs-button-text']
-    ),
-    'control' => array(
-        'label'                 =>  esc_html__( 'Slider Section Button Text', 'trade-hub' ),
-        'section'               => 'trade-hub-feature-slider-setting',
-        'type'                  => 'text',
-        'priority'              => 90,
-        'active_callback'       => ''
-    )
-);
 
 
 
