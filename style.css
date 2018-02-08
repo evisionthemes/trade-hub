@@ -8717,6 +8717,7 @@ a#slide-next {
 
 .call-to-action-btn {
   float: right;
+  text-align: right;
 }
 
 .wrapper-callback h2 {
@@ -9989,7 +9990,8 @@ section.section-wrapper,
   padding-top: 40px;
 }
 
-section.section-wrapper h1 {
+section.section-wrapper h1,
+section.section-wrapper h1 a {
   text-align: center;
   padding-bottom: 15px;
   text-transform: capitalize;
@@ -10260,6 +10262,17 @@ a.know-more:after {
   font-family: fontAwesome;
 }
 
+.left-text-content.feature-section h1,
+.text-div.right h1 {
+  text-align: left;
+}
+
+.left-text-content.feature-section h1:after,
+.text-div.right h1:after {
+  left: auto;
+  right: auto;
+}
+
 @media screen and (max-width:767px) {
   section.about-section {
     background-size: cover;
@@ -10359,7 +10372,19 @@ section.testimonials-section .slick-dots li {
 }
 
 .testimonials-content h4 {
-  text-align: center;
+  text-align: right;
+  position: relative;
+  opacity: .6;
+}
+
+.testimonials-content h4:after {
+  content: "";
+  position: absolute;
+  right: 0;
+  width: 42px;
+  background: #000;
+  height: 2px;
+  opacity: .6;
 }
 
 .testimonials-content p:before {

@@ -12,7 +12,7 @@ $trade_hub_customizer_defaults['trade-hub-featured-slider-pages'] = 0;
 $trade_hub_customizer_defaults['trade-hub-fs-single-words'] = 30;
 $trade_hub_customizer_defaults['trade-hub-fs-enable-title'] = 1;
 $trade_hub_customizer_defaults['trade-hub-fs-enable-caption'] = 1;
-$trade_hub_customizer_defaults['trade-hub-fs-button-text'] = esc_html__('View More','trade-hub');
+// $trade_hub_customizer_defaults['trade-hub-fs-button-text'] = esc_html__('View More','trade-hub');
 $trade_hub_customizer_defaults['trade-hub-featured-slider-number'] = 2;
 $trade_hub_customizer_defaults['trade-hub-featured-slider-selection'] = 'from-page';
 

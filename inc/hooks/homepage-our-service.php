@@ -31,7 +31,7 @@ if ( !function_exists('trade_hub_our_service') ) :
 	        	</div>
 	       	</div><!-- background image div -->
 	       	<div class="text-div right">
-	         	<h2><?php echo esc_html($trade_hub_our_service_title);?></h2>
+	         	<h1><?php echo esc_html($trade_hub_our_service_title);?></h1>
 	        	<p class="portfolio-description"><?php echo wp_kses_post( trade_hub_words_count ( $trade_hub_our_service_single_word, $trade_hub_our_service_sub_title) ) ; ?></p>
 	        	<div class="listing">
 	            	<h3><?php echo esc_html($trade_hub_our_service_first_title);?></h3>
