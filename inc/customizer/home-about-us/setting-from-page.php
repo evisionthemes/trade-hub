@@ -9,7 +9,7 @@ global $trade_hub_customizer_defaults;
 
 
 // defaults value
-$trade_hub_customizer_defaults['trade-hub-about-us-enable']  = 1;
+$trade_hub_customizer_defaults['trade-hub-about-us-enable']  = 0;
 $trade_hub_customizer_defaults['trade-hub-single-word']		 = 25;
 $trade_hub_customizer_defaults['trdae-hub-about-us-page']   = 0;
 $trade_hub_customizer_defaults['trade-hub-button-text']		= esc_html__('KNOW MORE','trade-hub');

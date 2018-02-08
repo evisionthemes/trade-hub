@@ -18,7 +18,7 @@ if ( ! function_exists( 'trade_hub_testimonial_array' ) ) :
         $trade_hub_testimonial_contents_array[1]['trade-hub-testimonial-title'] = esc_html__('JOHN DOE', 'trade-hub');
         $trade_hub_testimonial_contents_array[1]['trade-hub-testimonial-content'] = esc_html__("Proin eget tortor risus. Pellentesque in ipsum id orci porta dapibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.", 'trade-hub');
         $trade_hub_testimonial_contents_array[1]['trade-hub-testimonial-link'] = '#';
-        $trade_hub_testimonial_contents_array[1]['trade-hub-testimonial-image'] = get_template_directory_uri().'/assets/images/bg1.jpg';
+        $trade_hub_testimonial_contents_array[1]['trade-hub-testimonial-image'] = get_template_directory_uri().'/assets/images/right-content-post.jpg';
         $trade_hub_testimonial_page = array('trade-hub-testimonial-pages-ids');
         $trade_hub_testimonial_posts = evision_customizer_get_repeated_all_value(3 , $trade_hub_testimonial_page);
         $trade_hub_testimonial_posts_ids = array();
@@ -93,7 +93,7 @@ if ( ! function_exists( 'trade_hub_home_testimonial' ) ) :
     function trade_hub_home_testimonial()
     {
         global $trade_hub_customizer_all_values;
-        if( 1 != $trade_hub_customizer_all_values['trade-hub-testimonial-enable-option'] )
+        if( ! $trade_hub_customizer_all_values['trade-hub-testimonial-enable-option'] )
         {
             return null;
         }
@@ -120,18 +120,18 @@ if ( ! function_exists( 'trade_hub_home_testimonial' ) ) :
                             ?>
                             <div class="col-md-4 col-sm-4 col-xs-12 testimonials-wrapper">
                                 <div class="testimonials-content">
-                                    <div id="f1_container">
-                                        <div id="f1_card" class="shadow">
-                                            <div class="front face">
+                                    <div id="th-f1_container">
+                                        <div id="th-f1_card" class="shadow">
+                                            <div class="th-front th-face">
                                                 <img src="<?php echo esc_url($trade_hub_testimonial_array['trade-hub-testimonial-image']);?>" />
                                             </div><!-- testimonials image -->
-                                            <div class="back face center"><!-- put background image inline style here -->
+                                            <h4><a href="<?php echo esc_url($trade_hub_testimonial_array['trade-hub-testimonial-link']);?>"><?php echo esc_html($trade_hub_testimonial_array['trade-hub-testimonial-title']);?></a></h4><!-- custom link for testimonials -->
+                                            <div class="th-back th-face center"><!-- put background image inline style here -->
                                                 <p><?php echo wp_kses_post($trade_hub_testimonial_array['trade-hub-testimonial-content'])?></p>
                                             </div>
                                         </div>
                                     </div><!-- flip 1 container -->
-
-                                    <h4><a href="<?php echo esc_url($trade_hub_testimonial_array['trade-hub-testimonial-link']);?>"><?php echo esc_html($trade_hub_testimonial_array['trade-hub-testimonial-title']);?></a></h4><!-- custom link for testimonials -->
+                                    
                                 </div><!-- testimonials content -->
                             </div><!-- wrapper -->
                             <?php

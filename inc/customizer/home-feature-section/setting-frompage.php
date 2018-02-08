@@ -7,7 +7,7 @@ global $trade_hub_customizer_defaults;
 
 
 // default value for our feature 
-$trade_hub_customizer_defaults['trade-hub-our-feature-enable'] = 1;
+$trade_hub_customizer_defaults['trade-hub-our-feature-enable'] = 0;
 $trade_hub_customizer_defaults['trade-hub-our-feature-title-text'] = esc_html__('Our Amazing Feature','trade-hub');
 $trade_hub_customizer_defaults['trade-hub-our-select-number-page'] = 3;
 $trade_hub_customizer_defaults['trade-hub-our-single-word-page'] = 25;

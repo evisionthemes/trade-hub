@@ -6,7 +6,7 @@ global $trade_hub_repeated_settings_controls;
 global $trade_hub_customizer_defaults;
 
 /*defaults values feature portfolio options*/
-$trade_hub_customizer_defaults['trade-hub-feature-slider-enable'] = 1;
+$trade_hub_customizer_defaults['trade-hub-feature-slider-enable'] = 0;
 $trade_hub_customizer_defaults['trade-hub-featured-slider-category'] = 0;
 $trade_hub_customizer_defaults['trade-hub-featured-slider-pages'] = 0;
 $trade_hub_customizer_defaults['trade-hub-fs-single-words'] = 30;

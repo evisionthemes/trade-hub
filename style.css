@@ -3,12 +3,16 @@ Theme Name: Trade Hub
 Theme URI: https://evisionthemes.com/product/trade-hub
 Author: eVision Themes
 Author URI: http://evisionthemes.com
-Description: Trade Hub, A clean and responsive WordPress magazine theme that has a beautiful design to help you start a professional looking magazine / news website. It can be used for any magazine niche such as tech, politics, sports, games, fashion, etc. With the multiple and flexible features, you can optimize your website through customizer and wouldn't have to write any single code. The theme has responsive design, drag and drop options, enable / disable settings, so, the contents of your website will look elegant on any smart devices. Preview : demo: http://demo.evisionthemes.com/trade-hub Support : https://evisionthemes.com/supports Follow: https://www.facebook.com/evisionthemes Documentation : http://doc.evisionthemes.com/trade-hub
-Version: 0.1.0
+Trade Hub is a user friendly creative theme for all kind of business, accounting, financial, coaching, law office, business planning, corporate websites and blogging. It's simple to configure the homepage setting using Theme Customizer. The theme comes with flexible features, clean coding, documentation and dedicated support team to solve your confusion while building professional website. 
+Documentation: https://evisionthemes.com/documentation/
+Support : https://evisionthemes.com/supports
+Live Preview : https://demo.evisionthemes.com/trade-hub/
+Follow: https://www.facebook.com/evisionthemes 
+Version: 1.0.0
 License: GNU General Public License v3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Text Domain: trade-hub
-Tags: blog, news, one-column, two-columns, left-sidebar, right-sidebar,custom-background, custom-logo, custom-menu, custom-colors, threaded-comments, translation-ready, featured-images, theme-options, full-width-template, e-commerce, footer-widgets
+Tags: custom-logo, custom-menu, custom-colors, threaded-comments, blog, news, one-column, two-columns, left-sidebar, right-sidebar,custom-background,  translation-ready, featured-images, theme-options, full-width-template, e-commerce, footer-widgets
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
@@ -367,7 +371,7 @@ input[type="submit"] {
 
 p {
   margin-bottom: 15px;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.7;
   color: #444;
 }
@@ -1016,7 +1020,7 @@ body.single .nav-links .nav-next a:hover {
   display: block;
   padding-bottom: 7px;
   padding-top: 6px;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .widget a {
@@ -5719,7 +5723,6 @@ aside#secondary .widget .widget-title:after,
   padding: 0;
   font-size: 14px;
   font-size: 0.875rem;
-  border-radius: 4px;
 }
 
 .search-form .search-submit:hover,
@@ -5847,13 +5850,6 @@ aside#secondary .widget .widget-title:after,
 
 span.comment {
   float: right;
-}
-
-.footer-widget ul a:before {
-  content: "\f105";
-  font-family: fontAwesome;
-  padding-right: 7px;
-  font-weight: 100;
 }
 
 .thumb-post .overlay-post-content {
@@ -6665,7 +6661,7 @@ aside#secondary .right-post-content .thumb-post .post-icons a:hover {
 .search-holder {
   text-align: center;
   display: block;
-  padding-top: 4px;
+  padding-top: 7px;
 }
 
 .nav-buttons.col-md-1 .search-holder .button-search {
@@ -6954,8 +6950,13 @@ aside#secondary .right-post-content .thumb-post .post-icons a:hover {
   }
 }
 
-div#content {
+div#content,
+body.home.page #primary {
   padding-top: 40px;
+}
+
+body.home.page div#content {
+  padding-top: 0;
 }
 
 .site-content #primary,
@@ -7555,11 +7556,10 @@ button#mobile-menu-toggle-close {
 .main-navigation a,
 .main-navigation a:visited {
   display: block;
-  font-size: 12px;
+  font-size: 14px;
   outline-offset: -1px;
-  padding: 21px 50px 28px 0;
+  padding: 21px 30px 28px 0;
   text-transform: uppercase;
-  font-weight: 600;
   color: #4e4c4c;
 }
 
@@ -8842,6 +8842,10 @@ aside#secondary h2 {
   padding: 0;
 }
 
+section.no-results.not-found {
+  max-width: 456px;
+}
+
 section.error-404.not-found {
   padding: 10px 57px;
   background: #efefef;
@@ -9438,41 +9442,6 @@ div {
 
 /* sidebar changes */
 
-aside#secondary .widget ul li:before {
-  content: "\f101";
-  font-family: fontAwesome;
-  padding-right: 10px;
-  color: #585858;
-}
-
-aside#secondary section.widget_categories ul li:before {
-  content: "\f114";
-}
-
-aside#secondary section.widget_recent_entries ul li:before {
-  content: "\f0a1";
-}
-
-aside#secondary section.widget_archive ul li:before {
-  content: "\f187";
-}
-
-aside#secondary section.widget_archive select {
-  width: 100%;
-}
-
-aside#secondary section.widget_pages ul li:before {
-  content: "\f016";
-}
-
-aside#secondary section.widget_meta ul li:before {
-  content: "\f02e";
-}
-
-aside#secondary section.widget_recent_comments ul li:before {
-  content: "\f0e5";
-}
-
 i.fa.fa-search.fa-close {
   margin-top: -10px;
 }
@@ -9655,7 +9624,6 @@ span.edit-link:before {
 
 div#page {
   background: #fff;
-  box-shadow: 0 0 3px #585858;
   padding: 0;
 }
 
@@ -9921,6 +9889,7 @@ i.fa.fa-bars.top-nav-mobile {
 
 
 /* home page slider */
+
 section#banner-section {
   border-bottom: 5px solid;
 }
@@ -9951,15 +9920,16 @@ section#banner-section {
 .overlay {
   height: calc(100vh - 160px);
   position: relative;
-/*  background: rgba(0, 0, 0, 0.5)
-*/}
+  /*  background: rgba(0, 0, 0, 0.5)
+*/
+}
 
 .banner-content-inner {
   position: absolute;
   top: 50%;
   transform: translate(0, -50%);
   z-index: 999;
-  background: rgba(0, 0, 0, 0.23921568627450981);
+  background: rgba(0, 0, 0, 0.24);
   max-width: 900px;
   width: 100%;
   left: 0;
@@ -9971,7 +9941,7 @@ section#banner-section {
 a.border-btn {
   color: #000;
   font-size: 18px;
-  padding: 12px 55px;
+  padding: 12px 30px;
   border-radius: 0;
   -webkit-transition: width 0.5s;
   transition: width 0.5s;
@@ -10011,11 +9981,11 @@ section.section-wrapper,
 
 section.section-wrapper h1 {
   text-align: center;
-  padding-bottom: 30px;
+  padding-bottom: 15px;
   text-transform: capitalize;
   position: relative;
   margin-top: 0;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   color: #444;
 }
 
@@ -10037,16 +10007,10 @@ section.section-wrapper h1:after {
 }
 
 .background-image-div {
-  background: url(./assets/images/1.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  transform: scale(1.2);
   transition: all .5s;
-}
-
-section#portfolio:hover .background-image-div {
-  transform: scale(1);
 }
 
 .bg-overlay {
@@ -10075,23 +10039,12 @@ section#portfolio .bg-overlay {
 .text-div.right {
   width: 50%;
   float: right;
-  padding: 30px 54px;
+  padding: 30px 0 0 54px;
   background: #fff;
   z-index: 9;
   position: relative;
 }
-@media screen and (min-width:767px) {
-  .text-div.right:after {
-    content: "\f0d9";
-    left: -21px;
-    position: absolute;
-    top: 50%;
-    font-family: fontAwesome;
-    color: #fff;
-    font-size: 68px;
-    transform: translate(0,-50%);
-  }
-}
+
 section#portfolio h1,
 section#portfolio h2 {
   color: #444;
@@ -10138,7 +10091,7 @@ p.portfolio-description {
     float: none;
     background: #fbfbfb;
     padding: 10px 20px;
-    margin-top: 30px;
+    margin: 30px 0;
   }
   .background-image-div.portfolio-left {
     width: 100%;
@@ -10152,10 +10105,6 @@ p.portfolio-description {
 section#trade-hub-feature {
   padding-bottom: 40px;
   background: #fbfbfb;
-}
-
-section#trade-hub-feature h1 {
-  padding-bottom: 0;
 }
 
 .feature-content i {
@@ -10245,7 +10194,6 @@ section#trade-hub-feature h1 {
   padding: 10px;
   color: white;
   text-align: center;
-  background: url(./assets/images/3.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -10291,9 +10239,8 @@ section#trade-hub-feature h1 {
 section.about-section {
   position: relative;
   padding-top: 40px;
-  min-height: 400px;
-  background: #fbfbfb;
-  background: url(./assets/images/3.jpg);
+  min-height: 350px;
+  background: #fff;
   background-size: 50%;
   background-repeat: no-repeat;
   background-position: 100%;
@@ -10318,18 +10265,6 @@ a.know-more:after {
   }
 }
 
-@media screen and (min-width:767px) {
-  .left-text-content.feature-section:after{
-    content: "\f0da";
-    right: -21px;
-    position: absolute;
-    top: 50%;
-    font-family: fontAwesome;
-    color: #fff;
-    font-size: 68px;
-    transform: translate(0,-50%);
-  }
-}
 
 /* callback section */
 
@@ -10385,10 +10320,11 @@ section.testimonials-section .slick-dots li {
 }
 
 .testimonials-content {
-  border: 1px solid #dedede;
+  border: 1px solid rgba(222, 222, 222, 0.38);
   padding: 10px;
   text-align: center;
   transition: all .5s;
+  background: #fff;
 }
 
 .testimonials-content:hover {
@@ -10398,13 +10334,10 @@ section.testimonials-section .slick-dots li {
 .testimonials-content p {
   position: relative;
   z-index: 999;
-  color: #fff;
-  padding: 10px;
   text-align: center;
 }
 
 .client-image {
-  background: url(./assets/images/1.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   height: 100px;
@@ -10425,12 +10358,24 @@ section.testimonials-section .slick-dots li {
   content: "\f10d";
   font-family: fontAwesome;
   padding-right: 10px;
+  opacity: .4;
 }
 
 .testimonials-content p:after {
   content: "\f10e";
   font-family: fontAwesome;
   padding-left: 10px;
+  opacity: .4;
+}
+
+.th-front.th-face {
+  height: 130px;
+  overflow: hidden;
+  width: 130px;
+  left: 0;
+  right: 0;
+  border-radius: 50%;
+  margin: 15px auto;
 }
 
 section.testimonials-section #f1_container,
@@ -10462,16 +10407,16 @@ section.contact-section.section-wrapper {
 }
 
 .about {
-  width: 50%;
   padding: 20px 30px;
   color: #fff;
   float: left;
   height: 100%;
   background: #312e2e;
+  max-width: 50%;
 }
 
 .social-icon-only {
-  width: 50%;
+  max-width: 50%;
   float: left;
   text-align: left;
   padding: 20px 40px;
@@ -10486,7 +10431,7 @@ section.contact-section h2 {
 
 .left.contact ul li {
   list-style: none;
-  font-size: 14px;
+  font-size: 16px;
   border-bottom: 1px solid #c5c5c5;
 }
 
@@ -10498,7 +10443,6 @@ section.contact-section h2 {
 .about p,
 .about a {
   color: #c1c1c1;
-  font-size: 14px;
 }
 
 a.more:after {
@@ -10517,6 +10461,7 @@ a.more:after {
   .social-icon-only {
     width: 100%;
     height: auto;
+    max-width: 100%;
   }
 }
 
@@ -10531,7 +10476,6 @@ section#th-news {
   max-height: 200px;
   overflow: hidden;
   height: 100%;
-  margin-bottom: 20px;
 }
 
 .news-image img {
@@ -10551,6 +10495,18 @@ section#th-news {
 .th-news-wrapper {
   position: relative;
   margin-bottom: 20px;
+}
+
+.news-heading-content.feature-section {
+  margin-top: -36px;
+  z-index: 99;
+  position: relative;
+  background: #fff;
+  width: 90%;
+  left: 0;
+  right: 0;
+  margin: -36px auto 10px;
+  padding: 16px;
 }
 
 a.blog-meta {
@@ -10615,6 +10571,16 @@ a.blog-meta:before {
   border-top: 3px solid #000;
 }
 
+@media screen and (max-width:767px) {
+  .news-heading-content.feature-section {
+    width: 100%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding: auto;
+  }
+}
+
 
 /* Preloader */
 
@@ -10648,8 +10614,25 @@ body {
 }
 
 
+/* if all sections are disable */
 
-  
+.trade-hub-no-opton {
+  max-width: 600px;
+  width: 100%;
+  left: 0;
+  right: 0;
+  margin: 20px auto;
+  padding: 100px 0;
+  text-align: center;
+  background: #fbfbfb;
+}
+
+.trade-hub-no-opton a {
+  background: #239ddb;
+  padding: 10px;
+  color: #fff;
+}
+
 
 /* ==================================*/
 

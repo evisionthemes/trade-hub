@@ -7,7 +7,7 @@ global $trade_hub_repeated_settings_controls;
 global $trade_hub_customizer_defaults;
 
 // default's value
-$trade_hub_customizer_defaults['trade-contact-enable-option']  = 1;
+$trade_hub_customizer_defaults['trade-contact-enable-option']  = 0;
 $trade_hub_customizer_defaults['trade-contact-main-title']  = esc_html__('Contact Us','trade-hub');
 $trade_hub_customizer_defaults['trade-contact-localtion']  = esc_html__('NEW BANESHOWER,KATHMANDU NEPAL','trade-hub');
 $trade_hub_customizer_defaults['trade-contact-email']  = esc_html__('Evisionitnepal@gmail.com','trade-hub');

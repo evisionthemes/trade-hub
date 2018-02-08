@@ -14,6 +14,7 @@ if ( ! function_exists( 'trade_hub_before_footer' ) ) :
         </div><!-- #content -->
     </div>
     </section>
+    <?php do_action( 'trade_hub_show_message_if_no_option_selected' );?>
         <!-- *****************************************
              Footer section starts
     ****************************************** -->

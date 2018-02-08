@@ -3,17 +3,18 @@
 by eVision Themes (info@evisionthemes.com)
 
 Contributors: evisiontheme
-Tags: blog, news, one-column, two-columns, left-sidebar, right-sidebar, custom-header, custom-background, custom-logo, custom-menu, custom-colors, post-formats, threaded-comments, translation-ready, featured-images, theme-options, full-width-template, rtl-language-support, e-commerce
+Tags: custom-logo, custom-menu, custom-colors, blog, news, one-column, two-columns, left-sidebar, right-sidebar, custom-header, custom-background,  post-formats, threaded-comments, translation-ready, featured-images, theme-options, full-width-template, rtl-language-support, e-commerce
 
 Requires at least: 4.0
 Tested up to: 4.9.1
-Stable tag: 0.1.0
+Stable tag: 1.0.0
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
 == Description ==
 
-Trade Hub, A free magazine theme that has a beautiful design to help you start a professional looking news website. It can be used for any magazine niche such as tech, politics, sports, games, fashion, etc. With the available features you can optimize your website through clicks only and won’t have to write any code. The theme has responsive design, so, the contents of your website will look elegant on any device. For demo: http://demo.evisionthemes.com/trade-hub
+Trade Hub is a fresh, clean & feature rich WordPress theme developed specifically for all type of corporate business, finance business and startup company, blogging, etc. This theme is fully responsive that is perfectly adjust on any small to large devices. No coding required to create a website. In order to build inner pages layout, it supports popular plugins like Jetpack, Elementor Page Builder and other popular ones.. 
+
 
 == Copyright ==
 
@@ -152,8 +153,8 @@ https://fonts.google.com/specimen/Ubuntu
 License: Ubuntu Font License
 
 == Image used in screenshot ==
-1) https://pixabay.com/en/apple-coffee-computer-cup-girl-1851464/
-2) https://pixabay.com/en/workplace-team-business-meeting-1245776/
+1) https://pixabay.com/en/write-plan-business-startup-593333/
+
 * Other are slef made and all images are licensed under [CC0](http://creativecommons.org/publicdomain/zero/1.0/legalcode.txt)
 
 == Installation ==
@@ -172,5 +173,8 @@ Note:
 	If your Image is not align properly, then you can try regenerate thumbnails. So that it can fit on required image size.
 
 == Changelog ==
+= - 1.0.0 - =
+* new section added.
+
 = - 0.1.0 - =
 * Initial release.
