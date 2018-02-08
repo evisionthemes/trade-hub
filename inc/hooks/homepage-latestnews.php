@@ -122,9 +122,9 @@ if ( ! function_exists( 'trade_hub_latest_news' ) ) :
                                     <h3><a href="<?php echo esc_url( get_permalink() );?>"><?php the_title();?></a></h3>
                                     <?php if( has_excerpt() ) : ?>
                                     <p><?php echo wp_kses_post( get_the_excerpt() );?></p>
-                                    <p><?php else: ?>
-                                        <?php echo  wp_kses_post( trade_hub_words_count( $trade_hub_latest_news_single_words ,get_the_content() ) ); ?></p>
-                                    <?php endif;?>   
+                                    <?php else: ?>
+                                     <p>   <?php echo  wp_kses_post( trade_hub_words_count( $trade_hub_latest_news_single_words ,get_the_content() ) ); ?>
+                                    <?php endif;?></p>   
                                     <a class="date-meta" href="<?php echo esc_url( get_day_link( get_the_time('Y'), get_the_time('m'), get_the_time('d') ) ); ?>"><?php echo esc_html( get_the_date('M j , Y') );?></a>
                                 </div><!-- content -->
 
