@@ -46,7 +46,7 @@ if ( 'posts' == get_option( 'show_on_front' ) ) {
             </div>
         <?php }
         
-     // do_action('trade_hub_customizer_link');
+     // do_action('trade_hub_show_message_if_no_option_selected');
 
 }
 get_footer();

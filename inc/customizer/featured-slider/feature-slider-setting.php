@@ -75,42 +75,6 @@ $trade_hub_settings_controls['trade-hub-fs-single-words'] =
         )
     );
 
-/*feature slider selection from control*/
-$trade_hub_settings_controls['trade-hub-featured-slider-selection'] =
-    array(
-        'setting' =>     array(
-            'default'              => $trade_hub_customizer_defaults['trade-hub-featured-slider-selection']
-        ),
-        'control' => array(
-            'label'                 =>  esc_html__( 'Select Slider From', 'trade-hub' ),
-            'description'           =>  esc_html__( 'After selecting one of the option, please go back and go to particular section to add', 'trade-hub' ),
-            'section'               => 'trade-hub-feature-slider-setting',
-            'type'                  => 'select',
-            'choices'               => array(
-                'from-page' => esc_html__( 'Page', 'trade-hub' ),
-                'from-category' => esc_html__( 'Category', 'trade-hub' ),
-            ),
-            'priority'              => 40,
-            'active_callback'       => ''
-        )
-    );
-
-/*creating setting control for trade-hub-fs-Category start*/
-$trade_hub_settings_controls['trade-hub-featured-slider-category'] =
-    array(
-        'setting' =>     array(
-            'default'              => $trade_hub_customizer_defaults['trade-hub-featured-slider-category']
-        ),
-        'control' => array(
-            'label'                 =>  esc_html__( 'Select Category For Slider', 'trade-hub' ),
-            'description'           =>  esc_html__( 'If you have oly choosen category then page you need to select one from here', 'trade-hub' ),
-            'section'               => 'trade-hub-feature-slider-setting',
-            'type'                  => 'category_dropdown',
-            'priority'              => 50,
-            'active_callback'       => ''
-        )
-    );
-
 
 
 /*creating setting control for trade-hub-fs-page start*/
