@@ -98,7 +98,7 @@ $trade_hub_repeated_settings_controls['trade-hub-our-feature-page'] =
             ),
             'control' =>   array(
                 'label'                 =>    esc_html__( 'Select Page For Our Feature Page Icon %s', 'trade-hub' ),
-                'description'           =>   sprintf( esc_html__( 'Use font awesome icon: Eg: %1$s . %2$s See more here %3$s', 'trade-hub' ), 'fa-desktop','<a href="'.esc_url('http://fontawesome.io/cheatsheet/').'" target="_blank">','</a>' ),
+                'description'           =>   sprintf( esc_html__( 'Use font awesome icon: Eg: %1$s . %2$s See more here %3$s', 'trade-hub' ), 'fa-desktop','<a href="'.esc_url('https://fontawesome.com/icons').'" target="_blank">','</a>' ),
                 'section'               =>   'trade-hub-our-feature-section',
                 'type'                  =>   'text',
                 'priority'              =>   45,
