@@ -6985,15 +6985,6 @@ body.home.page div#content {
   }
 }
 
-.masonry {
-  /* Masonry container */
-  -moz-column-count: 4;
-  -webkit-column-count: 4;
-  column-count: 4;
-  -moz-column-gap: 1em;
-  -webkit-column-gap: 1em;
-  column-gap: 1em;
-}
 
 .wrapper-grid {
   /* Masonry bricks or child elements */
@@ -7387,6 +7378,17 @@ span.notice-title:before {
 
 .wrapper.wrap-nav {
   position: relative;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px){
+  .sec-menu{
+    display: inline-block;
+    text-align: center;
+  }
+  
+  .wrap-inner {
+    text-align: center;
+  }
 }
 
 .wrap-nav .wrap-inner {
@@ -8715,6 +8717,7 @@ a#slide-next {
 
 .call-to-action-btn {
   float: right;
+  text-align: right;
 }
 
 .wrapper-callback h2 {
@@ -9922,8 +9925,14 @@ section#banner-section {
 .overlay {
   height: calc(100vh - 160px);
   position: relative;
-  /*  background: rgba(0, 0, 0, 0.5)
-*/
+}
+
+/* mobile view and landscape mood */
+
+@media screen and (max-width: 767px) and (orientation: landscape) {
+  .overlay {
+    height: 100vh;
+  }
 }
 
 .banner-content-inner {
@@ -9981,7 +9990,8 @@ section.section-wrapper,
   padding-top: 40px;
 }
 
-section.section-wrapper h1 {
+section.section-wrapper h1,
+section.section-wrapper h1 a {
   text-align: center;
   padding-bottom: 15px;
   text-transform: capitalize;
@@ -10252,6 +10262,17 @@ a.know-more:after {
   font-family: fontAwesome;
 }
 
+.left-text-content.feature-section h1,
+.text-div.right h1 {
+  text-align: left;
+}
+
+.left-text-content.feature-section h1:after,
+.text-div.right h1:after {
+  left: auto;
+  right: auto;
+}
+
 @media screen and (max-width:767px) {
   section.about-section {
     background-size: cover;
@@ -10351,7 +10372,19 @@ section.testimonials-section .slick-dots li {
 }
 
 .testimonials-content h4 {
-  text-align: center;
+  text-align: right;
+  position: relative;
+  opacity: .6;
+}
+
+.testimonials-content h4:after {
+  content: "";
+  position: absolute;
+  right: 0;
+  width: 42px;
+  background: #000;
+  height: 2px;
+  opacity: .6;
 }
 
 .testimonials-content p:before {
@@ -10642,7 +10675,6 @@ body {
   padding: 10px;
   color: #fff;
 }
-
 
 /* ==================================*/
 

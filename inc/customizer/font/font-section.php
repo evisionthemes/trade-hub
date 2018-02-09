@@ -30,9 +30,9 @@ $trade_hub_google_fonts = array(
 );
 
 /*defaults values*/
-$trade_hub_customizer_defaults['trade-hub-font-family-Primary'] = 'Gudea:400,400i,700';
+$trade_hub_customizer_defaults['trade-hub-font-family-Primary'] = 'Roboto';
 $trade_hub_customizer_defaults['trade-hub-font-family-site-identity'] = 'Roboto';
-$trade_hub_customizer_defaults['trade-hub-font-family-title'] = 'Magra:400,700';
+$trade_hub_customizer_defaults['trade-hub-font-family-title'] = 'Roboto';
 
 
 /*section*/

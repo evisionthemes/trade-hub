@@ -125,10 +125,10 @@ if ( ! function_exists( 'trade_hub_home_testimonial' ) ) :
                                             <div class="th-front th-face">
                                                 <img src="<?php echo esc_url($trade_hub_testimonial_array['trade-hub-testimonial-image']);?>" />
                                             </div><!-- testimonials image -->
-                                            <h4><a href="<?php echo esc_url($trade_hub_testimonial_array['trade-hub-testimonial-link']);?>"><?php echo esc_html($trade_hub_testimonial_array['trade-hub-testimonial-title']);?></a></h4><!-- custom link for testimonials -->
                                             <div class="th-back th-face center"><!-- put background image inline style here -->
                                                 <p><?php echo wp_kses_post($trade_hub_testimonial_array['trade-hub-testimonial-content'])?></p>
                                             </div>
+                                            <h4><a href="<?php echo esc_url($trade_hub_testimonial_array['trade-hub-testimonial-link']);?>"><?php echo esc_html($trade_hub_testimonial_array['trade-hub-testimonial-title']);?></a></h4><!-- custom link for testimonials -->
                                         </div>
                                     </div><!-- flip 1 container -->
                                     
