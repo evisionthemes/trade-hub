@@ -10377,14 +10377,8 @@ section.testimonials-section .slick-dots li {
   opacity: .6;
 }
 
-.testimonials-content h4:after {
-  content: "";
-  position: absolute;
-  right: 0;
-  width: 42px;
-  background: #000;
-  height: 2px;
-  opacity: .6;
+.testimonials-content h4 i{
+  padding-right: 5px;
 }
 
 .testimonials-content p:before {
