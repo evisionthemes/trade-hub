@@ -5,7 +5,6 @@ global $trade_hub_settings_controls;
 global $trade_hub_repeated_settings_controls;
 global $trade_hub_customizer_defaults;
 
-
 // default value for our feature 
 $trade_hub_customizer_defaults['trade-hub-our-feature-enable'] = 0;
 $trade_hub_customizer_defaults['trade-hub-our-feature-title-text'] = esc_html__('Our Amazing Feature','trade-hub');
