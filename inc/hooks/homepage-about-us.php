@@ -52,12 +52,10 @@ function  tarde_hub_about_us()
 			                    <div class="col-md-6 col-xs-12 col-sm-6">
 			                        <div class="left-text-content feature-section">
 
-    			                       <h3><a href="<?php the_permalink();?>"><?php the_title();?></a></h3>
-
-    			                       <h1><a href="#"><?php the_title();?></a></h1>
+    			                       <h1><?php the_title();?></h1>
 
     			                       <p><?php echo wp_kses_post(trade_hub_words_count( $trade_hub_feature_slider_single_words_about ,get_the_content()));?></p>
-    			                       <a href="#" class="know-more"><?php echo esc_html($trade_hub_home_about_button_text);?>
+    			                       <a href="<?php the_permalink();?>" class="know-more"><?php echo esc_html($trade_hub_home_about_button_text);?>
     			                    	
     			                       </a>
 			                        </div>
@@ -101,9 +99,9 @@ function  tarde_hub_about_us()
 			              <div class="content-left clearfix">   
 			                <div class="col-md-6 col-xs-12 col-sm-6">
 			                  <div class="left-text-content feature-section">
-			                    <h3><a href="<?php the_permalink();?>"><?php the_title();?></a></h3>
+			                    <h3><?php the_title();?></h3>
 			                    <p><?php echo wp_kses_post(trade_hub_words_count( $trade_hub_feature_slider_single_words_about ,get_the_content()));?></p>
-			                    <a href="#" class="know-more"><?php echo esc_html($trade_hub_home_about_button_text);?></a>
+			                    <a href="<?php the_permalink();?>" class="know-more"><?php echo esc_html($trade_hub_home_about_button_text);?></a>
 			                  </div>
 			                </div><!-- col-md-6 -->                  
 			              </div>
