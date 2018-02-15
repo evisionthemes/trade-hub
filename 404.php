@@ -6,18 +6,17 @@
  *
  * @package trade-hub
  */
-
 get_header(); ?>
 	<div class="wrapper page-inner-title">
 		<div class="container">
 		    <div class="row">
-		        <div class="col-md-12 col-sm-12 col-xs-12">
+				<div class="col-md-12 col-sm-12 col-xs-12">
 					<header class="entry-header">
-						<div class="inner-banner-overlay">
-							<h1 class="entry-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'trade-hub' ); ?></h1>
-						</div>
+					<div class="inner-banner-overlay">
+						<h1 class="entry-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'trade-hub' ); ?></h1>
+					</div>
 					</header><!-- .entry-header -->
-		        </div>
+				</div>
 		    </div>
 		</div>
 	</div>
@@ -30,9 +29,9 @@ get_header(); ?>
 						<div class="page-content">
 						<h1>4o4</h1>
 							<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'trade-hub' ); ?></p>	
-							 <div id="404-search"> 
+							<div id="404-search"> 
                                     <?php get_search_form();  ?>                       
-                                </div>						
+                            </div>						
      					</div><!-- .page-content -->
 					</section><!-- .error-404 -->
 

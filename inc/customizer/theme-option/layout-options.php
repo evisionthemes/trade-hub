@@ -5,14 +5,14 @@ global $trade_hub_repeated_settings_controls;
 global $trade_hub_customizer_defaults;
 
 /*defaults values*/
-$trade_hub_customizer_defaults['trade-hub-enable-static-page'] = 1;
+$trade_hub_customizer_defaults['trade-hub-enable-static-page']          = 1;
 $trade_hub_customizer_defaults['trade-hub-search-button-enable-option'] = 0;
-$trade_hub_customizer_defaults['trade-hub-alternate-layout'] = 1;
-$trade_hub_customizer_defaults['trade-hub-default-layout'] = 'right-sidebar';
-$trade_hub_customizer_defaults['trade-hub-single-post-image-align'] = 'full';
-$trade_hub_customizer_defaults['trade-number-of-words'] = 35;
-$trade_hub_customizer_defaults['trade-hub-archive-layout'] = 'thumbnail-and-excerpt';
-$trade_hub_customizer_defaults['trade-hub-archive-image-align'] = 'full';
+$trade_hub_customizer_defaults['trade-hub-alternate-layout']            = 1;
+$trade_hub_customizer_defaults['trade-hub-default-layout']              = 'right-sidebar';
+$trade_hub_customizer_defaults['trade-hub-single-post-image-align']     = 'full';
+$trade_hub_customizer_defaults['trade-number-of-words']                 = 35;
+$trade_hub_customizer_defaults['trade-hub-archive-layout']              = 'thumbnail-and-excerpt';
+$trade_hub_customizer_defaults['trade-hub-archive-image-align']         = 'full';
 
 $trade_hub_sections['trade-hub-layout-options'] =
     array(
@@ -78,8 +78,8 @@ $trade_hub_settings_controls['trade-hub-default-layout'] =
             'type'                  => 'select',
             'choices'               => array(
                 'right-sidebar' => esc_html__( 'Content - Primary Sidebar', 'trade-hub' ),
-                'left-sidebar' => esc_html__( 'Primary Sidebar - Content', 'trade-hub' ),
-                'no-sidebar' => esc_html__( 'No Sidebar', 'trade-hub' )
+                'left-sidebar'  => esc_html__( 'Primary Sidebar - Content', 'trade-hub' ),
+                'no-sidebar'    => esc_html__( 'No Sidebar', 'trade-hub' )
             ),
             'priority'              => 10,
             'active_callback'       => ''
@@ -97,10 +97,10 @@ $trade_hub_settings_controls['trade-hub-single-post-image-align'] =
             'section'               => 'trade-hub-layout-options',
             'type'                  => 'select',
             'choices'               => array(
-                'full' => esc_html__( 'Full', 'trade-hub' ),
-                'right' => esc_html__( 'Right', 'trade-hub' ),
-                'left' => esc_html__( 'Left', 'trade-hub' ),
-                'no-image' => esc_html__( 'No image', 'trade-hub' )
+                'full'      => esc_html__( 'Full', 'trade-hub' ),
+                'right'     => esc_html__( 'Right', 'trade-hub' ),
+                'left'      => esc_html__( 'Left', 'trade-hub' ),
+                'no-image'  => esc_html__( 'No image', 'trade-hub' )
             ),
             'priority'              => 40,
             'description'           =>  esc_html__( 'Please note that this setting can be override from individual post/page', 'trade-hub' ),
@@ -130,7 +130,7 @@ $trade_hub_settings_controls['trade-hub-single-post-image-align'] =
             'description'           =>    esc_html__( 'This will controll the excerpt length on listing page', 'trade-hub' ),
             'section'               =>   'trade-hub-layout-options',
             'type'                  =>   'number',
-            'input_attrs' =>   array( 'min' =>   1, 'max' =>   200),
+            'input_attrs'           =>   array( 'min' => 1, 'max' => 200 ),
             'priority'              =>   40,
             'active_callback'       =>   ''
         )

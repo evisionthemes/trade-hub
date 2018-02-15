@@ -6,7 +6,7 @@ global $trade_hub_customizer_defaults;
 
 /*defaults values*/
 $trade_hub_customizer_defaults['trade-hub-footer-sidebar-number'] = 3;
-$trade_hub_customizer_defaults['trade-hub-copyright-text'] = __('Copyright &copy; All right reserved.','trade-hub');
+$trade_hub_customizer_defaults['trade-hub-copyright-text'] = esc_html__( 'Copyright &copy; All right reserved.', 'trade-hub' );
 $trade_hub_customizer_defaults['trade-hub-enable-theme-name'] = 1;
 
 $trade_hub_sections['trade-hub-footer-options'] =

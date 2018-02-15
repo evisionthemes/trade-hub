@@ -1,5 +1,4 @@
 <?php
-
 global $trade_hub_panels;
 global $trade_hub_sections;
 global $trade_hub_settings_controls;

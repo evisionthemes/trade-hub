@@ -169,7 +169,7 @@ class Breadcrumb_Trail {
 				$breadcrumb .= sprintf( '<h2 class="trail-browse">%s</h2>', $this->labels['browse'] );
 
 			// Open the unordered list.
-			$breadcrumb .= '<ul class="trail-items" itemscope itemtype="http://schema.org/BreadcrumbList">';
+			$breadcrumb .= '<ul class="trail-items" itemscope itemtype="' . esc_url('http://schema.org/BreadcrumbList') . '">';
 
 			// Add the number of items and item list order schema.
 			$breadcrumb .= sprintf( '<meta name="numberOfItems" content="%d" />', absint( $item_count ) );

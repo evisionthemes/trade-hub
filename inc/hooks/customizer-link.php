@@ -20,8 +20,8 @@ if ( ! function_exists('customizer_link') ) :
     
     ?>
     <section class="container trade-hub-no-opton">
-        <p>All Section are based on page. Enable each Section from customizer for 
-          slider: main-homePage->feature-slider->Enable feature slider. likewise to other sections </p>
+        <p><?php echo __('All Section are based on page. Enable each Section from customizer for 
+          slider: main-homePage->feature-slider->Enable feature slider. likewise to other sections' ,'trade-hub' );?> </p>
         <a href="<?php echo esc_url( admin_url('/customize.php') );?>"><?php esc_html_e( 'Goto Customizer','trade-hub' );?></a>
     </section>
   <?php

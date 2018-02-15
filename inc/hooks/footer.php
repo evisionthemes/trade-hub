@@ -114,7 +114,7 @@ if ( ! function_exists( 'trade_hub_footer' ) ) :
                              if( 1 == $trade_hub_customizer_all_values['trade-hub-enable-theme-name']){
                                 ?>
                                 <span class="sep"> | </span>
-                                <?php printf( esc_html__( 'Theme: %1$s by %2$s', 'trade-hub' ), 'Trade Hub', '<a href="http://evisionthemes.com/" target = "_blank" rel="designer">eVisionThemes </a>' ); ?>
+                                <?php printf( esc_html__( 'Theme: %1$s by %2$s', 'trade-hub' ), 'Trade Hub', sprint('<a href="%s" target = "_blank" rel="designer">%s</a>', esc_url( 'http://evisionthemes.com/' ), esc_html__( 'eVisionThemes', 'trade-hub' ) )  ); ?>
                                 <?php
                             }
                             ?>

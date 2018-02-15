@@ -14,8 +14,8 @@ if ( ! function_exists( 'trade_hub_latest_news_array' ) ) :
         // $trade_hub_latest_news_number = absint( $trade_hub_customizer_all_values['trade-hub-featured-slider-number'] );
         $trade_hub_latest_news_single_words = absint( $trade_hub_customizer_all_values['trade-hub-latest-news-single-word'] );
        
-        $trade_hub_latest_news_contents_array[0]['trade-hub-latest-news-title'] = __('START YOUR BUSINESS','trade-hub');
-        $trade_hub_latest_news_contents_array[0]['trade-hub-latest-news-content'] = __("Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas semper, dolor vitae venenatis cursus, enim ante commodo orci, non maximus ante lectus nec urna. Vivamus laoreet hendrerit",'trade-hub');
+        $trade_hub_latest_news_contents_array[0]['trade-hub-latest-news-title'] = esc_html__( 'START YOUR BUSINESS', 'trade-hub' );
+        $trade_hub_latest_news_contents_array[0]['trade-hub-latest-news-content'] = esc_html__( 'Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas semper, dolor vitae venenatis cursus, enim ante commodo orci, non maximus ante lectus nec urna. Vivamus laoreet hendrerit', 'trade-hub');
         $trade_hub_latest_news_contents_array[0]['trade-hub-latest-news-link'] = '#';
         $trade_hub_latest_news_contents_array[0]['trade-hub-latest-news-image'] = get_template_directory_uri()."/assets/images/1.jpg";
         // $repeated_page = array('trade-hub-fs-pages-ids');
@@ -105,7 +105,7 @@ if ( ! function_exists( 'trade_hub_latest_news' ) ) :
                               <div class="th-news-wrapper">
                                 <div class="ribbon">
                                     <a href="<?php echo esc_url( get_category_link( $trade_hub_latest_news_category ) );?>">
-                                        <span><?php esc_html_e( sprintf( __('%s','trade-hub'), get_cat_name( $trade_hub_latest_news_category ) ) );?></span>
+                                        <span><?php printf( '%s', get_cat_name( $trade_hub_latest_news_category ) );?></span>
                                     </a>
                                 </div>
                                 

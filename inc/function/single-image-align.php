@@ -1,6 +1,5 @@
 <?php 
 /*image alignment single post*/
-
 if( ! function_exists( 'trade_hub_single_post_image_align' ) ) :
     /**
      * trade-hub default layout function

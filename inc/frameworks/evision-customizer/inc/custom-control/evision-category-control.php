@@ -31,7 +31,7 @@ if ( class_exists( 'WP_Customize_Control' ) && !class_exists( 'Evision_Customize
                 array(
                     'name'              => $name,
                     'echo'              => 0,
-                    'show_option_none'  =>__('Select','trade-hub'),
+                    'show_option_none'  => esc_html__( 'Select', 'trade-hub' ),
                     'option_none_value' => '0',
                     'selected'          => $this->value(),
                 )
