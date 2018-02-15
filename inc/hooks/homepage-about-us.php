@@ -46,20 +46,20 @@ function  tarde_hub_about_us()
 
             <section class="about-section section-wrapper container" style="background-image: url('<?php echo esc_url($thumb[0]); ?>');"><!-- background image style here -->
 			        <div class="row">
-			        	
-			            <div class="feature-text-content-wrapper col-md-12">
-			                <div class="content-left clearfix">   
-			                    <div class="col-md-6 col-xs-12 col-sm-6">
-			                        <div class="left-text-content feature-section">
+			        	<div class="col-md-6 col-xs-12 col-sm-6">
+    			            <div class="feature-text-content-wrapper col-md-12">
+    			                <div class="content-left clearfix">   
+    			                    
+    			                        <div class="left-text-content feature-section">
 
-    			                       <h1><?php the_title();?></h1>
+        			                       <h1><?php the_title();?></h1>
 
-    			                       <p><?php echo wp_kses_post(trade_hub_words_count( $trade_hub_feature_slider_single_words_about ,get_the_content()));?></p>
-    			                       <a href="<?php the_permalink();?>" class="know-more"><?php echo esc_html($trade_hub_home_about_button_text);?>
-    			                    	
-    			                       </a>
-			                        </div>
-			                    </div><!-- col-md-6 -->                  
+        			                       <p><?php echo wp_kses_post(trade_hub_words_count( $trade_hub_feature_slider_single_words_about ,get_the_content()));?></p>
+        			                       <a href="<?php the_permalink();?>" class="know-more"><?php echo esc_html($trade_hub_home_about_button_text);?>
+        			                    	
+        			                       </a>
+    			                        </div>
+    			                    </div><!-- col-md-6 -->                  
 			                </div>
 			            </div>
 			           

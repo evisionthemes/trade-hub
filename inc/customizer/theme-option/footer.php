@@ -29,6 +29,7 @@ $trade_hub_settings_controls['trade-hub-footer-sidebar-number'] =
                 0 => esc_html__( 'Disable footer sidebar area', 'trade-hub' ),
                 1 => esc_html__( '1', 'trade-hub' ),
                 2 => esc_html__( '2', 'trade-hub' ),
+                3 => esc_html__( '3', 'trade-hub' ),
                 
             ),
             'priority'              => 15,
