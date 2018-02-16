@@ -238,7 +238,7 @@ function trade_hub_primary_menu_callback() {
 	?>
 		<ul id="menu">
 			<li><a href="<?php echo esc_url( home_url( '/' ) );?>"><?php esc_html_e('Home','trade-hub');?></a></li>
-			<li><a href="<?php echo esc_url( admin_url( 'wp-admin/nav-menus.php' ) );?>"><?php esc_html_e('Set Primary Menu','trade-hub');?></a></li>
+			<li><a href="<?php echo esc_url( admin_url( '/nav-menus.php' ) );?>"><?php esc_html_e('Set Primary Menu','trade-hub');?></a></li>
 		</ul>
 	<?php
 }
@@ -247,7 +247,7 @@ function trade_hub_primary_menu_mobile_callback() {
 	?>
 		<ul id="mobile-menu">
 			<li><a href="<?php echo esc_url( home_url( '/' ) );?>"><?php esc_html_e('Home','trade-hub');?></a></li>
-			<li><a href="<?php echo esc_url( admin_url( 'wp-admin/nav-menus.php' ) );?>"><?php esc_html_e('Set Primary Menu','trade-hub');?></a></li>
+			<li><a href="<?php echo esc_url( admin_url( '/nav-menus.php' ) );?>"><?php esc_html_e('Set Primary Menu','trade-hub');?></a></li>
 		</ul>
 	<?php
 }
