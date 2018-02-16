@@ -8,7 +8,7 @@ Documentation: https://evisionthemes.com/documentation/
 Support : https://evisionthemes.com/supports
 Live Preview : https://demo.evisionthemes.com/trade-hub/
 Follow: https://www.facebook.com/evisionthemes 
-Version: 1.0.0
+Version: 1.0.1
 License: GNU General Public License v3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Text Domain: trade-hub
@@ -5574,7 +5574,6 @@ article .comment-list,
   display: inline-block;
   text-align: center;
   vertical-align: top;
-  width: 100%;
   margin-bottom: 15px;
   margin-top: 15px;
 }
@@ -9924,9 +9923,13 @@ section#banner-section {
 
 /* mobile view and landscape mood */
 
-@media screen and (max-width: 767px) and (orientation: landscape) {
+@media screen and (max-width: 900px) and (orientation: landscape) {
   .overlay {
     height: 100vh;
+  }
+
+  .text-content {
+    padding: 0 16px 16px;
   }
 }
 
@@ -10126,7 +10129,7 @@ section#trade-hub-feature {
 
 .feature-content {
   padding: 10px;
-  display: inline-block;
+  display: block;
   transition: all .5s;
   position: relative;
   text-align: center;
@@ -10318,8 +10321,13 @@ section .overlay-callback h1:after {
 .overlay-callback p {
   padding-bottom: 15px;
 }
-
-
+@media screen and (max-width:767px) {
+  a.border-btn {    
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+  }
+}
 /* testimonials section */
 
 section.testimonials-section.section-wrapper {

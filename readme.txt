@@ -7,7 +7,7 @@ Tags: custom-logo, custom-menu, custom-colors, blog, news, one-column, two-colum
 
 Requires at least: 4.0
 Tested up to: 4.9.1
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -171,6 +171,9 @@ trade-hub includes support for Infinite Scroll in Jetpack.
 
 Note:
 	If your Image is not align properly, then you can try regenerate thumbnails. So that it can fit on required image size.
+== Changelog ==
+= - 1.0.1 - =
+* issue fixing from reviewer.
 
 == Changelog ==
 = - 1.0.0 - =
