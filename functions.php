@@ -151,11 +151,11 @@ function trade_hub_scripts() {
 		wp_add_inline_style( 'trade-hub-style', trade_hub_inline_style() );
 
 		// *** SCRIPT ***//
-		$min = '';
-		if ( !defined( 'SCRIPT_DEBUG' )  || ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG == false ) ) {
-			$min = '.min';
+		$min = '.min';
+		if ( defined( 'SCRIPT_DEBUG' ) && true == SCRIPT_DEBUG ) {
+			$min = '';
 		}
-
+		
 		// modernizr
 		wp_enqueue_script( 'jquery-modernizr', get_template_directory_uri() . '/assets/js/modernizr.min.js', array('jquery'), '2.8.3', true );
 		
