@@ -1,6 +1,6 @@
 /*
 Theme Name: Trade Hub
-Theme URI: https://evisionthemes.com/product/trade-hub
+Theme URI: https://evisionthemes.com/product/trade-hub/
 Author: eVision Themes
 Author URI: http://evisionthemes.com
 Description: Trade Hub is a user friendly creative theme for all kind of business, accounting, financial, coaching, law office, business planning, corporate websites and blogging. It's simple to configure the homepage setting using Theme Customizer. The theme comes with flexible features, clean coding, documentation and dedicated support team to solve your confusion while building professional website. 
@@ -4546,24 +4546,19 @@ h6 {
     font-size: 3rem;
   }
   h2 {
-    font-size: 32px;
-    font-size: 2rem;
+    font-size: 36px;
   }
   h3 {
-    font-size: 16px;
-    font-size: 1rem;
+    font-size: 28px;
   }
   h4 {
-    font-size: 14px;
-    font-size: 0.875rem;
+    font-size: 22px;
   }
   h5 {
-    font-size: 12px;
-    font-size: 0.75rem;
+    font-size: 18px;
   }
   h6 {
-    font-size: 10px;
-    font-size: 0.625rem;
+    font-size: 16px;
   }
 }
 
@@ -10010,6 +10005,7 @@ section.section-wrapper h1:after {
   right: 0;
   margin: auto;
   margin-top: 10px;
+  display: block;
 }
 
 .portfolio-second.section-wrapper {
@@ -10156,7 +10152,6 @@ section#trade-hub-feature {
   padding: 0;
   position: relative;
   margin-top: 0;
-  display: inline-block;
 }
 
 .service-image {
