@@ -151,6 +151,10 @@ function trade_hub_scripts() {
 		wp_add_inline_style( 'trade-hub-style', trade_hub_inline_style() );
 
 		// *** SCRIPT ***//
+		$min = '';
+		if ( !defined( 'SCRIPT_DEBUG' )  || ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG == false ) ) {
+			$min = '.min';
+		}
 
 		// modernizr
 		wp_enqueue_script( 'jquery-modernizr', get_template_directory_uri() . '/assets/js/modernizr.min.js', array('jquery'), '2.8.3', true );
@@ -158,9 +162,9 @@ function trade_hub_scripts() {
 		// easing
 		wp_enqueue_script('jquery-easing', get_template_directory_uri() . '/assets/frameworks/jquery.easing/jquery.easing.js', array('jquery'), '0.3.6', 1);
 	    // slick
-	    wp_enqueue_script('jquery-slick', get_template_directory_uri() . '/assets/frameworks/slick/slick.min.js', array('jquery'), '1.6.0', 1);
+	    wp_enqueue_script('jquery-slick', get_template_directory_uri() . '/assets/frameworks/slick/slick' . $min . '.js', array('jquery'), '1.6.0', 1);
 	    // waypoints
-	    wp_enqueue_script('jquery-waypoints', get_template_directory_uri() . '/assets/frameworks/waypoints/jquery.waypoints.min.js', array('jquery'), '4.0.0', 1);
+	    wp_enqueue_script('jquery-waypoints', get_template_directory_uri() . '/assets/frameworks/waypoints/jquery.waypoints' . $min . '.js', array('jquery'), '4.0.0', 1);
 		// custom
 		wp_enqueue_script('trade-hub-custom-js', get_template_directory_uri() . '/assets/js/evision-custom.js', array('jquery'), '', true);
 
