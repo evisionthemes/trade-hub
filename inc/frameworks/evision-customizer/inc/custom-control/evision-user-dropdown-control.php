@@ -42,7 +42,7 @@ if ( class_exists( 'WP_Customize_Control' ) && ! class_exists( 'Evision_Customiz
                         }
                         printf('<option value="-1" %s>%s</option>',selected($default_selected, 1, false),esc_html__('Select','trade-hub'));
                         foreach ( $users as $user ) {
-                            printf('<option value="%s" %s>%s</option>', absint($user->data->ID), selected($this->value(),  absint($user->data->ID), false), esc_html($user->data->display_name,'trade-hub' ) ) ;
+                            printf('<option value="%s" %s>%s</option>', absint($user->data->ID), selected($this->value(),  absint($user->data->ID), false), $user->data->display_name ) ;
                         }
                         ?>
                     </select>

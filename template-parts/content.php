@@ -18,7 +18,7 @@ global $trade_hub_customizer_all_values;
 		$trade_hub_archive_layout = $trade_hub_customizer_all_values['trade-hub-archive-layout'];
 		$trade_hub_archive_image_align = $trade_hub_customizer_all_values['trade-hub-archive-image-align'];
 		if( 'excerpt-only' == $trade_hub_archive_layout ){
-			the_excerpt();
+			echo wp_trim_excerpt( get_the_excerpt() );
 		}
 		elseif( 'full-post' == $trade_hub_archive_layout ){
 			the_content( sprintf(

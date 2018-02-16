@@ -1,5 +1,4 @@
 <?php
-
 global $trade_hub_panels;
 global $trade_hub_sections;
 global $trade_hub_settings_controls;
@@ -7,15 +6,15 @@ global $trade_hub_repeated_settings_controls;
 global $trade_hub_customizer_defaults;
 
 // defaults value's
-$trade_hub_customizer_defaults['trade-hub-call-action-enable-option']  = 0;
-$trade_hub_customizer_defaults['trade-hub-call-action-button-text']  = esc_html__('BUY NOW','trade-hub');
-$trade_hub_customizer_defaults['trade-hub-call-action-main-text']	= esc_html__('USE THIS BUTTON FOR CALL TO ACTION','trade-hub');
-$trade_hub_customizer_defaults['trade-hub-call-action-link']	= '#';
+$trade_hub_customizer_defaults['trade-hub-call-action-enable-option']  	= 0;
+$trade_hub_customizer_defaults['trade-hub-call-action-button-text']  	= esc_html__( 'BUY NOW', 'trade-hub' );
+$trade_hub_customizer_defaults['trade-hub-call-action-main-text']		= esc_html__( 'USE THIS BUTTON FOR CALL TO ACTION', 'trade-hub' );
+$trade_hub_customizer_defaults['trade-hub-call-action-link']			= '#';
 
 // create a section for call to action
 $trade_hub_sections['trade-hub-call-action-section'] = 
 array(
-	'title'					=> esc_html__('Call-To-Action','trade-hub'),
+	'title'					=> esc_html__( 'Call-To-Action', 'trade-hub' ),
 	'panel'					=> 'trade-hub-main-homepage-panel',
 	'priority'				=> 240
 );
@@ -27,7 +26,7 @@ array(
 		'default'			=> $trade_hub_customizer_defaults['trade-hub-call-action-enable-option']
 	),
 	'control'				=> array(
-		'label'				=> esc_html__('Enable Call to Action','trade-hub'),
+		'label'				=> esc_html__( 'Enable Call to Action', 'trade-hub' ),
 		'section'			=> 'trade-hub-call-action-section',
 		'type'				=> 'checkbox',
 		'priority'			=> 10,
@@ -43,7 +42,7 @@ array(
 		'default'			=> $trade_hub_customizer_defaults['trade-hub-call-action-main-text']
 	),
 	'control'				=> array(
-		'label'				=> esc_html__('Call Action Text','trade-hub'),
+		'label'				=> esc_html__(  'Call Action Text', 'trade-hub' ),
 		'section'			=> 'trade-hub-call-action-section',
 		'type'				=> 'text',
 		'priority'			=> 30,
@@ -59,7 +58,7 @@ array(
 		'default'			=> $trade_hub_customizer_defaults['trade-hub-call-action-button-text']
 	),
 	'control'				=> array(
-		'label'				=> esc_html__('Button Text','trade-hub'),
+		'label'				=> esc_html__( 'Button Text', 'trade-hub' ),
 		'section'			=> 'trade-hub-call-action-section',
 		'type'				=> 'text',
 		'priority'			=> 40,
@@ -74,7 +73,7 @@ array(
 		'default'			=> $trade_hub_customizer_defaults['trade-hub-call-action-link']
 	),
 	'control'				=> array(
-		'label'				=> esc_html__('Button Url','trade-hub'),
+		'label'				=> esc_html__( 'Button Url', 'trade-hub' ),
 		'section'			=> 'trade-hub-call-action-section',
 		'type'				=> 'url',
 		'priority'			=> 50,

@@ -1,5 +1,4 @@
 <?php
-
 global $trade_hub_panels;
 global $trade_hub_sections;
 global $trade_hub_settings_controls;
@@ -7,17 +6,17 @@ global $trade_hub_repeated_settings_controls;
 global $trade_hub_customizer_defaults;
 
 // defaults value
-$trade_hub_customizer_defaults['trade-hub-about-us-enable']  = 0;
-$trade_hub_customizer_defaults['trade-hub-single-word']		 = 25;
-$trade_hub_customizer_defaults['trdae-hub-about-us-page']   = 0;
-$trade_hub_customizer_defaults['trade-hub-button-text']		= esc_html__('KNOW MORE','trade-hub');
+$trade_hub_customizer_defaults['trade-hub-about-us-enable']		= 0;
+$trade_hub_customizer_defaults['trade-hub-single-word']			= 25;
+$trade_hub_customizer_defaults['trdae-hub-about-us-page']   	= 0;
+$trade_hub_customizer_defaults['trade-hub-button-text']			= esc_html__( 'KNOW MORE', 'trade-hub' );
 // $trade_hub_customizer_defaults['trade-hub-button-link']		= '#';	
-$trade_hub_customizer_defaults['trade-hub-select_number_page']		= 1;		
+$trade_hub_customizer_defaults['trade-hub-select_number_page']	= 1;		
 
 // craate a section  for testimonial
 $trade_hub_sections['trade-hub-about-us-section'] = 
 array(
-	'title'				=> esc_html('About-Us','trade-hub'),
+	'title'				=> esc_html__( 'About-Us', 'trade-hub' ),
 	'panel'				=> 'trade-hub-main-homepage-panel',
 	'priority'			=> 30
 );
@@ -29,7 +28,7 @@ array(
 		'default'			=> $trade_hub_customizer_defaults['trade-hub-about-us-enable'],
 	),
 	'control'				=> array(
-		'label'				=> esc_html__('Enable About-Us','trade-hub'),
+		'label'				=> esc_html__( 'Enable About-Us', 'trade-hub' ),
 		'section'			=> 'trade-hub-about-us-section',
 		'type'				=> 'checkbox',
 		'priority'			=> 10,
@@ -43,10 +42,10 @@ array(
 		'default'			=> $trade_hub_customizer_defaults['trade-hub-single-word'],
 	),
 	'control'				=> array(
-		'label'				=> esc_html__('Select Number Of words-About-us','trade-hub'),
+		'label'				=> esc_html__( 'Select Number Of words-About-us', 'trade-hub' ),
 		'section'			=> 'trade-hub-about-us-section',
 		'type'				=> 'number',
-		'inuput_attr'		=> array('min'=>1,'max'=>200),
+		'inuput_attr'		=> array( 'min'=>1, 'max'=>200 ),
 		'priority'			=> 20,
 		'active_callvack'	=> ''
 	)
@@ -58,7 +57,7 @@ array(
 		'default'			=> $trade_hub_customizer_defaults['trdae-hub-about-us-page'],
 	),
 	'control'				=> array(
-		'label'				=> esc_html__('Select Page For About Us','trade-hub'),
+		'label'				=> esc_html__( 'Select Page For About Us', 'trade-hub' ),
 		'section'			=> 'trade-hub-about-us-section',
 		'type'				=> 'dropdown-pages',
 		'priority'			=> 30,
@@ -72,7 +71,7 @@ array(
 		'default'			=> $trade_hub_customizer_defaults['trade-hub-button-text'],
 	),
 	'control'				=> array(
-		'label'				=> esc_html__('Button Text','trade-hub'),
+		'label'				=> esc_html__( 'Button Text', 'trade-hub' ),
 		'section'			=> 'trade-hub-about-us-section',
 		'type'				=> 'text',
 		'priority'			=> 40,

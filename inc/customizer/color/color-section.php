@@ -16,9 +16,9 @@ $trade_hub_customizer_defaults['trade-hub-color-reset'] = '';
 if ( ! function_exists( 'trade_hub_color_reset' ) ) :
     function trade_hub_color_reset( ) {
         
-            global $trade_hub_customizer_saved_values;
-           $trade_hub_customizer_saved_values = trade_hub_get_all_options();
-        if ( $trade_hub_customizer_saved_values['trade-hub-color-reset'] == 1 ) {
+        global $trade_hub_customizer_saved_values;
+        $trade_hub_customizer_saved_values = trade_hub_get_all_options();
+        if ( $trade_hub_customizer_saved_values['trade-hub-color-reset'] == absint( 1 ) ) {
             global $trade_hub_customizer_defaults;
             global $trade_hub_customizer_saved_values;
             /*getting fields*/

@@ -6,18 +6,18 @@ global $trade_hub_repeated_settings_controls;
 global $trade_hub_customizer_defaults;
 
 /*defaults values feature portfolio options*/
-$trade_hub_customizer_defaults['trade-hub-feature-slider-enable'] = 0;
-$trade_hub_customizer_defaults['trade-hub-featured-slider-category'] = 0;
-$trade_hub_customizer_defaults['trade-hub-featured-slider-pages'] = 0;
-$trade_hub_customizer_defaults['trade-hub-fs-single-words'] = 30;
-$trade_hub_customizer_defaults['trade-hub-fs-enable-title'] = 1;
-$trade_hub_customizer_defaults['trade-hub-fs-enable-caption'] = 1;
-$trade_hub_customizer_defaults['trade-hub-fs-button-text'] = esc_html__('Know More','trade-hub');
+$trade_hub_customizer_defaults['trade-hub-feature-slider-enable']       = 0;
+$trade_hub_customizer_defaults['trade-hub-featured-slider-category']    = 0;
+$trade_hub_customizer_defaults['trade-hub-featured-slider-pages']       = 0;
+$trade_hub_customizer_defaults['trade-hub-fs-single-words']             = 30;
+$trade_hub_customizer_defaults['trade-hub-fs-enable-title']             = 1;
+$trade_hub_customizer_defaults['trade-hub-fs-enable-caption']           = 1;
+$trade_hub_customizer_defaults['trade-hub-fs-button-text']              = esc_html__('Know More','trade-hub');
 
 // $trade_hub_customizer_defaults['trade-hub-fs-button-text'] = esc_html__('View More','trade-hub');
 
-$trade_hub_customizer_defaults['trade-hub-featured-slider-number'] = 2;
-$trade_hub_customizer_defaults['trade-hub-featured-slider-selection'] = 'from-page';
+$trade_hub_customizer_defaults['trade-hub-featured-slider-number']      = 2;
+$trade_hub_customizer_defaults['trade-hub-featured-slider-selection']   = 'from-page';
 
 /*feature slider enable setting*/
 $trade_hub_sections['trade-hub-feature-slider-setting'] =

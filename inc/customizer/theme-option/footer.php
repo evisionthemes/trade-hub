@@ -6,7 +6,7 @@ global $trade_hub_customizer_defaults;
 
 /*defaults values*/
 $trade_hub_customizer_defaults['trade-hub-footer-sidebar-number'] = 3;
-$trade_hub_customizer_defaults['trade-hub-copyright-text'] = __('Copyright &copy; All right reserved.','trade-hub');
+$trade_hub_customizer_defaults['trade-hub-copyright-text'] = esc_html__( 'Copyright &copy; All right reserved.', 'trade-hub' );
 $trade_hub_customizer_defaults['trade-hub-enable-theme-name'] = 1;
 
 $trade_hub_sections['trade-hub-footer-options'] =
@@ -29,6 +29,7 @@ $trade_hub_settings_controls['trade-hub-footer-sidebar-number'] =
                 0 => esc_html__( 'Disable footer sidebar area', 'trade-hub' ),
                 1 => esc_html__( '1', 'trade-hub' ),
                 2 => esc_html__( '2', 'trade-hub' ),
+                3 => esc_html__( '3', 'trade-hub' ),
                 
             ),
             'priority'              => 15,

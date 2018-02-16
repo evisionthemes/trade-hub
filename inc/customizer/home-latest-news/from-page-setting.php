@@ -1,5 +1,4 @@
 <?php 
-
 global $trade_hub_panels;
 global $trade_hub_sections;
 global $trade_hub_settings_controls;
@@ -7,19 +6,19 @@ global $trade_hub_repeated_settings_controls;
 global $trade_hub_customizer_defaults;
 
 // defaults value
-$trade_hub_customizer_defaults['trade-hub-latest-news-enable-option'] = 0;
-$trade_hub_customizer_defaults['trade-hub-latest-news-title-text']  = esc_html__('Latest News','trade-hub');
-$trade_hub_customizer_defaults['trade-hub-latest-news-category']  = 0;
-$trade_hub_customizer_defaults['trade-hub-latest-news-single-word']  = 30;
+$trade_hub_customizer_defaults['trade-hub-latest-news-enable-option']   = 0;
+$trade_hub_customizer_defaults['trade-hub-latest-news-title-text']      = esc_html__( 'Latest News', 'trade-hub' );
+$trade_hub_customizer_defaults['trade-hub-latest-news-category']        = 0;
+$trade_hub_customizer_defaults['trade-hub-latest-news-single-word']     = 30;
 $trade_hub_customizer_defaults['trade-hub-latest-news-section-number']  = 3;
-$trade_hub_customizer_defaults['trade-hub-latest-news-button-text'] = __('Browse more','trade-hub');
+$trade_hub_customizer_defaults['trade-hub-latest-news-button-text']     = esc_html__( 'Browse more', 'trade-hub' );
 /*$trade_hub_customizer_defaults['trade-hub-latest-news-button-link'] = '#';*/
-$trade_hub_customizer_defaults['trade-hub-latest-news-selection'] = 'from-category';
+$trade_hub_customizer_defaults['trade-hub-latest-news-selection']       = 'from-category';
 
 // create a section for latest news
 $trade_hub_sections['trade-hub-latest-news-section'] = 
 array(
-	'title'				=> esc_html__('Latest-News','trade-hub'),
+	'title'				=> esc_html__( 'Latest-News', 'trade-hub' ),
 	'panel'				=> 'trade-hub-main-homepage-panel',
 	'priority'			=> 250
 );
@@ -31,7 +30,7 @@ array(
 		'default'			=> $trade_hub_customizer_defaults['trade-hub-latest-news-enable-option']
 	),
 	'control'				=> array(
-		'label'				=> esc_html__('Enable Latest News','trade-hub'),
+		'label'				=> esc_html__( 'Enable Latest News', 'trade-hub' ),
 		'section'			=> 'trade-hub-latest-news-section',
 		'type'				=> 'checkbox',
 		'priority'			=> 10,
@@ -46,7 +45,7 @@ array(
 		'default'			=> $trade_hub_customizer_defaults['trade-hub-latest-news-title-text']
 	),
 	'control'				=> array(
-		'label'				=> esc_html__('Title Text','trade-hub'),
+		'label'				=> esc_html__( 'Title Text', 'trade-hub' ),
 		'section'			=> 'trade-hub-latest-news-section',
 		'type'				=> 'text',
 		'priority'			=> 20,
@@ -61,7 +60,7 @@ array(
 		'default'			=> $trade_hub_customizer_defaults['trade-hub-latest-news-single-word']
 	),
 	'control'				=> array(
-		'label'				=> esc_html__('Select Number Of Word','trade-hub'),
+		'label'				=> esc_html__( 'Select Number Of Word', 'trade-hub' ),
 		'section'			=> 'trade-hub-latest-news-section',
 		'type'				=> 'number',
 		'input_attr'		=> array('min' => 1, 'max' =>200),
@@ -74,29 +73,29 @@ array(
 $trade_hub_settings_controls['trade-hub-latest-news-category'] =
     array(
         'setting' =>       array(
-            'default'              =>   $trade_hub_customizer_defaults['trade-hub-latest-news-category']
+            'default'              => $trade_hub_customizer_defaults['trade-hub-latest-news-category']
         ),
         'control' =>   array(
-            'label'                 =>    esc_html__( 'Select Category For Latest News', 'trade-hub' ),
-            'description'           =>    esc_html__( 'News will only displayed from this category', 'trade-hub' ),
-            'section'               =>   'trade-hub-latest-news-section',
-            'type'                  =>   'category_dropdown',
-            'priority'              =>   50,
-            'active_callback'       =>   ''
+            'label'                 => esc_html__( 'Select Category For Latest News', 'trade-hub' ),
+            'description'           => esc_html__( 'News will only displayed from this category', 'trade-hub' ),
+            'section'               => 'trade-hub-latest-news-section',
+            'type'                  => 'category_dropdown',
+            'priority'              => 50,
+            'active_callback'       => ''
         )
     );
 
 $trade_hub_settings_controls['trade-hub-latest-news-button-text'] =
     array(
         'setting' =>       array(
-            'default'              =>   $trade_hub_customizer_defaults['trade-hub-latest-news-button-text']
+            'default'              => $trade_hub_customizer_defaults['trade-hub-latest-news-button-text']
         ),
         'control' =>   array(
-            'label'                 =>    esc_html__( 'Browse All Button Text', 'trade-hub' ),
-            'section'               =>   'trade-hub-latest-news-section',
-            'type'                  =>   'text',
-            'priority'              =>   60,
-            'active_callback'       =>   ''
+            'label'                 => esc_html__( 'Browse All Button Text', 'trade-hub' ),
+            'section'               => 'trade-hub-latest-news-section',
+            'type'                  => 'text',
+            'priority'              => 60,
+            'active_callback'       => ''
         )
     );
 

@@ -8,18 +8,16 @@ if ( !function_exists('trade_hub_excerpt_length') ) :
      * @param null
      * @return int
      */
-     function trade_hub_excerpt_length( $length )
-     {
-        global $business_craft_customizer_all_values;
-        $excerpt_length = $business_craft_customizer_all_values['trade-number-of-words'];
-        if ( empty($excerpt_length) )
-        {
+     function trade_hub_excerpt_length( $length ) {
+        global $trade_hub_customizer_all_values;
+        $excerpt_length = $trade_hub_customizer_all_values['trade-number-of-words'];        
+        if ( !$excerpt_length ) {
             $excerpt_length = $length;
         }
         return $excerpt_length;
      }
 endif;
-add_filter( 'excerpt_length', 'trade_hub_excerpt_length', 999 );
+add_filter( 'excerpt_length', 'trade_hub_excerpt_length' );
 
 
 if ( ! function_exists( 'trade_hub_implement_read_more' ) ) :
@@ -40,9 +38,9 @@ if ( ! function_exists( 'trade_hub_implement_read_more' ) ) :
         }
 
         $output = $more;
-        $read_more_text = __('continue reading','trade-hub');
+        $read_more_text = esc_html__('continue reading','trade-hub');
         if ( ! empty( $read_more_text ) ) {
-            $output = ' <div class="read-more-text"><a href="' . esc_url( get_permalink() ) . '" class="read-more">' . esc_html( $read_more_text ) . '</a></div>';
+            $output = ' <div class="read-more-text"><a href="' . esc_url( get_permalink() ) . '" class="read-more">' . $read_more_text . '</a></div>';
             $output = apply_filters( 'trade_hub_filter_read_more_link' , $output );
         }
         return $output;

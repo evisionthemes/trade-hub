@@ -251,7 +251,7 @@ add_action( 'trade_hub_action_before_header', 'trade_hub_skip_to_content', 10 );
                                                  'theme_location' => 'primary',
                                                  'menu_id'        => 'primary-menu-mobile',
                                                  'menu_class'     => 'primary-menu',
-                                                 'fallback_cb'    => 'trade_hub_primary-menu-mobile_callback'
+                                                 'fallback_cb'    => 'trade_hub_primary_menu_mobile_callback'
                                              ) );
                                              ?>
                                        </nav>

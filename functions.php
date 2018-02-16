@@ -38,8 +38,7 @@ function trade_hub_setup() {
 	 * hard-coded <title> tag in the document head, and expect WordPress to
 	 * provide it for us.
 	 */
-	add_theme_support( 'title-tag' );
-	add_image_size( 'trade-hub-recent-sidebar', 165, 165, true );
+	add_theme_support( 'title-tag' );	
 
 
 	/*
@@ -127,7 +126,7 @@ function trade_hub_google_fonts() {
 	if ( $fonts ) {
 		$fonts_url = add_query_arg( array(
 			'family' => urlencode( implode( '|', $fonts ) ),
-		), 'https://fonts.googleapis.com/css' );
+		), esc_url( '//fonts.googleapis.com/css' ) );
 	}
 
 	return $fonts_url;
@@ -230,3 +229,21 @@ endif;
 
 /*update to pro added*/
 require_once( trailingslashit( get_template_directory() ) . 'trt-customize-pro/trade-hub/class-customize.php' );
+
+function trade_hub_primary_menu_callback() {
+	?>
+		<ul id="menu">
+			<li><a href="<?php echo esc_url( home_url( '/' ) );?>"><?php esc_html_e('Home','trade-hub');?></a></li>
+			<li><a href="<?php echo esc_url( admin_url( 'wp-admin/nav-menus.php' ) );?>"><?php esc_html_e('Set Primary Menu','trade-hub');?></a></li>
+		</ul>
+	<?php
+}
+
+function trade_hub_primary_menu_mobile_callback() {
+	?>
+		<ul id="mobile-menu">
+			<li><a href="<?php echo esc_url( home_url( '/' ) );?>"><?php esc_html_e('Home','trade-hub');?></a></li>
+			<li><a href="<?php echo esc_url( admin_url( 'wp-admin/nav-menus.php' ) );?>"><?php esc_html_e('Set Primary Menu','trade-hub');?></a></li>
+		</ul>
+	<?php
+}

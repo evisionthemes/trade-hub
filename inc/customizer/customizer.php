@@ -100,7 +100,7 @@ add_action( 'customize_save_after','trade_hub_customizer_reset' );
 $trade_hub_sections['trade-hub-customizer-reset'] =
     array(
         'priority'       => 999,
-        'title'          => __( 'Reset All Options', 'trade-hub' )
+        'title'          => esc_html__( 'Reset All Options', 'trade-hub' )
     );
 $trade_hub_settings_controls['trade-hub-customizer-reset-settings'] =
     array(
@@ -109,8 +109,8 @@ $trade_hub_settings_controls['trade-hub-customizer-reset-settings'] =
             'transport'            => 'postmessage',
         ),
         'control' => array(
-            'label'                 =>  __( 'Reset All Options', 'trade-hub' ),
-            'description'           =>  __( 'Caution: Reset all options settings to default. Refresh the page after save to view the effects. ', 'trade-hub' ),
+            'label'                 =>  esc_html__( 'Reset All Options', 'trade-hub' ),
+            'description'           =>  esc_html__( 'Caution: Reset all options settings to default. Refresh the page after save to view the effects. ', 'trade-hub' ),
             'section'               => 'trade-hub-customizer-reset',
             'type'                  => 'checkbox',
             'priority'              => 10,
@@ -123,14 +123,14 @@ Aranging header image
  *******************************************/
 $trade_hub_sections['custom_css'] =
     array(
-        'title'          => __( 'Additional CSS', 'trade-hub' ),
+        'title'          => esc_html__( 'Additional CSS', 'trade-hub' ),
         'priority'       => 400,
     );
     
 $trade_hub_sections['header_image'] =
     array(
         'priority'       => 1999,
-        'title'          => __( 'Header Image', 'trade-hub' )
+        'title'          => esc_html__( 'Header Image', 'trade-hub' )
     );
 
 $trade_hub_customizer_args = array(

@@ -35,15 +35,15 @@ if ( ! function_exists( 'trade_hub_home_feature_array' ) ) :
                 {
                     $trade_hub_home_feature_posts_ids[] = $trade_hub_home_feature_post['trade-hub-home-feature-pages-ids'];
                 }
-                 if( isset( $trade_hub_home_feature_post['business-craft-our-service-icon'] ))
+                 if( isset( $trade_hub_home_feature_post['trade-hub-our-service-icon'] ))
                     {
-                        $trade_hub_home_feature_post = $trade_hub_home_feature_post['business-craft-our-service-icon'];
+                        $trade_hub_home_feature_post = $trade_hub_home_feature_post['trade-hub-our-service-icon'];
                     }
                     else
                     {
                         $trade_hub_home_feature_post =' fa-desktop';
                     }
-                    $business_craft_icons_arrays[] = $trade_hub_home_feature_post;
+                    $trade_hub_icons_arrays[] = $trade_hub_home_feature_post;
 
             }
             if( !empty( $trade_hub_home_feature_posts_ids ))
@@ -134,7 +134,7 @@ if ( ! function_exists( 'trade_hub_home_feature' ) ) :
 		             						break;
 		             					}?> 
 
-		             					<div class="col-md-4 col-sm-4 col-xs-12">
+		             					<div class="col-md-<?php echo intval( 12/$trade_hub_home_feature_number);?> col-sm-<?php echo intval( 12/$trade_hub_home_feature_number);?> col-xs-12">
 				                  			<div class="feature-content">
 				                     			<i class="fa <?php echo esc_attr($trade_hub_feature_array['trade-hub-home-feature-page-icon']);?>"></i>
 				                     			<div class="content-right">
