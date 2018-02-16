@@ -6474,6 +6474,7 @@ img.desaturate {
 }
 
 
+
 /*image on inner banner stage*/
 
 .page-inner-title .entry-header.inner-banner-image {
@@ -7099,6 +7100,10 @@ body.evision-no-sidebar #secondary {
 
 .top-header .noticebar:after {
   clear: both;
+}
+
+.logged-in header#masthead {
+  padding-top: 15px;
 }
 
 @media screen and (max-width: 767px) {
