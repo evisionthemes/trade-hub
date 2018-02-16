@@ -10252,6 +10252,7 @@ section.about-section {
   background-size: 50% 100%;
   background-repeat: no-repeat;
   background-position: 100%;
+  overflow: hidden;
 }
 
 a.know-more:after {
