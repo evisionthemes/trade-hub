@@ -109,7 +109,7 @@ function trade_hub_layout_options_callback() {
         </tr>
         <!--Image alignment-->
         <tr>
-            <td colspan="4"><?php _e( 'Featured Image Alignment', 'trade-hub' ); ?></td>
+            <td colspan="4"><?php esc_html_e( 'Featured Image Alignment', 'trade-hub' ); ?></td>
         </tr>
         <tr>
             <td>
@@ -145,7 +145,7 @@ function trade_hub_save_sidebar_layout( $post_id ) {
     }
 
     // Verify the nonce before proceeding.
-    if ( !isset( $_POST[ 'trade_hub_layout_options_nonce' ] ) || !wp_verify_nonce( $_POST[ 'trade_hub_layout_options_nonce' ], basename( __FILE__ ) ) ) {
+    if ( !isset( $_POST[ 'trade_hub_layout_options_nonce' ] ) || !wp_verify_nonce( sanitize_key($_POST[ 'trade_hub_layout_options_nonce' ] ), basename( __FILE__ ) ) ) {
         return;
     }
 
@@ -160,7 +160,7 @@ function trade_hub_save_sidebar_layout( $post_id ) {
     
     if(isset($_POST['trade-hub-default-layout'])){
         $old = get_post_meta( $post_id, 'trade-hub-default-layout', true );
-        $new = sanitize_text_field( $_POST['trade-hub-default-layout'] );
+        $new = sanitize_text_field( wp_unslash( $_POST['trade-hub-default-layout'] ) );
         if ( $new && $new != $old ) {
             update_post_meta( $post_id, 'trade-hub-default-layout', $new );
         } elseif ( '' == $new && $old ) {
@@ -171,7 +171,7 @@ function trade_hub_save_sidebar_layout( $post_id ) {
     /*image align*/
     if(isset($_POST['trade-hub-single-post-image-align'])){
         $old = get_post_meta( $post_id, 'trade-hub-single-post-image-align', true );
-        $new = sanitize_text_field( $_POST['trade-hub-single-post-image-align'] );
+        $new = sanitize_text_field( wp_unslash ( $_POST['trade-hub-single-post-image-align'] ) );
         if ( $new && $new != $old ) {
             update_post_meta( $post_id, 'trade-hub-single-post-image-align', $new );
         } elseif ( '' == $new && $old ) {
