@@ -205,6 +205,7 @@ add_action( 'trade_hub_action_before_header', 'trade_hub_skip_to_content', 10 );
           <div class="container top-header-wrap">
             <div class="col-md-4 wrapper wrapper-site-identity">
               <div class="site-branding">
+               <?php trade_hub_the_custom_logo(); ?>
                 <?php
                    if ( is_front_page() && is_home() ) : ?>
                 <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
@@ -217,8 +218,7 @@ add_action( 'trade_hub_action_before_header', 'trade_hub_skip_to_content', 10 );
                    if ( $description || is_customize_preview() ) : ?>
                 <p class="site-description"><?php echo esc_html($description); /* WPCS: xss ok. */ ?></p>
                 <?php
-                   endif; ?>
-                <?php trade_hub_the_custom_logo(); ?>
+                   endif; ?>               
               </div>
             </div>
             <nav class="col-md-8 wrapper wrap-nav">

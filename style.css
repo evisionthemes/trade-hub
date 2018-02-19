@@ -5578,35 +5578,39 @@ article .comment-list,
   margin-top: 15px;
 }
 
-.gallery-cols-2 .gallery-item {
+.gallery-columns-2 .gallery-item {
   max-width: 50%;
 }
 
-.gallery-cols-3 .gallery-item {
+.gallery-columns-1 .gallery-item {
+  width: 100%;
+}
+
+.gallery-columns-3 .gallery-item {
   max-width: 33.33%;
 }
 
-.gallery-cols-4 .gallery-item {
+.gallery-columns-4 .gallery-item {
   max-width: 25%;
 }
 
-.gallery-cols-5 .gallery-item {
+.gallery-columns-5 .gallery-item {
   max-width: 20%;
 }
 
-.gallery-cols-6 .gallery-item {
+.gallery-columns-6 .gallery-item {
   max-width: 16.66%;
 }
 
-.gallery-cols-7 .gallery-item {
+.gallery-columns-7 .gallery-item {
   max-width: 14.28%;
 }
 
-.gallery-cols-8 .gallery-item {
+.gallery-columns-8 .gallery-item {
   max-width: 12.5%;
 }
 
-.gallery-cols-9 .gallery-item {
+.gallery-columns-9 .gallery-item {
   max-width: 11.11%;
 }
 
@@ -5615,18 +5619,18 @@ article .comment-list,
 }
 
 @media screen and (max-width: 767px) {
-  .gallery-cols-5 .gallery-item,
-  .gallery-cols-6 .gallery-item,
-  .gallery-cols-7 .gallery-item,
-  .gallery-cols-8 .gallery-item,
-  .gallery-cols-9 .gallery-item {
+  .gallery-columns-5 .gallery-item,
+  .gallery-columns-6 .gallery-item,
+  .gallery-columns-7 .gallery-item,
+  .gallery-columns-8 .gallery-item,
+  .gallery-columns-9 .gallery-item {
     max-width: 100%;
   }
 }
 
 @media screen and (max-width: 480px) {
-  .gallery-cols-3 .gallery-item,
-  .gallery-cols-4 .gallery-item {
+  .gallery-columns-3 .gallery-item,
+  .gallery-columns-4 .gallery-item {
     max-width: 100%;
   }
 }
@@ -6474,6 +6478,7 @@ img.desaturate {
 }
 
 
+
 /*image on inner banner stage*/
 
 .page-inner-title .entry-header.inner-banner-image {
@@ -7099,6 +7104,10 @@ body.evision-no-sidebar #secondary {
 
 .top-header .noticebar:after {
   clear: both;
+}
+
+.logged-in header#masthead {
+  padding-top: 15px;
 }
 
 @media screen and (max-width: 767px) {
@@ -10353,9 +10362,18 @@ section.testimonials-section .slick-dots li {
 }
 
 .testimonials-content:hover {
-  border-radius: 6px;
+  box-shadow: 0 0 3px #d8d8d8;
+  background: #fff;
 }
 
+.th-front.th-face {
+  transform: scale(1.1);
+  transition: all .5s;
+}
+
+.testimonials-content:hover .th-front.th-face {
+  transform: scale(1);
+}
 .testimonials-content p {
   position: relative;
   z-index: 999;

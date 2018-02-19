@@ -153,7 +153,7 @@ https://fonts.google.com/specimen/Ubuntu
 License: Ubuntu Font License
 
 == Image used in screenshot ==
-1) https://pixabay.com/en/write-plan-business-startup-593333/
+1) https://www.pexels.com/photo/man-holds-digital-tablet-in-his-hands-6363/
 
 * Other are slef made and all images are licensed under [CC0](http://creativecommons.org/publicdomain/zero/1.0/legalcode.txt)
 
