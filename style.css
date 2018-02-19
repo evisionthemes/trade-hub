@@ -10362,9 +10362,18 @@ section.testimonials-section .slick-dots li {
 }
 
 .testimonials-content:hover {
-  border-radius: 6px;
+  box-shadow: 0 0 3px #d8d8d8;
+  background: #fff;
 }
 
+.th-front.th-face {
+  transform: scale(1.1);
+  transition: all .5s;
+}
+
+.testimonials-content:hover .th-front.th-face {
+  transform: scale(1);
+}
 .testimonials-content p {
   position: relative;
   z-index: 999;
