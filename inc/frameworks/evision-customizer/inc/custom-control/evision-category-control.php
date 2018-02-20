@@ -39,7 +39,7 @@ if ( class_exists( 'WP_Customize_Control' ) && !class_exists( 'Evision_Customize
             $dropdown_final = str_replace( '<select', '<select ' . $this->get_link(), $dropdown_categories );
             printf(
                 '<label><span class="customize-control-title">%s</span> %s</label>',
-                $this->label,
+                esc_html($this->label),
                 $dropdown_final
             );
         }
