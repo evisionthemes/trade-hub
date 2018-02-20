@@ -10692,6 +10692,10 @@ body {
   color: #fff;
 }
 
+/* woocommerce */
+.woocommerce .quantity .qty {
+  width: 4.631em !important;
+}
 /* ==================================*/
 
 
