@@ -13,6 +13,13 @@ if ( ! function_exists( 'trade_hub_home_feature_array' ) ) :
         $trade_hub_home_feature_number = absint($trade_hub_customizer_all_values['trade-hub-our-select-number-page']);
         $trade_hub_home_feature_single_words = absint($trade_hub_customizer_all_values['trade-hub-our-single-word-page']);
 
+        $trade_hub_home_feature_contents_array = array();
+
+        $trade_hub_home_feature_contents_array[1]['trade-hub-home-feature-title'] = __('Clean Designs', 'business-craft');
+        $trade_hub_home_feature_contents_array[1]['trade-hub-home-feature-content'] = __("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.", 'business-craft');
+        $trade_hub_home_feature_contents_array[1]['trade-hub-home-feature-link'] = '#';
+        $trade_hub_home_feature_contents_array[1]['trade-hub-home-feature-page-icon'] = 'fa-desktop';
+
         $trade_hub_icons_array = array('trade-hub-home-feature-page-icon');
         $trade_hub_home_feature_page = array('trade-hub-home-feature-pages-ids');
         
@@ -91,39 +98,36 @@ if ( ! function_exists( 'trade_hub_home_feature' ) ) :
            <section class="feature-section section-wrapper" id="trade-hub-feature">
 		        <div class="container">
 		            <div class="row">
-		             	<h2><?php echo esc_html($trade_hub_home_feature_title); ?></h2> 
-		             	          
-		             		<div class="feature-icon-content-wrapper col-md-12">
+		             	<h2><?php echo esc_html($trade_hub_home_feature_title); ?></h2>		            <div class="feature-icon-content-wrapper col-md-12">
+                                <?php
+                                    $i = 0;
 
-		             			<?php
-		             				$i = 0;
+                                    foreach ($trade_hub_feature_arrays as $trade_hub_feature_array)
+                                    {
+                                        if ( $trade_hub_home_feature_number < $i )
+                                        {
+                                            break;
+                                        }?> 
 
-		             				foreach ($trade_hub_feature_arrays as $trade_hub_feature_array)
-		             				{
-		             					if ( $trade_hub_home_feature_number < $i )
-		             					{
-		             						break;
-		             					}?> 
-
-		             					<div class="col-md-<?php echo intval( 12/$trade_hub_home_feature_number);?> col-sm-<?php echo intval( 12/$trade_hub_home_feature_number);?> col-xs-12">
-				                  			<div class="feature-content">
-				                     			<i class="fa <?php echo esc_attr($trade_hub_feature_array['trade-hub-home-feature-page-icon']);?>"></i>
-				                     			<div class="content-right">
-				                        			<h3><a href="<?php echo esc_url($trade_hub_feature_array['trade-hub-home-feature-link']);?>"><?php echo esc_html($trade_hub_feature_array['trade-hub-home-feature-title']);
-				                        			 ?></a></h3>
-				                        			<p><?php echo wp_kses_post($trade_hub_feature_array['trade-hub-home-feature-content']);?></p>
-				                     			</div><!--content -->
-				                  			</div><!-- feature content -->
-		               					</div><!-- col-md-12 -->
-		             				    <?php
-				               			$i++;
-				               		}
-				               		?>         
-		          	   		</div><!-- md-6 -->
+                                        <div class="col-md-<?php echo intval( 12/$trade_hub_home_feature_number);?> col-sm-<?php echo intval( 12/$trade_hub_home_feature_number);?> col-xs-12">
+                                            <div class="feature-content">
+                                                <i class="fa <?php echo esc_attr($trade_hub_feature_array['trade-hub-home-feature-page-icon']);?>"></i>
+                                                <div class="content-right">
+                                                    <h3><a href="<?php echo esc_url($trade_hub_feature_array['trade-hub-home-feature-link']);?>"><?php echo esc_html($trade_hub_feature_array['trade-hub-home-feature-title']);
+                                                     ?></a></h3>
+                                                    <p><?php echo wp_kses_post($trade_hub_feature_array['trade-hub-home-feature-content']);?></p>
+                                                </div><!--content -->
+                                            </div><!-- feature content -->
+                                        </div><!-- col-md-12 -->
+                                        <?php
+                                        $i++;
+                                    }
+                                    ?>         
+                            </div><!-- md-6 -->
             
-		         		 </div><!-- row -->
-		        	</div><!-- container -->
-   			</section><!-- feature section end --> 
+                         </div><!-- row -->
+                    </div><!-- container -->
+            </section><!-- feature section end --> 
             <?php
         }
     }
