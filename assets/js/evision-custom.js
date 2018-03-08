@@ -133,4 +133,51 @@ function Slider() {
     ]
   });
 
+   //slick slider 
+  jQuery('.testimonials').slick({
+    slidesToShow: 3,
+    dots: true,
+    arrows: false,
+    autoplay: true,
+    autoplaySpeed: 6000,
+    responsive: [{
+        breakpoint: 768,
+        settings: {
+          arrows: false,
+          slidesToShow: 1
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          arrows: false,
+          slidesToShow: 1
+        }
+      }
+    ]
+  });
+
+  jQuery('.trade-hub-news').slick({
+    slidesToShow: 3,
+    dots: true,
+    arrows: false,
+    autoplay: true,
+    autoplaySpeed: 6000,
+    responsive: [{
+        breakpoint: 768,
+        settings: {
+          arrows: false,
+          slidesToShow: 1
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          arrows: false,
+          slidesToShow: 1
+        }
+      }
+    ]
+  });
+
 }

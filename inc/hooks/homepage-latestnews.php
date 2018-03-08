@@ -98,7 +98,7 @@ if ( ! function_exists( 'trade_hub_latest_news' ) ) :
                 <section class="section-wrapper" id="th-news">
                     <div class="container">
                       <div class="row">
-                        <h1><?php echo esc_html( $trade_hub_customizer_all_values['trade-hub-latest-news-title-text'] ); ?></h1>
+                        <h2><?php echo esc_html( $trade_hub_customizer_all_values['trade-hub-latest-news-title-text'] ); ?></h2>
                             <?php while($trade_hub_fature_section_post_query->have_posts() ) : $trade_hub_fature_section_post_query->the_post();?>
                             <div class="col-md-4 col-sm-4 col-xs-12">
                               

@@ -107,7 +107,7 @@ if ( ! function_exists( 'trade_hub_home_testimonial' ) ) :
            <section class="testimonials-section section-wrapper"><!-- testimonials section start here -->
                <div class="container">
                   <div class="row">
-                    <h1><?php echo esc_html($trade_hub_testimonial_title); ?></h1>
+                    <h2><?php echo esc_html($trade_hub_testimonial_title); ?></h2>
                     <div class="testimonials">
                         <?php 
                         $i = 1;

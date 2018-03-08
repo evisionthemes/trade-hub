@@ -92,12 +92,13 @@ if( ! function_exists( 'trade_hub_inline_style' ) ) :
             .tabs-menu li.current,           
             .tagcloud a:hover,
             .left.contact,
-            section.section-wrapper h1:after,            
+            section.section-wrapper h2:after,            
             .ribbon span,
             .slick-prev:hover:before, 
             .slick-next:hover:before,
             .nav-holder #sec-menu-toggle,
-            section.callback-section{
+            section.callback-section,
+            a.border-btn{
               background-color: <?php echo esc_attr( $trade_hub_primary_color_option );?>;
             }
 
@@ -107,7 +108,8 @@ if( ! function_exists( 'trade_hub_inline_style' ) ) :
             .flip-container .front,
             .flip-container .back,            
             a.border-btn,
-            .ribbon span::before {
+            .ribbon span::before,
+            a.border-btn {
               border-color: <?php echo esc_attr( $trade_hub_primary_color_option );?>; 
             }
 

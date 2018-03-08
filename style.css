@@ -8948,7 +8948,7 @@ section.error-404.not-found h1:before {
 .footer-widget p{
   color: #fff;
 }
-h1.widget-title:after {
+h2.widget-title:after {
   content: "";
   position: absolute;
   left: 3px;
@@ -9956,16 +9956,19 @@ section#banner-section {
   padding: 0 16px 30px;
 }
 
+.banner-content-inner a.border-btn {
+  border: 0;
+}
+
 a.border-btn {
-  color: #000;
+  color: #fff;
   font-size: 18px;
   padding: 12px 30px;
   border-radius: 0;
-  -webkit-transition: width 0.5s;
-  transition: width 0.5s;
-  text-transform: uppercase;
-  border: 1px solid #cacaca;
-  background: #fff;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  text-transform: uppercase;  
+  border: 1px solid;
 }
 
 a.border-btn:hover,
@@ -9997,8 +10000,8 @@ section.section-wrapper,
   padding-top: 40px;
 }
 
-section.section-wrapper h1,
-section.section-wrapper h1 a {
+section.section-wrapper h2,
+section.section-wrapper h2 a {
   text-align: center;
   padding-bottom: 15px;
   text-transform: capitalize;
@@ -10008,7 +10011,7 @@ section.section-wrapper h1 a {
   color: #444;
 }
 
-section.section-wrapper h1:after {
+section.section-wrapper h2:after {
   content: "";
   position: absolute;
   width: 79px;
@@ -10270,13 +10273,13 @@ a.know-more:after {
   font-family: fontAwesome;
 }
 
-.left-text-content.feature-section h1,
-.text-div.right h1 {
+.left-text-content.feature-section h2,
+.text-div.right h2 {
   text-align: left;
 }
 
-.left-text-content.feature-section h1:after,
-.text-div.right h1:after {
+.left-text-content.feature-section h2:after,
+.text-div.right h2:after {
   left: auto;
   right: auto;
 }
@@ -10316,7 +10319,7 @@ section.callback-section {
   background: transparent;
 }
 
-section .overlay-callback h1 {
+section .overlay-callback h2 {
   color: #fff;
   padding-bottom: 10px;
   text-transform: uppercase;
@@ -10324,7 +10327,7 @@ section .overlay-callback h1 {
   margin: 0;
 }
 
-section .overlay-callback h1:after {
+section .overlay-callback h2:after {
   width: 0;
 }
 

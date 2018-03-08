@@ -25,8 +25,8 @@ function trade_hub_widgets_init() {
             'description' => esc_html__( 'Displays items on footer section.', 'trade-hub' ),
             'before_widget' => '<aside id="%1$s" class="widget %2$s">',
             'after_widget' => '</aside>',
-            'before_title'  => '<h1 class="widget-title">',
-            'after_title'   => '</h1>',
+            'before_title'  => '<h2 class="widget-title">',
+            'after_title'   => '</h2>',
         ));
         if( $trade_hub_footer_widgets_number > absint( 1 ) ){
             register_sidebar(array(
@@ -35,8 +35,8 @@ function trade_hub_widgets_init() {
                 'description' => esc_html__( 'Displays items on footer section.','trade-hub' ),
                 'before_widget' => '<aside id="%1$s" class="widget %2$s">',
                 'after_widget' => '</aside>',
-                'before_title'  => '<h1 class="widget-title">',
-                'after_title'   => '</h1>',
+                'before_title'  => '<h2 class="widget-title">',
+                'after_title'   => '</h2>',
             ));
         }
         if( $trade_hub_footer_widgets_number > absint( 2 ) ){
@@ -46,8 +46,8 @@ function trade_hub_widgets_init() {
                 'description' => esc_html__( 'Displays items on footer section.', 'trade-hub' ),
                 'before_widget' => '<aside id="%1$s" class="widget %2$s">',
                 'after_widget' => '</aside>',
-                'before_title'  => '<h1 class="widget-title">',
-                'after_title'   => '</h1>',
+                'before_title'  => '<h2 class="widget-title">',
+                'after_title'   => '</h2>',
             ));
         }
         if( $trade_hub_footer_widgets_number > absint( 3 ) ){
@@ -57,8 +57,8 @@ function trade_hub_widgets_init() {
                 'description' => esc_html__( 'Displays items on footer section.','trade-hub' ),
                 'before_widget' => '<aside id="%1$s" class="widget %2$s">',
                 'after_widget' => '</aside>',
-                'before_title'  => '<h1 class="widget-title">',
-                'after_title'   => '</h1>',
+                'before_title'  => '<h2 class="widget-title">',
+                'after_title'   => '</h2>',
             ));
         }
     }
