@@ -18,8 +18,7 @@ jQuery(document).ready(function ($) {
   checkImage();
   Slider();
 
-  /* sticky nav */
-  jQuery("header#masthead").sticky({topSpacing:0});
+  
   //nice scroll 
   var windowsize = jQuery(window).width();
   if(windowsize > 769) {
@@ -28,6 +27,8 @@ jQuery(document).ready(function ($) {
       cursorwidth:"0",
       cursorborder: "0",
     });
+    /* sticky nav */
+  jQuery("header#masthead").sticky({topSpacing:0});
   } else {
     //console.log('nicescroll diasbled');
   }
@@ -132,7 +133,7 @@ function Slider() {
     autoplay: true,
     autoplaySpeed: 6000,
     responsive: [{
-        breakpoint: 768,
+        breakpoint: 769,
         settings: {
           arrows: false,
           slidesToShow: 1
