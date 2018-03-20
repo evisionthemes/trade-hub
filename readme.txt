@@ -73,6 +73,16 @@ Author: Caleb Troughton
 Source: https://github.com/imakewebthings/waypoints/blog/master/licenses.txt
 License: Licensed under the MIT license.
 
+jquery.nicescroll
+-- version 3.7.6
+-- copyright 2017-07-19 InuYaksa*2017
+-- licensed under the MIT
+--
+-- https://nicescroll.areaaperta.com/
+-- https://github.com/inuyaksa/jquery.nicescroll
+--
+
+
 Customizer Pro:
 Author: justintadlock
 Source: https://github.com/justintadlock/trt-customizer-pro

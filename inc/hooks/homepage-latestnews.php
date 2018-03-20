@@ -113,7 +113,7 @@ if ( ! function_exists( 'trade_hub_latest_news' ) ) :
                                 <?php if( has_post_thumbnail() ): ?>
                                     <?php the_post_thumbnail('full');?>
                                 <?php else: ?>    
-                                    <img alt="<?php echo esc_url( get_permalink() );?>" class="img-responsive" src = "<?php echo esc_url( get_template_directory_uri().'/assets/image/no-image.png' ); ?>">
+                                    <img alt="<?php echo esc_url( get_permalink() );?>" class="img-responsive" src = "<?php echo esc_url( get_template_directory_uri().'/assets/images/no-image.png' ); ?>">
                                 <?php endif;?>
 
                                 </div><!-- img -->

@@ -107,7 +107,7 @@ if ( ! function_exists( 'trade_hub_featured_home_slider' ) ) :
                 break;
             }
             if(empty($trade_hub_slider_array['trade-hub-feature-slider-image'])){
-                $trade_hub_feature_slider_image = get_template_directory_uri().'/assets/img/no-image-1260_530.png';
+                $trade_hub_feature_slider_image = get_template_directory_uri().'/assets/images/no-image.png';
             }
             else{
                 $trade_hub_feature_slider_image =$trade_hub_slider_array['trade-hub-feature-slider-image'];
