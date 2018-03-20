@@ -10270,6 +10270,10 @@ a.know-more:after {
   text-align: left;
 }
 
+.left-text-content.feature-section {
+  padding-bottom: 10px;
+}
+
 .left-text-content.feature-section h2:after,
 .text-div.right h2:after {
   left: auto;
