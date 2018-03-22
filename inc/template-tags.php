@@ -27,11 +27,13 @@ function trade_hub_posted_on() {
 	);
 
 	$posted_on = sprintf(
+		/* translators: %s: search term */
 		esc_html_x( 'On %s', 'post date', 'trade-hub' ),
 		'<a href="' . esc_url(get_day_link(get_the_time('Y'), get_the_time('m'), get_the_time('d') )) . '" rel="bookmark">' . $time_string . '</a>'
 	);
 
 	$byline = sprintf(
+		/* translators: %s: search term */
 		esc_html_x( 'By %s', 'post author', 'trade-hub' ),
 		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( $author_id ) ) . '">' . esc_html( get_the_author_meta( 'user_nicename', $author_id ) ) . '</a></span>'
 	);
@@ -50,12 +52,14 @@ function trade_hub_entry_footer() {
 	if ( 'post' === get_post_type() ) {
 		/* translators: used between list items, there is a space after the comma */
 		$categories_list = get_the_category_list( esc_html( ' ') );
+		/* translators: %s: search term */
 		if ( $categories_list && trade_hub_categorized_blog() ) {
 			printf( '<span class="cat-links">' . esc_html__( 'Categories : %1$s', 'trade-hub' ) . '</span>', $categories_list ); // WPCS: XSS OK.
 		}
 
 		/* translators: used between list items, there is a space after the comma */
 		$tags_list = get_the_tag_list( esc_html( '') );
+		/* translators: %s: search term */
 		if ( $tags_list ) {
 			printf( '<span class="tags-links">' . esc_html__( 'Tags : %1$s', 'trade-hub' ) . '</span>', $tags_list ); // WPCS: XSS OK.
 		}

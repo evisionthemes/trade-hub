@@ -89,6 +89,7 @@ $trade_hub_repeated_settings_controls['trade-hub-featured-slider-pages'] =
                 'default'              => $trade_hub_customizer_defaults['trade-hub-featured-slider-pages'],
             ),
             'control' => array(
+                /* translators: %s: search term */
                 'label'                 =>  esc_html__( 'Select Page For Slide %s', 'trade-hub' ),
                 'section'               => 'trade-hub-feature-slider-setting',
                 'type'                  => 'dropdown-pages',

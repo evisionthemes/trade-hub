@@ -13,13 +13,6 @@ if ( ! function_exists( 'trade_hub_home_feature_array' ) ) :
         $trade_hub_home_feature_number = absint($trade_hub_customizer_all_values['trade-hub-our-select-number-page']);
         $trade_hub_home_feature_single_words = absint($trade_hub_customizer_all_values['trade-hub-our-single-word-page']);
 
-        $trade_hub_home_feature_contents_array = array();
-
-        $trade_hub_home_feature_contents_array[1]['trade-hub-home-feature-title'] = __('Clean Designs', 'business-craft');
-        $trade_hub_home_feature_contents_array[1]['trade-hub-home-feature-content'] = __("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.", 'business-craft');
-        $trade_hub_home_feature_contents_array[1]['trade-hub-home-feature-link'] = '#';
-        $trade_hub_home_feature_contents_array[1]['trade-hub-home-feature-page-icon'] = 'fa-desktop';
-
         $trade_hub_icons_array = array('trade-hub-home-feature-page-icon');
         $trade_hub_home_feature_page = array('trade-hub-home-feature-pages-ids');
         
@@ -96,9 +89,12 @@ if ( ! function_exists( 'trade_hub_home_feature' ) ) :
             ?>          
 
            <section class="feature-section section-wrapper" id="trade-hub-feature">
-		        <div class="container">
-		            <div class="row">
-		             	<h2><?php echo esc_html($trade_hub_home_feature_title); ?></h2>		            <div class="feature-icon-content-wrapper col-md-12">
+                <div class="container">
+                    <div class="row">
+                        <h1><?php echo esc_html($trade_hub_home_feature_title); ?></h1> 
+                                  
+                            <div class="feature-icon-content-wrapper col-md-12">
+
                                 <?php
                                     $i = 0;
 
