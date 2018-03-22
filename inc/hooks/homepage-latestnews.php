@@ -1,65 +1,6 @@
 <?php
 
-if ( ! function_exists( 'trade_hub_latest_news_array' ) ) :
-    /**
-     * Featured Slider array creation
-     *
-     * @since Trade Hub 1.0.0
-     *
-     * @param string $from_slider
-     * @return array
-     */
-    function trade_hub_latest_news_array( ){
-        global $trade_hub_customizer_all_values;
-        // $trade_hub_latest_news_number = absint( $trade_hub_customizer_all_values['trade-hub-featured-slider-number'] );
-        $trade_hub_latest_news_single_words = absint( $trade_hub_customizer_all_values['trade-hub-latest-news-single-word'] );
-       
-        $trade_hub_latest_news_contents_array[0]['trade-hub-latest-news-title'] = esc_html__( 'START YOUR BUSINESS', 'trade-hub' );
-        $trade_hub_latest_news_contents_array[0]['trade-hub-latest-news-content'] = esc_html__( 'Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas semper, dolor vitae venenatis cursus, enim ante commodo orci, non maximus ante lectus nec urna. Vivamus laoreet hendrerit', 'trade-hub');
-        $trade_hub_latest_news_contents_array[0]['trade-hub-latest-news-link'] = '#';
-        $trade_hub_latest_news_contents_array[0]['trade-hub-latest-news-image'] = get_template_directory_uri()."/assets/images/1.jpg";
-        // $repeated_page = array('trade-hub-fs-pages-ids');
-        $trade_hub_latest_news_args = array();
-            $trade_hub_latest_news_category = $trade_hub_customizer_all_values['trade-hub-latest-news-category'];
-            if( 0 != $trade_hub_latest_news_category ){
-                $trade_hub_latest_news_args =    array(
-                    'post_type' => 'post',
-                    'cat' => $trade_hub_latest_news_category,
-                    'ignore_sticky_posts' => true
-                );
-            }
-        
 
-        if( !empty( $trade_hub_latest_news_args )){
-            // the query
-            $trade_hub_fature_section_post_query = new WP_Query( $trade_hub_latest_news_args );
-
-            if ( $trade_hub_fature_section_post_query->have_posts() ) :
-                $i = 0;
-                while ( $trade_hub_fature_section_post_query->have_posts() ) : $trade_hub_fature_section_post_query->the_post();
-                    $url ='';
-                    if(has_post_thumbnail()){
-                        $thumb = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'full' );
-                        $url = $thumb['0'];
-                    }
-                    $trade_hub_latest_news_contents_array[$i]['ID'] = get_the_ID();
-                    $trade_hub_latest_news_contents_array[$i]['trade-hub-latest-news-title'] = get_the_title();
-                    if (has_excerpt()) {
-                        $trade_hub_latest_news_contents_array[$i]['trade-hub-latest-news-content'] = get_the_excerpt();
-                    }
-                    else {
-                        $trade_hub_latest_news_contents_array[$i]['trade-hub-latest-news-content'] = trade_hub_words_count( $trade_hub_latest_news_single_words ,get_the_content());
-                    }
-                    $trade_hub_latest_news_contents_array[$i]['trade-hub-latest-news-link'] = get_permalink();
-                    $trade_hub_latest_news_contents_array[$i]['trade-hub-latest-news-image'] = $url;
-                    $i++;
-                endwhile;
-                wp_reset_postdata();
-            endif;
-        }
-        return $trade_hub_latest_news_contents_array;
-    }
-endif;
 
 if ( ! function_exists( 'trade_hub_latest_news' ) ) :
     /**
