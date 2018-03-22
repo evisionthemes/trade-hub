@@ -17,6 +17,22 @@ jQuery(document).ready(function ($) {
   addOddclass();
   checkImage();
   Slider();
+
+  
+  //nice scroll 
+  var windowsize = jQuery(window).width();
+  if(windowsize > 769) {
+    jQuery("body").niceScroll({
+      horizrailenabled:false,
+      cursorwidth:"0",
+      cursorborder: "0",
+    });
+    /* sticky nav */
+  jQuery("header#masthead").sticky({topSpacing:0});
+  } else {
+    //console.log('nicescroll diasbled');
+  }
+
 });
 
 /* fixed header function */
@@ -114,6 +130,53 @@ function Slider() {
     slidesToShow: 1,
     dots: true,
     arrows: true,
+    autoplay: true,
+    autoplaySpeed: 6000,
+    responsive: [{
+        breakpoint: 769,
+        settings: {
+          arrows: false,
+          slidesToShow: 1
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          arrows: false,
+          slidesToShow: 1
+        }
+      }
+    ]
+  });
+
+   //slick slider 
+  jQuery('.testimonials').slick({
+    slidesToShow: 3,
+    dots: true,
+    arrows: false,
+    autoplay: true,
+    autoplaySpeed: 6000,
+    responsive: [{
+        breakpoint: 768,
+        settings: {
+          arrows: false,
+          slidesToShow: 1
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          arrows: false,
+          slidesToShow: 1
+        }
+      }
+    ]
+  });
+
+  jQuery('.trade-hub-news').slick({
+    slidesToShow: 3,
+    dots: true,
+    arrows: false,
     autoplay: true,
     autoplaySpeed: 6000,
     responsive: [{

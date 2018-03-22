@@ -52,7 +52,7 @@ function  tarde_hub_about_us()
     			                    
     			                        <div class="left-text-content feature-section">
 
-        			                       <h1><?php the_title();?></h1>
+        			                       <h2><?php the_title();?></h2>
 
         			                       <p><?php echo wp_kses_post(trade_hub_words_count( $trade_hub_feature_slider_single_words_about ,get_the_content()));?></p>
         			                       <a href="<?php the_permalink();?>" class="know-more"><?php echo esc_html($trade_hub_home_about_button_text);?>

@@ -21,7 +21,7 @@ if ( !function_exists('trade_hub_call_to_action') ) :
 	        <div class="overlay-callback">
 	        	<div class="container">
 	            	<div class="col-md-7 col-sm-7 col-xs-12 call-toaction-text">
-	              		<h1><?php echo esc_html($trade_hub_call_action_main_text); ?></h1>
+	              		<h2><?php echo esc_html($trade_hub_call_action_main_text); ?></h2>
 	            	</div><!-- title -->
 	            	<div class="col-md-5 col-sm-5 col-xs-12 call-to-action-btn">
 	              		<a href="<?php echo esc_url($trade_hub_call_action_button_url);?>" class="border-btn" ><?php echo esc_html($trade_hub_call_action_button_text); ?></a>

@@ -107,7 +107,7 @@ if ( ! function_exists( 'trade_hub_home_testimonial' ) ) :
            <section class="testimonials-section section-wrapper"><!-- testimonials section start here -->
                <div class="container">
                   <div class="row">
-                    <h1><?php echo esc_html($trade_hub_testimonial_title); ?></h1>
+                    <h2><?php echo esc_html($trade_hub_testimonial_title); ?></h2>
                     <div class="testimonials">
                         <?php 
                         $i = 1;
@@ -123,7 +123,7 @@ if ( ! function_exists( 'trade_hub_home_testimonial' ) ) :
                                     <div id="th-f1_container">
                                         <div id="th-f1_card" class="shadow">
                                             <div class="th-front th-face">
-                                                <img src="<?php echo esc_url($trade_hub_testimonial_array['trade-hub-testimonial-image']);?>" />
+                                                <img alt="<?php echo esc_html($trade_hub_testimonial_array['trade-hub-testimonial-title']);?>" src="<?php echo esc_url($trade_hub_testimonial_array['trade-hub-testimonial-image']);?>" />
                                             </div><!-- testimonials image -->
                                             <div class="th-back th-face center"><!-- put background image inline style here -->
                                                 <p><?php echo wp_kses_post($trade_hub_testimonial_array['trade-hub-testimonial-content'])?></p>

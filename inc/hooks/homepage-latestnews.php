@@ -39,7 +39,7 @@ if ( ! function_exists( 'trade_hub_latest_news' ) ) :
                 <section class="section-wrapper" id="th-news">
                     <div class="container">
                       <div class="row">
-                        <h1><?php echo esc_html( $trade_hub_customizer_all_values['trade-hub-latest-news-title-text'] ); ?></h1>
+                        <h2><?php echo esc_html( $trade_hub_customizer_all_values['trade-hub-latest-news-title-text'] ); ?></h2>
                             <?php while($trade_hub_fature_section_post_query->have_posts() ) : $trade_hub_fature_section_post_query->the_post();?>
                             <div class="col-md-4 col-sm-4 col-xs-12">
                               
@@ -54,7 +54,7 @@ if ( ! function_exists( 'trade_hub_latest_news' ) ) :
                                 <?php if( has_post_thumbnail() ): ?>
                                     <?php the_post_thumbnail('full');?>
                                 <?php else: ?>    
-                                    <img class="img-responsive" src = "<?php echo esc_url( get_template_directory_uri().'/assets/image/no-image.png' ); ?>">
+                                    <img alt="<?php echo esc_url( get_permalink() );?>" class="img-responsive" src = "<?php echo esc_url( get_template_directory_uri().'/assets/images/no-image.png' ); ?>">
                                 <?php endif;?>
 
                                 </div><!-- img -->
