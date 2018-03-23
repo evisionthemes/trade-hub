@@ -14,7 +14,7 @@ $trade_hub_customizer_defaults['trade-hub-our-service-first-title'] 		= 	'';
 $trade_hub_customizer_defaults['trade-hub-our-service-first-sub-title'] 	= 	'';
 $trade_hub_customizer_defaults['trade-hub-our-service-second-title'] 		= 	'';
 $trade_hub_customizer_defaults['trade-hub-our-service-second-sub-title'] 	= 	'';
-$trade_hub_customizer_defaults['trade-hub-our-service-third-title'] 		= 	''
+$trade_hub_customizer_defaults['trade-hub-our-service-third-title'] 		= 	'';
 $trade_hub_customizer_defaults['trade-hub-our-service-third-sub-title']		= 	'';
 
 $trade_hub_customizer_defaults['trade-hub-our-service-image'] 				=  	'';
