@@ -16,7 +16,7 @@ if ( ! function_exists( 'trade_hub_testimonial_array' ) ) :
         $trade_hub_testimonial_contents_array = array();
 
         $trade_hub_testimonial_contents_array[1]['trade-hub-testimonial-title'] = esc_html__('JOHN DOE', 'trade-hub');
-        $trade_hub_testimonial_contents_array[1]['trade-hub-testimonial-content'] = esc_html__("Proin eget tortor risus. Pellentesque in ipsum id orci porta dapibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.", 'trade-hub');
+        $trade_hub_testimonial_contents_array[1]['trade-hub-testimonial-content'] = esc_html__("Importance of education tells us the value of education in our life. Education means a lot in everyone’s life as it facilitates our learning, knowledge and skill.", 'trade-hub');
         $trade_hub_testimonial_contents_array[1]['trade-hub-testimonial-link'] = '#';
         $trade_hub_testimonial_contents_array[1]['trade-hub-testimonial-image'] = get_template_directory_uri().'/assets/images/right-content-post.jpg';
         $trade_hub_testimonial_page = array('trade-hub-testimonial-pages-ids');

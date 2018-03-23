@@ -96,7 +96,9 @@ $trade_hub_repeated_settings_controls['trade-hub-our-feature-page'] =
                 'default'              =>   $trade_hub_customizer_defaults['trade-hub-our-feature-icon'],
             ),
             'control' =>   array(
+            	/* translators: %s: search term */
                 'label'                 =>    esc_html__( 'Select Page For Our Feature Page Icon %s', 'trade-hub' ),
+                /* translators: %s: search term */
                 'description'           =>   sprintf( esc_html__( 'Use font awesome icon: Eg: %1$s . %2$s See more here %3$s', 'trade-hub' ), 'fa-desktop', '<a href="' . esc_url( 'https://fontawesome.com/icons' ) . '" target="_blank">', '</a>' ),
                 'section'               =>   'trade-hub-our-feature-section',
                 'type'                  =>   'text',
@@ -109,6 +111,7 @@ $trade_hub_repeated_settings_controls['trade-hub-our-feature-page'] =
             'setting' =>       array(
                 'default'              =>   $trade_hub_customizer_defaults['trade-hub-our-feature-page'],
             ),
+            /* translators: %s: search term */
             'control' =>   array(
                 'label'                 =>    esc_html__( 'Select Page For Our Page %s', 'trade-hub' ),
                 'section'               =>   'trade-hub-our-feature-section',
