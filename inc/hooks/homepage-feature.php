@@ -91,7 +91,7 @@ if ( ! function_exists( 'trade_hub_home_feature' ) ) :
            <section class="feature-section section-wrapper" id="trade-hub-feature">
                 <div class="container">
                     <div class="row">
-                        <h1><?php echo esc_html($trade_hub_home_feature_title); ?></h1> 
+                        <h2><?php echo esc_html($trade_hub_home_feature_title); ?></h2> 
                                   
                             <div class="feature-icon-content-wrapper col-md-12">
 
