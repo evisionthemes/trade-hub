@@ -7,7 +7,7 @@ Tags: custom-logo, custom-menu, custom-colors, blog, news, one-column, two-colum
 
 Requires at least: 4.0
 Tested up to: 4.9.1
-Stable tag: 1.0.1
+Stable tag: 1.0.3
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -38,11 +38,6 @@ Author: 2012-2015 Nicolas Gallagher and Jonathan Neal
 Source: http://necolas.github.io/normalize.css
 License: [MIT/GPL2 Licensed](http://opensource.org/licenses/MIT)
 
-html5shiv:
-Author: 2014 Alexander Farkas (aFarkas)
-Source: https://github.com/afarkas/html5shiv
-License: [MIT/GPL2 Licensed](http://opensource.org/licenses/MIT)
-
 jquery.easing:
 Author: 2008 George McGinley Smith
 Source: https://raw.github.com/gdsmith/jquery-easing/master
@@ -52,11 +47,6 @@ respond:
 Author: 2012 Scott Jehl
 Source: https://github.com/scottjehl/Respond
 License:[MIT](http://opensource.org/licenses/MIT)
-
-jQuery Cycle2:
-Author: 2014 M. Alsup
-Source: http://jquery.malsup.com/cycle2
-License: Dual licensed: MIT/GPL
 
 slick:
 Author: Ken Wheeler
@@ -73,14 +63,10 @@ Author: Caleb Troughton
 Source: https://github.com/imakewebthings/waypoints/blog/master/licenses.txt
 License: Licensed under the MIT license.
 
-jquery.nicescroll
--- version 3.7.6
--- copyright 2017-07-19 InuYaksa*2017
--- licensed under the MIT
---
--- https://nicescroll.areaaperta.com/
--- https://github.com/inuyaksa/jquery.nicescroll
---
+jquery.Sticky
+Sticky Plugin v1.0.4 for jQuery
+Website: http://stickyjs.com/
+licensed under the MIT--
 
 
 Customizer Pro:
@@ -88,79 +74,16 @@ Author: justintadlock
 Source: https://github.com/justintadlock/trt-customizer-pro
 License: GPLv2
 
+Modernizr
+website: www.modernizr.com
+Copyright (c) Faruk Ates, Paul Irish, Alex Sexton
+License: Available under the BSD and MIT licenses: www.modernizr.com/license/
+
+
 
 Font Icons:
 * Font Awesome 4.5.0 by @davegandy - http://fontawesome.io - @fontawesome *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License) 
 
-
-Google font:
-Roboto
-https://fonts.google.com/specimen/Roboto
-License: Apache License, Version 2.0
-
-Archivo Narrow
-https://fonts.google.com/specimen/Archivo+Narrow
-License: Open Font License
-
-Bitter
-https://fonts.google.com/specimen/Bitter
-License: Open Font License
-
-Cookie
-https://fonts.google.com/specimen/Cookie
-License: Open Font License
-
-Exo
-https://fonts.google.com/specimen/Exo
-License: Open Font License
-
-Kreon
-https://fonts.google.com/specimen/Kreon
-License: Open Font License
-
-Lato
-https://fonts.google.com/specimen/Lato
-License: Open Font License
-
-Merriweather
-https://fonts.google.com/specimen/Merriweather
-License: Open Font License
-
-Merriweather
-https://fonts.google.com/specimen/Merriweather
-License: Open Font License
-
-News Cycle
-https://fonts.google.com/specimen/News+Cycle
-License: Open Font License
-
-Oxygen
-https://fonts.google.com/specimen/Playball
-License: Open Font License
-
-Playball
-https://fonts.google.com/specimen/Playball
-License: Open Font License
-
-Tangerine
-https://fonts.google.com/specimen/Tangerine
-License: Open Font License
-
-Ropa Sans
-https://fonts.google.com/specimen/Ropa+Sans
-License: Open Font License
-
-Yanone Kaffeesatz
-https://fonts.google.com/specimen/Yanone+Kaffeesatz
-License: Open Font License
-
-Raleway
-https://fonts.google.com/specimen/Raleway
-License: Open Font License
-
-Ubuntu
-https://fonts.google.com/specimen/Ubuntu
-License: Ubuntu Font License
 
 == Image used in screenshot ==
 1) https://www.pexels.com/photo/man-holds-digital-tablet-in-his-hands-6363/
@@ -181,11 +104,17 @@ trade-hub includes support for Infinite Scroll in Jetpack.
 
 Note:
 	If your Image is not align properly, then you can try regenerate thumbnails. So that it can fit on required image size.
+
 == Changelog ==
+= - 1.0.3 - =
+* issue fixing from reviewer.
+
+= - 1.0.2 - =
+* issue fixing from reviewer.
+
 = - 1.0.1 - =
 * issue fixing from reviewer.
 
-== Changelog ==
 = - 1.0.0 - =
 * new section added.
 

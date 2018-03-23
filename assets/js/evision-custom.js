@@ -17,22 +17,7 @@ jQuery(document).ready(function ($) {
   addOddclass();
   checkImage();
   Slider();
-
-  
-  //nice scroll 
-  var windowsize = jQuery(window).width();
-  if(windowsize > 769) {
-    jQuery("body").niceScroll({
-      horizrailenabled:false,
-      cursorwidth:"0",
-      cursorborder: "0",
-    });
-    /* sticky nav */
   jQuery("header#masthead").sticky({topSpacing:0});
-  } else {
-    //console.log('nicescroll diasbled');
-  }
-
 });
 
 /* fixed header function */

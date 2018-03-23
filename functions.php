@@ -161,7 +161,6 @@ function trade_hub_scripts() {
 
 		wp_enqueue_script( 'jquery-sticky', get_template_directory_uri() . '/assets/js/jquery.sticky.js', array('jquery'), true );
 
-		wp_enqueue_script( 'jquery-nicescroll', get_template_directory_uri() . '/assets/js/jquery.nicescroll.js', array('jquery'), true );
 		
 		// easing
 		wp_enqueue_script('jquery-easing', get_template_directory_uri() . '/assets/frameworks/jquery.easing/jquery.easing.js', array('jquery'), '0.3.6', 1);
@@ -173,7 +172,7 @@ function trade_hub_scripts() {
 		wp_enqueue_script('trade-hub-custom-js', get_template_directory_uri() . '/assets/js/evision-custom.js', array('jquery'), '', true);
 
 		// skip-link-focus-fix
-		wp_enqueue_script( 'trade-hub-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+		wp_enqueue_script( 'trade-hub-skip-link-focus-fix', get_template_directory_uri() . './assets/js/skip-link-focus-fix.js', array(), '20151215', true );
 
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
