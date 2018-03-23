@@ -8,16 +8,16 @@ global $trade_hub_customizer_defaults;
 // deafults value
 $trade_hub_customizer_defaults['trade-hub-our-service-enable-option'] 		= 0;
 $trade_hub_customizer_defaults['trade-hub-our-service-single-word'] 		= 25;
-$trade_hub_customizer_defaults['trade-hub-our-service-title'] 				= esc_html__( 'Great Product Of Company', 'trade-hub' );
-$trade_hub_customizer_defaults['trade-hub-our-service-sub-title'] 			= esc_html__( 'Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally', 'trade-hub' );
-$trade_hub_customizer_defaults['trade-hub-our-service-first-title'] 		= esc_html__( 'PSD TO HTML5/CSS3', 'trade-hub' );
-$trade_hub_customizer_defaults['trade-hub-our-service-first-sub-title'] 	= esc_html__( 'Paetos dignissim at cursus elefeind norma arcu.velim pellentesque uter justo magna gravida.', 'trade-hub' );
-$trade_hub_customizer_defaults['trade-hub-our-service-second-title'] 		= esc_html__( 'HOSTING & DOMAIN SERVICES','trade-hub' );
-$trade_hub_customizer_defaults['trade-hub-our-service-second-sub-title'] 	= esc_html__( 'Paetos dignissim at cursus elefeind norma arcu.velim pellentesque uter justo magna gravida.', 'trade-hub' );
-$trade_hub_customizer_defaults['trade-hub-our-service-third-title'] 		= esc_html__( 'GET PLAN YOUR BUSINESS', 'trade-hub' );
-$trade_hub_customizer_defaults['trade-hub-our-service-third-sub-title']		= esc_html__( 'Paetos dignissim at cursus elefeind norma arcu.velim pellentesque uter justo magna gravida.', 'trade-hub' );
+$trade_hub_customizer_defaults['trade-hub-our-service-title'] 				=  	'';
+$trade_hub_customizer_defaults['trade-hub-our-service-sub-title'] 			=  	'';
+$trade_hub_customizer_defaults['trade-hub-our-service-first-title'] 		= 	'';
+$trade_hub_customizer_defaults['trade-hub-our-service-first-sub-title'] 	= 	'';
+$trade_hub_customizer_defaults['trade-hub-our-service-second-title'] 		= 	'';
+$trade_hub_customizer_defaults['trade-hub-our-service-second-sub-title'] 	= 	'';
+$trade_hub_customizer_defaults['trade-hub-our-service-third-title'] 		= 	''
+$trade_hub_customizer_defaults['trade-hub-our-service-third-sub-title']		= 	'';
 
-$trade_hub_customizer_defaults['trade-hub-our-service-image'] 				= get_template_directory_uri() .'/inc/assets/images/3.jpg';
+$trade_hub_customizer_defaults['trade-hub-our-service-image'] 				=  	'';
 
 // create a section for our service section
 $trade_hub_sections['trade-hub-our-service-section']						=	array(

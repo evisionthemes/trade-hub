@@ -107,7 +107,9 @@ if ( ! function_exists( 'trade_hub_home_feature' ) ) :
 
                                         <div class="col-md-<?php echo intval( 12/$trade_hub_home_feature_number);?> col-sm-<?php echo intval( 12/$trade_hub_home_feature_number);?> col-xs-12">
                                             <div class="feature-content">
+                                                <?php if ( !empty($trade_hub_feature_array['trade-hub-home-feature-page-icon']) ) { ?>
                                                 <i class="fa <?php echo esc_attr($trade_hub_feature_array['trade-hub-home-feature-page-icon']);?>"></i>
+                                                <?php } ?>
                                                 <div class="content-right">
                                                     <h3><a href="<?php echo esc_url($trade_hub_feature_array['trade-hub-home-feature-link']);?>"><?php echo esc_html($trade_hub_feature_array['trade-hub-home-feature-title']);
                                                      ?></a></h3>
