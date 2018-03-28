@@ -13,6 +13,12 @@ if ( ! function_exists( 'trade_hub_home_feature_array' ) ) :
         $trade_hub_home_feature_number = absint($trade_hub_customizer_all_values['trade-hub-our-select-number-page']);
         $trade_hub_home_feature_single_words = absint($trade_hub_customizer_all_values['trade-hub-our-single-word-page']);
 
+        $trade_hub_home_feature_contents_array = array();
+
+        $trade_hub_home_feature_contents_array[1]['trade-hub-home-feature-title'] = esc_html__('Clean Designs', 'trade-hub');
+        $trade_hub_home_feature_contents_array[1]['trade-hub-home-feature-content'] = esc_html__("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.", 'trade-hub');
+        $trade_hub_home_feature_contents_array[1]['trade-hub-home-feature-link'] = '#';
+        $trade_hub_home_feature_contents_array[1]['trade-hub-home-feature-page-icon'] = 'fa-desktop';
         $trade_hub_icons_array = array('trade-hub-home-feature-page-icon');
         $trade_hub_home_feature_page = array('trade-hub-home-feature-pages-ids');
         
@@ -105,11 +111,9 @@ if ( ! function_exists( 'trade_hub_home_feature' ) ) :
                                             break;
                                         }?> 
 
-                                        <div class="col-md-<?php echo intval( 12/$trade_hub_home_feature_number);?> col-sm-<?php echo intval( 12/$trade_hub_home_feature_number);?> col-xs-12">
+                                        <div class="col-md-4 col-sm-4 col-xs-12">
                                             <div class="feature-content">
-                                                <?php if ( !empty($trade_hub_feature_array['trade-hub-home-feature-page-icon']) ) { ?>
                                                 <i class="fa <?php echo esc_attr($trade_hub_feature_array['trade-hub-home-feature-page-icon']);?>"></i>
-                                                <?php } ?>
                                                 <div class="content-right">
                                                     <h3><a href="<?php echo esc_url($trade_hub_feature_array['trade-hub-home-feature-link']);?>"><?php echo esc_html($trade_hub_feature_array['trade-hub-home-feature-title']);
                                                      ?></a></h3>
