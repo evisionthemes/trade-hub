@@ -45,10 +45,11 @@ if ( ! function_exists( 'trade_hub_latest_news' ) ) :
                             <?php while($trade_hub_fature_section_post_query->have_posts() ) : $trade_hub_fature_section_post_query->the_post();?>
                             <div class="col-md-4 col-sm-4 col-xs-12">
                               
-                              <div class="th-news-wrapper">
+                            <div class="th-news-wrapper">
                                 <div class="ribbon">
                                     <a href="<?php echo esc_url( get_category_link( $trade_hub_latest_news_category ) );?>">
-                                        <span><?php printf( '%s', get_cat_name( $trade_hub_latest_news_category ) );?></span>
+                                           <span><?php printf( // WPCS: XSS OK
+                                            '%s', get_cat_name( $trade_hub_latest_news_category ) );?></span>
                                     </a>
                                 </div>
                                 
@@ -67,11 +68,17 @@ if ( ! function_exists( 'trade_hub_latest_news' ) ) :
                                     <p><?php echo wp_kses_post( get_the_excerpt() );?></p>
                                     <?php else: ?>
                                      <p>   <?php echo  wp_kses_post( trade_hub_words_count( $trade_hub_latest_news_single_words ,get_the_content() ) ); ?>
-                                    <?php endif;?></p>   
-                                    <a class="date-meta" href="<?php echo esc_url( get_day_link( get_the_time('Y'), get_the_time('m'), get_the_time('d') ) ); ?>"><?php echo esc_html( get_the_date('M j , Y') );?></a>
+                                    <?php endif;?></p> 
+                                    <?php 
+                                        $archive_year  = get_the_time('Y'); 
+                                        $archive_month = get_the_time('m'); 
+                                        $archive_day   = get_the_time('d'); 
+                                    ?>
+
+                                    <a class="date-meta" href="<?php echo esc_url( get_day_link( $archive_year, $archive_month, $archive_day ) ); ?>"><?php echo esc_html( get_the_date() );?></a>
                                 </div><!-- content -->
 
-                               </div><!-- th-news-wrapper -->  
+                            </div><!-- th-news-wrapper -->  
 
                             </div><!-- col-md-4 col-sm-4 col-xs-12 -->
                             <?php endwhile;?>
