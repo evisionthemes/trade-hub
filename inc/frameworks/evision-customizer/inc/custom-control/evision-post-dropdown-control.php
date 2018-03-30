@@ -45,7 +45,8 @@ if ( class_exists( 'WP_Customize_Control' ) && !class_exists( 'Evision_Customize
                         else{
                             $default_selected = 0;
                         }
-                        printf('<option value="-1" %s>%s</option>',selected($default_selected, 1, false), esc_html__('Select', 'trade-hub' ) );
+                        printf( // WPCS: XSS OK
+                            '<option value="-1" %s>%s</option>',selected($default_selected, 1, false), esc_html__('Select', 'trade-hub' ) );
                         foreach ( $evision_posts as $evision_post ) {
                             printf( // WPCS: XSS OK
                                 '<option value="%s" %s>%s</option>', absint($evision_post->ID), selected($this->value(), absint($evision_post->ID), false), $evision_post->post_title );
