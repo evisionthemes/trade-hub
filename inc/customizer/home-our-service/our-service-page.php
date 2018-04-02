@@ -9,7 +9,7 @@ global $trade_hub_customizer_defaults;
 $trade_hub_customizer_defaults['trade-hub-our-service-enable-option'] 		= 0;
 $trade_hub_customizer_defaults['trade-hub-our-service-number-page']			= 3;
 $trade_hub_customizer_defaults['trade-hub-our-service-single-word'] 		= 25;
-$trade_hub_customizer_defaults['trade-hub-our-service-title'] 				=  	'';
+$trade_hub_customizer_defaults['trade-hub-our-service-main_title'] 			=  	'';
 $trade_hub_customizer_defaults['trade-hub-our-service-page']				= '';
 $trade_hub_customizer_defaults['trade-hub-our-service-image'] 				=  	'';
 
@@ -50,9 +50,9 @@ $trade_hub_settings_controls['trade-hub-our-service-single-word'] = array(
 
 
 // create a setting control for our service title text
-$trade_hub_settings_controls['trade-hub-our-service-title'] = array(
+$trade_hub_settings_controls['trade-hub-our-service-main_title'] = array(
 	'setting'				=> array(
-		'default'			=> $trade_hub_customizer_defaults['trade-hub-our-service-title']
+		'default'			=> $trade_hub_customizer_defaults['trade-hub-our-service-main_title']
 	),
 	'control'				=> array(
 		'label'				=> esc_html__( 'Title Text', 'trade-hub' ),

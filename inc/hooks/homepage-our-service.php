@@ -15,8 +15,8 @@ if ( ! function_exists( 'trade_hub_our_service_array' ) ) :
 
         $trade_hub_our_service_contents_array = array();
 
-        $trade_hub_our_service_contents_array[1]['trade-hub-our_service-title'] = esc_html__('JOHN DOE', 'trade-hub');
-        $trade_hub_our_service_contents_array[1]['trade-hub-our_service-content'] = esc_html__("Importance of education tells us the value of education in our life. Education means a lot in everyone’s life as it facilitates our learning, knowledge and skill.", 'trade-hub');
+        $trade_hub_our_service_contents_array[1]['trade-hub-our_service-title'] = '';
+        $trade_hub_our_service_contents_array[1]['trade-hub-our_service-content'] = '';
         $trade_hub_our_service_contents_array[1]['trade-hub-our_service-link'] = '#';
         
         $trade_hub_our_service_page = array('trade-hub-our-service-page-id');
@@ -94,7 +94,7 @@ if ( ! function_exists( 'trade_hub_our_service' ) ) :
         {
             $trade_hub_our_service_single_words = absint($trade_hub_customizer_all_values['trade-hub-our-service-single-word']);
             $trade_hub_our_service_number = absint($trade_hub_customizer_all_values['trade-hub-testimonial-number-page']);
-            $trade_hub_our_service_title  = esc_html__($trade_hub_customizer_all_values['trade-hub-our-service-title']);
+            $trade_hub_our_service_main_title  = esc_html($trade_hub_customizer_all_values['trade-hub-our-service-main_title']);
             $trade_hub_our_service_image  = $trade_hub_customizer_all_values['trade-hub-our-service-image'];
             ?>          
 
@@ -104,8 +104,8 @@ if ( ! function_exists( 'trade_hub_our_service' ) ) :
                     </div>
                 </div><!-- background image div -->
                     <div class="text-div right">
-                        <?php if( !empty($trade_hub_our_service_title) ) { ?>
-                                <h2><?php echo esc_html($trade_hub_our_service_title);?></h2>
+                        <?php if( !empty($trade_hub_our_service_main_title) ) { ?>
+                                <h2><?php echo esc_html($trade_hub_our_service_main_title);?></h2>
                                 <?php } ?>
                         <?php 
                         $i = 1;
