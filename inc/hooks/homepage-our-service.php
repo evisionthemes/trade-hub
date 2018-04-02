@@ -95,7 +95,7 @@ if ( ! function_exists( 'trade_hub_our_service' ) ) :
             $trade_hub_our_service_single_words = absint($trade_hub_customizer_all_values['trade-hub-our-service-single-word']);
             $trade_hub_our_service_number = absint($trade_hub_customizer_all_values['trade-hub-testimonial-number-page']);
             $trade_hub_our_service_title  = esc_html__($trade_hub_customizer_all_values['trade-hub-our-service-title']);
-            $trade_hub_our_service_image            = $trade_hub_customizer_all_values['trade-hub-our-service-image'];
+            $trade_hub_our_service_image  = $trade_hub_customizer_all_values['trade-hub-our-service-image'];
             ?>          
 
             <section class="portfolio-first section-wrapper container" id="portfolio">

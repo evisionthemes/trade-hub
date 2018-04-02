@@ -81,3 +81,17 @@ $trade_hub_repeated_settings_controls['trade-hub-our-service-page']  =array(
 	)
 );
 
+// create a setting control for our service image
+$trade_hub_settings_controls['trade-hub-our-service-image'] = array(
+	'setting'				=> array(
+		'default'			=> $trade_hub_customizer_defaults['trade-hub-our-service-image']
+	),
+	'control'				=> array(
+		'label'				=> esc_html__( 'Title Text', 'trade-hub' ),
+		'section'			=> 'trade-hub-our-service-section',
+		'type'				=> 'image',
+		'priority'			=> 50,
+		'active_callback' 	=> ''
+	)
+);
+
