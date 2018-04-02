@@ -15,8 +15,8 @@ if ( ! function_exists( 'trade_hub_home_feature_array' ) ) :
 
         $trade_hub_home_feature_contents_array = array();
 
-        $trade_hub_home_feature_contents_array[1]['trade-hub-home-feature-title'] = esc_html__('Clean Designs', 'trade-hub');
-        $trade_hub_home_feature_contents_array[1]['trade-hub-home-feature-content'] = esc_html__("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.", 'trade-hub');
+        $trade_hub_home_feature_contents_array[1]['trade-hub-home-feature-title'] = '';
+        $trade_hub_home_feature_contents_array[1]['trade-hub-home-feature-content'] = '';
         $trade_hub_home_feature_contents_array[1]['trade-hub-home-feature-link'] = '#';
         $trade_hub_home_feature_contents_array[1]['trade-hub-home-feature-page-icon'] = 'fa-desktop';
         $trade_hub_icons_array = array('trade-hub-home-feature-page-icon');
@@ -54,7 +54,7 @@ if ( ! function_exists( 'trade_hub_home_feature_array' ) ) :
 
                     $trade_hub_home_feature_contents_array[$i]['trade-hub-home-feature-content'] = has_excerpt() ? get_the_excerpt() : trade_hub_words_count( $trade_hub_home_feature_single_words, get_the_content() );
                     
-                    $trade_hub_home_feature_contents_array[$i]['trade-hub-home-feature-link'] = get_permalink();
+                    $trade_hub_home_feature_contents_array[$i]['trade-hub-home-feature-link'] = esc_url( get_permalink() );
 
                     $trade_hub_home_feature_contents_array[$i]['trade-hub-home-feature-page-icon'] = 'fa-desktop';
 

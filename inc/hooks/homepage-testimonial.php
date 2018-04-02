@@ -61,7 +61,7 @@ if ( ! function_exists( 'trade_hub_testimonial_array' ) ) :
                     {
                         $trade_hub_testimonial_contents_array[$i]['trade-hub-testimonial-content'] = trade_hub_words_count( $trade_hub_testimonial_single_words ,get_the_content());
                     }
-                    $trade_hub_testimonial_contents_array[$i]['trade-hub-testimonial-link'] = get_permalink();
+                    $trade_hub_testimonial_contents_array[$i]['trade-hub-testimonial-link'] = esc_url( get_permalink() );
                     $thumb_image = '';
                     if(has_post_thumbnail())
                     {

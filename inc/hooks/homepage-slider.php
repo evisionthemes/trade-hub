@@ -13,8 +13,8 @@ if ( ! function_exists( 'trade_hub_featured_slider_array' ) ) :
         global $trade_hub_customizer_all_values;
         $trade_hub_feature_slider_number = absint( $trade_hub_customizer_all_values['trade-hub-featured-slider-number'] );
         $trade_hub_feature_slider_single_words = absint( $trade_hub_customizer_all_values['trade-hub-fs-single-words'] );
-        $trade_hub_feature_slider_contents_array[0]['trade-hub-feature-slider-title'] = __('START YOUR BUSINESS','trade-hub');
-        $trade_hub_feature_slider_contents_array[0]['trade-hub-feature-slider-content'] = __("Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas semper, dolor vitae venenatis cursus, enim ante commodo orci, non maximus ante lectus nec urna. Vivamus laoreet hendrerit",'trade-hub');
+        $trade_hub_feature_slider_contents_array[0]['trade-hub-feature-slider-title'] = '';
+        $trade_hub_feature_slider_contents_array[0]['trade-hub-feature-slider-content'] = '';
         $trade_hub_feature_slider_contents_array[0]['trade-hub-feature-slider-link'] = '#';
         $trade_hub_feature_slider_contents_array[0]['trade-hub-feature-slider-image'] = get_template_directory_uri()."/assets/img/slider.jpg";
         $repeated_page = array('trade-hub-fs-pages-ids');
@@ -59,7 +59,7 @@ if ( ! function_exists( 'trade_hub_featured_slider_array' ) ) :
                     else {
                         $trade_hub_feature_slider_contents_array[$i]['trade-hub-feature-slider-content'] = trade_hub_words_count( $trade_hub_feature_slider_single_words ,get_the_content());
                     }
-                    $trade_hub_feature_slider_contents_array[$i]['trade-hub-feature-slider-link'] = get_permalink();
+                    $trade_hub_feature_slider_contents_array[$i]['trade-hub-feature-slider-link'] = esc_url( get_permalink() );
                     $trade_hub_feature_slider_contents_array[$i]['trade-hub-feature-slider-image'] = $url;
                     $i++;
                 endwhile;
@@ -93,7 +93,6 @@ if ( ! function_exists( 'trade_hub_featured_home_slider' ) ) :
         $trade_hub_feature_slider_number = absint( $trade_hub_customizer_all_values['trade-hub-featured-slider-number'] );
         $trade_hub_feature_enable_title = $trade_hub_customizer_all_values['trade-hub-fs-enable-title'];
         $trade_hub_feature_enable_caption = $trade_hub_customizer_all_values['trade-hub-fs-enable-caption'];
-        // $trade_hub_feature_enable_search = $trade_hub_customizer_all_values['trade-hub-search-enable'];
         $trade_hub_feature_button_text = $trade_hub_customizer_all_values['trade-hub-fs-button-text'];
 
     ?>
