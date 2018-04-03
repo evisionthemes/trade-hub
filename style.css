@@ -10687,6 +10687,9 @@ body {
   color: #fff;
 }
 
+section#banner-section .slick-list.draggable {
+  width: 100%;
+}
 /* woocommerce */
 .woocommerce .quantity .qty {
   width: 4.631em !important;
