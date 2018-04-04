@@ -7,7 +7,7 @@ Tags: custom-logo, custom-menu, custom-colors, blog, news, one-column, two-colum
 
 Requires at least: 4.0
 Tested up to: 4.9.1
-Stable tag: 1.0.6
+Stable tag: 1.0.7
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -86,7 +86,7 @@ Font Icons:
 
 
 == Image used in screenshot ==
-1) https://www.pexels.com/photo/man-holds-digital-tablet-in-his-hands-6363/
+1) https://pixabay.com/en/adult-people-business-man-america-3211170/
 
 * Other are slef made and all images are licensed under [CC0](http://creativecommons.org/publicdomain/zero/1.0/legalcode.txt)
 
