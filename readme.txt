@@ -107,6 +107,9 @@ Note:
 
 == Changelog ==
 = - 1.0.6 - =
+* update version 
+
+= - 1.0.6 - =
 * issue fixing from reviewer
 
 = - 1.0.5 - =

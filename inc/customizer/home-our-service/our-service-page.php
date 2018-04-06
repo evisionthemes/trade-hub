@@ -87,7 +87,7 @@ $trade_hub_settings_controls['trade-hub-our-service-image'] = array(
 		'default'			=> $trade_hub_customizer_defaults['trade-hub-our-service-image']
 	),
 	'control'				=> array(
-		'label'				=> esc_html__( 'Title Text', 'trade-hub' ),
+		'label'				=> esc_html__( 'Upload Image', 'trade-hub' ),
 		'section'			=> 'trade-hub-our-service-section',
 		'type'				=> 'image',
 		'priority'			=> 50,
