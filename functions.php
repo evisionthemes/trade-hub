@@ -136,7 +136,7 @@ function trade_hub_google_fonts()
 	  $i  = 0;
 	  for ($i=0; $i < count( $trade_hub_pro_fonts ); $i++) { 
 
-	    if ( 'off' !== sprintf( _x( 'on', '%s font: on or off', 'edu-light' ), $trade_hub_pro_fonts[$i] ) ) {
+	    if ( 'off' !== sprintf( _x( 'on', '%s font: on or off', 'trade-hub' ), $trade_hub_pro_fonts[$i] ) ) {
 			$fonts[] = $trade_hub_pro_fonts[$i];
 		}
 

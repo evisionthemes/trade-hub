@@ -3,9 +3,9 @@
 if( ! function_exists( 'trade_hub_inline_style' ) ) :
 
     /**
-     * edu-light wp_head hook
+     * trade-hub wp_head hook
      *
-     * @since  edu-light 1.0.0
+     * @since  trade-hub 1.0.0
      */
     function trade_hub_inline_style(){
       

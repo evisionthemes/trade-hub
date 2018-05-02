@@ -9,7 +9,7 @@ global $trade_hub_customizer_defaults;
 /*creating panel for fonts-setting*/
 $trade_hub_panels['trade-hub-fonts'] =
     array(
-        'title'          => esc_html__( 'Font Setting', 'edu-light' ),
+        'title'          => esc_html__( 'Font Setting', 'trade-hub' ),
         'priority'       => 43
     );
 
@@ -153,7 +153,7 @@ $trade_hub_customizer_defaults['trade-hub-font-family-h1-h6']             = 'Ral
 $trade_hub_sections['trade-hub-family'] =
     array(
         'priority'       => 20,
-        'title'          => esc_html__( 'Font Family', 'edu-light' ),
+        'title'          => esc_html__( 'Font Family', 'trade-hub' ),
         'panel'          => 'trade-hub-fonts',
     );
 
@@ -164,8 +164,8 @@ $trade_hub_settings_controls['trade-hub-font-family-site-identity'] =
             'default'              => $trade_hub_customizer_defaults['trade-hub-font-family-site-identity'],
         ),
         'control' => array(
-            'label'                 => esc_html__( 'Site Identity Font Family', 'edu-light' ),
-            'description'           => esc_html__( 'Site title and tagline font family', 'edu-light' ),
+            'label'                 => esc_html__( 'Site Identity Font Family', 'trade-hub' ),
+            'description'           => esc_html__( 'Site title and tagline font family', 'trade-hub' ),
             'section'               => 'trade-hub-family',
             'type'                  => 'select',
             'choices'               => $trade_hub_google_fonts,
@@ -180,8 +180,8 @@ $trade_hub_settings_controls['trade-hub-font-family-menu'] =
             'default'              => $trade_hub_customizer_defaults['trade-hub-font-family-menu'],
         ),
         'control' => array(
-            'label'                 => esc_html__( 'Menu Font Family', 'edu-light' ),
-            'description'           => esc_html__( 'Primary menu font family', 'edu-light' ),
+            'label'                 => esc_html__( 'Menu Font Family', 'trade-hub' ),
+            'description'           => esc_html__( 'Primary menu font family', 'trade-hub' ),
             'section'               => 'trade-hub-family',
             'type'                  => 'select',
             'choices'               => $trade_hub_google_fonts,
@@ -196,7 +196,7 @@ $trade_hub_settings_controls['trade-hub-font-family-h1-h6'] =
             'default'              => $trade_hub_customizer_defaults['trade-hub-font-family-h1-h6'],
         ),
         'control' => array(
-            'label'                 => esc_html__( 'H1-H6 Font Family', 'edu-light' ),
+            'label'                 => esc_html__( 'H1-H6 Font Family', 'trade-hub' ),
             'section'               => 'trade-hub-family',
             'type'                  => 'select',
             'choices'               => $trade_hub_google_fonts,
