@@ -7,10 +7,28 @@
  * @package trade-hub
  */
 
+if ( !function_exists('trade_hub_file_directory') ) 
+{
+	function trade_hub_file_directory($file_path)
+	{
+		if ( file_exists(trailingslashit( get_stylesheet_directory() ). $file_path) )
+		{
+			return trailingslashit( get_stylesheet_directory() ). $file_path;
+		}
+		else
+		{
+			return trailingslashit( get_template_directory() ). $file_path;
+		}
+	}
+}
+
 /**
  * require trade-hub int.
  */
 require get_template_directory() . '/inc/init.php';
+// $trade_hub_init_file_path = trade_hub_file_directory('inc/init.php');
+// require $trade_hub_init_file_path;
+
 
 if ( ! function_exists( 'trade_hub_setup' ) ) :
 /**
@@ -96,41 +114,44 @@ function trade_hub_content_width() {
 }
 add_action( 'after_setup_theme', 'trade_hub_content_width', 0 );
 
-/*Google Fonts*/
-function trade_hub_google_fonts() {
-    global $trade_hub_customizer_all_values;
+
+// for font 
+function trade_hub_google_fonts()
+{
+	global $trade_hub_customizer_all_values;
 	$fonts_url = '';
 	$fonts     = array();
 
-
-	$trade_hub_font_family_body = $trade_hub_customizer_all_values['trade-hub-font-family-Primary'];
-	$trade_hub_font_family_title = $trade_hub_customizer_all_values['trade-hub-font-family-title'];
 	$trade_hub_font_family_site_identity = $trade_hub_customizer_all_values['trade-hub-font-family-site-identity'];
-    
-	$trade_hub_fonts = array();
-	$trade_hub_fonts[]=$trade_hub_font_family_body;
-	$trade_hub_fonts[]=$trade_hub_font_family_title;
-	$trade_hub_fonts[]=$trade_hub_font_family_site_identity;
+	$trade_hub_font_family_menu = $trade_hub_customizer_all_values['trade-hub-font-family-menu'];
+	$trade_hub_font_family_h1_h6 = $trade_hub_customizer_all_values['trade-hub-font-family-h1-h6'];
 
-	  $trade_hub_fonts_stylesheet = '//fonts.googleapis.com/css?family=';
+	$trade_hub_pro_fonts = array();
+	$trade_hub_pro_fonts[]=$trade_hub_font_family_site_identity;
+	$trade_hub_pro_fonts[]=$trade_hub_font_family_menu;
+	$trade_hub_pro_fonts[]=$trade_hub_font_family_h1_h6;
+
+	 $trade_hub_pro_fonts_stylesheet = '//fonts.googleapis.com/css?family=';
 
 	  $i  = 0;
-	  for ($i=0; $i < count( $trade_hub_fonts ); $i++) { 
+	  for ($i=0; $i < count( $trade_hub_pro_fonts ); $i++) { 
 
-	    if ( 'off' !== sprintf( _x( 'on', '%s font: on or off', 'trade-hub' ), $trade_hub_fonts[$i] ) ) {
-			$fonts[] = $trade_hub_fonts[$i];
+	    if ( 'off' !== sprintf( _x( 'on', '%s font: on or off', 'edu-light' ), $trade_hub_pro_fonts[$i] ) ) {
+			$fonts[] = $trade_hub_pro_fonts[$i];
 		}
 
 	  }
 
 	if ( $fonts ) {
 		$fonts_url = add_query_arg( array(
-			'family' => urlencode( implode( '|', $fonts ) ),
-		), esc_url( '//fonts.googleapis.com/css' ) );
+			'family' => urldecode( implode( '|', $fonts ) ),
+		), 'https://fonts.googleapis.com/css' );
 	}
 
 	return $fonts_url;
+
 }
+
 /**
  * Enqueue scripts and styles.
  */

@@ -3,26 +3,55 @@
 if( ! function_exists( 'trade_hub_inline_style' ) ) :
 
     /**
-     * trade-hub wp_head hook
+     * edu-light wp_head hook
      *
-     * @since  trade-hub 1.0.0
+     * @since  edu-light 1.0.0
      */
     function trade_hub_inline_style(){
       
         global $trade_hub_customizer_all_values;
-        global $trade_hub_google_fonts;
 
-        $trade_hub_background_color = get_background_color();
-        $trade_hub_primary_color_option = $trade_hub_customizer_all_values['trade-hub-primary-color'];
-        $trade_hub_site_identity_color_option = $trade_hub_customizer_all_values['trade-hub-site-identity-color'];
 
-        /*font settings*/
-        $trade_hub_font_family_primary_option = $trade_hub_google_fonts[$trade_hub_customizer_all_values['trade-hub-font-family-Primary']];
-        $trade_hub_font_family_site_identity_option = $trade_hub_google_fonts[$trade_hub_customizer_all_values['trade-hub-font-family-site-identity']];
-        $trade_hub_font_family_title_option = $trade_hub_google_fonts[$trade_hub_customizer_all_values['trade-hub-font-family-title']];
+
+        global$trade_hub_google_fonts;
+        $trade_hub_customizer_defaults['trade-hub-font-family-site-identity'] = 'Raleway:400,300,500,600,700,900';
+        $trade_hub_customizer_defaults['trade-hub-font-family-menu'] = 'Raleway:400,300,500,600,700,900';
+
+        $trade_hub_font_family_site_identity =$trade_hub_google_fonts[$trade_hub_customizer_all_values['trade-hub-font-family-site-identity']];
+        $trade_hub_font_family_menu =$trade_hub_google_fonts[$trade_hub_customizer_all_values['trade-hub-font-family-menu']];
+        $trade_hub_font_family_h1_h6 =$trade_hub_google_fonts[$trade_hub_customizer_all_values['trade-hub-font-family-h1-h6']];
+
+
+        $trade_hub_background_color                 = get_background_color();
+        $trade_hub_primary_color_option             = $trade_hub_customizer_all_values['trade-hub-primary-color'];
+        $trade_hub_site_identity_color_option       = $trade_hub_customizer_all_values['trade-hub-site-identity-color']; 
+        $trade_hub_section_heading_title_color      = $trade_hub_customizer_all_values['trade-hub-heading-section-title-color'];
+        $trade_hub_post_page_title_color            = $trade_hub_customizer_all_values['trade-hub-post-page-title-color'];
+        $trade_hub_menu_text_color                  = $trade_hub_customizer_all_values['trade-hub-menu-text-color'];                  
+
         /*end of about section*/
         ?>
         <style type="text/css">
+        /*site identity font family*/
+        .site-title,
+        .site-title a,
+        .site-description,
+        .site-description a {
+            font-family: '<?php echo esc_attr( $trade_hub_font_family_site_identity ); ?>'!important;
+        }
+        /*main menu*/
+        .main-navigation a{
+            font-family: '<?php echo esc_attr( $trade_hub_font_family_menu ); ?>'!important;
+        }
+        
+        h2, h2 a, .h2, .h2 a, 
+        h2.widget-title, .h1, .h3, .h4, .h5, .h6, 
+        h1, h3, h4, h5, h6 .h1 a, .h3 a, .h4 a,
+        .h5 a, .h6 a, h1 a, h3 a, h4 a, h5 a, 
+        h6 a {
+            font-family: '<?php echo esc_attr( $trade_hub_font_family_h1_h6 ); ?>'!important;
+        }
+
         /*=====COLOR OPTION=====*/
 
         /*Color*/
@@ -37,68 +66,26 @@ if( ! function_exists( 'trade_hub_inline_style' ) ) :
           }
         <?php
         } 
-        /*Primary*/
+            /*Primary*/
+
+
+        if( !empty($trade_hub_post_page_title_color) ){
+        ?>
+          
+            h2, h2 a, .h2, .h2 a, 
+            h2.widget-title, .h1, .h3, .h4, .h5, .h6, 
+            h1, h3, h4, h5, h6 .h1 a, .h3 a, .h4 a,
+            .h5 a, .h6 a, h1 a, h3 a, h4 a, h5 a, 
+            h6 a {
+            color: <?php echo esc_attr($trade_hub_post_page_title_color);?>!important;
+          }
+        <?php
+        } 
+
+
         if( !empty($trade_hub_primary_color_option) ){
         ?>
-            section.wrapper-slider .slide-pager .cycle-pager-active,
-            section.wrapper-slider .slide-pager .cycle-pager-active:visited,
-            section.wrapper-slider .slide-pager .cycle-pager-active:hover,
-            section.wrapper-slider .slide-pager .cycle-pager-active:focus,
-            section.wrapper-slider .slide-pager .cycle-pager-active:active,
-            .title-divider,
-            .title-divider:visited,
-            .block-overlay-hover,
-            .block-overlay-hover:visited,
-            #gmaptoggle,
-            #gmaptoggle:visited,
-            .evision-back-to-top,
-            .evision-back-to-top:visited,
-            .search-form .search-submit,
-            .search-form .search-submit:visited,
-            .widget_calendar tbody a,
-            .widget_calendar tbody a:visited,
-            .wrap-portfolio .button.is-checked,
-            .button.button-outline:hover, 
-            .button.button-outline:focus, 
-            .button.button-outline:active,
-            .radius-thumb-holder,
-            header.wrapper.top-header .controls,
-            .radius-thumb-holder:before,
-            .radius-thumb-holder:hover:before, 
-            .radius-thumb-holder:focus:before, 
-            .radius-thumb-holder:active:before,
-            #pbCloseBtn:hover:before,
-            .slide-pager .cycle-pager-active, 
-            .slick-dots .slick-active button,
-            .slide-pager span:hover,
-            .featurepost .latestpost-footer .moredetail a,
-            .featurepost .latestpost-footer .moredetail a:visited,
-            #load-wrap,
-            .back-tonav,
-            .back-tonav:visited,
-            .wrap-service .box-container .box-inner:hover .box-content, 
-            .wrap-service .box-container .box-inner:focus .box-content,
-            .search-holder .search-bg.search-open form,
-            .top-header .timer,
-            .nav-buttons,
-            .widget .widgettitle:after,
-            .widget .widget-title:after,
-            .widget input.search-submit,
-            .widget .search-form .search-submit,
-            .widget .search-form .search-submit:focus,
-            .main-navigation.sec-main-navigation ul li.current_page_item:before,
-            .comments-area input[type="submit"],
-            .slider-controls a i,
-            .tabs-menu li.current,           
-            .tagcloud a:hover,
-            .left.contact,
-            section.section-wrapper h2:after,            
-            .ribbon span,
-            .slick-prev:hover:before, 
-            .slick-next:hover:before,
-            .nav-holder #sec-menu-toggle,
-            section.callback-section,
-            a.border-btn{
+           {
               background-color: <?php echo esc_attr( $trade_hub_primary_color_option );?>;
             }
 
@@ -107,9 +94,7 @@ if( ! function_exists( 'trade_hub_inline_style' ) ) :
             .wrapper-slider,
             .flip-container .front,
             .flip-container .back,            
-            a.border-btn,
-            .ribbon span::before,
-            a.border-btn {
+            .ribbon span::before {
               border-color: <?php echo esc_attr( $trade_hub_primary_color_option );?>; 
             }
 
@@ -117,17 +102,21 @@ if( ! function_exists( 'trade_hub_inline_style' ) ) :
               border-bottom-color: <?php echo esc_attr( $trade_hub_primary_color_option );?> !important; 
             }
 
-            @media screen and (min-width: 768px){
             .main-navigation .current_page_item > a:after,
             .main-navigation .current-menu-item > a:after,
             .main-navigation .current_page_ancestor > a:after,
             .main-navigation li.active > a:after,
             .main-navigation li.active > a:after,
             .main-navigation li.active > a:after,
-            .main-navigation li.current_page_parent a:after {
+            a.border-btn,
+            .main-navigation li.current_page_parent a:after,
+            a#gotop,
+            .overlay-callback,
+            section#trade-hub-callback,
+            .ribbon span {
                 background-color: <?php echo esc_attr( $trade_hub_primary_color_option );?>;
               }
-            }
+         
 
             .latestpost-footer .moredetail a,
             .latestpost-footer .moredetail a:visited,
@@ -159,53 +148,35 @@ if( ! function_exists( 'trade_hub_inline_style' ) ) :
               color: <?php echo esc_attr( $trade_hub_primary_color_option );?> !important;
             }
         <?php
-        } 
-        if( !empty($trade_hub_site_identity_color_option) ){
-        ?>
-            /*Site identity / logo & tagline*/
-            .site-header .wrapper-site-identity .site-branding .site-title a,
-            .site-header .wrapper-site-identity .site-title a:visited,
-            .site-header .wrapper-site-identity .site-branding .site-description,
-            .page-inner-title .entry-header time {
-              color: <?php echo esc_attr( $trade_hub_site_identity_color_option );?>;
-            }
-        <?php
-        } 
-        if( !empty($trade_hub_font_family_primary_option) ){
-        /*=====FONT FAMILY OPTION=====*/
-        ?> 
-        /*Primary*/
-          html, body, p, button, input, select, textarea, pre, code, kbd, tt, var, samp , .main-navigation a, search-input-holder .search-field,
-          .widget{
-          font-family: '<?php echo esc_attr( $trade_hub_font_family_primary_option ); ?>'; /*Lato*/
-          }
-        <?php
-        } 
+        }
+         
 
-        if( !empty($trade_hub_font_family_site_identity_option) ){
-        ?> 
-          /*Site identity / logo & tagline*/
-          .site-header .wrapper-site-identity .site-title a, .site-header .wrapper-site-identity .site-description {
-          font-family: '<?php echo esc_attr( $trade_hub_font_family_site_identity_option ); ?>'; /*Lato*/
-          }
-        <?php
-        } 
-        if( !empty($trade_hub_font_family_title_option) ){
-        ?> 
-          /*Title*/
-          h1, h1 a,
-          h2, h2 a,
-          h3, h3 a,
-          h4, h4 a,
-          h5, h5 a,
-          h6, h6 a,
-          .widget-title h2,
-          .widget-title,
-          .news-content a{
-            font-family: '<?php echo esc_attr( $trade_hub_font_family_title_option ); ?>'; /*Lato*/
-          }
-        <?php
-        } 
+        if ( !empty($trade_hub_section_heading_title_color) )
+        {?>
+            /* section heading color */
+             section.section-wrapper h2, section.section-wrapper h2 a
+            {
+                color: <?php echo esc_attr($trade_hub_section_heading_title_color);?>!important;
+            }
+        <?php }
+
+
+        if ( !empty($trade_hub_menu_text_color) )
+        {?>
+            /* menu text color */
+            .main-navigation a, .main-navigation a:visited
+            {
+                color: <?php echo esc_attr($trade_hub_menu_text_color);?>!important;
+            }
+        <?php }
+
+
+      
+
+
+      
+
+          
         ?>
         </style>
     <?php

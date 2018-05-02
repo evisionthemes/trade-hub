@@ -18,6 +18,8 @@ require get_template_directory() .'/inc/customizer/featured-slider/feature-slide
 
 // conetion of our -feature-section
 require get_template_directory() .'/inc/customizer/home-feature-section/setting-frompage.php';
+// $trade_hub_feature_file_path = trade_hub_file_directory('inc/customizer/home-feature-section/setting-frompage.php');
+// require $trade_hub_feature_file_path;
 
 // conetion of our -service-section
 require get_template_directory() .'/inc/customizer/home-our-service/our-service-page.php';

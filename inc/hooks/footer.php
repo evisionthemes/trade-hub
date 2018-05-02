@@ -148,7 +148,9 @@ if ( ! function_exists( 'trade_hub_page_end' ) ) :
     global $trade_hub_customizer_all_values;
         ?>
     <?php
-     if( 1 == $trade_hub_customizer_all_values['trade-hub-enable-back-to-top']) {
+    $helo = $trade_hub_customizer_all_values['trade-hub-enable-back-to-top'];
+    // var_dump($hello); die('k vo');
+     if( 1 == $helo) {
         ?>
             <a id="gotop" class="evision-back-to-top" href="#page"><i class="fa fa-angle-up"></i></a>
         <?php

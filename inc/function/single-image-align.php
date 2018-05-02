@@ -15,6 +15,7 @@ if( ! function_exists( 'trade_hub_single_post_image_align' ) ) :
             $post_id = $post->ID;
         }
         $trade_hub_single_post_image_align = $trade_hub_customizer_all_values['trade-hub-single-post-image-align'];
+       
         $trade_hub_single_post_image_align_meta = get_post_meta( $post_id, 'trade-hub-single-post-image-align', true );
 
         if( false != $trade_hub_single_post_image_align_meta ) {

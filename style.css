@@ -7195,7 +7195,6 @@ span.notice-title:before {
 }
 
 .site-header .wrapper-site-identity .site-title a {
-  color: #313131;
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 0;
@@ -10312,7 +10311,7 @@ section.callback-section {
 }
 
 section .overlay-callback h2 {
-  color: #fff;
+  color: #fff !important;
   padding-bottom: 0;
   text-transform: uppercase;
   text-align: left;

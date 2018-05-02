@@ -68,6 +68,8 @@ require get_template_directory().'/inc/customizer/theme-option/option-panel.php'
 main-home-page options
  *******************************************/
 require get_template_directory().'/inc/customizer/main-home-page.php';
+// $trade_hub_main_home_page_file_path = trade_hub_file_directory('inc/customizer/main-home-page.php');
+// require $trade_hub_main_home_page_file_path;
 
 
 
