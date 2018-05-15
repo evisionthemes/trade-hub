@@ -14,8 +14,6 @@ $trade_hub_customizer_defaults['trade-hub-fs-enable-title']             = 1;
 $trade_hub_customizer_defaults['trade-hub-fs-enable-caption']           = 1;
 $trade_hub_customizer_defaults['trade-hub-fs-button-text']              = esc_html__('Know More','trade-hub');
 
-// $trade_hub_customizer_defaults['trade-hub-fs-button-text'] = esc_html__('View More','trade-hub');
-
 $trade_hub_customizer_defaults['trade-hub-featured-slider-number']      = 2;
 $trade_hub_customizer_defaults['trade-hub-featured-slider-selection']   = 'from-page';
 
@@ -137,6 +135,19 @@ $trade_hub_settings_controls['trade-hub-fs-enable-caption'] =
         )
     );
 
+$trade_hub_settings_controls['trade-hub-fs-button-text'] =
+    array(
+        'setting' =>     array(
+            'default'              => $trade_hub_customizer_defaults['trade-hub-fs-button-text']
+        ),
+        'control' => array(
+            'label'                 =>  esc_html__( 'Button Text', 'trade-hub' ),
+            'section'               => 'trade-hub-feature-slider-setting',
+            'type'                  => 'text',
+            'priority'              => 90,
+            'active_callback'       => ''
+        )
+    );
 
 
 

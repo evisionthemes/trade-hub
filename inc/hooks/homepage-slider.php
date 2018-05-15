@@ -126,11 +126,12 @@ if ( ! function_exists( 'trade_hub_featured_home_slider' ) ) :
                                   <div class="text-content">
                                       <?php echo wp_kses_post( $trade_hub_slider_array['trade-hub-feature-slider-content'] );?>
                                   </div>
+                                  <?php } ?>
+                                  <?php if (!empty($trade_hub_feature_button_text)) { ?>
                                   <div class="btn-holder">
-                                      <a href="<?php echo esc_url( $trade_hub_slider_array['trade-hub-feature-slider-link'] );?>" class="border-btn">view more</a>
+                                      <a href="<?php echo esc_url( $trade_hub_slider_array['trade-hub-feature-slider-link'] );?>" class="border-btn"><?php echo esc_html($trade_hub_feature_button_text);?></a>
                                   </div>
-                                  <?php
-                              }?>      
+                                  <?php }?>       
                           </div>
                       <?php } ?>
                     </div><!-- overlay -->

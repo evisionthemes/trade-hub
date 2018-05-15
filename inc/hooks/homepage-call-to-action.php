@@ -23,9 +23,11 @@ if ( !function_exists('trade_hub_call_to_action') ) :
 	            	<div class="col-md-7 col-sm-7 col-xs-12 call-toaction-text">
 	              		<h2><?php echo esc_html($trade_hub_call_action_main_text); ?></h2>
 	            	</div><!-- title -->
+	            	<?php if(!empty($trade_hub_call_action_button_text)) { ?>
 	            	<div class="col-md-5 col-sm-5 col-xs-12 call-to-action-btn">
 	              		<a href="<?php echo esc_url($trade_hub_call_action_button_url);?>" class="border-btn" ><?php echo esc_html($trade_hub_call_action_button_text); ?></a>
 	            	</div><!-- btn -->
+	            	<?php } ?>
 	            </div><!-- container -->
 	       </div><!-- overlay -->
 	    </section><!-- call back section end --> 

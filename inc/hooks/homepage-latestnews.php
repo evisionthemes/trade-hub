@@ -82,9 +82,11 @@ if ( ! function_exists( 'trade_hub_latest_news' ) ) :
 
                             </div><!-- col-md-4 col-sm-4 col-xs-12 -->
                             <?php endwhile;?>
+                            <?php if(!empty($trade_hub_latest_news_button_text)) { ?>
                             <div class="news-more-link col-md-12 clearfix">
                                <a href="<?php echo esc_url( get_category_link( $trade_hub_latest_news_category ) );?>" class="border-btn"><?php echo esc_html( $trade_hub_latest_news_button_text );?></a>
                             </div>
+                            <?php } ?>
                       </div><!-- row -->
                     </div><!-- container -->
                 </section><!-- section-wrapper -->
