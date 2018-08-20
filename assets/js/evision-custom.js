@@ -11,13 +11,13 @@ jQuery(window).on('load', function () {
 // On Document Ready
 jQuery(document).ready(function ($) {
   goToTop();
-  headerFix();
+  // headerFix();
   subMenuScript();
   navBar();
   addOddclass();
   checkImage();
   Slider();
-  jQuery("header#masthead").sticky({topSpacing:0});
+  // jQuery("header#masthead").sticky({topSpacing:0});
 });
 
 /* fixed header function */

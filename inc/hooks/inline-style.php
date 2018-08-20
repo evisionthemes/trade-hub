@@ -77,10 +77,20 @@ if( ! function_exists( 'trade_hub_inline_style' ) ) :
             h1, h3, h4, h5, h6 .h1 a, .h3 a, .h4 a,
             .h5 a, .h6 a, h1 a, h3 a, h4 a, h5 a, 
             h6 a {
-            color: <?php echo esc_attr($trade_hub_post_page_title_color);?>!important;
+            color: <?php echo esc_attr($trade_hub_post_page_title_color);?>;
           }
         <?php
         } 
+
+
+        if ( !empty($trade_hub_menu_text_color) )
+        {?>
+            /* menu text color */
+            .main-navigation a, .main-navigation a:visited
+            {
+                color: <?php echo esc_attr($trade_hub_menu_text_color);?>;
+            }
+        <?php }
 
 
         if( !empty($trade_hub_primary_color_option) ){
@@ -113,7 +123,11 @@ if( ! function_exists( 'trade_hub_inline_style' ) ) :
             a#gotop,
             .overlay-callback,
             section#trade-hub-callback,
-            .ribbon span {
+            .ribbon span,
+            .button, button, html input[type="button"], input[type="button"], input[type="reset"], input[type="submit"], .button:visited, button:visited, html input[type="button"]:visited, input[type="button"]:visited, input[type="reset"]:visited, input[type="submit"]:visited,
+            h2.widget-title:after,
+            .nav-holder #sec-menu-toggle,
+            section.testimonials-section .slick-dots li.slick-active {
                 background-color: <?php echo esc_attr( $trade_hub_primary_color_option );?>;
               }
          
@@ -144,8 +158,10 @@ if( ! function_exists( 'trade_hub_inline_style' ) ) :
             a.border-btn:hover,
             a.border-btn:focus,
             a.border-btn:active,
-            .feature-content:hover i{
-              color: <?php echo esc_attr( $trade_hub_primary_color_option );?> !important;
+            .feature-content:hover i,
+            .site-footer .site-info a:hover, .site-footer .site-info a:focus, .site-footer .site-info a:active, .site-footer .site-info a:visited:hover, .site-footer .site-info a:visited:focus, .site-footer .site-info a:visited:active,
+            .main-navigation.sec-main-navigation ul ul li:hover > a, .main-navigation.sec-main-navigation ul ul li:focus > a, .main-navigation.sec-main-navigation ul ul li:active > a  {
+              color: <?php echo esc_attr( $trade_hub_primary_color_option );?>;
             }
         <?php
         }
@@ -156,17 +172,7 @@ if( ! function_exists( 'trade_hub_inline_style' ) ) :
             /* section heading color */
              section.section-wrapper h2, section.section-wrapper h2 a
             {
-                color: <?php echo esc_attr($trade_hub_section_heading_title_color);?>!important;
-            }
-        <?php }
-
-
-        if ( !empty($trade_hub_menu_text_color) )
-        {?>
-            /* menu text color */
-            .main-navigation a, .main-navigation a:visited
-            {
-                color: <?php echo esc_attr($trade_hub_menu_text_color);?>!important;
+                color: <?php echo esc_attr($trade_hub_section_heading_title_color);?>;
             }
         <?php }
 
@@ -182,3 +188,5 @@ if( ! function_exists( 'trade_hub_inline_style' ) ) :
     <?php
     }
 endif;
+
+add_action( 'wp_head', 'trade_hub_inline_style' );

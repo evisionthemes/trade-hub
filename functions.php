@@ -168,8 +168,6 @@ function trade_hub_scripts() {
 		// google font
 		wp_enqueue_style( 'trade-hub-google-fonts', trade_hub_google_fonts() );
 
-		//inline style
-		wp_add_inline_style( 'trade-hub-style', trade_hub_inline_style() );
 
 		// *** SCRIPT ***//
 		$min = '.min';
@@ -180,7 +178,7 @@ function trade_hub_scripts() {
 		// modernizr
 		wp_enqueue_script( 'jquery-modernizr', get_template_directory_uri() . '/assets/js/modernizr.min.js', array('jquery'), '2.8.3', true );
 
-		wp_enqueue_script( 'jquery-sticky', get_template_directory_uri() . '/assets/js/jquery.sticky.js', array('jquery'), true );
+		// wp_enqueue_script( 'jquery-sticky', get_template_directory_uri() . '/assets/js/jquery.sticky.js', array('jquery'), true );
 
 		
 		// easing
@@ -200,7 +198,7 @@ function trade_hub_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'trade_hub_scripts' );
+add_action( 'wp_enqueue_scripts', 'trade_hub_scripts', 99 );
 
 /*added admin css for meta*/
 function trade_hub_wp_admin_style($hook) {

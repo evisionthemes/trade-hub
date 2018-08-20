@@ -218,7 +218,7 @@ border: 3px solid #000;
 }
 .slick-dots {
     position: absolute;
-    bottom: 4px;
+    bottom: -10px;
     display: block;
     width: 100%;
     padding: 0;
