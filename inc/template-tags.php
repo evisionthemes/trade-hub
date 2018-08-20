@@ -28,13 +28,13 @@ function trade_hub_posted_on() {
 
 	$posted_on = sprintf(
 		/* translators: %s: search term */
-		esc_html_x( 'On %s', 'post date', 'trade-hub' ),
+		esc_html_x( '%s', 'post date', 'trade-hub' ),
 		'<a href="' . esc_url(get_day_link(get_the_time('Y'), get_the_time('m'), get_the_time('d') )) . '" rel="bookmark">' . $time_string . '</a>'
 	);
 
 	$byline = sprintf(
 		/* translators: %s: search term */
-		esc_html_x( 'By %s', 'post author', 'trade-hub' ),
+		esc_html_x( '%s', 'post author', 'trade-hub' ),
 		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( $author_id ) ) . '">' . esc_html( get_the_author_meta( 'user_nicename', $author_id ) ) . '</a></span>'
 	);
 

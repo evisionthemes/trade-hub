@@ -4672,10 +4672,6 @@ input[type="submit"]:visited {
   padding: 14px 28px 15px;
   text-transform: uppercase;
   vertical-align: middle;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  border-radius: 5px;
   font-size: 16px;
   font-size: 1rem;
 }
@@ -4709,8 +4705,6 @@ button:active,
 input[type="button"]:active,
 input[type="reset"]:active,
 input[type="submit"]:active {
-  background: rgba(255, 102, 0, 0);
-  color: #171515;
   -webkit-transition: all 0.5;
   -moz-transition: all 0.5;
   -o-transition: all 0.5;
@@ -5748,13 +5742,6 @@ aside#secondary .widget .widget-title:after,
   padding: 0;
   font-size: 14px;
   font-size: 0.875rem;
-}
-
-.search-form .search-submit:hover,
-.search-form .search-submit:focus,
-.search-form .search-submit:active {
-  background: #000;
-  color: #fff;
 }
 
 /*widget categories*/
@@ -9000,11 +8987,6 @@ h2.widget-title:after {
   margin-bottom: 20px;
   font-size: 14px;
   text-align: left;
-  padding: 16px;
-}
-
-div#breadcrumb .container {
-  padding: 0;
 }
 
 .wrap-breadcrumb .container {
@@ -10548,7 +10530,7 @@ html {
 }
 
 @media only screen and (min-width: 1024px) {
-  .top-header-wrap {
+  .top-header-wrap .row {
     -ms-flex-align: center !important;
     align-items: center;
     -ms-flexbox: -ms-flexbox;
@@ -10556,8 +10538,7 @@ html {
   }
 }
 #breadcrumb {
-  border-top: 1px solid rgba(3, 3, 3, 0.36);
-  border-bottom: 1px solid rgba(3, 3, 3, 0.36);
+  border-bottom: 1px solid #ccc;
 }
 
 div#content, #content-home-static {
@@ -10896,6 +10877,10 @@ footer.entry-footer {
 
 #dpsp-content-top {
   margin-top: 1.2em;
+}
+
+.site-content #primary, .site-content #secondary {
+  margin-bottom: 20px;
 }
 
 @media (max-width: 767px) {
