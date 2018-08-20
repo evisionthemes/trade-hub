@@ -8995,12 +8995,6 @@ h2.widget-title:after {
   border-top: 1px solid rgba(3, 3, 3, 0.36);
 }
 
-@media screen and (max-width: 767px) {
-  .wrap-breadcrumb .container {
-    padding-left: 0;
-    padding-right: 0;
-  }
-}
 .wrap-breadcrumb ul {
   list-style: none;
   padding-left: 5px;
@@ -10561,6 +10555,23 @@ body.home.page #primary {
   padding-top: 30px;
 }
 
+body.evision-right-sidebar aside#secondary {
+  padding-right: 0;
+}
+
+body.evision-left-sidebar #secondary {
+  padding-left: 0;
+}
+
+body.evision-left-sidebar #primary {
+  padding-right: 0;
+}
+
+@media (max-width: 768px) {
+  body.evision-left-sidebar #primary {
+    padding-left: 0;
+  }
+}
 aside#secondary .widget .widgettitle, aside#secondary .widget .widget-title, .widget-title {
   padding-bottom: 10px;
   font-weight: 600;
@@ -10888,6 +10899,14 @@ footer.entry-footer {
     text-align: center;
     font-size: 2em;
   }
+}
+.wp-block-column {
+  padding: 15px;
+}
+
+.wp-block-columns {
+  margin-left: -15px;
+  margin-right: -15px;
 }
 
 /*# sourceMappingURL=style.css.map */
