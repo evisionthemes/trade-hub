@@ -177,12 +177,16 @@ if( ! function_exists( 'trade_hub_inline_style' ) ) :
             }
         <?php }
 
+        /* search */
+        if(isset($trade_hub_customizer_all_values['trade-hub-search-button-enable-option']) )
+        {
+        ?>
+            .main-navigation {
+                margin-right: 10px;
+            }
 
-      
-
-
-      
-
+        <?php 
+        }//endif 
           
         ?>
         </style>
