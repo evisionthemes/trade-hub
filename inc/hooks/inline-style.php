@@ -20,6 +20,7 @@ if( ! function_exists( 'trade_hub_inline_style' ) ) :
         $trade_hub_font_family_site_identity =$trade_hub_google_fonts[$trade_hub_customizer_all_values['trade-hub-font-family-site-identity']];
         $trade_hub_font_family_menu =$trade_hub_google_fonts[$trade_hub_customizer_all_values['trade-hub-font-family-menu']];
         $trade_hub_font_family_h1_h6 =$trade_hub_google_fonts[$trade_hub_customizer_all_values['trade-hub-font-family-h1-h6']];
+        $trade_hub_font_family_body =$trade_hub_google_fonts[$trade_hub_customizer_all_values['trade-hub-font-family-body']];
 
 
         $trade_hub_background_color                 = get_background_color();
@@ -50,6 +51,10 @@ if( ! function_exists( 'trade_hub_inline_style' ) ) :
         .h5 a, .h6 a, h1 a, h3 a, h4 a, h5 a, 
         h6 a {
             font-family: '<?php echo esc_attr( $trade_hub_font_family_h1_h6 ); ?>'!important;
+        }
+        
+        html,body {
+            font-family: '<?php echo esc_attr( $trade_hub_font_family_body ); ?>';
         }
 
         /*=====COLOR OPTION=====*/
