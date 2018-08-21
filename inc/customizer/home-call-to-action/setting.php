@@ -6,9 +6,9 @@ global $trade_hub_repeated_settings_controls;
 global $trade_hub_customizer_defaults;
 
 // defaults value's
-$trade_hub_customizer_defaults['trade-hub-call-action-enable-option']  	= 0;
-$trade_hub_customizer_defaults['trade-hub-call-action-button-text']  	= esc_html__( 'BUY NOW', 'trade-hub' );
-$trade_hub_customizer_defaults['trade-hub-call-action-main-text']		= esc_html__( 'USE THIS BUTTON FOR CALL TO ACTION', 'trade-hub' );
+$trade_hub_customizer_defaults['trade-hub-call-action-enable-option']  	= 1;
+$trade_hub_customizer_defaults['trade-hub-call-action-button-text']  	= '';
+$trade_hub_customizer_defaults['trade-hub-call-action-main-text']		= '';
 $trade_hub_customizer_defaults['trade-hub-call-action-link']			= '#';
 
 // create a section for call to action

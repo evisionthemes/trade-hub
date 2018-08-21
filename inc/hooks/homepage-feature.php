@@ -10,15 +10,8 @@ if ( ! function_exists( 'trade_hub_home_feature_array' ) ) :
      */
     function trade_hub_home_feature_array(  ){
         global $trade_hub_customizer_all_values;
-        $trade_hub_home_feature_number = absint($trade_hub_customizer_all_values['trade-hub-our-select-number-page']);
         $trade_hub_home_feature_single_words = absint($trade_hub_customizer_all_values['trade-hub-our-single-word-page']);
-
         $trade_hub_home_feature_contents_array = array();
-
-        $trade_hub_home_feature_contents_array[1]['trade-hub-home-feature-title'] = '';
-        $trade_hub_home_feature_contents_array[1]['trade-hub-home-feature-content'] = '';
-        $trade_hub_home_feature_contents_array[1]['trade-hub-home-feature-link'] = '#';
-        $trade_hub_home_feature_contents_array[1]['trade-hub-home-feature-page-icon'] = 'fa-desktop';
         $trade_hub_icons_array = array('trade-hub-home-feature-page-icon');
         $trade_hub_home_feature_page = array('trade-hub-home-feature-pages-ids');
         
@@ -42,25 +35,21 @@ if ( ! function_exists( 'trade_hub_home_feature_array' ) ) :
             $trade_hub_home_feature_args =    array(
                 'post_type' => 'page',
                 'post__in' => array_map( 'absint', $trade_hub_home_feature_posts_ids ),
-                'posts_per_page' => absint($trade_hub_home_feature_number),
                 'orderby' => 'post__in'
             );
             $trade_hub_home_feature_contents_array = array(); /*again empty array*/
             $trade_hub_home_feature_post_query = new WP_Query( $trade_hub_home_feature_args );
             if ( $trade_hub_home_feature_post_query->have_posts() ) :
-                $i = 0;
+                $i = 1;
                 while ( $trade_hub_home_feature_post_query->have_posts() ) : $trade_hub_home_feature_post_query->the_post();
-                    $trade_hub_home_feature_contents_array[$i]['trade-hub-home-feature-title'] = get_the_title();
 
-                    $trade_hub_home_feature_contents_array[$i]['trade-hub-home-feature-content'] = has_excerpt() ? get_the_excerpt() : trade_hub_words_count( $trade_hub_home_feature_single_words, get_the_content() );
-                    
-                    $trade_hub_home_feature_contents_array[$i]['trade-hub-home-feature-link'] = esc_url( get_permalink() );
+                        $trade_hub_home_feature_contents_array[]  = array(
+                        'trade-hub-home-feature-title'         => get_the_title(),
+                        'trade-hub-home-feature-content'       => has_excerpt()  ? the_excerpt() : trade_hub_words_count($trade_hub_home_feature_single_words,get_the_content()),
+                        'trade-hub-home-feature-link'           => esc_url(get_the_permalink()),
+                        'trade-hub-home-feature-page-icon'      => isset($trade_hub_icons_arrays[$i]['trade-hub-home-feature-page-icon']) ? $trade_hub_icons_arrays[$i]['trade-hub-home-feature-page-icon'] : ''
 
-                    $trade_hub_home_feature_contents_array[$i]['trade-hub-home-feature-page-icon'] = 'fa-desktop';
-
-                    if(isset( $trade_hub_icons_arrays[$i+1]['trade-hub-home-feature-page-icon'] )) {
-                        $trade_hub_home_feature_contents_array[$i]['trade-hub-home-feature-page-icon'] = $trade_hub_icons_arrays[$i+1]['trade-hub-home-feature-page-icon'];
-                    }
+                    );
                     $i++;
                 endwhile;
                 wp_reset_postdata();
@@ -87,40 +76,44 @@ if ( ! function_exists( 'trade_hub_home_feature' ) ) :
             return null;
         }
         $trade_hub_feature_arrays = trade_hub_home_feature_array();
+        // var_dump($trade_hub_feature_arrays);die();*
         
         if( is_array( $trade_hub_feature_arrays ))
         {
-            $trade_hub_home_feature_number = absint($trade_hub_customizer_all_values['trade-hub-our-select-number-page']);
             $trade_hub_home_feature_title = $trade_hub_customizer_all_values['trade-hub-our-feature-title-text'];
-            ?>          
+            ?>   
 
-           <section class="feature-section section-wrapper" id="trade-hub-feature">
+            <?php if(!empty($trade_hub_home_feature_title) || count($trade_hub_feature_arrays) > 0) { ?>
+            <section class="feature-section section-wrapper" id="trade-hub-feature">
                 <div class="container">
                     <div class="row">
-                        <h2><?php echo esc_html($trade_hub_home_feature_title); ?></h2> 
-                                  
+                        <?php if(!empty($trade_hub_home_feature_title ) ) { ?>
+                            <h2><?php echo esc_html($trade_hub_home_feature_title); ?></h2> 
+                        <?php } ?>          
                             <div class="feature-icon-content-wrapper col-md-12">
 
                                 <?php
                                     $i = 0;
 
                                     foreach ($trade_hub_feature_arrays as $trade_hub_feature_array)
-                                    {
-                                        if ( $trade_hub_home_feature_number < $i )
-                                        {
-                                            break;
-                                        }?> 
+                                    {   ?> 
+                                        <?php if(!empty($trade_hub_feature_array['trade-hub-home-feature-page-icon']) || !empty($trade_hub_feature_array['trade-hub-home-feature-title']) || !empty($trade_hub_feature_array['trade-hub-home-feature-content']) ) { ?>
 
-                                        <div class="col-md-4 col-sm-4 col-xs-12">
-                                            <div class="feature-content">
-                                                <i class="fa <?php echo esc_attr($trade_hub_feature_array['trade-hub-home-feature-page-icon']);?>"></i>
-                                                <div class="content-right">
-                                                    <h3><a href="<?php echo esc_url($trade_hub_feature_array['trade-hub-home-feature-link']);?>"><?php echo esc_html($trade_hub_feature_array['trade-hub-home-feature-title']);
-                                                     ?></a></h3>
-                                                    <p><?php echo wp_kses_post($trade_hub_feature_array['trade-hub-home-feature-content']);?></p>
-                                                </div><!--content -->
-                                            </div><!-- feature content -->
-                                        </div><!-- col-md-12 -->
+                                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                                <div class="feature-content">
+                                                    <i class="fa <?php echo esc_attr($trade_hub_feature_array['trade-hub-home-feature-page-icon']);?>"></i>
+                                                    <div class="content-right">
+                                                        <?php if(!empty($trade_hub_feature_array['trade-hub-home-feature-link']) ) { ?>
+                                                        <h3><a href="<?php echo esc_url($trade_hub_feature_array['trade-hub-home-feature-link']);?>"><?php echo esc_html($trade_hub_feature_array['trade-hub-home-feature-title']);
+                                                         ?></a></h3>
+                                                         <?php } ?>
+                                                         <?php if(!empty($trade_hub_feature_array['trade-hub-home-feature-content']) ) { ?>
+                                                        <p><?php echo wp_kses_post($trade_hub_feature_array['trade-hub-home-feature-content']);?></p>
+                                                        <?php } ?>
+                                                    </div><!--content -->
+                                                </div><!-- feature content -->
+                                            </div><!-- col-md-12 -->
+                                        <?php } ?>
                                         <?php
                                         $i++;
                                     }
@@ -130,6 +123,7 @@ if ( ! function_exists( 'trade_hub_home_feature' ) ) :
                          </div><!-- row -->
                     </div><!-- container -->
             </section><!-- feature section end --> 
+            <?php } ?>
             <?php
         }
     }

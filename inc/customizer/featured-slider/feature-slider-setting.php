@@ -6,16 +6,12 @@ global $trade_hub_repeated_settings_controls;
 global $trade_hub_customizer_defaults;
 
 /*defaults values feature portfolio options*/
-$trade_hub_customizer_defaults['trade-hub-feature-slider-enable']       = 0;
-$trade_hub_customizer_defaults['trade-hub-featured-slider-category']    = 0;
+$trade_hub_customizer_defaults['trade-hub-feature-slider-enable']       = 1;
 $trade_hub_customizer_defaults['trade-hub-featured-slider-pages']       = 0;
 $trade_hub_customizer_defaults['trade-hub-fs-single-words']             = 30;
 $trade_hub_customizer_defaults['trade-hub-fs-enable-title']             = 1;
 $trade_hub_customizer_defaults['trade-hub-fs-enable-caption']           = 1;
 $trade_hub_customizer_defaults['trade-hub-fs-button-text']              = esc_html__('Know More','trade-hub');
-
-$trade_hub_customizer_defaults['trade-hub-featured-slider-number']      = 2;
-$trade_hub_customizer_defaults['trade-hub-featured-slider-selection']   = 'from-page';
 
 /*feature slider enable setting*/
 $trade_hub_sections['trade-hub-feature-slider-setting'] =
@@ -37,25 +33,6 @@ $trade_hub_settings_controls['trade-hub-feature-slider-enable'] =
             'description'           => esc_html__( 'Enable "Feature slider" on checked' , 'trade-hub' ),
             'type'                  => 'checkbox',
             'priority'              => 10,
-            'active_callback'       => ''
-        )
-    );
-
-/*No of feature slider selection*/
-$trade_hub_settings_controls['trade-hub-featured-slider-number'] =
-    array(
-        'setting' =>     array(
-            'default'              => $trade_hub_customizer_defaults['trade-hub-featured-slider-number']
-        ),
-        'control' => array(
-            'label'                 =>  esc_html__( 'Number Of Slider', 'trade-hub' ),
-            'section'               => 'trade-hub-feature-slider-setting',
-            'type'                  => 'select',
-            'choices'               => array(
-                1 => esc_html__( '1', 'trade-hub' ),
-                2 => esc_html__( '2', 'trade-hub' )
-            ),
-            'priority'              => 20,
             'active_callback'       => ''
         )
     );

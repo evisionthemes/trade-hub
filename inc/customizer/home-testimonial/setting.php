@@ -6,8 +6,8 @@ global $trade_hub_repeated_settings_controls;
 global $trade_hub_customizer_defaults;
 
 // defaults value;
-$trade_hub_customizer_defaults['trade-hub-testimonial-enable-option'] 	= 0;
-$trade_hub_customizer_defaults['trade-hub-testimonial-title-text'] 		= esc_html__( 'Testimonials', 'trade-hub' );
+$trade_hub_customizer_defaults['trade-hub-testimonial-enable-option'] 	= 1;
+$trade_hub_customizer_defaults['trade-hub-testimonial-title-text'] 		= '';
 $trade_hub_customizer_defaults['trade-hub-testimonial-single-word'] 	= 30;
 $trade_hub_customizer_defaults['trade-hub-testimonial-from-page'] 		= 0;
 $trade_hub_customizer_defaults['trade-hub-testimonial-number-page'] 	= 3;

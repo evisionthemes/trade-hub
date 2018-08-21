@@ -10,17 +10,12 @@ if ( ! function_exists( 'trade_hub_testimonial_array' ) ) :
      */
     function trade_hub_testimonial_array(  ){
         global $trade_hub_customizer_all_values;
-        $trade_hub_testimonial_number = absint($trade_hub_customizer_all_values['trade-hub-testimonial-number-page']);
         $trade_hub_testimonial_single_words = absint($trade_hub_customizer_all_values['trade-hub-testimonial-single-word']);
 
         $trade_hub_testimonial_contents_array = array();
 
-        $trade_hub_testimonial_contents_array[1]['trade-hub-testimonial-title'] = esc_html__('JOHN DOE', 'trade-hub');
-        $trade_hub_testimonial_contents_array[1]['trade-hub-testimonial-content'] = esc_html__("Importance of education tells us the value of education in our life. Education means a lot in everyone’s life as it facilitates our learning, knowledge and skill.", 'trade-hub');
-        $trade_hub_testimonial_contents_array[1]['trade-hub-testimonial-link'] = '#';
-        $trade_hub_testimonial_contents_array[1]['trade-hub-testimonial-image'] = get_template_directory_uri().'/assets/images/right-content-post.jpg';
         $trade_hub_testimonial_page = array('trade-hub-testimonial-pages-ids');
-        $trade_hub_testimonial_posts = evision_customizer_get_repeated_all_value(3 , $trade_hub_testimonial_page);
+        $trade_hub_testimonial_posts = evision_customizer_get_repeated_all_value(6 , $trade_hub_testimonial_page);
         $trade_hub_testimonial_posts_ids = array();
 
         if( null != $trade_hub_testimonial_posts )
@@ -36,10 +31,9 @@ if ( ! function_exists( 'trade_hub_testimonial_array' ) ) :
             if( !empty( $trade_hub_testimonial_posts_ids ))
             {
                 $trade_hub_testimonial_args =    array(
-                    'post_type' => 'page',
-                    'post__in' => array_map( 'absint', $trade_hub_testimonial_posts_ids ),
-                    'posts_per_page' => absint($trade_hub_testimonial_number),
-                    'orderby' => 'post__in'
+                    'post_type'         => 'page',
+                    'post__in'          => array_map( 'absint', $trade_hub_testimonial_posts_ids ),
+                    'orderby'           => 'post__in'
                 );
             }
         }
@@ -52,24 +46,18 @@ if ( ! function_exists( 'trade_hub_testimonial_array' ) ) :
             if ( $trade_hub_testimonial_post_query->have_posts() ) :
                 $i = 1;
                 while ( $trade_hub_testimonial_post_query->have_posts() ) : $trade_hub_testimonial_post_query->the_post();
-                    $trade_hub_testimonial_contents_array[$i]['trade-hub-testimonial-title'] = get_the_title();
-                    if (has_excerpt())
-                    {
-                        $trade_hub_testimonial_contents_array[$i]['trade-hub-testimonial-content'] = get_the_excerpt();
-                    }
-                    else
-                    {
-                        $trade_hub_testimonial_contents_array[$i]['trade-hub-testimonial-content'] = trade_hub_words_count( $trade_hub_testimonial_single_words ,get_the_content());
-                    }
-                    $trade_hub_testimonial_contents_array[$i]['trade-hub-testimonial-link'] = esc_url( get_permalink() );
                     $thumb_image = '';
                     if(has_post_thumbnail())
                     {
                         $thumb = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'full' );
                         $thumb_image = $thumb['0'];
                     }
-
-                    $trade_hub_testimonial_contents_array[$i]['trade-hub-testimonial-image'] = $thumb_image;
+                    $trade_hub_testimonial_contents_array[]  = array(
+                        'trade-hub-testimonial-title'         => get_the_title(),
+                        'trade-hub-testimonial-content'       => has_excerpt()  ? the_excerpt() : trade_hub_words_count($trade_hub_testimonial_single_words,get_the_content()),
+                        'trade-hub-testimonial-link'           => esc_url(get_the_permalink()),
+                        'trade-hub-testimonial-image'           =>$thumb_image,
+                    );
                     
                     $i++;
                 endwhile;
@@ -100,51 +88,57 @@ if ( ! function_exists( 'trade_hub_home_testimonial' ) ) :
         $trade_hub_testimonial_arrays = trade_hub_testimonial_array(  );
         if( is_array( $trade_hub_testimonial_arrays ))
         {
-            $trade_hub_testimonial_number = absint($trade_hub_customizer_all_values['trade-hub-testimonial-number-page']);
+
             $trade_hub_testimonial_title = $trade_hub_customizer_all_values['trade-hub-testimonial-title-text'];
             ?>          
-
-           <section class="testimonials-section section-wrapper"><!-- testimonials section start here -->
-               <div class="container">
-                  <div class="row">
-                    <?php if ( !empty($trade_hub_testimonial_title) ) { ?>
-                    <h2><?php echo esc_html($trade_hub_testimonial_title); ?></h2>
-                    <?php } ?>
-                    <div class="testimonials">
-                        <?php 
-                        $i = 1;
-                        foreach ( $trade_hub_testimonial_arrays as $trade_hub_testimonial_array )
-                        { 
-                            if ( $trade_hub_testimonial_number  < $i)
-                            {
-                                break;
-                            }
-                            ?>
-                            <div class="col-md-4 col-sm-4 col-xs-12 testimonials-wrapper">
-                                <div class="testimonials-content">
-                                    <div id="th-f1_container">
-                                        <div id="th-f1_card" class="shadow">
-                                            <div class="th-front th-face">
-                                                <img alt="<?php echo esc_html($trade_hub_testimonial_array['trade-hub-testimonial-title']);?>" src="<?php echo esc_url($trade_hub_testimonial_array['trade-hub-testimonial-image']);?>" />
-                                            </div><!-- testimonials image -->
-                                            <div class="th-back th-face center"><!-- put background image inline style here -->
-                                                <p><?php echo wp_kses_post($trade_hub_testimonial_array['trade-hub-testimonial-content'])?></p>
-                                            </div>
-                                            <h4><i class="fa fa-angle-right"></i><a href="<?php echo esc_url($trade_hub_testimonial_array['trade-hub-testimonial-link']);?>"><?php echo esc_html($trade_hub_testimonial_array['trade-hub-testimonial-title']);?></a></h4><!-- custom link for testimonials -->
-                                        </div>
-                                    </div><!-- flip 1 container -->
-                                    
-                                </div><!-- testimonials content -->
-                            </div><!-- wrapper -->
-                            <?php
-                            $i++;
-                        }
-                        ?>              
-                    </div><!-- testimonials -->
-                  </div><!-- row -->
-               </div><!-- container -->
-            </section><!-- testimonials section end -->  
+            <?php if(!empty($trade_hub_testimonial_title) || count($trade_hub_testimonial_arrays) > 0) { ?>
+                <section class="testimonials-section  section-wrapper"><!-- testimonials section start here -->
+                   <div class="container">
+                      <div class="row">
+                        <?php if(!empty($trade_hub_testimonial_title) ) { ?>
+                            <h2><?php echo esc_html($trade_hub_testimonial_title); ?></h2>
+                        <?php } ?>
+                        <?php if(count($trade_hub_testimonial_arrays) > 0) { ?>
+                            <div class="testimonials">
+                                <?php 
+                                $i = 1;
+                                foreach ( $trade_hub_testimonial_arrays as $trade_hub_testimonial_array )
+                                {     ?>
+                                    <?php if(!empty($trade_hub_testimonial_array['trade-hub-testimonial-image']) || !empty($trade_hub_testimonial_array['trade-hub-testimonial-content']) || !empty($trade_hub_testimonial_array['trade-hub-testimonial-title']) ) { ?>
+                                        <div class="col-md-4 col-sm-4 col-xs-12 testimonials-wrapper">
+                                            <div class="testimonials-content">
+                                                <div id="th-f1_container">
+                                                    <div id="th-f1_card" class="shadow">
+                                                        <?php if(!empty($trade_hub_testimonial_array['trade-hub-testimonial-image']) ){ ?>
+                                                            <div class="th-front th-face">
+                                                                <img src="<?php echo esc_url($trade_hub_testimonial_array['trade-hub-testimonial-image']);?>" />
+                                                            </div><!-- testimonials image -->
+                                                        <?php } ?>
+                                                        <?php if(!empty($trade_hub_testimonial_array['trade-hub-testimonial-content']) ) { ?>
+                                                            <div class="th-back th-face center"><!-- put background image inline style here -->
+                                                                <p><?php echo wp_kses_post($trade_hub_testimonial_array['trade-hub-testimonial-content'])?></p>
+                                                            </div>
+                                                        <?php } ?>
+                                                        <?php if(!empty($trade_hub_testimonial_array['trade-hub-testimonial-title']) ) { ?>
+                                                            <h4><i class="fa fa-angle-right"></i><a href="<?php echo esc_url($trade_hub_testimonial_array['trade-hub-testimonial-link']);?>"><?php echo esc_html($trade_hub_testimonial_array['trade-hub-testimonial-title']);?></a></h4><!-- custom link for testimonials -->
+                                                        <?php } ?>
+                                                    </div>
+                                                </div><!-- flip 1 container -->
+                                                
+                                            </div><!-- testimonials content -->
+                                        </div><!-- wrapper -->
+                                    <?php } ?>
+                                    <?php
+                                    $i++;
+                                }
+                                ?>              
+                            </div><!-- testimonials -->
+                        <?php } ?>
+                      </div><!-- row -->
+                   </div><!-- container -->
+                </section><!-- testimonials section end -->
             <?php
+            }
         }
     }
 endif;

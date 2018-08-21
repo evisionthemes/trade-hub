@@ -71,48 +71,6 @@ function  tarde_hub_about_us()
             endwhile;
         endif;
     } 
-    if( empty($trade_hub_home_about_posts ))
-    {
-       $trade_hub_feature_about_args =    array(
-            'post_type' => 'page',
-            'posts_per_page' => 1,
-            'orderby' => 'post__in',
-        );
-       $trade_hub_about_default_post_query = new WP_Query($trade_hub_feature_about_args );
-        if ($trade_hub_about_default_post_query->have_posts() ) :
-          while ($trade_hub_about_default_post_query->have_posts() ) :$trade_hub_about_default_post_query->the_post();
-            if(has_post_thumbnail())
-            {
-                $thumb = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'full' );
-            }
-            else
-            {
-                $thumb[0] = '';
-            }
-            ?>
-            <section class="about-section section-wrapper"><!-- background image style here -->
-			    <div class="container">
-			        <div class="row">
-			        	
-			          <div class="feature-text-content-wrapper col-md-12">
-			              <div class="content-left clearfix">   
-			                <div class="col-md-6 col-xs-12 col-sm-6">
-			                  <div class="left-text-content feature-section">
-			                    <h3><?php the_title();?></h3>
-			                    <p><?php echo wp_kses_post(trade_hub_words_count( $trade_hub_feature_slider_single_words_about ,get_the_content()));?></p>
-			                    <a href="<?php the_permalink();?>" class="know-more"><?php echo esc_html($trade_hub_home_about_button_text);?></a>
-			                  </div>
-			                </div><!-- col-md-6 -->                  
-			              </div>
-			           </div>
-			           
-			        </div>
-		       </div>
-		    </section><!-- about section -->
-            <?php
-            endwhile;
-        endif;
-    } 
 }
 endif;
 

@@ -30,7 +30,24 @@
 	</div>
 </div>
 	<div class="entry-content">
-		
+		<?php
+		$trade_hub_single_post_image_align = trade_hub_single_post_image_align(get_the_ID());
+		if( 'no-image' != $trade_hub_single_post_image_align ){
+			if( 'left' == $trade_hub_single_post_image_align ){
+				echo "<div class='image-left'>";
+				the_post_thumbnail('medium');
+			}
+			elseif( 'right' == $trade_hub_single_post_image_align ){
+				echo "<div class='image-right'>";
+				the_post_thumbnail('medium');
+			}
+			else{
+				echo "<div class='image-full'>";
+				the_post_thumbnail('full');
+			}
+			echo "</div>";/*div end*/
+		}
+		?>
 
 		<?php the_content(); ?>
 		<?php

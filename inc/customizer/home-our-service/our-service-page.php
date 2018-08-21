@@ -6,8 +6,7 @@ global $trade_hub_repeated_settings_controls;
 global $trade_hub_customizer_defaults;
 
 // deafults value
-$trade_hub_customizer_defaults['trade-hub-our-service-enable-option'] 		= 0;
-$trade_hub_customizer_defaults['trade-hub-our-service-number-page']			= 3;
+$trade_hub_customizer_defaults['trade-hub-our-service-enable-option'] 		= 1;
 $trade_hub_customizer_defaults['trade-hub-our-service-single-word'] 		= 25;
 $trade_hub_customizer_defaults['trade-hub-our-service-main_title'] 			=  	'';
 $trade_hub_customizer_defaults['trade-hub-our-service-page']				= '';

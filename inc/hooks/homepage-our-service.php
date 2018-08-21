@@ -10,14 +10,14 @@ if ( ! function_exists( 'trade_hub_our_service_array' ) ) :
      */
     function trade_hub_our_service_array(  ){
         global $trade_hub_customizer_all_values;
-        $trade_hub_our_service_number = absint($trade_hub_customizer_all_values['trade-hub-our-service-number-page']);
+        // $trade_hub_our_service_number = absint($trade_hub_customizer_all_values['trade-hub-our-service-number-page']);
         $trade_hub_our_service_single_words = absint($trade_hub_customizer_all_values['trade-hub-our-service-single-word']);
 
         $trade_hub_our_service_contents_array = array();
 
-        $trade_hub_our_service_contents_array[1]['trade-hub-our_service-title'] = '';
-        $trade_hub_our_service_contents_array[1]['trade-hub-our_service-content'] = '';
-        $trade_hub_our_service_contents_array[1]['trade-hub-our_service-link'] = '#';
+        // $trade_hub_our_service_contents_array[1]['trade-hub-our_service-title'] = '';
+        // $trade_hub_our_service_contents_array[1]['trade-hub-our_service-content'] = '';
+        // $trade_hub_our_service_contents_array[1]['trade-hub-our_service-link'] = '#';
         
         $trade_hub_our_service_page = array('trade-hub-our-service-page-id');
         $trade_hub_our_service_posts = evision_customizer_get_repeated_all_value(3 , $trade_hub_our_service_page);
@@ -38,7 +38,7 @@ if ( ! function_exists( 'trade_hub_our_service_array' ) ) :
                 $trade_hub_our_service_args =    array(
                     'post_type' => 'page',
                     'post__in' => array_map( 'absint', $trade_hub_our_service_posts_ids ),
-                    'posts_per_page' => absint($trade_hub_our_service_number),
+                    // 'posts_per_page' => absint($trade_hub_our_service_number),
                     'orderby' => 'post__in'
                 );
             }
@@ -52,16 +52,22 @@ if ( ! function_exists( 'trade_hub_our_service_array' ) ) :
             if ( $trade_hub_our_service_post_query->have_posts() ) :
                 $i = 1;
                 while ( $trade_hub_our_service_post_query->have_posts() ) : $trade_hub_our_service_post_query->the_post();
-                    $trade_hub_our_service_contents_array[$i]['trade-hub-our_service-title'] = get_the_title();
-                    if (has_excerpt())
-                    {
-                        $trade_hub_our_service_contents_array[$i]['trade-hub-our_service-content'] = get_the_excerpt();
-                    }
-                    else
-                    {
-                        $trade_hub_our_service_contents_array[$i]['trade-hub-our_service-content'] = trade_hub_words_count( $trade_hub_our_service_single_words ,get_the_content());
-                    }
-                    $trade_hub_our_service_contents_array[$i]['trade-hub-our_service-link'] = get_permalink();
+                    // $trade_hub_our_service_contents_array[$i]['trade-hub-our_service-title'] = get_the_title();
+                    // if (has_excerpt())
+                    // {
+                    //     $trade_hub_our_service_contents_array[$i]['trade-hub-our_service-content'] = get_the_excerpt();
+                    // }
+                    // else
+                    // {
+                    //     $trade_hub_our_service_contents_array[$i]['trade-hub-our_service-content'] = trade_hub_words_count( $trade_hub_our_service_single_words ,get_the_content());
+                    // }
+                    // $trade_hub_our_service_contents_array[$i]['trade-hub-our_service-link'] = get_permalink();
+                    $trade_hub_our_service_contents_array[]  = array(
+                        'trade-hub-our_service-title'         => get_the_title(),
+                        'trade-hub-our_service-content'       => has_excerpt()  ? the_excerpt() : trade_hub_words_count($trade_hub_our_service_single_words,get_the_content()),
+                        'trade-hub-our_service-link'           => esc_url(get_the_permalink())
+
+                    );
                     
                     $i++;
                 endwhile;
@@ -93,44 +99,46 @@ if ( ! function_exists( 'trade_hub_our_service' ) ) :
         if( is_array( $trade_hub_our_service_arrays ))
         {
             $trade_hub_our_service_single_words = absint($trade_hub_customizer_all_values['trade-hub-our-service-single-word']);
-            $trade_hub_our_service_number = absint($trade_hub_customizer_all_values['trade-hub-testimonial-number-page']);
+            // $trade_hub_our_service_number = absint($trade_hub_customizer_all_values['trade-hub-testimonial-number-page']);
             $trade_hub_our_service_main_title  = esc_html($trade_hub_customizer_all_values['trade-hub-our-service-main_title']);
             $trade_hub_our_service_image  = $trade_hub_customizer_all_values['trade-hub-our-service-image'];
-            ?>          
+            ?> 
 
-            <section class="portfolio-first section-wrapper container" id="portfolio">
-                <div class="background-image-div portfolio-left"  style="background-image: url(<?php echo esc_url($trade_hub_our_service_image);?>);"><!-- put background image link here -->
-                    <div class="bg-overlay">
-                    </div>
-                </div><!-- background image div -->
-                    <div class="text-div right">
-                        <?php if( !empty($trade_hub_our_service_main_title) ) { ?>
-                                <h2><?php echo esc_html($trade_hub_our_service_main_title);?></h2>
-                                <?php } ?>
-                        <?php 
-                        $i = 1;
-                        foreach ( $trade_hub_our_service_arrays as $trade_hub_our_service_array )
-                        { 
-                            if ( $trade_hub_our_service_number  < $i)
-                            {
-                                break;
-                            }
-                            ?>
-                                <div class="listing">
-                                    <?php if ( !empty($trade_hub_our_service_array['trade-hub-our_service-title']) ) { ?>
-                                    <h3><?php echo esc_html($trade_hub_our_service_array['trade-hub-our_service-title']);?></h3>
+            <?php if(!empty($trade_hub_our_service_image) || !empty($trade_hub_our_service_main_title) || count($trade_hub_our_service_arrays) > 0) { ?>
+                <section class="portfolio-first section-wrapper container" id="portfolio">
+                    <div class="background-image-div portfolio-left"  style="background-image: url(<?php echo esc_url($trade_hub_our_service_image);?>);"><!-- put background image link here -->
+                        <div class="bg-overlay">
+                        </div>
+                    </div><!-- background image div -->
+                        <div class="text-div right">
+                            <?php if( !empty($trade_hub_our_service_main_title) ) { ?>
+                                    <h2><?php echo esc_html($trade_hub_our_service_main_title);?></h2>
                                     <?php } ?>
-                                    <p><?php echo wp_kses_post( trade_hub_words_count ($trade_hub_our_service_single_words, $trade_hub_our_service_array['trade-hub-our_service-content']) ) ; ?></p>
-
-                                    
-                                </div>
-                            
-                            <?php
-                            $i++;
-                        }
-                        ?>              
-                    </div><!-- testimonials -->
-            </section><!-- testimonials section end -->  
+                            <?php 
+                            $i = 1;
+                            foreach ( $trade_hub_our_service_arrays as $trade_hub_our_service_array )
+                            { 
+                                // if ( $trade_hub_our_service_number  < $i)
+                                // {
+                                //     break;
+                                // }
+                                ?>
+                                    <?php if(!empty($trade_hub_our_service_array['trade-hub-our_service-title']) || !empty($trade_hub_our_service_array['trade-hub-our_service-content']) ) { ?>
+                                        <div class="listing">
+                                            <?php if ( !empty($trade_hub_our_service_array['trade-hub-our_service-title']) ) { ?>
+                                            <h3><?php echo esc_html($trade_hub_our_service_array['trade-hub-our_service-title']);?></h3>
+                                            <?php } ?>
+                                            <p><?php echo wp_kses_post( trade_hub_words_count ($trade_hub_our_service_single_words, $trade_hub_our_service_array['trade-hub-our_service-content']) ) ; ?></p>  
+                                        </div>
+                                    <?php } ?>
+                                
+                                <?php
+                                $i++;
+                            }
+                            ?>              
+                        </div><!-- testimonials -->
+                </section><!-- testimonials section end --> 
+            <?php } ?> 
             <?php
         }
     }

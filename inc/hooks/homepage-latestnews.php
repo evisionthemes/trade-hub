@@ -76,6 +76,7 @@ if ( ! function_exists( 'trade_hub_latest_news' ) ) :
                                     ?>
 
                                     <a class="date-meta" href="<?php echo esc_url( get_day_link( $archive_year, $archive_month, $archive_day ) ); ?>"><?php echo esc_html( get_the_date() );?></a>
+                                    <a class="author" href="<?php echo esc_url(get_author_posts_url(get_the_author_meta('ID')) ); ?>"><?php echo esc_html(get_the_author() );?></a>
                                 </div><!-- content -->
 
                             </div><!-- th-news-wrapper -->  
