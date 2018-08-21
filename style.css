@@ -10527,6 +10527,8 @@ section#banner-section .slick-list.draggable {
     justify-content: center;
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
   }
 }
 @media (min-width: 768px) and (min-width: 768px) {
@@ -10574,7 +10576,7 @@ html {
 }
 
 #content-home-static {
-  padding-top: 0;
+  padding-top: 10px;
 }
 
 #breadcrumb {
