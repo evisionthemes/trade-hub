@@ -86,7 +86,7 @@ Font Icons:
 
 
 == Image used in screenshot ==
-1) https://pixabay.com/en/office-tax-business-finance-620822/
+1) https://pixabay.com/en/paper-business-document-composition-3224638/
 
 * Other are slef made and all images are licensed under [CC0](http://creativecommons.org/publicdomain/zero/1.0/legalcode.txt)
 
