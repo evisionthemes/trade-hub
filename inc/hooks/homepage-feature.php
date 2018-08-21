@@ -99,7 +99,7 @@ if ( ! function_exists( 'trade_hub_home_feature' ) ) :
                     <div class="row">
                         <h2><?php echo esc_html($trade_hub_home_feature_title); ?></h2> 
                                   
-                            <div class="feature-icon-content-wrapper col-md-12">
+                            <div class="feature-icon-content-wrapper justify-content-sm-center col-md-12">
 
                                 <?php
                                     $i = 0;

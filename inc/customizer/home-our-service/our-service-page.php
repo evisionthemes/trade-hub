@@ -15,7 +15,7 @@ $trade_hub_customizer_defaults['trade-hub-our-service-image'] 				=  	'';
 
 // create a section for our service section
 $trade_hub_sections['trade-hub-our-service-section']						=	array(
-		'title'			=>	esc_html__( 'Our-Service', 'trade-hub' ),
+		'title'			=>	esc_html__( 'Our Service', 'trade-hub' ),
 		'panel'			=> 'trade-hub-main-homepage-panel',
 		'priority'		=> 220
 	);
@@ -40,7 +40,7 @@ $trade_hub_settings_controls['trade-hub-our-service-single-word'] = array(
 		'default'			=> $trade_hub_customizer_defaults['trade-hub-our-service-single-word']
 	),
 	'control'				=> array(
-		'label'				=> esc_html__( 'Select Number Of Word- Our Service', 'trade-hub' ),
+		'label'				=> esc_html__( 'Number of Words', 'trade-hub' ),
 		'section'			=> 'trade-hub-our-service-section',
 		'type'				=> 'number',
 		'priority'			=> 10,
@@ -72,7 +72,7 @@ $trade_hub_repeated_settings_controls['trade-hub-our-service-page']  =array(
 		),
 		'control'	=> array(
 			/* translators: %s: search term */
-			'label'				=> esc_html__('Select page for services %s','trade-hub'),
+			'label'				=> esc_html__('Select Service Page %s','trade-hub'),
 			'section'			=> 'trade-hub-our-service-section',
 			'type'				=> 'dropdown-pages',
 			'priority'			=> 40,

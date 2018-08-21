@@ -14,7 +14,7 @@ $trade_hub_customizer_defaults['trade-hub-call-action-link']			= '#';
 // create a section for call to action
 $trade_hub_sections['trade-hub-call-action-section'] = 
 array(
-	'title'					=> esc_html__( 'Call-To-Action', 'trade-hub' ),
+	'title'					=> esc_html__( 'Call To Action', 'trade-hub' ),
 	'panel'					=> 'trade-hub-main-homepage-panel',
 	'priority'				=> 240
 );
@@ -26,7 +26,7 @@ array(
 		'default'			=> $trade_hub_customizer_defaults['trade-hub-call-action-enable-option']
 	),
 	'control'				=> array(
-		'label'				=> esc_html__( 'Enable Call to Action', 'trade-hub' ),
+		'label'				=> esc_html__( 'Enable Call To Action', 'trade-hub' ),
 		'section'			=> 'trade-hub-call-action-section',
 		'type'				=> 'checkbox',
 		'priority'			=> 10,
@@ -42,7 +42,7 @@ array(
 		'default'			=> $trade_hub_customizer_defaults['trade-hub-call-action-main-text']
 	),
 	'control'				=> array(
-		'label'				=> esc_html__(  'Call Action Text', 'trade-hub' ),
+		'label'				=> esc_html__(  'Call To Action Text', 'trade-hub' ),
 		'section'			=> 'trade-hub-call-action-section',
 		'type'				=> 'text',
 		'priority'			=> 30,

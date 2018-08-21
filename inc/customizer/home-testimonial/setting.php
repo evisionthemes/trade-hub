@@ -58,7 +58,7 @@ array(
 		'default'			=> $trade_hub_customizer_defaults['trade-hub-testimonial-single-word'],
 	),
 	'control'				=> array(
-		'label'				=> esc_html__( 'Select Number Of Word', 'trade-hub' ),
+		'label'				=> esc_html__( 'Number of Words', 'trade-hub' ),
 		'section'			=> 'trade-hub-testimonial-sections',
 		'type'				=> 'number',
 		'pripority'			=> 40,
@@ -77,7 +77,7 @@ $trade_hub_repeated_settings_controls['trade-hub-testimonial-from-page'] =
             ),
             'control' => array(
             	/* translators: %s: search term */
-                'label'                 =>  esc_html__( 'Select Page For testimonial Section %s', 'trade-hub' ),
+                'label'                 =>  esc_html__( 'Select Testimonial Page %s', 'trade-hub' ),
                 'section'               => 'trade-hub-testimonial-sections',
                 'type'                  => 'dropdown-pages',
                 'priority'              => 50,
@@ -89,7 +89,7 @@ $trade_hub_repeated_settings_controls['trade-hub-testimonial-from-page'] =
                 'section'               => 'trade-hub-testimonial-sections',
                 'type'                  => 'message',
                 'priority'              => 50,
-                'description'           => '<br /><hr />'
+                // 'description'           => '<br /><hr />'
             )
         )
     );

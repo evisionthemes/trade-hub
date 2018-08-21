@@ -127,7 +127,8 @@ if( ! function_exists( 'trade_hub_inline_style' ) ) :
             .button, button, html input[type="button"], input[type="button"], input[type="reset"], input[type="submit"], .button:visited, button:visited, html input[type="button"]:visited, input[type="button"]:visited, input[type="reset"]:visited, input[type="submit"]:visited,
             h2.widget-title:after,
             .nav-holder #sec-menu-toggle,
-            section.testimonials-section .slick-dots li.slick-active {
+            section.testimonials-section .slick-dots li.slick-active,
+            .slick-dots li.slick-active {
                 background-color: <?php echo esc_attr( $trade_hub_primary_color_option );?>;
               }
          

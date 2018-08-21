@@ -16,7 +16,7 @@ $trade_hub_customizer_defaults['trade-hub-our-feature-icon'] 		= esc_html__( 'fa
 // section for our-feature-option
 $trade_hub_sections['trade-hub-our-feature-section'] = 
 	array(
-			'title'			=> esc_html__( 'Our-Feature', 'trade-hub' ),
+			'title'			=> esc_html__( 'Our Feature', 'trade-hub' ),
 			'panel'			=> 'trade-hub-main-homepage-panel',
 			'priority'		=> 20
 	);
@@ -28,7 +28,7 @@ $trade_hub_settings_controls['trade-hub-our-feature-enable'] =
 					'default'			=> $trade_hub_customizer_defaults['trade-hub-our-feature-enable']	
 			),
 			'control'					=> array(
-					'label'				=> esc_html__( 'Enable Feature', 'trade-hub' ),
+					'label'				=> esc_html__( 'Enable Our Feature', 'trade-hub' ),
 					'section'			=> 'trade-hub-our-feature-section',
 					'type'				=> 'checkbox',
 					'priority'			=> 10,
@@ -43,7 +43,7 @@ array(
 		'default'						=> $trade_hub_customizer_defaults['trade-hub-our-feature-title-text']
 	),
 	'control'							=> array(
-		'label'							=> esc_html__( 'Our Feaure title Text', 'trade-hub' ),
+		'label'							=> esc_html__( 'Title Text', 'trade-hub' ),
 		'section'						=> 'trade-hub-our-feature-section',
 		'type'							=> 'text',
 		'priority'						=> 20,
@@ -58,7 +58,7 @@ array(
 		'default'						=> $trade_hub_customizer_defaults['trade-hub-our-select-number-page']
 	),
 	'control'							=> array(
-		'label'							=> esc_html__( 'Select Number Of Page', 'trade-hub' ),
+		'label'							=> esc_html__( 'Number of Page', 'trade-hub' ),
 		'section'						=> 'trade-hub-our-feature-section',
 		'type'							=> 'select',
 		'choices'						=> array(
@@ -78,7 +78,7 @@ $trade_hub_settings_controls['trade-hub-our-single-word-page'] =
 			'default'						=> $trade_hub_customizer_defaults['trade-hub-our-single-word-page']
 		),
 		'control'							=> array(
-			'label'							=> esc_html__( 'Select Number Of Words', 'trade-hub' ),
+			'label'							=> esc_html__( 'Number of Words', 'trade-hub' ),
 			'section'						=> 'trade-hub-our-feature-section',
 			'type'							=> 'number',
 			'input_attrs'					=> array('min' => 1, 'max'  => 300),
@@ -97,7 +97,7 @@ $trade_hub_repeated_settings_controls['trade-hub-our-feature-page'] =
             ),
             'control' =>   array(
             	/* translators: %s: search term */
-                'label'                 =>    esc_html__( 'Select Page For Our Feature Page Icon %s', 'trade-hub' ),
+                'label'                 =>    esc_html__( 'Select Icon for Page %s', 'trade-hub' ),
                 /* translators: %s: search term */
                 'description'           =>   sprintf( esc_html__( 'Use font awesome icon: Eg: %1$s . %2$s See more here %3$s', 'trade-hub' ), 'fa-desktop', '<a href="' . esc_url( 'https://fontawesome.com/icons' ) . '" target="_blank">', '</a>' ),
                 'section'               =>   'trade-hub-our-feature-section',
@@ -113,7 +113,7 @@ $trade_hub_repeated_settings_controls['trade-hub-our-feature-page'] =
             ),
             'control' =>   array(
             	/* translators: %s: search term */
-                'label'                 =>    esc_html__( 'Select Page For Our Page %s', 'trade-hub' ),
+                'label'                 =>    esc_html__( 'Select Page %s', 'trade-hub' ),
                 'section'               =>   'trade-hub-our-feature-section',
                 'type'                  =>   'dropdown-pages',
                 'priority'              =>   55,

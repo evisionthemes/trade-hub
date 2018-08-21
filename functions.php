@@ -200,6 +200,18 @@ function trade_hub_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'trade_hub_scripts', 99 );
 
+
+/**
+ * Customizer control styles and scripts.
+ */
+function trade_hub_customizer_control_scripts()
+{
+    wp_enqueue_style('trade-hub-customize-controls-style', get_template_directory_uri() . '/editor-style.css');
+}
+
+add_action('customize_controls_enqueue_scripts', 'trade_hub_customizer_control_scripts', 0);
+
+
 /*added admin css for meta*/
 function trade_hub_wp_admin_style($hook) {
 	if ( in_array( $hook, array( 'post.php', 'post-new.php' ) ) ) {

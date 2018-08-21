@@ -92,7 +92,7 @@ $trade_hub_settings_controls['trade-hub-menu-text-color'] = array(
         'default' => $trade_hub_customizer_defaults['trade-hub-menu-text-color'],
     ),
     'control' => array(
-        'label'                 =>  esc_html__( 'Menu text Color', 'trade-hub' ),
+        'label'                 =>  esc_html__( 'Menu Text Color', 'trade-hub' ),
         'section'               => 'colors',
         'type'                  => 'color',
         'priority'              => 40,

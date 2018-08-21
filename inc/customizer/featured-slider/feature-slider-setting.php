@@ -21,7 +21,7 @@ $trade_hub_customizer_defaults['trade-hub-featured-slider-selection']   = 'from-
 $trade_hub_sections['trade-hub-feature-slider-setting'] =
     array(
         'priority'       => 10,
-        'title'          => esc_html__( 'Feature-Slider', 'trade-hub' ),
+        'title'          => esc_html__( 'Feature Slider', 'trade-hub' ),
         'panel'          => 'trade-hub-main-homepage-panel',
     );
 
@@ -34,7 +34,6 @@ $trade_hub_settings_controls['trade-hub-feature-slider-enable'] =
         'control' => array(
             'label'                 =>  esc_html__( 'Enable Feature Slider', 'trade-hub' ),
             'section'               => 'trade-hub-feature-slider-setting',
-            'description'           => esc_html__( 'Enable "Feature slider" on checked' , 'trade-hub' ),
             'type'                  => 'checkbox',
             'priority'              => 10,
             'active_callback'       => ''
@@ -66,8 +65,7 @@ $trade_hub_settings_controls['trade-hub-fs-single-words'] =
             'default'              => $trade_hub_customizer_defaults['trade-hub-fs-single-words']
         ),
         'control' => array(
-            'label'                 =>  esc_html__( 'Single Slider- Number Of Words', 'trade-hub' ),
-            'description'           =>  esc_html__( 'If you do not have selected from - Custom', 'trade-hub' ),
+            'label'                 =>  esc_html__( 'Number of Words', 'trade-hub' ),
             'section'               => 'trade-hub-feature-slider-setting',
             'type'                  => 'number',
             'priority'              => 30,
@@ -88,7 +86,7 @@ $trade_hub_repeated_settings_controls['trade-hub-featured-slider-pages'] =
             ),
             'control' => array(
                 /* translators: %s: search term */
-                'label'                 =>  esc_html__( 'Select Page For Slide %s', 'trade-hub' ),
+                'label'                 =>  esc_html__( 'Select Slide %s', 'trade-hub' ),
                 'section'               => 'trade-hub-feature-slider-setting',
                 'type'                  => 'dropdown-pages',
                 'priority'              => 60,
@@ -100,7 +98,7 @@ $trade_hub_repeated_settings_controls['trade-hub-featured-slider-pages'] =
                 'section'               => 'trade-hub-feature-slider-setting',
                 'type'                  => 'message',
                 'priority'              => 60,
-                'description'           => '<br /><hr />'
+                // 'description'           => '<br /><hr />'
             )
         )
     );
