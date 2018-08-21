@@ -147,6 +147,7 @@ $trade_hub_google_fonts = array(
 $trade_hub_customizer_defaults['trade-hub-font-family-site-identity']     = 'Raleway:400,300,500,600,700,900';
 $trade_hub_customizer_defaults['trade-hub-font-family-menu']              = 'Raleway:400,300,500,600,700,900';
 $trade_hub_customizer_defaults['trade-hub-font-family-h1-h6']             = 'Raleway:400,300,500,600,700,900';
+$trade_hub_customizer_defaults['trade-hub-font-family-body']              = 'Raleway:400,300,500,600,700,900';
 
 
 /*section*/
@@ -205,3 +206,17 @@ $trade_hub_settings_controls['trade-hub-font-family-h1-h6'] =
         )
     );
 
+$trade_hub_settings_controls['trade-hub-font-family-body'] =
+    array(
+        'setting' =>     array(
+            'default'              => $trade_hub_customizer_defaults['trade-hub-font-family-body'],
+        ),
+        'control' => array(
+            'label'                 => esc_html__( 'Body Font Family', 'trade-hub' ),
+            'section'               => 'trade-hub-family',
+            'type'                  => 'select',
+            'choices'               => $trade_hub_google_fonts,
+            'priority'              => 15,
+            'active_callback'       => ''
+        )
+    );

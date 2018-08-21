@@ -125,11 +125,13 @@ function trade_hub_google_fonts()
 	$trade_hub_font_family_site_identity = $trade_hub_customizer_all_values['trade-hub-font-family-site-identity'];
 	$trade_hub_font_family_menu = $trade_hub_customizer_all_values['trade-hub-font-family-menu'];
 	$trade_hub_font_family_h1_h6 = $trade_hub_customizer_all_values['trade-hub-font-family-h1-h6'];
+	$trade_hub_font_family_body  = $trade_hub_customizer_all_values['trade-hub-font-family-body'];
 
 	$trade_hub_pro_fonts = array();
 	$trade_hub_pro_fonts[]=$trade_hub_font_family_site_identity;
 	$trade_hub_pro_fonts[]=$trade_hub_font_family_menu;
 	$trade_hub_pro_fonts[]=$trade_hub_font_family_h1_h6;
+	$trade_hub_pro_fonts[]=$trade_hub_font_family_body;
 
 	 $trade_hub_pro_fonts_stylesheet = '//fonts.googleapis.com/css?family=';
 
