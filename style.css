@@ -4,7 +4,7 @@ Theme URI: https://evisionthemes.com/product/trade-hub/
 Author: eVision Themes
 Author URI: http://evisionthemes.com
 Description: Trade Hub is a user friendly creative theme for all kind of business, accounting, financial, coaching, law office, business planning, corporate websites and blogging. It's simple to configure the homepage setting using Theme Customizer. The theme comes with flexible features, clean coding, documentation and dedicated support team to solve your confusion while building professional website.Documentation: https://evisionthemes.com/documentation/, Support : https://evisionthemes.com/supports, Live Preview : https://demo.evisionthemes.com/trade-hub/, Follow: https://www.facebook.com/evisionthemes 
-Version: 2.0.0
+Version: 2.0.1
 License: GNU General Public License v3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Text Domain: trade-hub
@@ -10538,6 +10538,15 @@ section#banner-section .slick-list.draggable {
   }
 }
 
+@media (min-width: 992px) {
+  .d-md-none {
+    display: none !important;
+  }
+}
+.d-block {
+  display: block !important;
+}
+
 html {
   font-family: 'Open Sans';
 }
@@ -10709,35 +10718,48 @@ aside#secondary .widget .widgettitle, aside#secondary .widget .widget-title, .wi
   width: 100%;
   left: 0;
   right: 0;
-  height: 36px;
   line-height: 36px;
 }
-
-.trade-additional-nav {
+#topheader .trade-additional-nav {
+  position: inherit;
+  padding: 0;
   padding-right: 20px;
+  float: right;
+  background: transparent;
+}
+@media (max-width: 991px) {
+  #topheader .trade-additional-nav {
+    display: none;
+    background: rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin-left: -15px;
+    margin-right: -15px;
+    float: none !important;
+    padding: 0 15px;
+  }
+}
+#topheader .social-icon-only {
+  width: auto;
 }
 
 .trade-additional-nav ul {
   padding-left: 20px;
 }
-
 .trade-additional-nav a {
   color: #fff;
-}
-
-#topheader .trade-additional-nav {
-  position: inherit;
-  padding: 0;
-  float: right;
-  background: transparent;
 }
 
 #topheader .trade-additional-nav ul {
   margin: 0;
   padding: 0;
 }
-#topheader.social-nav-right .trade-additional-nav ul {
-  text-align: left;
+@media (min-width: 992px) {
+  #topheader.social-nav-right .trade-additional-nav ul {
+    text-align: left;
+  }
+}
+#topheader.social-nav-left .head-list-toggle {
+  float: right;
 }
 
 #topheader.social-nav-right .social-icon-only {
@@ -10746,6 +10768,14 @@ aside#secondary .widget .widgettitle, aside#secondary .widget .widget-title, .wi
 
 #topheader.social-nav-right .trade-additional-nav {
   float: left;
+}
+
+.head-list-toggle {
+  color: #fff !important;
+  font-weight: 600;
+}
+.head-list-toggle:after {
+  content: 'Contact';
 }
 
 #banner-section .slick-dots {
