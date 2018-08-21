@@ -54,14 +54,14 @@ function trade_hub_entry_footer() {
 		$categories_list = get_the_category_list( esc_html( ' ') );
 		if ( $categories_list && trade_hub_categorized_blog() ) {
 			/* translators: %s: search term */
-			printf( '<span class="cat-links">' . esc_html__( 'Categories : %1$s', 'trade-hub' ) . '</span>', $categories_list ); // WPCS: XSS OK.
+			printf( '<span class="cat-links">' . esc_html__( '%1$s', 'trade-hub' ) . '</span>', $categories_list ); // WPCS: XSS OK.
 		}
 
 		/* translators: used between list items, there is a space after the comma */
 		$tags_list = get_the_tag_list( esc_html( '') );
 		if ( $tags_list ) {
 			/* translators: %s: search term */
-			printf( '<span class="tags-links">' . esc_html__( 'Tags : %1$s', 'trade-hub' ) . '</span>', $tags_list ); // WPCS: XSS OK.
+			printf( '<span class="tags-links">' . esc_html__( '%1$s', 'trade-hub' ) . '</span>', $tags_list ); // WPCS: XSS OK.
 		}
 	}
 
