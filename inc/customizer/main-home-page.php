@@ -9,7 +9,7 @@ global $trade_hub_customizer_defaults;
 
 $trade_hub_panels['trade-hub-main-homepage-panel'] = 
 	array(
-		'title'  => esc_html__('Main-HomePage','trade-hub'),
+		'title'  => esc_html__('Home Page / Front Page','trade-hub'),
 		'priority' => 200
 	);
 

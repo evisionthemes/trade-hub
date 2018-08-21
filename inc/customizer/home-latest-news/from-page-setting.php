@@ -17,7 +17,7 @@ $trade_hub_customizer_defaults['trade-hub-latest-news-selection']       = 'from-
 // create a section for latest news
 $trade_hub_sections['trade-hub-latest-news-section'] = 
 array(
-	'title'				=> esc_html__( 'Latest-News', 'trade-hub' ),
+	'title'				=> esc_html__( 'Latest News', 'trade-hub' ),
 	'panel'				=> 'trade-hub-main-homepage-panel',
 	'priority'			=> 250
 );
@@ -59,7 +59,7 @@ array(
 		'default'			=> $trade_hub_customizer_defaults['trade-hub-latest-news-single-word']
 	),
 	'control'				=> array(
-		'label'				=> esc_html__( 'Select Number Of Word', 'trade-hub' ),
+		'label'				=> esc_html__( 'Number of Words', 'trade-hub' ),
 		'section'			=> 'trade-hub-latest-news-section',
 		'type'				=> 'number',
 		'input_attr'		=> array('min' => 1, 'max' =>200),
@@ -75,7 +75,7 @@ $trade_hub_settings_controls['trade-hub-latest-news-category'] =
             'default'              => $trade_hub_customizer_defaults['trade-hub-latest-news-category']
         ),
         'control' =>   array(
-            'label'                 => esc_html__( 'Select Category For Latest News', 'trade-hub' ),
+            'label'                 => esc_html__( 'Select Category', 'trade-hub' ),
             'description'           => esc_html__( 'News will only displayed from this category', 'trade-hub' ),
             'section'               => 'trade-hub-latest-news-section',
             'type'                  => 'category_dropdown',
@@ -90,7 +90,7 @@ $trade_hub_settings_controls['trade-hub-latest-news-button-text'] =
             'default'              => $trade_hub_customizer_defaults['trade-hub-latest-news-button-text']
         ),
         'control' =>   array(
-            'label'                 => esc_html__( 'Browse All Button Text', 'trade-hub' ),
+            'label'                 => esc_html__( 'Button Text', 'trade-hub' ),
             'section'               => 'trade-hub-latest-news-section',
             'type'                  => 'text',
             'priority'              => 60,

@@ -6,7 +6,7 @@ global $trade_hub_customizer_defaults;
 
 /*defaults values*/
 $trade_hub_customizer_defaults['trade-hub-enable-static-page']          = 1;
-$trade_hub_customizer_defaults['trade-hub-search-button-enable-option'] = 0;
+$trade_hub_customizer_defaults['trade-hub-search-button-enable-option'] = 1;
 $trade_hub_customizer_defaults['trade-hub-alternate-layout']            = 1;
 $trade_hub_customizer_defaults['trade-hub-default-layout']              = 'right-sidebar';
 $trade_hub_customizer_defaults['trade-hub-single-post-image-align']     = 'full';
@@ -93,7 +93,7 @@ $trade_hub_settings_controls['trade-hub-single-post-image-align'] =
             'default'              => $trade_hub_customizer_defaults['trade-hub-single-post-image-align'],
         ),
         'control' => array(
-            'label'                 =>  esc_html__( 'Alignment Of Image In Single Post/Page', 'trade-hub' ),
+            'label'                 =>  esc_html__( 'Alignment of Image In Single Post/Page', 'trade-hub' ),
             'section'               => 'trade-hub-layout-options',
             'type'                  => 'select',
             'choices'               => array(
@@ -126,8 +126,8 @@ $trade_hub_settings_controls['trade-hub-single-post-image-align'] =
             'default'              =>   $trade_hub_customizer_defaults['trade-number-of-words']
         ),
         'control' =>   array(
-            'label'                 =>    esc_html__( 'Number Of Words For Excerpt', 'trade-hub' ),
-            'description'           =>    esc_html__( 'This will controll the excerpt length on listing page', 'trade-hub' ),
+            'label'                 =>    esc_html__( 'Number of Words For Excerpt', 'trade-hub' ),
+            'description'           =>    esc_html__( 'This will control the excerpt length on listing page', 'trade-hub' ),
             'section'               =>   'trade-hub-layout-options',
             'type'                  =>   'number',
             'input_attrs'           =>   array( 'min' => 1, 'max' => 200 ),

@@ -89,9 +89,9 @@ if ( ! function_exists( 'trade_hub_home_feature' ) ) :
                     <div class="row">
                         <?php if(!empty($trade_hub_home_feature_title ) ) { ?>
                             <h2><?php echo esc_html($trade_hub_home_feature_title); ?></h2> 
-                        <?php } ?>          
-                            <div class="feature-icon-content-wrapper col-md-12">
-
+                        <?php } ?>  
+                                  
+                            <div class="feature-icon-content-wrapper justify-content-sm-center col-md-12">
                                 <?php
                                     $i = 0;
 
