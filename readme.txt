@@ -86,9 +86,14 @@ Font Icons:
 
 
 == Image used in screenshot ==
+* All images are licensed under [CC0](http://creativecommons.org/publicdomain/zero/1.0/legalcode.txt)
+
+=== Main Slider ===
 1) https://pixabay.com/en/paper-business-document-composition-3224638/
 
-* Other are slef made and all images are licensed under [CC0](http://creativecommons.org/publicdomain/zero/1.0/legalcode.txt)
+=== About Section ===
+1) https://www.pexels.com/photo/man-using-laptop-on-table-against-white-background-257897/
+
 
 == Installation ==
 
