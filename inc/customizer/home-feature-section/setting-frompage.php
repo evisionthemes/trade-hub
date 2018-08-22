@@ -10,7 +10,7 @@ $trade_hub_customizer_defaults['trade-hub-our-feature-enable'] 		= 1;
 $trade_hub_customizer_defaults['trade-hub-our-feature-title-text'] 	= '';
 $trade_hub_customizer_defaults['trade-hub-our-single-word-page'] 	= 25;
 $trade_hub_customizer_defaults['trade-hub-our-feature-page'] 		= 0;
-$trade_hub_customizer_defaults['trade-hub-our-feature-icon'] 		= esc_html__( 'fa fa-desktop', 'trade-hub' );
+$trade_hub_customizer_defaults['trade-hub-our-feature-icon'] 		= esc_html__( 'fa-desktop', 'trade-hub' );
 
 // section for our-feature-option
 $trade_hub_sections['trade-hub-our-feature-section'] = 

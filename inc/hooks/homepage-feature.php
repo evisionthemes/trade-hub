@@ -47,7 +47,7 @@ if ( ! function_exists( 'trade_hub_home_feature_array' ) ) :
                         'trade-hub-home-feature-title'         => get_the_title(),
                         'trade-hub-home-feature-content'       => has_excerpt()  ? the_excerpt() : trade_hub_words_count($trade_hub_home_feature_single_words,get_the_content()),
                         'trade-hub-home-feature-link'           => esc_url(get_the_permalink()),
-                        'trade-hub-home-feature-page-icon'      => isset($trade_hub_icons_arrays[$i]['trade-hub-home-feature-page-icon']) ? $trade_hub_icons_arrays[$i]['trade-hub-home-feature-page-icon'] : ''
+                        'trade-hub-home-feature-page-icon'      => isset($trade_hub_icons_arrays[$i]['trade-hub-home-feature-page-icon']) ? $trade_hub_icons_arrays[$i]['trade-hub-home-feature-page-icon'] : 'fa-desktop'
 
                     );
                     $i++;
