@@ -7,7 +7,7 @@ Tags: custom-logo, custom-menu, custom-colors, blog, news, one-column, two-colum
 
 Requires at least: 4.0
 Tested up to: 4.9.1
-Stable tag: 2.0.1
+Stable tag: 2.0.2
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -111,6 +111,10 @@ Note:
 	If your Image is not align properly, then you can try regenerate thumbnails. So that it can fit on required image size.
 
 == Changelog ==
+
+= - 2.0.2 - =
+* issue fixed in latest blog
+
 = - 2.0.1 - =
 * issue fixed in slider section
 * issue fixed in feature section
