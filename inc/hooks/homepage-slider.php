@@ -11,7 +11,6 @@ if ( ! function_exists( 'trade_hub_featured_slider_array' ) ) :
      */
     function trade_hub_featured_slider_array( ){
         global $trade_hub_customizer_all_values;
-        // $trade_hub_feature_slider_number = absint( $trade_hub_customizer_all_values['trade-hub-featured-slider-number'] );
         $trade_hub_feature_slider_single_words = absint( $trade_hub_customizer_all_values['trade-hub-fs-single-words'] );
         $trade_hub_feature_slider_contents_array[0]['trade-hub-feature-slider-title'] = esc_html__('Well Come TO Bussiness Theme','trade-hub');
         $trade_hub_feature_slider_contents_array[0]['trade-hub-feature-slider-content'] = esc_html__('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum congue leo eget malesuada. Proin eget tortor risus.','trade-hub');
@@ -85,12 +84,10 @@ if ( ! function_exists( 'trade_hub_featured_home_slider' ) ) :
         if( ! $trade_hub_customizer_all_values['trade-hub-feature-slider-enable'] ){
             return null;
         }
-        // $trade_hub_feature_slider_selection_options = $trade_hub_customizer_all_values['trade-hub-featured-slider-selection'];
         $trade_hub_slider_arrays = trade_hub_featured_slider_array(  );
 
 
         if( is_array( $trade_hub_slider_arrays )){
-        // $trade_hub_feature_slider_number = absint( $trade_hub_customizer_all_values['trade-hub-featured-slider-number'] );
         $trade_hub_feature_enable_title = $trade_hub_customizer_all_values['trade-hub-fs-enable-title'];
         $trade_hub_feature_enable_caption = $trade_hub_customizer_all_values['trade-hub-fs-enable-caption'];
         $trade_hub_feature_button_text = $trade_hub_customizer_all_values['trade-hub-fs-button-text'];
@@ -102,9 +99,6 @@ if ( ! function_exists( 'trade_hub_featured_home_slider' ) ) :
         <?php
         $i = 1;
         foreach( $trade_hub_slider_arrays as $trade_hub_slider_array ){
-            // if( $trade_hub_feature_slider_number < $i){
-            //     break;
-            // }
             if(empty($trade_hub_slider_array['trade-hub-feature-slider-image'])){
                 $trade_hub_feature_slider_image = get_template_directory_uri().'/assets/images/no-image.png';
             }
@@ -149,5 +143,5 @@ if ( ! function_exists( 'trade_hub_featured_home_slider' ) ) :
   }
 }
 endif;
-add_action( 'trade_hub_homepage', 'trade_hub_featured_home_slider', 10 );
+add_action( 'trade_hub_homepage_slider', 'trade_hub_featured_home_slider', 10 );
 
