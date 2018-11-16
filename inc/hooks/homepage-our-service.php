@@ -5,42 +5,51 @@ if ( ! function_exists( 'trade_hub_our_service_array' ) ) :
      *
      * @since trade-hub 1.0.0
      *
-     * @param null
+     * @param $from_slider
      * @return array
      */
-    function trade_hub_our_service_array(  ){
+    function trade_hub_our_service_array( $from_slider ){
         global $trade_hub_customizer_all_values;
-        // $trade_hub_our_service_number = absint($trade_hub_customizer_all_values['trade-hub-our-service-number-page']);
         $trade_hub_our_service_single_words = absint($trade_hub_customizer_all_values['trade-hub-our-service-single-word']);
 
         $trade_hub_our_service_contents_array = array();
-
-        // $trade_hub_our_service_contents_array[1]['trade-hub-our_service-title'] = '';
-        // $trade_hub_our_service_contents_array[1]['trade-hub-our_service-content'] = '';
-        // $trade_hub_our_service_contents_array[1]['trade-hub-our_service-link'] = '#';
         
         $trade_hub_our_service_page = array('trade-hub-our-service-page-id');
         $trade_hub_our_service_posts = evision_customizer_get_repeated_all_value(3 , $trade_hub_our_service_page);
         $trade_hub_our_service_posts_ids = array();
 
-        if( null != $trade_hub_our_service_posts )
-        {
-            foreach( $trade_hub_our_service_posts as $trade_hub_our_service_post )
-            {
-                if( 0 != $trade_hub_our_service_post['trade-hub-our-service-page-id'] )
-                {
-                    $trade_hub_our_service_posts_ids[] = $trade_hub_our_service_post['trade-hub-our-service-page-id'];
-                }
-                 
-            }
-            if( !empty( $trade_hub_our_service_posts_ids ))
-            {
-                $trade_hub_our_service_args =    array(
-                    'post_type' => 'page',
-                    'post__in' => array_map( 'absint', $trade_hub_our_service_posts_ids ),
-                    // 'posts_per_page' => absint($trade_hub_our_service_number),
-                    'orderby' => 'post__in'
+        if( 'from-category'  == $from_slider ){
+            $trade_hub_service_from_post = $trade_hub_customizer_all_values['trdae-hub-our-service-post-category'];
+            if( 0 != $trade_hub_service_from_post ){
+                $trade_hub_our_service_args = array(
+                    'post_type'         => 'post',
+                    'cat'               => absint($trade_hub_service_from_post),
+                    'posts_per_page'    => 3 ,
+                    'orderby'           => 'Desc'
+
                 );
+            }
+        }
+        else{
+            if( null != $trade_hub_our_service_posts )
+            {
+                foreach( $trade_hub_our_service_posts as $trade_hub_our_service_post )
+                {
+                    if( 0 != $trade_hub_our_service_post['trade-hub-our-service-page-id'] )
+                    {
+                        $trade_hub_our_service_posts_ids[] = $trade_hub_our_service_post['trade-hub-our-service-page-id'];
+                    }
+                     
+                }
+                if( !empty( $trade_hub_our_service_posts_ids ))
+                {
+                    $trade_hub_our_service_args =    array(
+                        'post_type' => 'page',
+                        'post__in' => array_map( 'absint', $trade_hub_our_service_posts_ids ),
+
+                        'orderby' => 'post__in'
+                    );
+                }
             }
         }
         // the query
@@ -52,16 +61,6 @@ if ( ! function_exists( 'trade_hub_our_service_array' ) ) :
             if ( $trade_hub_our_service_post_query->have_posts() ) :
                 $i = 1;
                 while ( $trade_hub_our_service_post_query->have_posts() ) : $trade_hub_our_service_post_query->the_post();
-                    // $trade_hub_our_service_contents_array[$i]['trade-hub-our_service-title'] = get_the_title();
-                    // if (has_excerpt())
-                    // {
-                    //     $trade_hub_our_service_contents_array[$i]['trade-hub-our_service-content'] = get_the_excerpt();
-                    // }
-                    // else
-                    // {
-                    //     $trade_hub_our_service_contents_array[$i]['trade-hub-our_service-content'] = trade_hub_words_count( $trade_hub_our_service_single_words ,get_the_content());
-                    // }
-                    // $trade_hub_our_service_contents_array[$i]['trade-hub-our_service-link'] = get_permalink();
                     $trade_hub_our_service_contents_array[]  = array(
                         'trade-hub-our_service-title'         => get_the_title(),
                         'trade-hub-our_service-content'       => has_excerpt()  ? the_excerpt() : trade_hub_words_count($trade_hub_our_service_single_words,get_the_content()),
@@ -95,11 +94,12 @@ if ( ! function_exists( 'trade_hub_our_service' ) ) :
         {
             return null;
         }
-        $trade_hub_our_service_arrays = trade_hub_our_service_array(  );
+        $trade_hub_our_service_select_post = $trade_hub_customizer_all_values['trdae-hub-our-service-post-selection'];
+
+        $trade_hub_our_service_arrays = trade_hub_our_service_array( $trade_hub_our_service_select_post );
         if( is_array( $trade_hub_our_service_arrays ))
         {
             $trade_hub_our_service_single_words = absint($trade_hub_customizer_all_values['trade-hub-our-service-single-word']);
-            // $trade_hub_our_service_number = absint($trade_hub_customizer_all_values['trade-hub-testimonial-number-page']);
             $trade_hub_our_service_main_title  = esc_html($trade_hub_customizer_all_values['trade-hub-our-service-main_title']);
             $trade_hub_our_service_image  = $trade_hub_customizer_all_values['trade-hub-our-service-image'];
             ?> 
@@ -118,10 +118,6 @@ if ( ! function_exists( 'trade_hub_our_service' ) ) :
                             $i = 1;
                             foreach ( $trade_hub_our_service_arrays as $trade_hub_our_service_array )
                             { 
-                                // if ( $trade_hub_our_service_number  < $i)
-                                // {
-                                //     break;
-                                // }
                                 ?>
                                     <?php if(!empty($trade_hub_our_service_array['trade-hub-our_service-title']) || !empty($trade_hub_our_service_array['trade-hub-our_service-content']) ) { ?>
                                         <div class="listing">

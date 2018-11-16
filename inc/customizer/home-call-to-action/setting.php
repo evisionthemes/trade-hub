@@ -7,8 +7,8 @@ global $trade_hub_customizer_defaults;
 
 // defaults value's
 $trade_hub_customizer_defaults['trade-hub-call-action-enable-option']  	= 1;
-$trade_hub_customizer_defaults['trade-hub-call-action-button-text']  	= '';
-$trade_hub_customizer_defaults['trade-hub-call-action-main-text']		= '';
+$trade_hub_customizer_defaults['trade-hub-call-action-main-text']		= esc_html__('Trade Hub Free Business Theme','trade-hub');
+$trade_hub_customizer_defaults['trade-hub-call-action-button-text']  	= esc_html__('Buy Pro Theme','trade-hub');
 $trade_hub_customizer_defaults['trade-hub-call-action-link']			= '#';
 
 // create a section for call to action
@@ -44,7 +44,7 @@ array(
 	'control'				=> array(
 		'label'				=> esc_html__(  'Call To Action Text', 'trade-hub' ),
 		'section'			=> 'trade-hub-call-action-section',
-		'type'				=> 'text',
+		'type'				=> 'textarea',
 		'priority'			=> 30,
 		'active_callback'	=> ''
 	)

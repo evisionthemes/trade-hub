@@ -5,7 +5,7 @@ global $trade_hub_repeated_settings_controls;
 global $trade_hub_customizer_defaults;
 
 /*defaults values*/
-$trade_hub_customizer_defaults['trade-hub-enable-static-page']          = 1;
+$trade_hub_customizer_defaults['trade-hub-enable-static-page']          = 0;
 $trade_hub_customizer_defaults['trade-hub-search-button-enable-option'] = 1;
 $trade_hub_customizer_defaults['trade-hub-alternate-layout']            = 1;
 $trade_hub_customizer_defaults['trade-hub-default-layout']              = 'right-sidebar';

@@ -8,9 +8,11 @@ global $trade_hub_customizer_defaults;
 // deafults value
 $trade_hub_customizer_defaults['trade-hub-our-service-enable-option'] 		= 1;
 $trade_hub_customizer_defaults['trade-hub-our-service-single-word'] 		= 25;
-$trade_hub_customizer_defaults['trade-hub-our-service-main_title'] 			=  	'';
-$trade_hub_customizer_defaults['trade-hub-our-service-page']				= '';
-$trade_hub_customizer_defaults['trade-hub-our-service-image'] 				=  	'';
+$trade_hub_customizer_defaults['trade-hub-our-service-main_title'] 			= esc_html__('Our Service','trade-hub');
+$trade_hub_customizer_defaults['trdae-hub-our-service-post-selection']      = 'from-category';
+$trade_hub_customizer_defaults['trdae-hub-our-service-post-category']       = 1;
+$trade_hub_customizer_defaults['trade-hub-our-service-page']				= 0;
+$trade_hub_customizer_defaults['trade-hub-our-service-image'] 				=  get_template_directory_uri().'/assets/images/slider.png';
 
 // create a section for our service section
 $trade_hub_sections['trade-hub-our-service-section']						=	array(
@@ -58,6 +60,38 @@ $trade_hub_settings_controls['trade-hub-our-service-main_title'] = array(
 		'section'			=> 'trade-hub-our-service-section',
 		'type'				=> 'text',
 		'priority'			=> 30,
+		'active_callback' 	=> ''
+	)
+);
+
+// Service section post selection
+$trade_hub_settings_controls['trdae-hub-our-service-post-selection'] = array(
+	'setting'				=> array(
+		'default'			=> $trade_hub_customizer_defaults['trdae-hub-our-service-post-selection']
+	),
+	'control'				=> array(
+		'label'				=> esc_html__( 'Select Service Post Type', 'trade-hub' ),
+		'section'			=> 'trade-hub-our-service-section',
+		'type'				=> 'select',
+		'choices' => array(
+			'from-category' => esc_html__('From Category','trdae-hub'),
+			'from-page'     => esc_html__('From Page','trdae-hub'),
+		),
+		'priority'			=> 35,
+		'active_callback' 	=> ''
+	)
+);
+
+// Service section for category
+$trade_hub_settings_controls['trdae-hub-our-service-post-category'] = array(
+	'setting'				=> array(
+		'default'			=> $trade_hub_customizer_defaults['trdae-hub-our-service-post-category']
+	),
+	'control'				=> array(
+		'label'				=> esc_html__( 'Select Post', 'trade-hub' ),
+		'section'			=> 'trade-hub-our-service-section',
+		'type'				=> 'category_dropdown',
+		'priority'			=> 38,
 		'active_callback' 	=> ''
 	)
 );

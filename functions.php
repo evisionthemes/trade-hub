@@ -98,6 +98,9 @@ function trade_hub_setup() {
 	/*woocommerce support*/
 	add_theme_support( 'woocommerce' );
 
+
+
+
 }
 endif;
 add_action( 'after_setup_theme', 'trade_hub_setup' );
@@ -231,15 +234,15 @@ add_action( 'admin_enqueue_scripts', 'trade_hub_wp_admin_style' );
  */
 require get_template_directory() . '/inc/template-tags.php';
 
+
+
+
 /**
  * Custom functions that act independently of the theme templates.
  */
 require get_template_directory() . '/inc/extras.php';
 
-/**
- * Implement the Custom Header feature.
- */
-require get_template_directory() . '/inc/custom-header.php';
+
 
 /**
  * Load Jetpack compatibility file.

@@ -10753,6 +10753,50 @@ aside#secondary .widget .widgettitle, aside#secondary .widget .widget-title, .wi
   margin: 0;
   padding: 0;
 }
+
+/* trade hub additional nav bar top */
+.trade-additional-nav {
+  position: absolute;
+  /*top: 0;*/
+  z-index: 99;
+  background: rgba(0, 0, 0, 0.65);
+  right: 0;
+  text-align: right;
+}
+
+.trade-additional-nav:after {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 44px 51px 0;
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  border-color: rgba(0, 0, 0, 0.65) rgba(0, 0, 0, 0.65) transparent transparent;
+  left: -44px;
+}
+
+.trade-additional-nav ul {
+  list-style: none;
+}
+
+.trade-additional-nav ul li {
+  display: inline-block;
+  padding-right: 20px;
+  color: #fff;
+}
+
+.trade-additional-nav ul li i {
+  padding-right: 6px;
+}
+
+@media screen and (max-width: 767px) {
+  .trade-additional-nav {
+    display: none;
+  }
+}
+
 @media (min-width: 992px) {
   #topheader.social-nav-right .trade-additional-nav ul {
     text-align: left;

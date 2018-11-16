@@ -7,9 +7,11 @@ global $trade_hub_customizer_defaults;
 
 // default value for our feature 
 $trade_hub_customizer_defaults['trade-hub-our-feature-enable'] 		= 1;
-$trade_hub_customizer_defaults['trade-hub-our-feature-title-text'] 	= '';
+$trade_hub_customizer_defaults['trade-hub-our-feature-title-text'] 	= esc_html__('Key Feature','trade-hub');
 $trade_hub_customizer_defaults['trade-hub-our-single-word-page'] 	= 25;
+$trade_hub_customizer_defaults['trade-hub-our-feautre-selection']   = 'from-category';
 $trade_hub_customizer_defaults['trade-hub-our-feature-page'] 		= 0;
+$trade_hub_customizer_defaults['trade-hub-our-feature-category']	= 1;
 $trade_hub_customizer_defaults['trade-hub-our-feature-icon'] 		= esc_html__( 'fa-desktop', 'trade-hub' );
 
 // section for our-feature-option
@@ -67,6 +69,42 @@ $trade_hub_settings_controls['trade-hub-our-single-word-page'] =
 			'active_callback'				=> ''
 		)
 	);
+
+// trade hub add feature Section
+$trade_hub_settings_controls['trade-hub-our-feautre-selection']  =  array(
+	'setting'	=> array(
+
+		'default'	=> $trade_hub_customizer_defaults['trade-hub-our-feautre-selection']
+	),
+	'control'	=> array(
+		'label'		=> esc_html__('Select Feature Post Type','trade-hub'),
+		'section'   => 'trade-hub-our-feature-section',
+		'type'		=> 'select',
+		'choices' => array(
+			'from-category'  => esc_html__('From-Category','trade-hub'), 
+			'from-page'  	 => esc_html__('From-Page','trade-hub'), 
+
+		),
+		'priority' 			=> 41,
+		'active_callback'   => ''
+	)
+
+);
+
+/*post type slider from post */
+$trade_hub_settings_controls['trade-hub-our-feature-category'] = array(
+    'setting' => array(
+    'default'                   => $trade_hub_customizer_defaults['trade-hub-our-feature-category'] 
+    ),
+    'control' => array(
+        'label'                 => esc_html__('Select Category','business-click'),
+        'section'               => 'trade-hub-our-feature-section',
+        'type'                  => 'category_dropdown',            
+        'priority'              => 43,
+        'acticve_callback'      => ''
+
+    ),     
+);
 
 
 $trade_hub_repeated_settings_controls['trade-hub-our-feature-page'] =

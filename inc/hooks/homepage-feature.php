@@ -5,38 +5,54 @@ if ( ! function_exists( 'trade_hub_home_feature_array' ) ) :
      *
      * @since trade-hub 1.0.0
      *
-     * @param null
+     * @param $fropm_slider
      * @return array
      */
-    function trade_hub_home_feature_array(  ){
+    function trade_hub_home_feature_array($from_slider){
         global $trade_hub_customizer_all_values;
         $trade_hub_home_feature_single_words = absint($trade_hub_customizer_all_values['trade-hub-our-single-word-page']);
         $trade_hub_home_feature_contents_array = array();
         $trade_hub_icons_array = array('trade-hub-home-feature-page-icon');
         $trade_hub_home_feature_page = array('trade-hub-home-feature-pages-ids');
-        
+
         $trade_hub_icons_arrays = evision_customizer_get_repeated_all_value(3 , $trade_hub_icons_array );
         $trade_hub_home_feature_posts = evision_customizer_get_repeated_all_value(3 , $trade_hub_home_feature_page);
         $trade_hub_home_feature_posts_ids = array();
-        
-        if( null != $trade_hub_home_feature_posts ) {
+        // $trade_hub_feture_category = $trade_hub_customizer_all_values['trade-hub-our-feature-category'];
+        // var_dump($trade_hub_feture_category);die('kfeature');
 
-            foreach( $trade_hub_home_feature_posts as $trade_hub_home_feature_post_id ) {
-
-                if( $trade_hub_home_feature_post_id['trade-hub-home-feature-pages-ids'] ) {
-                    $trade_hub_home_feature_posts_ids[] = $trade_hub_home_feature_post_id['trade-hub-home-feature-pages-ids'];
-                }
-            }           
+        if( 'from-category'  == $from_slider ){
+            $trade_hub_feture_category = $trade_hub_customizer_all_values['trade-hub-our-feature-category'];
+            if( 0 != $trade_hub_feture_category){
+                $trade_hub_home_feature_args = array(
+                    'post_type'      => 'post',
+                    'posts_per_page' => 3,
+                    'cat'            => absint($trade_hub_feture_category),
+                    'order'        => 'Desc'
+                );
+            }
+        } 
+        else{
+            if( null != $trade_hub_home_feature_posts ) {
+                foreach( $trade_hub_home_feature_posts as $trade_hub_home_feature_post_id ) {
+                    if( $trade_hub_home_feature_post_id['trade-hub-home-feature-pages-ids'] ) {
+                        $trade_hub_home_feature_posts_ids[] = $trade_hub_home_feature_post_id['trade-hub-home-feature-pages-ids'];
+                    }
+                } 
+                if(!empty($trade_hub_home_feature_posts_ids)){
+                    $trade_hub_home_feature_args =    array(
+                    'post_type' => 'page',
+                    'post__in' => array_map( 'absint', $trade_hub_home_feature_posts_ids ),
+                    'orderby' => 'post__in'
+                );
+                }          
+            }
         }
         
         // the query
-        if( !empty( $trade_hub_home_feature_posts_ids ) ) {
+        // if( !empty( $trade_hub_home_feature_posts_ids ) ) {
 
-            $trade_hub_home_feature_args =    array(
-                'post_type' => 'page',
-                'post__in' => array_map( 'absint', $trade_hub_home_feature_posts_ids ),
-                'orderby' => 'post__in'
-            );
+            if(!empty($trade_hub_home_feature_args)){
             $trade_hub_home_feature_contents_array = array(); /*again empty array*/
             $trade_hub_home_feature_post_query = new WP_Query( $trade_hub_home_feature_args );
             if ( $trade_hub_home_feature_post_query->have_posts() ) :
@@ -75,8 +91,9 @@ if ( ! function_exists( 'trade_hub_home_feature' ) ) :
         if( ! $trade_hub_customizer_all_values['trade-hub-our-feature-enable'] ) {
             return null;
         }
-        $trade_hub_feature_arrays = trade_hub_home_feature_array();
-        // var_dump($trade_hub_feature_arrays);die();*
+        $trade_hub_feature_selection_type = $trade_hub_customizer_all_values['trade-hub-our-feautre-selection'];
+        $trade_hub_feature_arrays = trade_hub_home_feature_array($trade_hub_feature_selection_type);
+        // var_dump($trade_hub_feature_arrays);die('kre');
         
         if( is_array( $trade_hub_feature_arrays ))
         {

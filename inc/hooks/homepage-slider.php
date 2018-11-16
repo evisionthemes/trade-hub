@@ -91,10 +91,33 @@ if ( ! function_exists( 'trade_hub_featured_home_slider' ) ) :
         $trade_hub_feature_enable_title = $trade_hub_customizer_all_values['trade-hub-fs-enable-title'];
         $trade_hub_feature_enable_caption = $trade_hub_customizer_all_values['trade-hub-fs-enable-caption'];
         $trade_hub_feature_button_text = $trade_hub_customizer_all_values['trade-hub-fs-button-text'];
+        // var_dump($trade_hub_feature_button_text);die('hello');
+
+         /* for top -nav header*/
+        $trade_hub_top_nva_email        = $trade_hub_customizer_all_values['trade-hub-top-nav-email'];
+        // var_dump($trade_hub_top_nva_email);die('hello');
+        $trade_hub_top_nva_contact      = $trade_hub_customizer_all_values['trade-hub-top-nav-contact'];
+        $trade_hub_top_nva_location     = $trade_hub_customizer_all_values['trade-hub-top-nav-location'];
 
     ?>
 
       <section id="banner-section" class="banner-section"><!-- banner section -->
+      <?php 
+       if ( 1 == $trade_hub_customizer_all_values['trade-hub-top-nav-enable'] )
+        {?>
+        <div class="trade-additional-nav"><!-- additional nav -->
+            <ul>
+                <li><i class="fa fa-envelope"></i><?php echo esc_html($trade_hub_top_nva_email);?></li>
+               <?php if(!empty($trade_hub_top_nva_contact)  ) { ?>
+              <li><i class="fa fa-phone"></i><?php echo esc_html($trade_hub_top_nva_contact);?></li>
+              <?php } ?>
+               <?php if( !empty($trade_hub_top_nva_location) ) { ?>
+              <li><i class="fa fa-map-signs"></i><?php echo esc_html($trade_hub_top_nva_location);?></li>
+              <?php } ?>
+            </ul>
+        </div><!-- additional contact-section -->
+      <?php } ?>
+
         <div class="banner-wrapper">
         <?php
         $i = 1;

@@ -7,8 +7,10 @@ global $trade_hub_customizer_defaults;
 
 // defaults value;
 $trade_hub_customizer_defaults['trade-hub-testimonial-enable-option'] 	= 1;
-$trade_hub_customizer_defaults['trade-hub-testimonial-title-text'] 		= '';
+$trade_hub_customizer_defaults['trade-hub-testimonial-title-text'] 		= esc_html__('Testimonial','trade-hub');
 $trade_hub_customizer_defaults['trade-hub-testimonial-single-word'] 	= 30;
+$trade_hub_customizer_defaults['trdae-hub-testimonial-selection-post']  = 'form-category';
+$trade_hub_customizer_defaults['trade-hub-testimonila-from-category']   = 1;
 $trade_hub_customizer_defaults['trade-hub-testimonial-from-page'] 		= 0;
 $trade_hub_customizer_defaults['trade-hub-testimonial-number-page'] 	= 3;
 
@@ -66,6 +68,39 @@ array(
 	)
 );
 
+// selection of post type
+$trade_hub_settings_controls['trdae-hub-testimonial-selection-post'] =  
+array(
+	'setting'				=> array(
+		'default'			=> $trade_hub_customizer_defaults['trdae-hub-testimonial-selection-post'],
+	),
+	'control'				=> array(
+		'label'				=> esc_html__( 'Select post type', 'trade-hub' ),
+		'section'			=> 'trade-hub-testimonial-sections',
+		'type'				=> 'select',
+		'choices' => array(
+			'form-category'    => esc_html__('From Category','trade-hud'),
+			'form-page'    => esc_html__('From Page','trade-hud'),
+		),
+		'pripority'			=> 45,
+		'active_callback'	=> ''
+	)
+);
+
+// selection of post from category
+$trade_hub_settings_controls['trade-hub-testimonila-from-category'] =  
+array(
+	'setting'				=> array(
+		'default'			=> $trade_hub_customizer_defaults['trade-hub-testimonila-from-category'],
+	),
+	'control'				=> array(
+		'label'				=> esc_html__( 'Select post type', 'trade-hub' ),
+		'section'			=> 'trade-hub-testimonial-sections',
+		'type'				=> 'category_dropdown',
+		'pripority'			=> 48,
+		'active_callback'	=> ''
+	)
+);
 
 /*creating setting control for chrimbo-news-activities-page start*/
 $trade_hub_repeated_settings_controls['trade-hub-testimonial-from-page'] =

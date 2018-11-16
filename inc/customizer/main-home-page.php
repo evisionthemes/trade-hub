@@ -36,6 +36,9 @@ require get_template_directory() .'/inc/customizer/home-call-to-action/setting.p
 // conetion of  latest news
 require get_template_directory() .'/inc/customizer/home-latest-news/from-page-setting.php';
 
+require get_template_directory() .'/inc/customizer/home-top-nav/setting.php';
+
+
 
 
 

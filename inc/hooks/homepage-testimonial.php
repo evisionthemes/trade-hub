@@ -5,10 +5,10 @@ if ( ! function_exists( 'trade_hub_testimonial_array' ) ) :
      *
      * @since trade-hub 1.0.0
      *
-     * @param null
+     * @param $from_slider
      * @return array
      */
-    function trade_hub_testimonial_array(  ){
+    function trade_hub_testimonial_array( $from_slider ){
         global $trade_hub_customizer_all_values;
         $trade_hub_testimonial_single_words = absint($trade_hub_customizer_all_values['trade-hub-testimonial-single-word']);
 
@@ -18,23 +18,36 @@ if ( ! function_exists( 'trade_hub_testimonial_array' ) ) :
         $trade_hub_testimonial_posts = evision_customizer_get_repeated_all_value(6 , $trade_hub_testimonial_page);
         $trade_hub_testimonial_posts_ids = array();
 
-        if( null != $trade_hub_testimonial_posts )
-        {
-            foreach( $trade_hub_testimonial_posts as $trade_hub_testimonial_post )
-            {
-                if( 0 != $trade_hub_testimonial_post['trade-hub-testimonial-pages-ids'] )
-                {
-                    $trade_hub_testimonial_posts_ids[] = $trade_hub_testimonial_post['trade-hub-testimonial-pages-ids'];
-                }
-                 
-            }
-            if( !empty( $trade_hub_testimonial_posts_ids ))
-            {
-                $trade_hub_testimonial_args =    array(
-                    'post_type'         => 'page',
-                    'post__in'          => array_map( 'absint', $trade_hub_testimonial_posts_ids ),
-                    'orderby'           => 'post__in'
+        if('form-category' == $from_slider){
+            $trade_hub_tetsimonial_category = $trade_hub_customizer_all_values['trade-hub-testimonila-from-category'];
+            if( 0 != $trade_hub_tetsimonial_category ){
+                $trade_hub_testimonial_args = array(
+                    'post_type' => 'post',
+                    'cat'       => absint($trade_hub_tetsimonial_category),
+                    'post_per_page' => 3,
+                    'orderby'   => 'Desc'
                 );
+            }
+        }
+        else{
+            if( null != $trade_hub_testimonial_posts )
+            {
+                foreach( $trade_hub_testimonial_posts as $trade_hub_testimonial_post )
+                {
+                    if( 0 != $trade_hub_testimonial_post['trade-hub-testimonial-pages-ids'] )
+                    {
+                        $trade_hub_testimonial_posts_ids[] = $trade_hub_testimonial_post['trade-hub-testimonial-pages-ids'];
+                    }
+                     
+                }
+                if( !empty( $trade_hub_testimonial_posts_ids ))
+                {
+                    $trade_hub_testimonial_args =    array(
+                        'post_type'         => 'page',
+                        'post__in'          => array_map( 'absint', $trade_hub_testimonial_posts_ids ),
+                        'orderby'           => 'post__in'
+                    );
+                }
             }
         }
         // the query
@@ -85,7 +98,8 @@ if ( ! function_exists( 'trade_hub_home_testimonial' ) ) :
         {
             return null;
         }
-        $trade_hub_testimonial_arrays = trade_hub_testimonial_array(  );
+        $trade_hub_testimonial_select_post_type = $trade_hub_customizer_all_values['trdae-hub-testimonial-selection-post'];
+        $trade_hub_testimonial_arrays = trade_hub_testimonial_array($trade_hub_testimonial_select_post_type );
         if( is_array( $trade_hub_testimonial_arrays ))
         {
 

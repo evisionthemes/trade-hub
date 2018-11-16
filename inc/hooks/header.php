@@ -202,6 +202,57 @@ add_action( 'trade_hub_action_before_header', 'trade_hub_skip_to_content', 10 );
           <div id="status">&nbsp;</div>
         </div>
         <header id="masthead" class="wrapper wrap-head site-header">
+
+                 <!-- topheader -->
+          <?php 
+          $top_nav_bar = $trade_hub_customizer_all_values['trade-hub-top-header-bar-enable'];
+          $top_bar_aligment  = $trade_hub_customizer_all_values['tarde-hub-top-header-menu-aligment'];
+
+           if(1 == $top_nav_bar ) { ?>
+            <div id="topheader" class="<?php echo esc_html($top_bar_aligment)?>">
+              <div class="container">
+                <?php
+                  /* for top -nav header*/
+                  $trade_hub_top_nva_email = $trade_hub_customizer_all_values['trade-hub-top-nav-email'];
+                  $trade_hub_top_nva_contact = $trade_hub_customizer_all_values['trade-hub-top-nav-contact'];
+                  $trade_hub_top_nva_location = $trade_hub_customizer_all_values['trade-hub-top-nav-location'];
+
+                ?>
+
+                <!-- additional nav -->
+                <div class="trade-additional-nav">
+                  <ul>
+                    <?php if(!empty($trade_hub_top_nva_email)  ) { ?>
+                      <li><i class="fa fa-envelope"></i><a href="mailto:<?php echo esc_html($trade_hub_top_nva_email);?>"><?php echo esc_html($trade_hub_top_nva_email);?></a></li>
+                    <?php } ?>
+                     <?php if(!empty($trade_hub_top_nva_contact)  ) { ?>
+                    <li><i class="fa fa-phone"></i><?php echo esc_html($trade_hub_top_nva_contact);?></li>
+                    <?php } ?>
+                     <?php if( !empty($trade_hub_top_nva_location) ) { ?>
+                    <li><i class="fa fa-map-signs"></i><?php echo esc_html($trade_hub_top_nva_location);?></li>
+                    <?php } ?>
+                  </ul>
+                </div>
+                
+                <a href="#!" class="head-list-toggle float-left d-md-none"></a>
+
+                <!-- social-nav -->
+                <div class="social-icon-only social-nav">
+                    <div class="menu-social-links-container">
+                        <?php
+                          wp_nav_menu( array(
+                              'theme_location' => 'social',
+                              'menu_id'        => 'social-menu',
+                              'menu_class'     => 'trade-hub-social-menu',
+                              'fallback_cb'    => 'trade_hub_social_menu_callback'
+                          ) );
+                        ?>        
+                    </div>
+                </div>
+
+              </div>
+            </div>
+          <?php } ?>
           <div class="container top-header-wrap">
             <div class="row">
               <div class="col-md-4 wrapper wrapper-site-identity">
@@ -289,7 +340,7 @@ add_action( 'trade_hub_action_before_header', 'trade_hub_skip_to_content', 10 );
           </div>
         </header>
         <?php if ( is_front_page()  ) {
-          do_action('trade_hub_homepage');
+          // do_action('trade_hub_homepage');
           do_action('trade_hub_homepage_slider');      
 
         }else{
