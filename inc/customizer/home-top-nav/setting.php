@@ -9,6 +9,7 @@ global $trade_hub_customizer_defaults;
 // create a default value
 $trade_hub_customizer_defaults['trade-hub-top-nav-enable'] 				= 0;
 $trade_hub_customizer_defaults['trade-hub-top-header-bar-enable']		= 1;
+$trade_hub_customizer_defaults['trade-hub-enable-top-social-menu']		= 1;
 $trade_hub_customizer_defaults['tarde-hub-top-header-menu-aligment'] 	= 'social-nav-right';
 $trade_hub_customizer_defaults['trade-hub-top-nav-email'] 				= esc_html__('evisionthemes@gmail.com','trade-hub');
 $trade_hub_customizer_defaults['trade-hub-top-nav-contact'] 			= esc_html__('+977-1234567890','trade-hub');
@@ -48,6 +49,21 @@ $trade_hub_settings_controls['trade-hub-top-nav-enable'] = array(
 	'active_callback'	=> ''
 	)
 );
+
+//create a enable option for top social-menu 
+$trade_hub_settings_controls['trade-hub-enable-top-social-menu'] = array(
+	'setting' => array(
+		'default' => $trade_hub_customizer_defaults['trade-hub-enable-top-social-menu']
+	),
+	'control' => array(
+	'label'				=> esc_html__('Enable Top Nav Social Menu','trade-hub'),
+	'section'			=> 'trade-hub-top-nav-section',
+	'type'				=> 'checkbox',
+	'priority'			=> 17,
+	'active_callback'	=> ''
+	)
+);
+
 
 //create a enable option for top nav 
 $trade_hub_settings_controls['tarde-hub-top-header-menu-aligment'] = array(

@@ -32,7 +32,6 @@ if ( ! function_exists( 'trade_hub_featured_slider_array' ) ) :
                 $trade_hub_feature_slider_args =    array(
                     'post_type' => 'page',
                     'post__in' => $trade_hub_feature_section_posts_ids,
-                    // 'posts_per_page' => $trade_hub_feature_slider_number,
                     'orderby' => 'post__in'
                 );
             }
@@ -91,7 +90,6 @@ if ( ! function_exists( 'trade_hub_featured_home_slider' ) ) :
         $trade_hub_feature_enable_title = $trade_hub_customizer_all_values['trade-hub-fs-enable-title'];
         $trade_hub_feature_enable_caption = $trade_hub_customizer_all_values['trade-hub-fs-enable-caption'];
         $trade_hub_feature_button_text = $trade_hub_customizer_all_values['trade-hub-fs-button-text'];
-        // var_dump($trade_hub_feature_button_text);die('hello');
 
          /* for top -nav header*/
         $trade_hub_top_nva_email        = $trade_hub_customizer_all_values['trade-hub-top-nav-email'];

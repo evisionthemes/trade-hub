@@ -113,6 +113,10 @@ Note:
 == Changelog ==
 
 = - 2.0.2 - =
+* add top nav bar
+* add category in feature section
+* add category in service 
+* add category in testimonial section
 * issue fixed in latest blog
 
 = - 2.0.1 - =

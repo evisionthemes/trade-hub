@@ -18,8 +18,6 @@ if ( ! function_exists( 'trade_hub_home_feature_array' ) ) :
         $trade_hub_icons_arrays = evision_customizer_get_repeated_all_value(3 , $trade_hub_icons_array );
         $trade_hub_home_feature_posts = evision_customizer_get_repeated_all_value(3 , $trade_hub_home_feature_page);
         $trade_hub_home_feature_posts_ids = array();
-        // $trade_hub_feture_category = $trade_hub_customizer_all_values['trade-hub-our-feature-category'];
-        // var_dump($trade_hub_feture_category);die('kfeature');
 
         if( 'from-category'  == $from_slider ){
             $trade_hub_feture_category = $trade_hub_customizer_all_values['trade-hub-our-feature-category'];
@@ -50,8 +48,6 @@ if ( ! function_exists( 'trade_hub_home_feature_array' ) ) :
         }
         
         // the query
-        // if( !empty( $trade_hub_home_feature_posts_ids ) ) {
-
             if(!empty($trade_hub_home_feature_args)){
             $trade_hub_home_feature_contents_array = array(); /*again empty array*/
             $trade_hub_home_feature_post_query = new WP_Query( $trade_hub_home_feature_args );
@@ -93,7 +89,6 @@ if ( ! function_exists( 'trade_hub_home_feature' ) ) :
         }
         $trade_hub_feature_selection_type = $trade_hub_customizer_all_values['trade-hub-our-feautre-selection'];
         $trade_hub_feature_arrays = trade_hub_home_feature_array($trade_hub_feature_selection_type);
-        // var_dump($trade_hub_feature_arrays);die('kre');
         
         if( is_array( $trade_hub_feature_arrays ))
         {

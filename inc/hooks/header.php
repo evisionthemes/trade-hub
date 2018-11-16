@@ -237,6 +237,7 @@ add_action( 'trade_hub_action_before_header', 'trade_hub_skip_to_content', 10 );
                 <a href="#!" class="head-list-toggle float-left d-md-none"></a>
 
                 <!-- social-nav -->
+                <?php if( $trade_hub_customizer_all_values['trade-hub-enable-top-social-menu'] == 1 ){ ?>
                 <div class="social-icon-only social-nav">
                     <div class="menu-social-links-container">
                         <?php
@@ -249,6 +250,7 @@ add_action( 'trade_hub_action_before_header', 'trade_hub_skip_to_content', 10 );
                         ?>        
                     </div>
                 </div>
+                <?php } ?>
 
               </div>
             </div>
