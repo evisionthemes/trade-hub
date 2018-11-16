@@ -342,13 +342,9 @@ add_action( 'trade_hub_action_before_header', 'trade_hub_skip_to_content', 10 );
           </div>
         </header>
         <?php if ( is_front_page()  ) {
-          // do_action('trade_hub_homepage');
-          do_action('trade_hub_homepage_slider');      
-
+          do_action('trade_hub_homepage_slider'); 
         }else{
-          do_action('trade_hub_homepage');
-
-          
+      
         } ?>
 
 

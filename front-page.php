@@ -19,8 +19,7 @@ if ( 'posts' == get_option( 'show_on_front' ) ) {
          * @hooked busine_Craft_aboutus _page -16
          * @hooked trade_hub_our_service -21
          */
-        do_action( 'trade_hub_homepage' );   
-        // do_action('trade_hub_homepage_slider');      
+        do_action( 'trade_hub_homepage' );        
 
         $trade_hub_static_page = absint($trade_hub_customizer_all_values['trade-hub-enable-static-page']);
         // $trade_hub_static_page = 1;

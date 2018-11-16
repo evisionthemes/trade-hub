@@ -42,7 +42,7 @@ $trade_hub_settings_controls['trade-hub-top-nav-enable'] = array(
 		'default' => $trade_hub_customizer_defaults['trade-hub-top-nav-enable']
 	),
 	'control' => array(
-	'label'				=> esc_html__('Enable Top Nav In Banner','trade-hub'),
+	'label'				=> esc_html__('Enable Slider Top Nav  Banner','trade-hub'),
 	'section'			=> 'trade-hub-top-nav-section',
 	'type'				=> 'checkbox',
 	'priority'			=> 15,
