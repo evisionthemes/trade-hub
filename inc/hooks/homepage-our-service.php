@@ -95,7 +95,6 @@ if ( ! function_exists( 'trade_hub_our_service' ) ) :
             return null;
         }
         $trade_hub_our_service_select_post = $trade_hub_customizer_all_values['trade-hub-our-service-post-selection'];
-
         $trade_hub_our_service_arrays = trade_hub_our_service_array( $trade_hub_our_service_select_post );
         if( is_array( $trade_hub_our_service_arrays ))
         {

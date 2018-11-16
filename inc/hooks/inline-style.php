@@ -63,6 +63,19 @@ if( ! function_exists( 'trade_hub_inline_style' ) ) :
         /*----------------------------------*/
         /*background color*/ 
         <?php 
+
+        if( !empty($trade_hub_site_identity_color_option) ){
+        ?>
+            /*Site identity / logo & tagline*/
+            body:not(.transparent-header) .site-branding a,
+            body:not(.transparent-header) .site-branding p,
+            body.home.transparent-header.small-header .site-branding a,
+            body.home.transparent-header.small-header .site-branding p {
+              color: <?php echo esc_attr( $trade_hub_site_identity_color_option );?>;
+            }
+        <?php
+        }
+        
         if( !empty($trade_hub_background_color) ){
         ?>
           
