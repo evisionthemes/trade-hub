@@ -97,7 +97,7 @@ $trade_hub_settings_controls['trade-hub-our-feature-category'] = array(
     'default'                   => $trade_hub_customizer_defaults['trade-hub-our-feature-category'] 
     ),
     'control' => array(
-        'label'                 => esc_html__('Select Category','business-click'),
+        'label'                 => esc_html__('Select Category','trade-hub'),
         'section'               => 'trade-hub-our-feature-section',
         'type'                  => 'category_dropdown',            
         'priority'              => 43,

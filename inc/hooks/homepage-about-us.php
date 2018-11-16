@@ -14,7 +14,7 @@ function  tarde_hub_about_us()
 	global$trade_hub_customizer_all_values;
 	$trade_hub_feature_slider_single_words_about = absint($trade_hub_customizer_all_values['trade-hub-single-word'] );
 	$trade_hub_home_about_button_text = esc_html($trade_hub_customizer_all_values['trade-hub-button-text']);
-	$trade_hub_home_about_posts = absint($trade_hub_customizer_all_values['trdae-hub-about-us-page']);
+	$trade_hub_home_about_posts = absint($trade_hub_customizer_all_values['trade-hub-about-us-page']);
 
 
   	if( !$trade_hub_customizer_all_values['trade-hub-about-us-enable'] ) {

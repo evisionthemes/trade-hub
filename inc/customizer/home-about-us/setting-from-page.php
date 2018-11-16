@@ -8,7 +8,7 @@ global $trade_hub_customizer_defaults;
 // defaults value
 $trade_hub_customizer_defaults['trade-hub-about-us-enable']		= 1;
 $trade_hub_customizer_defaults['trade-hub-single-word']			= 25;
-$trade_hub_customizer_defaults['trdae-hub-about-us-page']   	= 0;
+$trade_hub_customizer_defaults['trade-hub-about-us-page']   	= 0;
 $trade_hub_customizer_defaults['trade-hub-button-text']			= esc_html__( 'KNOW MORE', 'trade-hub' );	
 $trade_hub_customizer_defaults['trade-hub-select_number_page']	= 1;		
 
@@ -50,10 +50,10 @@ array(
 	)
 );
 
-$trade_hub_settings_controls['trdae-hub-about-us-page']  = 
+$trade_hub_settings_controls['trade-hub-about-us-page']  = 
 array(
 	'setting'				=> array(
-		'default'			=> $trade_hub_customizer_defaults['trdae-hub-about-us-page'],
+		'default'			=> $trade_hub_customizer_defaults['trade-hub-about-us-page'],
 	),
 	'control'				=> array(
 		'label'				=> esc_html__( 'Select About Us Page', 'trade-hub' ),

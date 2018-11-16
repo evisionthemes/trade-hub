@@ -19,7 +19,7 @@ if ( ! function_exists( 'trade_hub_our_service_array' ) ) :
         $trade_hub_our_service_posts_ids = array();
 
         if( 'from-category'  == $from_slider ){
-            $trade_hub_service_from_post = $trade_hub_customizer_all_values['trdae-hub-our-service-post-category'];
+            $trade_hub_service_from_post = $trade_hub_customizer_all_values['trade-hub-our-service-post-category'];
             if( 0 != $trade_hub_service_from_post ){
                 $trade_hub_our_service_args = array(
                     'post_type'         => 'post',
@@ -94,7 +94,7 @@ if ( ! function_exists( 'trade_hub_our_service' ) ) :
         {
             return null;
         }
-        $trade_hub_our_service_select_post = $trade_hub_customizer_all_values['trdae-hub-our-service-post-selection'];
+        $trade_hub_our_service_select_post = $trade_hub_customizer_all_values['trade-hub-our-service-post-selection'];
 
         $trade_hub_our_service_arrays = trade_hub_our_service_array( $trade_hub_our_service_select_post );
         if( is_array( $trade_hub_our_service_arrays ))

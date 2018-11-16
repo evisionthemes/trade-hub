@@ -98,7 +98,7 @@ if ( ! function_exists( 'trade_hub_home_testimonial' ) ) :
         {
             return null;
         }
-        $trade_hub_testimonial_select_post_type = $trade_hub_customizer_all_values['trdae-hub-testimonial-selection-post'];
+        $trade_hub_testimonial_select_post_type = $trade_hub_customizer_all_values['trade-hub-testimonial-selection-post'];
         $trade_hub_testimonial_arrays = trade_hub_testimonial_array($trade_hub_testimonial_select_post_type );
         if( is_array( $trade_hub_testimonial_arrays ))
         {

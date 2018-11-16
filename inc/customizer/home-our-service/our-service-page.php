@@ -9,8 +9,8 @@ global $trade_hub_customizer_defaults;
 $trade_hub_customizer_defaults['trade-hub-our-service-enable-option'] 		= 1;
 $trade_hub_customizer_defaults['trade-hub-our-service-single-word'] 		= 25;
 $trade_hub_customizer_defaults['trade-hub-our-service-main_title'] 			= esc_html__('Our Service','trade-hub');
-$trade_hub_customizer_defaults['trdae-hub-our-service-post-selection']      = 'from-category';
-$trade_hub_customizer_defaults['trdae-hub-our-service-post-category']       = 1;
+$trade_hub_customizer_defaults['trade-hub-our-service-post-selection']      = 'from-category';
+$trade_hub_customizer_defaults['trade-hub-our-service-post-category']       = 1;
 $trade_hub_customizer_defaults['trade-hub-our-service-page']				= 0;
 $trade_hub_customizer_defaults['trade-hub-our-service-image'] 				=  get_template_directory_uri().'/assets/images/slider.png';
 
@@ -65,17 +65,17 @@ $trade_hub_settings_controls['trade-hub-our-service-main_title'] = array(
 );
 
 // Service section post selection
-$trade_hub_settings_controls['trdae-hub-our-service-post-selection'] = array(
+$trade_hub_settings_controls['trade-hub-our-service-post-selection'] = array(
 	'setting'				=> array(
-		'default'			=> $trade_hub_customizer_defaults['trdae-hub-our-service-post-selection']
+		'default'			=> $trade_hub_customizer_defaults['trade-hub-our-service-post-selection']
 	),
 	'control'				=> array(
 		'label'				=> esc_html__( 'Select Service Post Type', 'trade-hub' ),
 		'section'			=> 'trade-hub-our-service-section',
 		'type'				=> 'select',
 		'choices' => array(
-			'from-category' => esc_html__('From Category','trdae-hub'),
-			'from-page'     => esc_html__('From Page','trdae-hub'),
+			'from-category' => esc_html__('From Category','trade-hub'),
+			'from-page'     => esc_html__('From Page','trade-hub'),
 		),
 		'priority'			=> 35,
 		'active_callback' 	=> ''
@@ -83,9 +83,9 @@ $trade_hub_settings_controls['trdae-hub-our-service-post-selection'] = array(
 );
 
 // Service section for category
-$trade_hub_settings_controls['trdae-hub-our-service-post-category'] = array(
+$trade_hub_settings_controls['trade-hub-our-service-post-category'] = array(
 	'setting'				=> array(
-		'default'			=> $trade_hub_customizer_defaults['trdae-hub-our-service-post-category']
+		'default'			=> $trade_hub_customizer_defaults['trade-hub-our-service-post-category']
 	),
 	'control'				=> array(
 		'label'				=> esc_html__( 'Select Post', 'trade-hub' ),
